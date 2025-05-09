@@ -1,0 +1,38 @@
+{
+  "الدوري الإنجليزي": [
+    {
+      "home": "أرسنال",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+      "away": "ليفربول",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+      "time": "22:00"
+    }
+  ],
+  "الدوري الإسباني": [
+    {
+      "home": "برشلونة",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      "away": "أتلتيكو مدريد",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
+      "time": "23:00"
+    }
+  ],
+  "دوري أبطال أوروبا": [
+    {
+      "home": "ريال مدريد",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      "away": "بايرن ميونخ",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_München_logo_(2017).svg",
+      "time": "22:00"
+    }
+  ],
+  "الدوري المصري": [
+    {
+      "home": "الأهلي",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/0/0a/Al_Ahly_SC_Logo.png",
+      "away": "المصري",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/f3/Al_Masry_SC_Logo.png",
+      "time": "21:00"
+    }
+  ]
+}
