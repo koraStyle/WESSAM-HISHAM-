@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>كورة ستايل - مباريات اليوم</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 60px;
+      vertical-align: middle;
+    }
+    header h1 {
+      display: inline;
+      margin-right: 15px;
+      font-size: 26px;
+    }
+    main {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .league {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .league h2 {
+      margin-top: 0;
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      color: #222;
+    }
+    .match {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .match:last-child {
+      border-bottom: none;
+    }
+    .team {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .team img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    .time {
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Soccer_ball.svg/120px-Soccer_ball.svg.png" alt="Logo">
+  <h1>كورة ستايل</h1>
+</header>
+
+<main>
+  <div class="league">
+    <h2>الدوري الإنجليزي الممتاز <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag" style="width:20px;vertical-align:middle;"></h2>
+    <div class="match">
+      <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" alt="Arsenal"> أرسنال</div>
+      <div class="time">22:00</div>
+      <div class="team">ليفربول <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool"></div>
+    </div>
+  </div>
+
+  <div class="league">
+    <h2>دوري أبطال أوروبا <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/UEFA_Champions_League_logo_2.svg" alt="UCL" style="width:18px;"></h2>
+    <div class="match">
+      <div class="team"><img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real"> ريال مدريد</div>
+      <div class="time">23:00</div>
+      <div class="team">بايرن ميونخ <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_München_logo_(2017).svg" alt="Bayern"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 كورة ستايل - جميع الحقوق محفوظة
+</footer>
+
+</body>
+</html>
