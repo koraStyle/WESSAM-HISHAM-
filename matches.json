@@ -1,5 +1,30 @@
 "الدوري المصري": [
+  {"الدوري المصري": [
   {
+    "home": "الزمالك",
+    "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/e7/Zamalek_SC_logo.png",
+    "away": "سيراميكا كليوباترا",
+    "awayLogo": "https://upload.wikimedia.org/wikipedia/en/4/4a/Ceramica_Cleopatra_FC_logo.png",
+    "time": "17:00",
+    "result": "2 - 2"
+  },
+  {
+    "home": "البنك الأهلي",
+    "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/7/7f/National_Bank_of_Egypt_SC_Logo.png",
+    "away": "بيراميدز",
+    "awayLogo": "https://upload.wikimedia.org/wikipedia/en/e/e3/Pyramids_FC_Logo.png",
+    "time": "19:00",
+    "result": "4 - 2"
+  },
+  {
+    "home": "فاركو",
+    "homeLogo": "https://upload.wikimedia.org/wikipedia/en/6/61/Pharco_FC_Logo.png",
+    "away": "بتروجت",
+    "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Petrojet_FC_Logo.png",
+    "time": "20:00",
+    "result": "2 - 2"
+  }
+]
     "home": "الزمالك",
     "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/e7/Zamalek_SC_logo.png",
     "away": "سيراميكا كليوباترا",
