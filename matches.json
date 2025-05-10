@@ -1,0 +1,85 @@
+{
+  "الدوري المصري": [
+    {
+      "home": "الاتحاد السكندري",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/2/2e/Al_Ittihad_Alexandria_Club_Logo.png",
+      "away": "غزل المحلة",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/1/1c/Ghazl_El_Mahalla_SC_Logo.png",
+      "time": "20:00"
+    }
+  ],
+  "الدوري الإنجليزي": [
+    {
+      "home": "فولهام",
+      "homeLogo": "",
+      "away": "إيفرتون",
+      "awayLogo": "",
+      "time": "17:00"
+    },
+    {
+      "home": "ساوثهامبتون",
+      "homeLogo": "",
+      "away": "مانشستر سيتي",
+      "awayLogo": "",
+      "time": "17:00"
+    },
+    {
+      "home": "إيبسويتش تاون",
+      "homeLogo": "",
+      "away": "برينتفورد",
+      "awayLogo": "",
+      "time": "17:00"
+    },
+    {
+      "home": "وولفرهامبتون",
+      "homeLogo": "",
+      "away": "برايتون",
+      "awayLogo": "",
+      "time": "17:00"
+    },
+    {
+      "home": "بورنموث",
+      "homeLogo": "",
+      "away": "أستون فيلا",
+      "awayLogo": "",
+      "time": "19:30"
+    }
+  ],
+  "الدوري الإسباني": [
+    {
+      "home": "فالنسيا",
+      "homeLogo": "",
+      "away": "خيتافي",
+      "awayLogo": "",
+      "time": "16:00"
+    },
+    {
+      "home": "سيلتا فيجو",
+      "homeLogo": "",
+      "away": "إشبيلية",
+      "awayLogo": "",
+      "time": "17:15"
+    },
+    {
+      "home": "ريال مايوركا",
+      "homeLogo": "",
+      "away": "بلد الوليد",
+      "awayLogo": "",
+      "time": "19:30"
+    },
+    {
+      "home": "جيرونا",
+      "homeLogo": "",
+      "away": "فياريال",
+      "awayLogo": "",
+      "time": "19:30"
+    },
+    {
+      "home": "أتلتيكو مدريد",
+      "homeLogo": "",
+      "away": "ريال سوسيداد",
+      "awayLogo": "",
+      "time": "22:00"
+    }
+  ]
+}
