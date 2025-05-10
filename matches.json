@@ -5,81 +5,68 @@
       "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/2/2e/Al_Ittihad_Alexandria_Club_Logo.png",
       "away": "غزل المحلة",
       "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/1/1c/Ghazl_El_Mahalla_SC_Logo.png",
-      "time": "20:00"
+      "time": "مباشر"
     }
   ],
   "الدوري الإنجليزي": [
     {
-      "home": "فولهام",
-      "homeLogo": "",
-      "away": "إيفرتون",
-      "awayLogo": "",
-      "time": "17:00"
-    },
-    {
       "home": "ساوثهامبتون",
-      "homeLogo": "",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/c/c9/FC_Southampton.svg",
       "away": "مانشستر سيتي",
-      "awayLogo": "",
-      "time": "17:00"
-    },
-    {
-      "home": "إيبسويتش تاون",
-      "homeLogo": "",
-      "away": "برينتفورد",
-      "awayLogo": "",
-      "time": "17:00"
-    },
-    {
-      "home": "وولفرهامبتون",
-      "homeLogo": "",
-      "away": "برايتون",
-      "awayLogo": "",
-      "time": "17:00"
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+      "time": "مباشر"
     },
     {
       "home": "بورنموث",
-      "homeLogo": "",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/e5/AFC_Bournemouth_%28shield%29.svg",
       "away": "أستون فيلا",
-      "awayLogo": "",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/5/5c/Aston_Villa_FC_crest_%282016%29.svg",
       "time": "19:30"
     }
   ],
   "الدوري الإسباني": [
     {
-      "home": "فالنسيا",
-      "homeLogo": "",
-      "away": "خيتافي",
-      "awayLogo": "",
-      "time": "16:00"
-    },
-    {
-      "home": "سيلتا فيجو",
-      "homeLogo": "",
-      "away": "إشبيلية",
-      "awayLogo": "",
-      "time": "17:15"
-    },
-    {
-      "home": "ريال مايوركا",
-      "homeLogo": "",
-      "away": "بلد الوليد",
-      "awayLogo": "",
-      "time": "19:30"
-    },
-    {
-      "home": "جيرونا",
-      "homeLogo": "",
-      "away": "فياريال",
-      "awayLogo": "",
-      "time": "19:30"
-    },
-    {
       "home": "أتلتيكو مدريد",
-      "homeLogo": "",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
       "away": "ريال سوسيداد",
-      "awayLogo": "",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/f1/Real_Sociedad_logo.svg",
       "time": "22:00"
+    }
+  ],
+  "الدوري الإيطالي": [
+    {
+      "home": "لاتسيو",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/5c/SS_Lazio_badge.svg",
+      "away": "يوفنتوس",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/commons/1/15/Juventus_FC_2017_logo.svg",
+      "time": "مباشر"
+    }
+  ],
+  "الدوري الألماني": [
+    {
+      "home": "بايرن ميونخ",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_München_logo_%282017%29.svg",
+      "away": "مونشنجلادباخ",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Borussia_Mönchengladbach_logo.svg",
+      "time": "19:30"
+    }
+  ],
+  "الدوري الفرنسي": [
+    {
+      "home": "مونبلييه",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/e2/Montpellier_HSC_Logo.svg",
+      "away": "باريس سان جيرمان",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
+      "time": "مباشر"
+    }
+  ],
+  "الدوري السعودي": [
+    {
+      "home": "الوحدة",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/f/f2/Al-Wehda_Club_Makkah_Logo.png",
+      "away": "الفتح",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/8/89/Al-Fateh_SC_Logo.png",
+      "time": "مباشر"
     }
   ]
 }
