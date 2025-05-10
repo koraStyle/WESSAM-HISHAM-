@@ -1,0 +1,20 @@
+---
+layout: default
+title: الأخبار
+---
+
+<h1 style="text-align: center; color: #d62828;">أحدث الأخبار على كورة ستايل</h1>
+<div style="max-width: 700px; margin: auto; padding: 20px;">
+  {% for post in site.posts %}
+    <div style="background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h2 style="margin-top: 0;">
+        <a href="{{ post.url }}" style="text-decoration: none; color: #333;">
+          {{ post.title }}
+        </a>
+      </h2>
+      <p style="color: #888; font-size: 14px;">{{ post.date | date: "%Y-%m-%d" }}</p>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}" style="color: #d62828;">اقرأ المزيد</a>
+    </div>
+  {% endfor %}
+</div>
