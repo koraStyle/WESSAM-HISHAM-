@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كورة ستايل - مباريات اليوم</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #e0e0e0;
+      color: #222;
+      padding: 30px;
+      text-align: center;
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    h1 {
+      color: #d62828;
+    }
+    .league {
+      background-color: #fff;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: right;
+    }
+    .match {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+    }
+    .match img {
+      height: 30px;
+      vertical-align: middle;
+    }
+    .news-section {
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: right;
+    }
+    .news-item {
+      margin-bottom: 20px;
+    }
+    .news-item h3 {
+      margin: 0 0 5px;
+      color: #0077b6;
+    }
+    .news-item p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="logo.png" alt="شعار كورة ستايل">
+  </div>
+
+  <h1>كورة ستايل - مباريات اليوم</h1>
+  <div id="matches"></div>
+
+  <div class="news-section">
+    <h2>أحدث الأخبار</h2>
+
+    <div class="news-item">
+      <h3>كلاسيكو الأرض: من ينتصر ويبتعد بالصدارة؟</h3>
+      <p>تتجه أنظار عشاق كرة القدم حول العالم إلى مباراة الكلاسيكو بين برشلونة وريال مدريد، في لقاء يُتوقع أن يكون حاسمًا في صراع الصدارة.</p>
+    </div>
+
+    <div class="news-item">
+      <h3>مباريات نارية في الدوري الإنجليزي مع حسم ليفربول اللقب الـ20 في تاريخه</h3>
+      <p>شهدت الجولة الأخيرة من الدوري الإنجليزي مباريات حاسمة انتهت بتتويج ليفربول بلقبه العشرين في تاريخه بعد صراع مثير مع منافسيه.</p>
+    </div>
+
+  </div>
+
+  <script>
+    fetch('matches.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('matches');
+        for (const league in data) {
+          const leagueDiv = document.createElement('div');
+          leagueDiv.className = 'league';
+          const title = document.createElement('h2');
+          title.textContent = league;
+          leagueDiv.appendChild(title);
+
+          data[league].forEach(match => {
+            const matchDiv = document.createElement('div');
+            matchDiv.className = 'match';
+            matchDiv.innerHTML = `
+              <span><img src="${match.homeLogo}" alt="${match.home}" /> ${match.home}</span>
+              <strong>${match.time} - ${match.status}</strong>
+              <span>${match.away} <img src="${match.awayLogo}" alt="${match.away}" /></span>
+            `;
+            leagueDiv.appendChild(matchDiv);
+          });
+
+          container.appendChild(leagueDiv);
+        }
+      });
+  </script>
+</body>
+</html>
