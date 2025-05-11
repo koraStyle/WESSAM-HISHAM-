@@ -1,0 +1,124 @@
+{
+  "الدوري الإيطالي": [
+    {
+      "home": "فينيتسيا",
+      "away": "فيورنتينا",
+      "time": "18:30",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Venezia_F.C._logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/4/4e/ACF_Fiorentina_crest.svg"
+    },
+    {
+      "home": "أتالانتا",
+      "away": "روما",
+      "time": "20:45",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/8/88/AtalantaBC.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/f7/AS_Roma_logo.svg"
+    }
+  ],
+  "الدوري السعودي للمحترفين": [
+    {
+      "home": "الهلال",
+      "away": "العروبة",
+      "time": "19:05",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/1/15/Al-Hilal_FC_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/5/5a/Al-Orobah_FC_logo.svg"
+    },
+    {
+      "home": "الأخدود",
+      "away": "النصر",
+      "time": "21:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/5a/Al-Okhdood_Club_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/8/8a/Al-Nassr_FC_logo.svg"
+    },
+    {
+      "home": "الاتحاد",
+      "away": "الفيحاء",
+      "time": "21:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/35/Al-Ittihad_Club_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Al-Fayha_FC_logo.svg"
+    },
+    {
+      "home": "التعاون",
+      "away": "القادسية",
+      "time": "19:15",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/5b/Al-Taawoun_FC_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/2/2b/Al-Qadsiah_FC_logo.svg"
+    }
+  ],
+  "الدوري الإنجليزي الممتاز": [
+    {
+      "home": "مانشستر سيتي",
+      "away": "ولفرهامبتون",
+      "time": "22:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/fc/Wolverhampton_Wanderers.svg"
+    }
+  ],
+  "الدوري المصري": [
+    {
+      "home": "سموحة",
+      "away": "الإسماعيلي",
+      "time": "17:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/0/02/Smouha_SC_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/1/1e/Ismaily_SC_logo.svg"
+    },
+    {
+      "home": "زد",
+      "away": "طلائع الجيش",
+      "time": "20:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/9/9e/ZED_FC_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3c/Tala%27ea_El_Gaish_SC_logo.svg"
+    },
+    {
+      "home": "الجونة",
+      "away": "طلائع الجيش",
+      "time": "20:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3a/El_Gouna_FC_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3c/Tala%27ea_El_Gaish_SC_logo.svg"
+    }
+  ],
+  "كأس أمم إفريقيا تحت 21 سنة": [
+    {
+      "home": "نيجيريا",
+      "away": "السنغال",
+      "time": "05:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/0/0a/Nigeria_Football_Federation_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/8/8b/Senegal_Football_Federation_logo.svg"
+    },
+    {
+      "home": "غانا",
+      "away": "مصر",
+      "time": "08:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/1/19/Ghana_Football_Association_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/e/e1/Egyptian_Football_Association_logo.svg"
+    },
+    {
+      "home": "المغرب",
+      "away": "سيراليون",
+      "time": "08:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/4/43/Royal_Moroccan_Football_Federation_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3d/Sierra_Leone_Football_Association_logo.svg"
+    },
+    {
+      "home": "جنوب إفريقيا",
+      "away": "جمهورية الكونغو",
+      "time": "11:00",
+      "status": "قريبًا",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3a/South_African_Football_Association_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/2/2b/DR_Congo_Football_Association_logo.svg"
+    }
+  ]
+}
