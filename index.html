@@ -147,6 +147,31 @@
       <a href="https://www.yallakora.com/category/26/news/510218" target="_blank">اقرأ الخبر كامل</a>
     </div>
   </div>
+<script>
+  fetch('matches.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('matches');
+      for (const league in data) {
+        const leagueDiv = document.createElement('div');
+        const title = document.createElement('h3');
+        title.textContent = league;
+        leagueDiv.appendChild(title);
 
+        data[league].forEach(match => {
+          const matchDiv = document.createElement('div');
+          matchDiv.className = 'match';
+          matchDiv.innerHTML = `
+            <span><img src="${match.homeLogo}" alt="${match.home}" style="height: 24px; vertical-align: middle;"> ${match.home}</span>
+            <strong>${match.time} - ${match.status}</strong>
+            <span>${match.away} <img src="${match.awayLogo}" alt="${match.away}" style="height: 24px; vertical-align: middle;"></span>
+          `;
+          leagueDiv.appendChild(matchDiv);
+        });
+
+        container.appendChild(leagueDiv);
+      }
+    });
+</script>
 </body>
 </html>
