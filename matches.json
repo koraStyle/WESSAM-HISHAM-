@@ -1,124 +1,233 @@
-{
-  "الدوري الإيطالي": [
-    {
-      "home": "فينيتسيا",
-      "away": "فيورنتينا",
-      "time": "18:30",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Venezia_F.C._logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/4/4e/ACF_Fiorentina_crest.svg"
-    },
-    {
-      "home": "أتالانتا",
-      "away": "روما",
-      "time": "20:45",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/8/88/AtalantaBC.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/f7/AS_Roma_logo.svg"
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>كورة ستايل بلس - مباريات اليوم 15 مايو 2025</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      color: #222;
+      text-align: right;
+      max-width: 900px;
+      margin: auto;
     }
-  ],
-  "الدوري السعودي للمحترفين": [
-    {
-      "home": "الهلال",
-      "away": "العروبة",
-      "time": "19:05",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/1/15/Al-Hilal_FC_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/5/5a/Al-Orobah_FC_logo.svg"
-    },
-    {
-      "home": "الأخدود",
-      "away": "النصر",
-      "time": "21:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/5a/Al-Okhdood_Club_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/8/8a/Al-Nassr_FC_logo.svg"
-    },
-    {
-      "home": "الاتحاد",
-      "away": "الفيحاء",
-      "time": "21:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/35/Al-Ittihad_Club_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3f/Al-Fayha_FC_logo.svg"
-    },
-    {
-      "home": "التعاون",
-      "away": "القادسية",
-      "time": "19:15",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/5/5b/Al-Taawoun_FC_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/2/2b/Al-Qadsiah_FC_logo.svg"
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
     }
-  ],
-  "الدوري الإنجليزي الممتاز": [
-    {
-      "home": "مانشستر سيتي",
-      "away": "ولفرهامبتون",
-      "time": "22:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/f/fc/Wolverhampton_Wanderers.svg"
+    .logo img {
+      max-width: 250px;
+      height: auto;
     }
-  ],
-  "الدوري المصري": [
-    {
-      "home": "سموحة",
-      "away": "الإسماعيلي",
-      "time": "17:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/0/02/Smouha_SC_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/1/1e/Ismaily_SC_logo.svg"
-    },
-    {
-      "home": "زد",
-      "away": "طلائع الجيش",
-      "time": "20:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/9/9e/ZED_FC_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3c/Tala%27ea_El_Gaish_SC_logo.svg"
-    },
-    {
-      "home": "الجونة",
-      "away": "طلائع الجيش",
-      "time": "20:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3a/El_Gouna_FC_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3c/Tala%27ea_El_Gaish_SC_logo.svg"
+    h1 {
+      color: #d62828;
+      text-align: center;
+      margin-bottom: 30px;
     }
-  ],
-  "كأس أمم إفريقيا تحت 21 سنة": [
-    {
-      "home": "نيجيريا",
-      "away": "السنغال",
-      "time": "05:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/0/0a/Nigeria_Football_Federation_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/8/8b/Senegal_Football_Federation_logo.svg"
-    },
-    {
-      "home": "غانا",
-      "away": "مصر",
-      "time": "08:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/1/19/Ghana_Football_Association_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/e/e1/Egyptian_Football_Association_logo.svg"
-    },
-    {
-      "home": "المغرب",
-      "away": "سيراليون",
-      "time": "08:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/4/43/Royal_Moroccan_Football_Federation_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/3/3d/Sierra_Leone_Football_Association_logo.svg"
-    },
-    {
-      "home": "جنوب إفريقيا",
-      "away": "جمهورية الكونغو",
-      "time": "11:00",
-      "status": "قريبًا",
-      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/3/3a/South_African_Football_Association_logo.svg",
-      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/2/2b/DR_Congo_Football_Association_logo.svg"
+    .section {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-  ]
-}
+    h2 {
+      color: #d62828;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d62828;
+      padding-bottom: 8px;
+    }
+    .match, .league-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .match:last-child, .league-item:last-child {
+      border-bottom: none;
+    }
+    .match span, .league-item a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: #222;
+      text-decoration: none;
+    }
+    .match strong {
+      font-weight: bold;
+      color: #555;
+    }
+    .match img, .league-item img {
+      height: 30px;
+      vertical-align: middle;
+    }
+    .news-item {
+      margin-bottom: 15px;
+      text-align: right;
+    }
+    .news-item h3 {
+      color: #0077b6;
+      margin-bottom: 5px;
+    }
+    .news-item p {
+      margin: 0;
+      color: #444;
+    }
+    .news-item a {
+      color: #d62828;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="logo.png" alt="شعار كورة ستايل بلس" />
+  </div>
+
+  <h1>مباريات اليوم - 15 مايو 2025</h1>
+
+  <div class="section" id="matches">
+    <h2>المباريات</h2>
+
+    <!-- جنوب أفريقيا ضد نيجيريا -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_South_Africa.svg" alt="جنوب أفريقيا"> جنوب أفريقيا</span>
+      <strong>7:00 م - بي إن سبورت HD 6</strong>
+      <span>نيجيريا <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg" alt="نيجيريا"></span>
+    </div>
+
+    <!-- مصر ضد المغرب -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="مصر"> مصر</span>
+      <strong>10:00 م - بي إن سبورت HD 6</strong>
+      <span>المغرب <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg" alt="المغرب"></span>
+    </div>
+
+    <!-- اسبانيول ضد برشلونة -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/en/2/2e/RCD_Espanyol_logo.svg" alt="اسبانيول"> اسبانيول</span>
+      <strong>10:30 م - بي إن سبورت 1HD</strong>
+      <span>برشلونة <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="برشلونة"></span>
+    </div>
+
+    <!-- الرائد ضد الاتحاد -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/en/7/77/Al_Raed_Logo.svg" alt="الرائد"> الرائد</span>
+      <strong>9:00 م - SSC SPORT</strong>
+      <span>الاتحاد <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Al_Ittihad_Club_logo.svg" alt="الاتحاد"></span>
+    </div>
+
+    <!-- الرياض ضد الشباب -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Al_Riyadh_SC_logo.svg" alt="الرياض"> الرياض</span>
+      <strong>9:00 م - SSC SPORT</strong>
+      <span>الشباب <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Al_Shabab_FC_logo.svg" alt="الشباب"></span>
+    </div>
+
+    <!-- القادسية ضد الوحدة -->
+    <div class="match">
+      <span><img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Al_Qadsiah_FC_logo.svg" alt="القادسية"> القادسية</span>
+      <strong>9:00 م - SSC SPORT</strong>
+      <span>الوحدة <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/Al_Wahda_FC_logo.svg" alt="الوحدة"></span>
+    </div>
+
+  </div>
+
+  <div class="section" id="leagues">
+    <h2>كل البطولات</h2>
+
+    <div class="league-item">
+      <a href="premier-league.html">الدوري الإنجليزي الممتاز</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Premier_League_Logo.svg" alt="الدوري الإنجليزي">
+    </div>
+
+    <div class="league-item">
+      <a href="laliga.html">الدوري الإسباني</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/92/La_Liga.png" alt="الدوري الإسباني">
+    </div>
+
+    <div class="league-item">
+      <a href="serie-a.html">الدوري الإيطالي</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Serie_A_logo_%282019%29.svg" alt="الدوري الإيطالي">
+    </div>
+
+    <div class="league-item">
+      <a href="bundesliga.html">الدوري الألماني</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/FC_Bayern_Munich_logo_%282017%29.svg" alt="الدوري الألماني">
+    </div>
+
+    <div class="league-item">
+      <a href="ligue-1.html">الدوري الفرنسي</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg" alt="الدوري الفرنسي">
+    </div>
+
+    <div class="league-item">
+      <a href="spl.html">الدوري السعودي</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9d/Saudi_Pro_League_logo.svg" alt="الدوري السعودي">
+    </div>
+
+    <div class="league-item">
+      <a href="egyptian-league.html">الدوري المصري</a>
+      <img src="https://upload.wikimedia.org/wikipedia/ar/e/e8/Al_Ahly_SC_Logo.png" alt="الدوري المصري">
+    </div>
+
+    <div class="league-item">
+      <a href="ucl.html">دوري أبطال أوروبا</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg" alt="دوري أبطال أوروبا">
+    </div>
+
+    <div class="league-item">
+      <a href="uefa-europa-league.html">الدوري الأوروبي</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/UEFA_Europa_League_Logo.svg" alt="الدوري الأوروبي">
+    </div>
+
+    <div class="league-item">
+      <a href="uefa-europa-conference-league.html">دوري المؤتمر الأوروبي</a>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/02/UEFA_Europa_Conference_League_logo.svg" alt="دوري المؤتمر الأوروبي">
+    </div>
+
+    <div class="league-item">
+      <a href="african-u21.html">كأس أمم أفريقيا تحت 21 سنة</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/CAF_Logo.png" alt="كأس أمم أفريقيا تحت 21 سنة">
+    </div>
+
+  </div>
+
+  <div class="section" id="news">
+    <h2>أحدث الأخبار الرياضية</h2>
+
+    <div class="news-item">
+      <h3><a href="https://www.yallakora.com/news/510033" target="_blank" style="color: #0077b6;">الأهلي وبيراميدز يضمنان المشاركة في دوري أبطال أفريقيا</a></h3>
+      <p>تأهل النادي الأهلي ونظيره بيراميدز رسميًا إلى دوري أبطال أفريقيا في الموسم المقبل.</p>
+    </div>
+
+    <div class="news-item">
+      <h3><a href="https://www.yallakora.com/fifa-cwc/2893/news/510033" target="_blank" style="color: #0077b6;">تفاصيل عقد ريفيرو مع الأهلي</a></h3>
+      <p>كشف تقرير صحفي تفاصيل عقد المدرب ريفيرو مع النادي الأهلي.</p>
+    </div>
+
+    <div class="news-item">
+      <h3><a href="https://www.filgoal.com/articles/505237" target="_blank" style="color: #0077b6;">سامبدوريا يهبط إلى الدرجة الثالثة لأول مرة في تاريخه</a></h3>
+      <p>سجل نادي سامبدوريا الإيطالي هبوطًا رسميًا إلى الدرجة الثالثة بعد موسم كارثي.</p>
+    </div>
+
+    <div class="news-item">
+      <h3><a href="https://www.yallakora.com/category/26/news/510218" target="_blank" style="color: #0077b6;">أنشيلوتي: ريال مدريد لم يستسلم.. وما زلنا في سباق الدوري الإسباني</a></h3>
+      <p>أكد كارلو أنشيلوتي مدرب ريال مدريد أن الفريق ما زال يتمسك بآماله في الفوز بالدوري الإسباني.</p>
+    </div>
+
+    <div class="news-item">
+      <h3><a href="https://www.yallakora.com/category/26/news/510218" target="_blank" style="color: #0077b6;">مبابي يتساوى مع صلاح في سباق الحذاء الذهبي 2025</a></h3>
+      <p>سجل كيليان مبابي هدفًا جديدًا ليعادل عدد أهداف محمد صلاح في سباق الحذاء الذهبي لعام 2025.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
