@@ -50,21 +50,51 @@
 <body>
 
   <h1 style="color:#d62828;">كورة ستايل بلس - مباريات اليوم</h1>
+<div class="section" id="matches">
+  <h2>مباريات اليوم - 16 مايو 2025</h2>
+</div>
+<script>
+  fetch('matches.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('matches');
 
-  <div class="section">
-    <h2>مباريات اليوم - 16 مايو 2025</h2>
+      const now = new Date();
 
-    <div class="match"><span>طلائع الجيش</span> <strong>8:00 م - أون تايم سبورت 1</strong> <span>إنبي</span></div>
-    <div class="match"><span>الإسماعيلي</span> <strong>8:00 م - أون تايم سبورت 2</strong> <span>مودرن سبورت</span></div>
-    <div class="match"><span>سموحة</span> <strong>8:00 م - أون تايم سبورت 2</strong> <span>الاتحاد السكندري</span></div>
-    <div class="match"><span>غزل المحلة</span> <strong>8:00 م - أون تايم سبورت</strong> <span>الجونة</span></div>
-    <div class="match"><span>أستون فيلا</span> <strong>9:30 م - beIN Sports 2HD</strong> <span>توتنهام</span></div>
-    <div class="match"><span>تشيلسي</span> <strong> - beIN Sports 1HD</strong> <span>مانشستر يونايتد</span></div>
-    <div class="match"><span>الفتح</span> <strong>6:55 م - SSC SPORT</strong> <span>الهلال</span></div>
-    <div class="match"><span>النصر</span> <strong>9:00 م - SSC SPORT</strong> <span>التعاون</span></div>
+      for (const league in data) {
+        const leagueDiv = document.createElement('div');
+        const title = document.createElement('h3');
+        title.textContent = league;
+        leagueDiv.appendChild(title);
+
+        data[league].forEach(match => {
+          const matchTime = new Date(match.time);
+          const diffMinutes = (matchTime - now) / (1000 * 60);
+          let status = '';
+
+          if (diffMinutes <= 0) {
+            status = 'مباشر';
+          } else if (diffMinutes <= 60) {
+            status = 'بعد قليل';
+          } else {
+            status = matchTime.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+          }
+
+          const matchDiv = document.createElement('div');
+          matchDiv.className = 'match';
+          matchDiv.innerHTML = `
+            <span><img src="${match.homeLogo}" alt="${match.home}" style="height: 24px; vertical-align: middle;"> ${match.home}</span>
+            <strong>${status} - ${match.channel}</strong>
+            <span>${match.away} <img src="${match.awayLogo}" alt="${match.away}" style="height: 24px; vertical-align: middle;"></span>
+          `;
+          leagueDiv.appendChild(matchDiv);
+        });
+
+        container.appendChild(leagueDiv);
+      }
+    });
+</script>
   </div>
-
-  <div class="section">
     <h2>كل البطولات</h2>
     <div class="league-item"><a href="https://www.premierleague.com" target="_blank">الدوري الإنجليزي الممتاز</a> <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Premier_League_Logo.svg"></div>
     <div class="league-item"><a href="https://www.laliga.com" target="_blank">الدوري الإسباني</a> <img src="https://upload.wikimedia.org/wikipedia/en/9/92/La_Liga.png"></div>
