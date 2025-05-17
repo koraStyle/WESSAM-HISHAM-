@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>كورة ستايل - مباريات 18 مايو 2025</title>
+  <style>
+    body {
+      font-family: 'Cairo', Arial, Tahoma, sans-serif;
+      background-color: #f4f8fb;
+      color: #223a5f;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #1766a0 0%, #2dceef 100%);
+      color: #fff;
+      text-align: center;
+      padding: 28px 0 18px 0;
+      font-size: 2.4em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 2px 12px #1766a022;
+    }
+    section {
+      max-width: 950px;
+      margin: 35px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px #1766a015;
+      padding: 28px 36px 22px 36px;
+    }
+    h2 {
+      color: #1766a0;
+      border-right: 6px solid #2dceef;
+      padding-right: 15px;
+      font-size: 1.6em;
+      margin-top: 0;
+    }
+    .match-list {
+      margin-bottom: 32px;
+    }
+    .tournament-link {
+      color: #1766a0;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 1.08em;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .match {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #eaf4fb;
+      border-radius: 10px;
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      font-size: 1.13em;
+      color: #223a5f;
+    }
+    .match .teams {
+      flex: 2;
+      font-weight: bold;
+    }
+    .match .time {
+      font-weight: bold;
+      min-width: 80px;
+      text-align: left;
+      color: #1766a0;
+    }
+    .match .channel {
+      font-style: italic;
+      color: #2dceef;
+      min-width: 130px;
+      text-align: left;
+    }
+    .match .status {
+      padding: 4px 12px;
+      border-radius: 7px;
+      font-size: 1em;
+      margin-right: 10px;
+      color: white;
+      font-weight: bold;
+      min-width: 80px;
+      text-align: center;
+      display: inline-block;
+    }
+    .match .live {
+      background: #f44336;
+    }
+    .match .soon {
+      background: #ff9800;
+    }
+    .match .upcoming {
+      background: #607d8b;
+      color: #fff;
+    }
+    .news-section {
+      background: #eaf4fb;
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-top: 35px;
+      color: #223a5f;
+    }
+    .news-section h2 {
+      border: none;
+      font-size: 1.23em;
+      margin-bottom: 12px;
+      padding-right: 0;
+      color: #223a5f;
+    }
+    .news-list {
+      list-style: square inside;
+      padding: 0;
+      margin: 0;
+    }
+    .news-list li {
+      margin-bottom: 8px;
+      font-size: 1.07em;
+    }
+    .footer {
+      background: #1766a0;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0 8px 0;
+      font-size: 1.1em;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      margin-top: 40px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 12px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.05em;
+    }
+    /* Popup styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      right: 0; left: 0; top: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background: #fff;
+      color: #223a5f;
+      padding: 28px 24px;
+      border-radius: 12px;
+      max-width: 90vw;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 24px #1766a055;
+      text-align: right;
+      position: relative;
+      min-width: 260px;
+    }
+    .close-modal {
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      font-size: 1.5em;
+      color: #1766a0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .tournaments-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 30px;
+      margin-bottom: 20px;
+    }
+    .tournaments-list a {
+      background: #eaf4fb;
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: #1766a0;
+      font-size: 1.07em;
+      text-decoration: none;
+      margin-bottom: 8px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .tournaments-list a:hover {
+      background: #d3eafd;
+    }
+    @media (max-width: 600px) {
+      section {
+        padding: 15px 3vw;
+      }
+      header {
+        font-size: 1.2em;
+        padding: 18px 0 10px 0;
+      }
+      .match {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1em;
+      }
+      .match .time,
+      .match .channel,
+      .match .status {
+        margin-right: 0;
+        margin-top: 5px;
+      }
+      .tournaments-list {
+        flex-direction: column;
+        gap: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>كورة ستايل</header>
+
+  <section>
+    <h2>الدوري الإنجليزي الممتاز</h2>
+    <div class="match-list">
+      <a class="tournament-link" href="https://www.premierleague.com/" target="_blank">الصفحة الرسمية للدوري الإنجليزي</a>
+      <div class="match" data-date="2025-05-18T16:15:00+03:00">
+        <span class="teams">وست هام يونايتد × نوتينجهام فورست</span>
+        <span class="channel">beIN SPORTS 2 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T17:00:00+03:00">
+        <span class="teams">ليستر سيتي × إبسويتش تاون</span>
+        <span class="channel">beIN SPORTS 2 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T17:00:00+03:00">
+        <span class="teams">برينتفورد × فولام</span>
+        <span class="channel">beIN SPORTS 3 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T18:30:00+03:00">
+        <span class="teams">أرسنال × نيوكاسل يونايتد</span>
+        <span class="channel">beIN SPORTS 2 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+    </div>
+
+    <h2>الدوري الإسباني</h2>
+    <div class="match-list">
+      <a class="tournament-link" href="https://www.laliga.com/" target="_blank">الصفحة الرسمية للدوري الإسباني</a>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">أوساسونا × إسبانيول</span>
+        <span class="channel">BeIN Sports 1 XTRA</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">لاس بالماس × ليجانيس</span>
+        <span class="channel">BeIN Sports 2 XTRA</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">ريال بلد الوليد × ديبورتيفو ألافيس</span>
+        <span class="channel">BeIN Sports 3 XTRA</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">إشبيلية × ريال مدريد</span>
+        <span class="channel">beIN SPORTS 3 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">ريال سوسيداد × جيرونا</span>
+        <span class="channel">BeIN Sports 4 XTRA</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">ريال مايوركا × خيتافي</span>
+        <span class="channel">beIN SPORTS 8 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">فالنسيا × أتليتك بلباو</span>
+        <span class="channel">beIN SPORTS 5 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">سيلتا فيجو × رايو فايكانو</span>
+        <span class="channel">BeIN Sports 5 XTRA</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">برشلونة × فياريال</span>
+        <span class="channel">beIN SPORTS 1 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">أتليتكو مدريد × ريال بيتيس</span>
+        <span class="channel">beIN SPORTS 4 HD</span>
+        <span class="status upcoming"></span>
+      </div>
+    </div>
+
+    <h2>الدوري المصري الممتاز</h2>
+    <div class="match-list">
+      <a class="tournament-link" href="https://www.efa.eg/ar/" target="_blank">الصفحة الرسمية للدوري المصري</a>
+      <div class="match" data-date="2025-05-18T20:00:00+03:00">
+        <span class="teams">فاركو × حرس الحدود</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+    </div>
+
+    <h2>الدوري الإيطالي</h2>
+    <div class="match-list">
+      <a class="tournament-link" href="https://www.legaseriea.it/en" target="_blank">الصفحة الرسمية للدوري الإيطالي</a>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">هيلاس فيرونا × كومو</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">بارما × نابولي</span>
+        <span class="channel">أبو ظبي الرياضية بريميوم 2</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">مونزا × إمبولي</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">ليتشي × تورينو</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">يوفنتوس × أودينيزي</span>
+        <span class="channel">أبو ظبي الرياضية بريميوم 2</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">إنتر × لاتسيو</span>
+        <span class="channel">أبو ظبي الرياضية بريميوم 1</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">فيورنتينا × بولونيا</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">كالياري × فينيزيا</span>
+        <span class="channel">غير معروف</span>
+        <span class="status upcoming"></span>
+      </div>
+      <div class="match" data-date="2025-05-18T21:45:00+03:00">
+        <span class="teams">روما × ميلان</span>
+        <span class="channel">أبو ظبي الرياضية بريميوم 1</span>
+        <span class="status upcoming"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم البطولات -->
+  <section>
+    <h2>كل البطولات الرياضية</h2>
+    <div class="tournaments-list">
+      <a href="https://www.premierleague.com/" target="_blank">الدوري الإنجليزي الممتاز</a>
+      <a href="https://www.laliga.com/" target="_blank">الدوري الإسباني</a>
+      <a href="https://www.ligue1.com/" target="_blank">الدوري الفرنسي</a>
+      <a href="https://www.bundesliga.com/en/" target="_blank">الدوري الألماني</a>
+      <a href="https://www.legaseriea.it/en" target="_blank">الدوري الإيطالي</a>
+      <a href="https://www.efa.eg/ar/" target="_blank">الدوري المصري الممتاز</a>
+      <a href="https://www.uefa.com/uefachampionsleague/" target="_blank">دوري أبطال أوروبا</a>
+      <a href="https://www.cafonline.com/caf-champions-league/" target="_blank">دوري أبطال أفريقيا</a>
+      <a href="https://www.conmebol.com/copa-libertadores/" target="_blank">كوبا ليبرتادوريس</a>
+      <a href="https://www.the-afc.com/en/club/afc_champions_league.html" target="_blank">دوري أبطال آسيا</a>
+      <a href="https://www.fifa.com/fifaplus/ar/tournaments/mens/worldcup" target="_blank">كأس العالم</a>
+      <a href="https://www.cafonline.com/total-africa-cup-of-nations/" target="_blank">كأس أمم أفريقيا</a>
+      <a href="https://www.uefa.com/uefaeuro-2024/" target="_blank">يورو</a>
+      <a href="https://olympics.com/ar/" target="_blank">الألعاب الأولمبية</a>
+    </div>
+  </section>
+
+  <section class="news-section">
+    <h2>أحدث الأخبار الرياضية</h2>
+    <ul class="news-list">
+      <li>مودرن سبورت يفوز على الإسماعيلي 2-1 ويصعب مهمة الدراويش في الدوري</li>
+      <li>ميار شريف تتأهل لنهائي بطولة بارما الإيطالية المفتوحة للتنس</li>
+      <li>رسمياً: وادي دجلة والمقاولون يصعدان للدوري الممتاز</li>
+      <li>الزمالك يبحث التعاون مع بيراميدز في شكوى أزمة القمة بالمحكمة الرياضية</li>
+      <li>ليفربول وتشيلسي يتنافسان على جوهرة كريستال بالاس</li>
+      <li>آرسنال يستهدف أنتوني جوردون.. وليفربول يترقب موقف نيوكاسل</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <a onclick="showModal('privacyModal')">سياسة الخصوصية</a> |
+    <a onclick="showModal('contactModal')">تواصل معنا</a>
+    <div style="margin-top:10px;font-size:0.95em;">جميع الحقوق محفوظة © كورة ستايل 2025</div>
+  </div>
+
+  <!-- سياسة الخصوصية -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+      <h3>سياسة الخصوصية</h3>
+      <p>
+        نحن في "كورة ستايل" نهتم بخصوصية زوارنا، ولا نقوم بجمع أي بيانات شخصية إلا للرد على استفساراتكم أو تحسين تجربة المستخدم. لن يتم مشاركة بياناتك مع أي طرف ثالث. باستخدامك الموقع، أنت توافق على سياسة الخصوصية هذه. لأي استفسار يرجى التواصل معنا عبر صفحة "تواصل معنا".
+      </p>
+    </div>
+  </div>
+
+  <!-- تواصل معنا -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+      <h3>تواصل معنا</h3>
+      <p>
+        البريد الإلكتروني: <a href="mailto:wessamelqawary92@gmail.com">wessamelqawary92@gmail.com</a><br>
+        رقم الموبايل: <a href="tel:0582193555">0582193555</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      ['privacyModal', 'contactModal'].forEach(function(id){
+        var modal = document.getElementById(id);
+        if (event.target === modal) modal.style.display = "none";
+      });
+    }
+
+    // جافاسكريبت لتغيير حالة المباراة تلقائياً
+    function updateMatchStatuses() {
+      const matches = document.querySelectorAll('.match');
+      const now = new Date();
+
+      matches.forEach(function(match) {
+        const dateStr = match.getAttribute('data-date');
+        if (!dateStr) return;
+        const matchDate = new Date(dateStr);
+        const statusSpan = match.querySelector('.status');
+        const timeSpan = match.querySelector('.time');
+        // مدة المباراة 120 دقيقة (2 ساعة)
+        const matchEnd = new Date(matchDate.getTime() + 120 * 60000);
+        const diff = (matchDate - now) / 60000; // بالدقائق
+
+        // إزالة كل الكلاسات السابقة
+        statusSpan.classList.remove('live', 'soon', 'upcoming');
+
+        if (now >= matchDate && now <= matchEnd) {
+          statusSpan.textContent = "مباشر";
+          statusSpan.classList.add('live');
+        } else if (diff > 0 && diff <= 30) {
+          statusSpan.textContent = "بعد قليل";
+          statusSpan.classList.add('soon');
+        } else if (diff > 30) {
+          // عرض توقيت المباراة فقط
+          const hours = matchDate.getHours().toString().padStart(2, '0');
+          const mins = matchDate.getMinutes().toString().padStart(2, '0');
+          statusSpan.textContent = hours + ":" + mins;
+          statusSpan.classList.add('upcoming');
+        } else {
+          statusSpan.textContent = ""; // بعد نهاية المباراة لا تظهر شيء
+        }
+      });
+    }
+
+    // تحديث كل دقيقة
+    updateMatchStatuses();
+    setInterval(updateMatchStatuses, 60000);
+  </script>
+</body>
+</html>
