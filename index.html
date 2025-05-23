@@ -275,7 +275,7 @@
   <section>
     <h2>الدوري الإسباني</h2>
     <div class="match-list">
-      <div class="match" data-date="2025-05-23T22:00:00+02:00">
+      <div class="match" data-date="2025-05-23T21:00:00+02:00">
         <span class="teams">ريال بيتيس × فالنسيا</span>
         <span class="channel">غير معروف</span>
         <span class="status upcoming"></span>
@@ -285,13 +285,13 @@
 
     <h2>الدوري الإيطالي</h2>
     <div class="match-list">
-      <div class="match" data-date="2025-05-23T21:45:00+02:00">
+      <div class="match" data-date="2025-05-23T20:45:00+02:00">
         <span class="teams">كومو × إنتر ميلان</span>
         <span class="channel">غير معروف</span>
         <span class="status upcoming"></span>
         <span class="result" style="display:none"></span>
       </div>
-      <div class="match" data-date="2025-05-23T21:45:00+02:00">
+      <div class="match" data-date="2025-05-23T20:45:00+02:00">
         <span class="teams">نابولي × كالياري</span>
         <span class="channel">غير معروف</span>
         <span class="status upcoming"></span>
@@ -469,7 +469,7 @@
         const matchDate = new Date(dateStr);
         const statusSpan = match.querySelector('.status');
         const resultSpan = match.querySelector('.result');
-        // مدة المباراة 120 دقيقة (2 ساعة)
+        // مدة المباراة 90 دقيقة (2 ساعة)
         const matchEnd = new Date(matchDate.getTime() + 120 * 60000);
         const diff = (matchDate - now) / 60000; // بالدقائق
 
