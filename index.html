@@ -1,518 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <title>كورة ستايل - مباريات 27 مايو 2025</title>
-  <style>
-    body {
-      font-family: 'Cairo', Arial, Tahoma, sans-serif;
-      background-color: #f4f8fb;
-      color: #223a5f;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(90deg, #1766a0 0%, #2dceef 100%);
-      color: #fff;
-      text-align: center;
-      padding: 28px 0 10px 0;
-      font-size: 2.4em;
-      font-weight: bold;
-      letter-spacing: 2px;
-      box-shadow: 0 2px 12px #1766a022;
-      position: relative;
-    }
-    .today-matches-title {
-      color: #1766a0;
-      background: #fff;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin: 0 auto 18px auto;
-      padding: 7px 0 3px 0;
-      border-radius: 0 0 20px 20px;
-      width: 180px;
-      box-shadow: 0 4px 18px #1766a015;
-      border-bottom: 3px solid #2dceef;
-      letter-spacing: 1px;
-    }
-    section {
-      max-width: 950px;
-      margin: 35px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px #1766a015;
-      padding: 28px 36px 22px 36px;
-    }
-    h2 {
-      color: #1766a0;
-      border-right: 6px solid #2dceef;
-      padding-right: 15px;
-      font-size: 1.6em;
-      margin-top: 0;
-    }
-    .matches-group {
-      margin-bottom: 35px;
-    }
-    .matches-group-title {
-      font-size: 1.18em;
-      color: #2dceef;
-      margin: 18px 0 8px 0;
-      font-weight: bold;
-      border-right: 4px solid #1766a0;
-      padding-right: 8px;
-      display: inline-block;
-      background: #f8fafd;
-      border-radius: 8px;
-      padding: 3px 14px 3px 8px;
-    }
-    .match-list {
-      margin-bottom: 12px;
-    }
-    .match {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      background: #eaf4fb;
-      border-radius: 10px;
-      padding: 10px 20px;
-      margin-bottom: 8px;
-      font-size: 1.13em;
-      color: #223a5f;
-    }
-    .match .teams {
-      flex: 2;
-      font-weight: bold;
-    }
-    .match .status {
-      padding: 4px 12px;
-      border-radius: 7px;
-      font-size: 1em;
-      margin-right: 10px;
-      color: white;
-      font-weight: bold;
-      min-width: 80px;
-      text-align: center;
-      display: inline-block;
-      background: #607d8b;
-      transition: background 0.2s;
-    }
-    .status.live {background: #f44336;}
-    .status.soon {background: #ff9800;}
-    .status.ended {background: #333;}
-    .tournaments-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-bottom: 20px;
-    }
-    .tournaments-list a {
-      background: #eaf4fb;
-      padding: 8px 16px;
-      border-radius: 8px;
-      color: #1766a0;
-      font-size: 1.07em;
-      text-decoration: none;
-      margin-bottom: 8px;
-      transition: background 0.2s;
-      display: inline-block;
-    }
-    .tournaments-list a:hover {
-      background: #d3eafd;
-    }
-    .standings-link {
-      display: block;
-      margin: 0 auto 10px auto;
-      background: #1766a0;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-      border-radius: 8px;
-      font-size: 1.14em;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.2s;
-      max-width: 320px;
-    }
-    .standings-link:hover {
-      background: #2dceef;
-      color: #fff;
-    }
-    .news-section {
-      background: #eaf4fb;
-      border-radius: 12px;
-      padding: 20px 25px;
-      margin-top: 35px;
-      color: #223a5f;
-    }
-    .news-section h2 {
-      border: none;
-      font-size: 1.23em;
-      margin-bottom: 12px;
-      padding-right: 0;
-      color: #223a5f;
-    }
-    .news-list {
-      list-style: square inside;
-      padding: 0;
-      margin: 0;
-    }
-    .news-list li {
-      margin-bottom: 14px;
-      font-size: 1.19em;
-      font-weight: 500;
-    }
-    .footer {
-      background: #1766a0;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0 8px 0;
-      font-size: 1.1em;
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-      margin-top: 40px;
-    }
-    .footer a {
-      color: #fff;
-      text-decoration: underline;
-      margin: 0 12px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.05em;
-    }
-    /* قسم عرض منتج أمازون */
-    .amazon-offer-section {
-      max-width:950px;
-      margin:35px auto 0 auto;
-      background:#fffbe6;
-      border-radius:16px;
-      box-shadow:0 4px 18px #ffe47533;
-      padding:24px 18px 20px 18px;
-      text-align:center;
-    }
-    .amazon-offer-section a {
-      display:inline-block;
-      text-decoration:none;
-      color:#232f3e;
-      font-weight:bold;
-      font-size:1.08em;
-      border-radius:12px;
-      background:#fff;
-      box-shadow:0 2px 10px #ffe47544;
-      padding:14px 18px 12px 18px;
-      transition:box-shadow 0.2s,transform 0.2s;
-      margin:0 auto;
-    }
-    .amazon-offer-section a:hover {
-      box-shadow:0 6px 20px #f7ca0044;
-      transform:translateY(-4px) scale(1.03);
-      background:#f7ca00;
-      color:#232f3e;
-    }
-    /* النوافذ المنبثقة */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      right: 0; left: 0; top: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-content {
-      background: #fff;
-      color: #223a5f;
-      padding: 28px 24px;
-      border-radius: 12px;
-      max-width: 90vw;
-      max-height: 80vh;
-      overflow-y: auto;
-      box-shadow: 0 4px 24px #1766a055;
-      text-align: right;
-      position: relative;
-      min-width: 260px;
-    }
-    .close-modal {
-      position: absolute;
-      left: 12px;
-      top: 10px;
-      font-size: 1.5em;
-      color: #1766a0;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      section {
-        padding: 15px 3vw;
-      }
-      header {
-        font-size: 1.2em;
-        padding: 18px 0 10px 0;
-      }
-      .today-matches-title {
-        font-size: 1em;
-        width: 70vw;
-      }
-      .matches-group-title {
-        font-size: 1em;
-        padding: 2px 8px 2px 4px;
-      }
-      .match {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 1em;
-      }
-      .match .status {
-        margin-right: 0;
-        margin-top: 5px;
-      }
-      .tournaments-list {
-        flex-direction: column;
-        gap: 8px 0;
-      }
-      .tournaments-list a {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .amazon-offer-section a {
-        font-size: 0.98em;
-        padding: 10px 8px 10px 8px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    كورة ستايل
-    <div class="today-matches-title">مباريات اليوم</div>
-  </header>
-
-  <!-- قسم المباريات -->
-  <section>
-    <h2>جدول مباريات يوم 27 مايو 2025</h2>
-    <div class="matches-group">
-      <div class="matches-group-title">الدوري البرازيلي الممتاز</div>
-      <div class="match-list">
-        <div class="match" data-date="2025-05-27T02:00:00+03:00"><span class="teams">براغانتينو × يوفينتود</span><span class="status"></span></div>
-      </div>
-    </div>
-    <div class="matches-group">
-      <div class="matches-group-title">الرابطة المحترفة الجزائرية الأولى</div>
-      <div class="match-list">
-        <div class="match" data-date="2025-05-27T19:00:00+03:00"><span class="teams">مولودية البيض × النادي القسنطيني</span><span class="status"></span></div>
-        <div class="match" data-date="2025-05-27T21:00:00+03:00"><span class="teams">شبيبة الساورة × مولودية الجزائر</span><span class="status"></span></div>
-        <div class="match" data-date="2025-05-27T21:00:00+03:00"><span class="teams">شباب بلوزداد × بارادو</span><span class="status"></span></div>
-      </div>
-    </div>
-    <div class="matches-group">
-      <div class="matches-group-title">الدوري البحريني الممتاز</div>
-      <div class="match-list">
-        <div class="match" data-date="2025-05-27T19:00:00+03:00"><span class="teams">الأهلي × المالكية</span><span class="status"></span></div>
-        <div class="match" data-date="2025-05-27T19:00:00+03:00"><span class="teams">سترة × الخالدية</span><span class="status"></span></div>
-      </div>
-    </div>
-    <div class="matches-group">
-      <div class="matches-group-title">مباراة ودية - أندية</div>
-      <div class="match-list">
-        <div class="match" data-date="2025-05-27T22:00:00+03:00"><span class="teams">الوداد الرياضي × إشبيلية</span><span class="status"></span></div>
-      </div>
-    </div>
-    <div class="matches-group">
-      <div class="matches-group-title">مباراة ودية</div>
-      <div class="match-list">
-        <div class="match" data-date="2025-05-27T21:00:00+03:00"><span class="teams">جامايكا × ترينيداد وتوباغو</span><span class="status"></span></div>
-      </div>
-    </div>
-  </section>
-<!-- بداية قسم المقالات -->
-  <section class="latest-articles" style="background:#f7f7f7; padding:20px; border-radius:10px; margin:30px auto 0 auto; max-width:950px; box-shadow:0 4px 18px #0001;">
-  <h2 style="color:#222; margin-bottom:15px; font-size:1.4em; border-right:4px solid #2dceef; padding-right:12px;">📰 أحدث المقالات الرياضية</h2>
-<!-- تحليل مباراة الأهلي وفاركو -->
-<div id="article-container">
-  <!-- تضمين محتوى المقال -->
-  <!-- include articles/article3.html manually -->
-</div>
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">الأهلي المصري يستعد لمواجهة إنتر ميامي في مباراة ودية</h3>
-    <p style="color:#555; font-size:15px;">النادي الأهلي يواجه إنتر ميامي ضمن جولة تحضيرية في الولايات المتحدة. تعرف على التفاصيل والتوقيت...</p>
-    <a href="articles/article1.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">ريال مدريد يعلن تعيين تشابي ألونسو مدربًا جديدًا</h3>
-    <p style="color:#555; font-size:15px;">النادي الملكي يراهن على نجم الفريق السابق لقيادة المشروع الجديد. إليك تفاصيل التعاقد وخطة الإدارة...</p>
-    <a href="articles/article2.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">برشلونة يوافق على رحيل إريك غارسيا إلى فالنسيا</h3>
-    <p style="color:#555; font-size:15px;">قرار جديد من تشافي يهدف لتقوية الدفاع وتوفير فرص أكبر للاعبين الشباب...</p>
-    <a href="articles/article3.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-</section>
-<!-- نهاية قسم المقالات -->
-  <!-- قسم البطولات -->
-  <section>
-    <h2>البطولات</h2>
-    <div class="tournaments-list">
-      <a href="https://www.spl.com.sa/ar" target="_blank">الدوري السعودي الممتاز</a>
-      <a href="https://www.egyptianleague.net/" target="_blank">الدوري المصري الممتاز</a>
-      <a href="https://www.tff.org.tr/" target="_blank">الدوري التركي الممتاز</a>
-      <a href="https://www.premierleague.com/" target="_blank">الدوري الإنجليزي الممتاز</a>
-      <a href="https://www.laliga.com/en-GB" target="_blank">الدوري الإسباني</a>
-      <a href="https://www.legaseriea.it/en" target="_blank">الدوري الإيطالي</a>
-      <a href="https://www.bundesliga.com/en/bundesliga" target="_blank">الدوري الألماني</a>
-      <a href="https://www.lfp.dz/" target="_blank">الرابطة الجزائرية الأولى</a>
-      <a href="https://www.cbf.com.br/" target="_blank">الدوري البرازيلي الممتاز</a>
-      <a href="https://www.mlssoccer.com/" target="_blank">الدوري الأمريكي لكرة القدم</a>
-      <a href="https://www.bfa.bh/" target="_blank">الدوري البحريني الممتاز</a>
-      <a href="https://www.uefa.com/uefachampionsleague/" target="_blank">دوري أبطال أوروبا</a>
-      <a href="https://www.cafonline.com/" target="_blank">دوري أبطال أفريقيا</a>
-      <a href="https://www.fifa.com/fifaplus/ar/tournaments/mens/worldcup" target="_blank">كأس العالم</a>
-      <a href="https://www.uefa.com/under17/" target="_blank">بطولة أمم أوروبا تحت 17 سنة</a>
-      <a href="https://www.afcchampionsleague.com/" target="_blank">دوري أبطال آسيا</a>
-      <a href="https://www.concacaf.com/en/champions-cup/" target="_blank">دوري أبطال الكونكاكاف</a>
-      <a href="https://www.copaamerica.com/" target="_blank">كوبا أمريكا</a>
-      <a href="https://www.africacupofnations.com/" target="_blank">كأس أمم أفريقيا</a>
-      <a href="https://www.uefa.com/uefaeuro-2024/" target="_blank">كأس أمم أوروبا</a>
-    </div>
-    <a class="standings-link" href="standings.html" target="_blank">ترتيب الفرق في الدوريات</a>
-  </section>
-<section id="match-analysis" style="background:#f9f9f9; padding:20px; border-radius:10px; margin:30px auto 0 auto; max-width:950px; box-shadow:0 4px 18px #0001;">
-  <h2 style="color:#1766a0; margin-bottom:18px; font-size:1.5em; border-right:4px solid #2dceef; padding-right:12px;">
-    📝 تحــليل المبــاريات
-  </h2>
-  <h3 style="color:#222; margin-bottom:14px; font-size:1.15em;">
-    🎯 تحليل مباراة الاتحاد وضمك - الجولة الأخيرة من دوري روشن السعودي 2024/2025
-  </h3>
-  <p style="font-size: 16px; color: #555; line-height: 1.8;">
-    🔥 اختتم <strong>الاتحاد السعودي</strong> موسمه في دوري روشن بفوز ثمين على <strong>ضمك</strong> بنتيجة <strong>1-0</strong>، في المباراة التي أُقيمت مساء الإثنين 26 مايو 2025 على ملعب مدينة الملك عبدالله الرياضية بجدة، وسط حضور جماهيري كبير واحتفالية التتويج باللقب العاشر في تاريخ النادي.
-  </p>
-  <p style="font-size: 16px; color: #555; line-height: 1.8;">
-    ✅ جاء هدف المباراة الوحيد في الدقيقة 72 عن طريق الهولندي <strong>ستيفن بيرجوين</strong> بعد تمريرة حاسمة من الإسباني <strong>أوناي هيرنانديز</strong>. سيطر الاتحاد على مجريات اللقاء وهدد مرمى ضمك في أكثر من مناسبة، بينما تصدى القائم لمحاولتين من <strong>كريم بنزيما</strong> و<strong>نجولو كانتي</strong> في الشوط الأول.
-  </p>
-  <p style="font-size: 16px; color: #555; line-height: 1.8;">
-    🏆 بهذا الفوز، رفع الاتحاد رصيده إلى <strong>83 نقطة</strong> في صدارة الترتيب، ليُتوَّج رسميًا بطلاً لدوري روشن السعودي 2024/2025 للمرة العاشرة في تاريخه. شهدت المباراة احتفالات جماهيرية ضخمة، وقام قائد الفريق <strong>كريم بنزيما</strong> برفع درع الدوري وسط فرحة اللاعبين والإدارة.
-  </p>
-  <ul style="font-size: 15px; color: #555; margin: 15px 0 10px 0; padding-right: 20px;">
-    <li>الاستحواذ: الاتحاد 58% - ضمك 42%</li>
-    <li>التسديدات: الاتحاد 18 (على المرمى 8) - ضمك 4 (على المرمى 1)</li>
-    <li>ركنيات: الاتحاد 7 - ضمك 2</li>
-    <li>أفضل لاعب: <strong>ستيفن بيرجوين</strong> (هدف الفوز)</li>
-    <li>الحضور الجماهيري: أكثر من 58 ألف مشجع</li>
-  </ul>
-  <p style="font-size: 16px; color: #888; font-style: italic;">
-    ✍️ تحليل كورة ستايل - تابعوا تحليلات باقي المباريات يوميًا على موقعنا.
-  </p>
-  <p style="font-size: 15px; color: #888;">
-    <a href="https://ittihadclub.sa/" target="_blank" style="color:#1766a0;text-decoration:underline;">المصدر: الموقع الرسمي لنادي الاتحاد</a>
-    &nbsp;|&nbsp;
-    <a href="https://www.spl.com.sa/ar" target="_blank" style="color:#1766a0;text-decoration:underline;">دوري روشن السعودي</a>
-    &nbsp;|&nbsp;
-    <a href="https://www.kooora.com/?c=23708&stage=1&sch=true" target="_blank" style="color:#1766a0;text-decoration:underline;">إحصائيات المباراة - كووورة</a>
-  </p>
-</section>
-
-  <!-- قسم الأخبار -->
-  <section class="news-section">
-    <h2>أحدث الأخبار الرياضية</h2>
-    <ul class="news-list">
-      <li>شباب بلوزداد يحقق فوزًا مهمًا في الرابطة الجزائرية الأولى <a href="https://www.crb.dz/" target="_blank" style="color:#1766a0;">(الموقع الرسمي)</a></li>
-      <li>الوداد يواجه إشبيلية في مباراة ودية قوية الليلة <a href="https://www.wac.ma/" target="_blank" style="color:#1766a0;">(الوداد الرسمي)</a></li>
-      <li>براغانتينو يستعد لمواجهة يوفينتود في الدوري البرازيلي <a href="https://www.redbullbragantino.com.br/" target="_blank" style="color:#1766a0;">(براغانتينو الرسمي)</a></li>
-      <li>الأهلي البحريني يصطدم بالمالكية في الدوري البحريني <a href="https://www.bfa.bh/news" target="_blank" style="color:#1766a0;">(الاتحاد البحريني)</a></li>
-      <li>أبرز نتائج مباريات الأمس في البطولات العالمية <a href="https://www.yallakora.com/" target="_blank" style="color:#1766a0;">(يلا كورة)</a></li>
-    </ul>
-  </section>
-
-  <!-- قسم عرض منتج أمازون بالرابط الجديد فقط -->
-  <div class="amazon-offer-section">
-    <a href="https://www.amazon.com?_encoding=UTF8&linkCode=ll2&tag=korastyle21-20&linkId=056eb4888627bed2e7582b213464b18a&language=en_US&ref_=as_li_ss_tl" target="_blank">
-      تسوق الآن من أمازون واحصل على أفضل العروض!
-    </a>
-  </div>
-<section style="background:#f7fafd; padding:28px 18px 22px 18px; border-radius:12px; max-width:950px; margin:35px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
-  <h2 style="color:#1766a0; margin-bottom:18px; font-size:1.5em; border-right:4px solid #2dceef; padding-right:12px;">
-    سياسة الخصوصية &amp; تواصل معنا
-  </h2>
-  <div style="margin-bottom:22px;">
-    <h3 style="color:#1766a0; margin-bottom:8px; font-size:1.1em;">سياسة الخصوصية في كورة ستايل</h3>
-    <p style="font-size:15px; color:#444; line-height:1.8; margin:0;">
-      في <strong>كورة ستايل</strong> نولي خصوصية زوارنا أهمية كبيرة. لا نقوم بجمع أي بيانات شخصية إلا إذا قمت بإدخالها بنفسك (مثل التواصل أو الاشتراك).<br><br>
-      <strong>ملفات تعريف الارتباط (Cookies):</strong> قد نستخدم الكوكيز لتحسين تجربتك. يمكنك تعطيلها من إعدادات المتصفح.<br>
-      <strong>روابط خارجية:</strong> يحتوي الموقع على روابط لمواقع مثل أمازون وشبكات التواصل. لسنا مسؤولين عن سياسات تلك المواقع.<br>
-      <strong>حماية البيانات:</strong> نلتزم بعدم مشاركة بياناتك مع أي طرف ثالث إلا بأمر قانوني.<br>
-      <strong>تحديثات السياسة:</strong> قد نقوم بتحديث السياسة وننشر أي تغييرات هنا.<br>
-      لأي استفسار حول الخصوصية أو البيانات، تواصل معنا عبر المعلومات أدناه.
-    </p>
-  </div>
-  <div>
-    <h3 style="color:#1766a0; margin-bottom:8px; font-size:1.1em;">تواصل معنا</h3>
-    <p style="font-size:15px; color:#444; line-height:1.7; margin:0;">
-      يسعدنا تواصلكم معنا لأي استفسار أو اقتراح أو شراكة إعلانية.<br>
-      <strong>البريد الإلكتروني:</strong>
-      <a href="mailto:wessamelqawary92@gmail.com" style="color:#1766a0;">wessamelqawary92@gmail.com</a><br>
-      <strong>رقم الهاتف:</strong>
-      <a href="tel:0582193555" style="color:#1766a0;">0582193555</a><br>
-      <strong>العنوان:</strong> المملكة العربية السعودية<br>
-      <strong>صفحاتنا الرسمية:</strong>
-      <br>
-      <a href="https://www.facebook.com/korastyle" target="_blank" style="color:#1766a0;">فيسبوك</a> |
-      <a href="https://twitter.com/korastyle" target="_blank" style="color:#1766a0;">تويتر</a>
-    </p>
-    <p style="color:#888; font-size:13px; margin-top:8px;">
-      فريق عمل <strong>كورة ستايل</strong> دائمًا في خدمتكم!
-    </p>
-  </div>
-</section>
-
-    // تحديث حالة كل مباراة تلقائيًا
-    function updateMatchStatuses() {
-      var now = new Date();
-      document.querySelectorAll('.match[data-date]').forEach(function(match) {
-        var dateStr = match.getAttribute('data-date');
-        var matchDate = new Date(dateStr);
-        var statusSpan = match.querySelector('.status');
-        statusSpan.classList.remove('live', 'soon', 'ended');
-        var matchEnd = new Date(matchDate.getTime() + 120 * 60000); // مدة المباراة ساعتين
-        var diff = (matchDate - now) / 60000; // فرق الدقائق
-        if (now >= matchDate && now <= matchEnd) {
-          statusSpan.textContent = "مباشر";
-          statusSpan.classList.add('live');
-        } else if (diff > 0 && diff <= 60) {
-          statusSpan.textContent = "بعد قليل";
-          statusSpan.classList.add('soon');
-        } else if (now > matchEnd) {
-          statusSpan.textContent = "انتهت";
-          statusSpan.classList.add('ended');
-        } else if (diff > 60) {
-          // عرض توقيت المباراة بصيغة 24 ساعة
-          var hours = matchDate.getHours();
-          var minutes = matchDate.getMinutes();
-          if (hours < 10) hours = "0" + hours;
-          if (minutes < 10) minutes = "0" + minutes;
-          statusSpan.textContent = hours + ":" + minutes;
-        } else {
-          statusSpan.textContent = "";
-        }
-      });
-    }
-    updateMatchStatuses();
-    setInterval(updateMatchStatuses, 60000);
-
-    // النوافذ المنبثقة
-    function showModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-    window.onclick = function(event) {
-      ['privacyModal', 'contactModal'].forEach(function(id){
-        var modal = document.getElementById(id);
-        if (event.target === modal) modal.style.display = "none";
-      });
-    }
-  </script>
-</body>
-</html>
