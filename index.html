@@ -427,35 +427,42 @@
       تسوق الآن من أمازون واحصل على أفضل العروض!
     </a>
   </div>
-
-  <div class="footer">
-    <a onclick="showModal('privacyModal')">سياسة الخصوصية</a> |
-    <a onclick="showModal('contactModal')">تواصل معنا</a>
-    <div style="margin-top:10px;font-size:0.95em;">جميع الحقوق محفوظة © كورة ستايل 2025</div>
-  </div>
-
-  <!-- سياسة الخصوصية -->
-  <div id="privacyModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
-      <h3>سياسة الخصوصية</h3>
-      <p>
-        نحن في "كورة ستايل" نهتم بخصوصية زوارنا، ولا نقوم بجمع أي بيانات شخصية إلا للرد على استفساراتكم أو تحسين تجربة المستخدم. لن يتم مشاركة بياناتك مع أي طرف ثالث. باستخدامك الموقع، أنت توافق على سياسة الخصوصية هذه. لأي استفسار يرجى التواصل معنا عبر صفحة "تواصل معنا".
+<div id="privacyContactModal" class="modal">
+  <div class="modal-content" style="max-width:500px;">
+    <span class="close-modal" onclick="closeModal('privacyContactModal')">&times;</span>
+    <h3 style="color:#1766a0; margin-bottom:18px;">سياسة الخصوصية &amp; تواصل معنا</h3>
+    <div style="padding-bottom:18px; border-bottom:1px solid #eee; margin-bottom:18px;">
+      <h4 style="color:#1766a0; margin-bottom:8px;">سياسة الخصوصية في كورة ستايل</h4>
+      <p style="font-size:15px; color:#444; line-height:1.8;">
+        في <strong>كورة ستايل</strong> نولي خصوصية زوارنا أهمية كبيرة. لا نقوم بجمع أي بيانات شخصية إلا إذا قمت بإدخالها بنفسك (مثل التواصل أو الاشتراك).<br><br>
+        <strong>ملفات تعريف الارتباط (Cookies):</strong> قد نستخدم الكوكيز لتحسين تجربتك. يمكنك تعطيلها من إعدادات المتصفح.<br>
+        <strong>روابط خارجية:</strong> يحتوي الموقع على روابط لمواقع مثل أمازون وشبكات التواصل. لسنا مسؤولين عن سياسات تلك المواقع.<br>
+        <strong>حماية البيانات:</strong> نلتزم بعدم مشاركة بياناتك مع أي طرف ثالث إلا بأمر قانوني.<br>
+        <strong>تحديثات السياسة:</strong> قد نقوم بتحديث السياسة وننشر أي تغييرات هنا.<br>
+        لأي استفسار حول الخصوصية أو البيانات، تواصل معنا عبر المعلومات أدناه.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#1766a0; margin-bottom:8px;">تواصل معنا</h4>
+      <p style="font-size:15px; color:#444; line-height:1.7;">
+        يسعدنا تواصلكم معنا لأي استفسار أو اقتراح أو شراكة إعلانية.<br>
+        <strong>البريد الإلكتروني:</strong>
+        <a href="mailto:wessamelqawary92@gmail.com" style="color:#1766a0;">wessamelqawary92@gmail.com</a><br>
+        <strong>رقم الهاتف:</strong>
+        <a href="tel:0582193555" style="color:#1766a0;">0582193555</a><br>
+        <strong>العنوان:</strong> المملكة العربية السعودية<br>
+        <strong>صفحاتنا الرسمية:</strong>
+        <br>
+        <a href="https://www.facebook.com/korastyle" target="_blank" style="color:#1766a0;">فيسبوك</a> |
+        <a href="https://twitter.com/korastyle" target="_blank" style="color:#1766a0;">تويتر</a>
+      </p>
+      <p style="color:#888; font-size:13px; margin-top:8px;">
+        فريق عمل <strong>كورة ستايل</strong> دائمًا في خدمتكم!
       </p>
     </div>
   </div>
+</div>
 
-  <!-- تواصل معنا -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
-      <h3>تواصل معنا</h3>
-      <p>
-        البريد الإلكتروني: <a href="mailto:wessamelqawary92@gmail.com">wessamelqawary92@gmail.com</a><br>
-        رقم الموبايل: <a href="tel:0582193555">0582193555</a>
-      </p>
-    </div>
-  </div>
 
   <script>
     // تحديث حالة كل مباراة تلقائيًا
