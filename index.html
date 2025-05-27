@@ -1,0 +1,260 @@
+<!-- الهيدر والشعار -->
+<header style="background:#1766a0; color:#fff; padding:22px 0 14px 0; text-align:center; border-radius:0 0 18px 18px;">
+  <h1 style="margin:0; font-size:2em; letter-spacing:2px;">كورة ستايل</h1>
+  <p style="margin:0; font-size:1.1em;">كل جديد في عالم الكرة لحظة بلحظة</p>
+</header>
+
+<!-- قسم مباريات اليوم -->
+<section style="background:#f7fafd; padding:24px 10px 18px 10px; border-radius:12px; max-width:950px; margin:28px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
+  <h2 style="color:#1766a0; margin-bottom:16px; font-size:1.4em; border-right:4px solid #2dceef; padding-right:12px;">مباريات اليوم - 28 مايو 2025</h2>
+  <div id="matches-list">
+    <!-- المباريات ستظهر هنا بواسطة جافاسكريبت -->
+  </div>
+</section>
+<script>
+const matches = [
+  // دوري المؤتمر الأوروبي
+  { league: "دوري المؤتمر الأوروبي", home: "ريال بيتيس", away: "تشيلسي", time: "2025-05-28T22:00:00+03:00" },
+  // الدوري المصري
+  { league: "الدوري المصري", home: "الأهلي", away: "فاركو", time: "2025-05-28T20:00:00+03:00" },
+  { league: "الدوري المصري", home: "سيراميكا", away: "بيراميدز", time: "2025-05-28T20:00:00+03:00" },
+  { league: "الدوري المصري", home: "بتروجيت", away: "البنك الأهلي", time: "2025-05-28T20:00:00+03:00" },
+  { league: "الدوري المصري", home: "المصري", away: "حرس الحدود", time: "2025-05-28T20:00:00+03:00" },
+  // الدوري العراقي
+  { league: "الدوري العراقي", home: "دهوك", away: "نفط ميسان", time: "2025-05-28T19:00:00+03:00" },
+  // كوبا ليبرتادوريس
+  { league: "كوبا ليبرتادوريس", home: "ساو باولو", away: "تاليريس", time: "2025-05-29T01:00:00+03:00" },
+  { league: "كوبا ليبرتادوريس", home: "ليبرتاد", away: "أليانزا ليما", time: "2025-05-29T01:00:00+03:00" },
+  { league: "كوبا ليبرتادوريس", home: "بوتافوغو", away: "جامعة تشيلي", time: "2025-05-29T03:30:00+03:00" },
+  { league: "كوبا ليبرتادوريس", home: "إستوديانتيس", away: "كارابوبو", time: "2025-05-29T03:30:00+03:00" },
+  { league: "كوبا ليبرتادوريس", home: "ريفر بليت", away: "يونيفرسيتاريو", time: "2025-05-29T03:30:00+03:00" },
+  { league: "كوبا ليبرتادوريس", home: "انديبندينتي", away: "برشلونة", time: "2025-05-29T03:30:00+03:00" }
+];
+
+function formatTime(dateStr) {
+  const date = new Date(dateStr);
+  let h = date.getHours();
+  let m = date.getMinutes();
+  if (h < 10) h = "0" + h;
+  if (m < 10) m = "0" + m;
+  return h + ":" + m;
+}
+
+function renderMatches() {
+  let html = "";
+  let lastLeague = "";
+  matches.forEach(match => {
+    if (match.league !== lastLeague) {
+      if (lastLeague !== "") html += "<hr style='margin:18px 0;'>";
+      html += `<h3 style="color:#1766a0; font-size:1.1em; margin-bottom:8px;">${match.league}</h3>`;
+      lastLeague = match.league;
+    }
+    html += `
+      <div style="display:flex; align-items:center; justify-content:space-between; background:#fff; border-radius:8px; padding:10px 14px; margin-bottom:8px;">
+        <span style="font-weight:bold;">${match.home}</span>
+        <span style="color:#1766a0; font-weight:bold;" class="match-time" data-date="${match.time}">${formatTime(match.time)}</span>
+        <span style="font-weight:bold;">${match.away}</span>
+      </div>
+    `;
+  });
+  document.getElementById("matches-list").innerHTML = html;
+}
+renderMatches();
+</script>
+
+<!-- قسم البطولات (جميع البطولات العالمية والمحلية) -->
+<section style="background:#fff; padding:20px 10px; border-radius:12px; max-width:950px; margin:28px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
+  <h2 style="color:#1766a0; margin-bottom:16px; font-size:1.3em; border-right:4px solid #2dceef; padding-right:12px;">البطولات</h2>
+  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:12px;">
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري المصري الممتاز</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري السعودي للمحترفين</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الإنجليزي الممتاز</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الإسباني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الإيطالي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الألماني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الفرنسي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">دوري أبطال أوروبا</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الأوروبي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">دوري المؤتمر الأوروبي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">دوري أبطال آسيا</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">دوري أبطال أفريقيا</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">كوبا ليبرتادوريس</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">كأس العالم للأندية</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">كأس العالم</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري المغربي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الجزائري</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري التونسي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري العراقي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الإماراتي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري القطري</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الأردني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري السوري</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري السوداني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الليبي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري اللبناني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الفلسطيني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الكويتي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري العماني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري البحريني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري اليمني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الصيني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الياباني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الأمريكي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري البرازيلي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الأرجنتيني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري التركي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري اليوناني</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري البلجيكي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري البرتغالي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">الدوري الهولندي</a></li>
+    <li><a href="#" style="color:#1766a0; font-weight:bold;">بطولات أخرى...</a></li>
+  </ul>
+</section>
+
+<!-- قسم ترتيب الفرق (بدون تغيير) -->
+<section style="background:#f7fafd; padding:20px 10px; border-radius:12px; max-width:950px; margin:28px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
+  <h2 style="color:#1766a0; margin-bottom:16px; font-size:1.3em; border-right:4px solid #2dceef; padding-right:12px;">ترتيب الفرق</h2>
+  <p style="color:#555; font-size:15px;">لمعرفة ترتيب الفرق في جميع البطولات اضغط هنا:</p>
+  <a href="#" style="display:inline-block; background:#2dceef; color:#fff; padding:10px 18px; border-radius:8px; font-weight:bold; text-decoration:none;">ترتيب الفرق في الدوريات</a>
+</section>
+
+<!-- قسم تحليل المباريات (مباراة الاتحاد وضمك - بدون تغيير) -->
+<section id="match-analysis" style="background:#f9f9f9; padding:20px; border-radius:10px; margin:30px auto 0 auto; max-width:950px; box-shadow:0 4px 18px #0001;">
+  <h2 style="color:#1766a0; margin-bottom:18px; font-size:1.5em; border-right:4px solid #2dceef; padding-right:12px;">
+    📝 تحــليل المبــاريات
+  </h2>
+  <h3 style="color:#222; margin-bottom:14px; font-size:1.15em;">
+    🎯 تحليل مباراة الاتحاد وضمك - الجولة الأخيرة من دوري روشن السعودي 2024/2025
+  </h3>
+  <p style="font-size: 16px; color: #555; line-height: 1.8;">
+    🔥 اختتم <strong>الاتحاد السعودي</strong> موسمه في دوري روشن بفوز ثمين على <strong>ضمك</strong> بنتيجة <strong>1-0</strong>، في المباراة التي أُقيمت مساء الإثنين 26 مايو 2025 على ملعب مدينة الملك عبدالله الرياضية بجدة، وسط حضور جماهيري كبير واحتفالية التتويج باللقب العاشر في تاريخ النادي.
+  </p>
+  <p style="font-size: 16px; color: #555; line-height: 1.8;">
+    ✅ جاء هدف المباراة الوحيد في الدقيقة 72 عن طريق الهولندي <strong>ستيفن بيرجوين</strong> بعد تمريرة حاسمة من الإسباني <strong>أوناي هيرنانديز</strong>. سيطر الاتحاد على مجريات اللقاء وهدد مرمى ضمك في أكثر من مناسبة، بينما تصدى القائم لمحاولتين من <strong>كريم بنزيما</strong> و<strong>نجولو كانتي</strong> في الشوط الأول.
+  </p>
+  <p style="font-size: 16px; color: #555; line-height: 1.8;">
+    🏆 بهذا الفوز، رفع الاتحاد رصيده إلى <strong>83 نقطة</strong> في صدارة الترتيب، ليُتوَّج رسميًا بطلاً لدوري روشن السعودي 2024/2025 للمرة العاشرة في تاريخه. شهدت المباراة احتفالات جماهيرية ضخمة، وقام قائد الفريق <strong>كريم بنزيما</strong> برفع درع الدوري وسط فرحة اللاعبين والإدارة.
+  </p>
+  <ul style="font-size: 15px; color: #555; margin: 15px 0 10px 0; padding-right: 20px;">
+    <li>الاستحواذ: الاتحاد 58% - ضمك 42%</li>
+    <li>التسديدات: الاتحاد 18 (على المرمى 8) - ضمك 4 (على المرمى 1)</li>
+    <li>ركنيات: الاتحاد 7 - ضمك 2</li>
+    <li>أفضل لاعب: <strong>ستيفن بيرجوين</strong> (هدف الفوز)</li>
+    <li>الحضور الجماهيري: أكثر من 58 ألف مشجع</li>
+  </ul>
+  <p style="font-size: 16px; color: #888; font-style: italic;">
+    ✍️ تحليل كورة ستايل - تابعوا تحليلات باقي المباريات يوميًا على موقعنا.
+  </p>
+  <p style="font-size: 15px; color: #888;">
+    <a href="https://ittihadclub.sa/" target="_blank" style="color:#1766a0;text-decoration:underline;">المصدر: الموقع الرسمي لنادي الاتحاد</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.spl.com.sa/ar" target="_blank" style="color:#1766a0;text-decoration:underline;">دوري روشن السعودي</a>
+    &nbsp;|&nbsp;
+    <a href="https://www.kooora.com/?c=23708&stage=1&sch=true" target="_blank" style="color:#1766a0;text-decoration:underline;">إحصائيات المباراة - كووورة</a>
+  </p>
+</section>
+
+<!-- قسم المقالات الرياضية (بدون تغيير) -->
+<section class="latest-articles" style="background:#f7f7f7; padding:20px; border-radius:10px; margin:30px auto 0 auto; max-width:950px; box-shadow:0 4px 18px #0001;">
+  <h2 style="color:#222; margin-bottom:15px; font-size:1.4em; border-right:4px solid #2dceef; padding-right:12px;">📰 أحدث المقالات الرياضية</h2>
+  <div class="article" style="margin-bottom:15px;">
+    <h3 style="margin:0; color:#1766a0;">الأهلي المصري يستعد لمواجهة إنتر ميامي في مباراة ودية</h3>
+    <p style="color:#555; font-size:15px;">النادي الأهلي يواجه إنتر ميامي ضمن جولة تحضيرية في الولايات المتحدة. تعرف على التفاصيل والتوقيت...</p>
+    <a href="articles/article1.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
+  </div>
+  <div class="article" style="margin-bottom:15px;">
+    <h3 style="margin:0; color:#1766a0;">ريال مدريد يعلن تعيين تشابي ألونسو مدربًا جديدًا</h3>
+    <p style="color:#555; font-size:15px;">النادي الملكي يراهن على نجم الفريق السابق لقيادة المشروع الجديد. إليك تفاصيل التعاقد وخطة الإدارة...</p>
+    <a href="articles/article2.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
+  </div>
+  <div class="article" style="margin-bottom:15px;">
+    <h3 style="margin:0; color:#1766a0;">برشلونة يوافق على رحيل إريك غارسيا إلى فالنسيا</h3>
+    <p style="color:#555; font-size:15px;">قرار جديد من تشافي يهدف لتقوية الدفاع وتوفير فرص أكبر للاعبين الشباب...</p>
+    <a href="articles/article3.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
+  </div>
+</section>
+
+<!-- قسم أحدث الأخبار الرياضية (أخبار حديثة وفعلية 28 مايو 2025) -->
+<section class="latest-news" style="background:#fff; padding:22px 10px; border-radius:12px; max-width:950px; margin:30px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
+  <h2 style="color:#1766a0; margin-bottom:15px; font-size:1.3em; border-right:4px solid #2dceef; padding-right:12px;">📢 أحدث الأخبار الرياضية</h2>
+  <ul style="list-style:none; padding:0; margin:0;">
+    <li style="margin-bottom:12px;">
+      <strong style="color:#1766a0;">الأهلي يواجه فاركو الليلة لحسم لقب الدوري المصري</strong><br>
+      الأهلي يحتاج للفوز على فاركو مساء اليوم للتتويج رسميًا بالدوري المصري الممتاز 2024/2025. المباراة الساعة 8 مساءً بتوقيت القاهرة.<br>
+      <a href="https://www.alahlyegypt.com/ar/news/article/42987" target="_blank" style="color:#2dceef;">المصدر: الموقع الرسمي للنادي الأهلي</a>
+    </li>
+    <li style="margin-bottom:12px;">
+      <strong style="color:#1766a0;">الزمالك يعلن عودة زيزو للتدريبات الجماعية</strong><br>
+      نادي الزمالك المصري يعلن عودة أحمد سيد زيزو للمشاركة في التدريبات بعد التعافي من الإصابة.<br>
+      <a href="https://el-zamalek.com/%D8%B9%D9%88%D8%AF%D8%A9-%D8%B2%D9%8A%D8%B2%D9%88-%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA-%D8%A7%D9%84%D9%81%D8%B1%D9%8A%D9%82/" target="_blank" style="color:#2dceef;">المصدر: الزمالك الرسمي</a>
+    </li>
+    <li style="margin-bottom:12px;">
+      <strong style="color:#1766a0;">تشيلسي يعلن التعاقد مع إنزو ماريسكا مدربًا جديدًا</strong><br>
+      نادي تشيلسي الإنجليزي يعلن رسميًا تعيين الإيطالي إنزو ماريسكا مدربًا للفريق الأول خلفًا لبوتشيتينو.<br>
+      <a href="https://www.chelseafc.com/en/news/latest-news" target="_blank" style="color:#2dceef;">المصدر: Chelsea FC</a>
+    </li>
+    <li style="margin-bottom:12px;">
+      <strong style="color:#1766a0;">الهلال السعودي يعلن استمرار جيسوس</strong><br>
+      إدارة نادي الهلال السعودي تؤكد استمرار المدرب البرتغالي خورخي جيسوس للموسم المقبل.<br>
+      <a href="https://www.alhilal.com/ar/news/14641" target="_blank" style="color:#2dceef;">المصدر: الهلال الرسمي</a>
+    </li>
+    <li>
+      <strong style="color:#1766a0;">نابولي يتوج رسميًا بلقب الدوري الإيطالي</strong><br>
+      نابولي يحسم الصراع مع إنتر ميلان ويتوج بلقب الدوري الإيطالي موسم 2024/2025.<br>
+      <a href="https://arabic.sport360.com/article/italianfootball/%D8%A7%D9%86%D8%AA%D8%B1-%D9%85%D9%8A%D9%84%D8%A7%D9%86/1328086/%D9%86%D8%A7%D8%A8%D9%88%D9%84%D9%8A-%D9%8A%D8%B1%D8%A8%D8%AD-%D8%B5%D8%B1%D8%A7%D8%B9%D9%87-%D9%85%D8%B9-%D8%A5%D9%86%D8%AA%D8%B1-%D9%85%D9%8A%D9%84%D8%A7%D9%86-%D9%88%D9%8A%D8%AA%D9%88%D8%AC-%D8%A8" target="_blank" style="color:#2dceef;">المصدر: Sport360</a>
+    </li>
+  </ul>
+</section>
+
+<!-- قسم عرض أمازون الجديد -->
+<div style="background:#fffbe6; border-radius:12px; box-shadow:0 2px 10px #ffe47533; padding:18px 12px; margin:30px auto 0 auto; max-width:950px; text-align:right;">
+  <h3 style="color:#1766a0; margin-bottom:10px;">تسوق بثقة عبر أمازون مع كورة ستايل</h3>
+  <p style="color:#444; font-size:15px; margin-bottom:10px;">
+    نحن في <strong>كورة ستايل</strong> نرشح لكم أفضل المنتجات الرياضية والعروض الحصرية من خلال شراكتنا مع موقع أمازون العالمي. عند النقر على الرابط أدناه وشراء أي منتج، فإنك تدعم موقعنا دون أي تكلفة إضافية عليك. نحن نختار لكم دائمًا المنتجات الأعلى تقييمًا والأكثر ملاءمة لعشاق الرياضة.
+  </p>
+  <p style="color:#888; font-size:14px; font-style:italic;">
+    الشفافية تهمنا: قد نحصل على عمولة بسيطة من أمازون عند شرائك عبر رابطنا، وهذا يساعدنا في تطوير محتوى الموقع وتقديم المزيد من التحليلات والأخبار الرياضية مجانًا للجميع.
+  </p>
+  <a href="https://amzn.to/3YZDKL5" target="_blank" style="display:inline-block; margin-top:8px; background:#f7ca00; color:#232f3e; font-weight:bold; padding:10px 18px; border-radius:8px; text-decoration:none; box-shadow:0 2px 8px #ffe47544;">تسوق الآن من أمازون</a>
+</div>
+
+<!-- سياسة الخصوصية وتواصل معنا (بدون أي تعديل) -->
+<section style="background:#f7fafd; padding:28px 18px 22px 18px; border-radius:12px; max-width:950px; margin:35px auto 0 auto; box-shadow:0 4px 18px #1766a015;">
+  <h2 style="color:#1766a0; margin-bottom:18px; font-size:1.5em; border-right:4px solid #2dceef; padding-right:12px;">
+    سياسة الخصوصية &amp; تواصل معنا
+  </h2>
+  <div style="margin-bottom:22px;">
+    <h3 style="color:#1766a0; margin-bottom:8px; font-size:1.1em;">سياسة الخصوصية في كورة ستايل</h3>
+    <p style="font-size:15px; color:#444; line-height:1.8; margin:0;">
+      في <strong>كورة ستايل</strong> نولي خصوصية زوارنا أهمية كبيرة. لا نقوم بجمع أي بيانات شخصية إلا إذا قمت بإدخالها بنفسك (مثل التواصل أو الاشتراك).<br><br>
+      <strong>ملفات تعريف الارتباط (Cookies):</strong> قد نستخدم الكوكيز لتحسين تجربتك. يمكنك تعطيلها من إعدادات المتصفح.<br>
+      <strong>روابط خارجية:</strong> يحتوي الموقع على روابط لمواقع مثل أمازون وشبكات التواصل. لسنا مسؤولين عن سياسات تلك المواقع.<br>
+      <strong>حماية البيانات:</strong> نلتزم بعدم مشاركة بياناتك مع أي طرف ثالث إلا بأمر قانوني.<br>
+      <strong>تحديثات السياسة:</strong> قد نقوم بتحديث السياسة وننشر أي تغييرات هنا.<br>
+      لأي استفسار حول الخصوصية أو البيانات، تواصل معنا عبر المعلومات أدناه.
+    </p>
+  </div>
+  <div>
+    <h3 style="color:#1766a0; margin-bottom:8px; font-size:1.1em;">تواصل معنا</h3>
+    <p style="font-size:15px; color:#444; line-height:1.7; margin:0;">
+      يسعدنا تواصلكم معنا لأي استفسار أو اقتراح أو شراكة إعلانية.<br>
+      <strong>البريد الإلكتروني:</strong>
+      <a href="mailto:wessamelqawary92@gmail.com" style="color:#1766a0;">wessamelqawary92@gmail.com</a><br>
+      <strong>رقم الهاتف:</strong>
+      <a href="tel:0582193555" style="color:#1766a0;">0582193555</a><br>
+      <strong>العنوان:</strong> المملكة العربية السعودية<br>
+      <strong>صفحاتنا الرسمية:</strong>
+      <br>
+      <a href="https://www.facebook.com/korastyle" target="_blank" style="color:#1766a0;">فيسبوك</a> |
+      <a href="https://twitter.com/korastyle" target="_blank" style="color:#1766a0;">تويتر</a>
+    </p>
+    <p style="color:#888; font-size:13px; margin-top:8px;">
+      فريق عمل <strong>كورة ستايل</strong> دائمًا في خدمتكم!
+    </p>
+  </div>
+</section>
+
+<!-- الفوتر -->
+<footer style="background:#1766a0; color:#fff; padding:18px 0 12px 0; text-align:center; border-radius:18px 18px 0 0; margin-top:30px;">
+  جميع الحقوق محفوظة &copy; كورة ستايل 2025
+</footer>
