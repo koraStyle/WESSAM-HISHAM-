@@ -1,266 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>جدول مباريات اليوم 29 مايو 2025</title>
-  <meta name="viewport" content="width=950">
-  <style>
-    body {background:#f7fafd; margin:0; font-family:Tahoma, Arial, sans-serif;}
-    .section-box {
-      background:#fff;
-      border-radius:22px;
-      max-width:950px;
-      margin:30px auto;
-      box-shadow:0 4px 18px #1766a015;
-      padding:32px 24px 38px 24px;
-    }
-    .section-title {
-      color:#1766a0;
-      font-size:1.5em;
-      border-right:6px solid #2dceef;
-      padding-right:16px;
-      margin-bottom:28px;
-      font-weight:bold;
-    }
-    .leagues-list {
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px 18px;
-      margin-bottom:36px;
-    }
-    .leagues-list a {
-      background:#f7fafd;
-      color:#1766a0;
-      font-weight:bold;
-      border-radius:10px;
-      padding:10px 22px;
-      font-size:1em;
-      border:none;
-      transition:background 0.2s;
-      box-shadow:0 2px 6px #1766a008;
-    }
-    .leagues-list a:hover {
-      background:#eaf7fd;
-    }
-    .standings-btn {
-      display:inline-block;
-      background:#1766a0;
-      color:#fff;
-      font-size:1.1em;
-      padding:13px 40px;
-      border-radius:10px;
-      font-weight:bold;
-      margin-top:10px;
-      border:none;
-      text-align:center;
-      transition:background 0.2s;
-    }
-    .standings-btn:hover {
-      background:#15598c;
-    }
-    /* جدول المباريات */
-    .matches-title {
-      color:#1766a0;
-      font-size:1.3em;
-      border-right:6px solid #2dceef;
-      padding-right:16px;
-      margin-bottom:24px;
-      font-weight:bold;
-    }
-    .match-league {
-      color:#1766a0;
-      font-weight:bold;
-      margin-bottom:8px;
-      font-size:1.09em;
-      margin-top:32px;
-    }
-    .match-row {
-      background:#f7fafd;
-      border-radius:10px;
-      padding:10px 14px;
-      margin-bottom:10px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      font-size:1em;
-      font-weight:500;
-    }
-    .status-btn {
-      border:none;
-      border-radius:6px;
-      padding:3px 18px;
-      font-size:15px;
-      font-weight:bold;
-      color:#fff;
-      background:#444;
-      margin-right:10px;
-      pointer-events:none;
-    }
-    .status-live {background:#e74c3c !important;}
-    .status-soon {background:#f39c12 !important;}
-    @media (max-width: 700px) {
-      .section-box {max-width: 98vw; padding:10px 2vw;}
-      .matches-title, .section-title {font-size:1.07em;}
-      .match-row, .match-league {font-size:1em;}
-      .leagues-list {gap:6px;}
-      .leagues-list a {padding:6px 10px;}
-      .standings-btn {padding:10px 10vw;}
-    }
-  </style>
-</head>
-<body>
-
-<!-- قسم جدول المباريات -->
-<section class="section-box">
-  <div class="matches-title">جدول مباريات اليوم 29 مايو 2025</div>
-  
-  <!-- الدوري الأمريكي MLS -->
-  <div class="match-league">الدوري الأمريكي MLS</div>
-  <div class="match-row">
-    <span>إنتر ميامي <span style="color:#888;font-size:13px;">(02:35)</span> مونتريال</span>
-    <button class="status-btn" data-time="2025-05-29T02:35:00+02:00">--</button>
-  </div>
-
-  <!-- الدوري المصري الممتاز -->
-  <div class="match-league">الدوري المصري الممتاز</div>
-  <div class="match-row">
-    <span>طلائع الجيش <span style="color:#888;font-size:13px;">(20:00)</span> مودرن سبورت</span>
-    <button class="status-btn" data-time="2025-05-29T20:00:00+02:00">--</button>
-  </div>
-  <div class="match-row">
-    <span>الاتحاد السكندري <span style="color:#888;font-size:13px;">(20:00)</span> إنبي</span>
-    <button class="status-btn" data-time="2025-05-29T20:00:00+02:00">--</button>
-  </div>
-  <div class="match-row">
-    <span>غزل المحلة <span style="color:#888;font-size:13px;">(20:00)</span> الإسماعيلي</span>
-    <button class="status-btn" data-time="2025-05-29T20:00:00+02:00">--</button>
-  </div>
-  <div class="match-row">
-    <span>زد <span style="color:#888;font-size:13px;">(20:00)</span> سموحة</span>
-    <button class="status-btn" data-time="2025-05-29T20:00:00+02:00">--</button>
-  </div>
-</section>
-
-<script>
-function updateMatchStatus() {
-  const now = new Date();
-  document.querySelectorAll('.status-btn').forEach(btn => {
-    const t = btn.getAttribute('data-time');
-    if (!t) return;
-    const matchTime = new Date(t);
-    const diffMin = (matchTime - now) / 60000;
-    if (diffMin <= -120) {
-      btn.textContent = "انتهت";
-      btn.className = "status-btn";
-    } else if (diffMin <= 0 && diffMin > -120) {
-      btn.textContent = "مباشر";
-      btn.className = "status-btn status-live";
-    } else if (diffMin <= 60) {
-      btn.textContent = "بعد قليل";
-      btn.className = "status-btn status-soon";
-    } else {
-      btn.textContent = "لم تبدأ";
-      btn.className = "status-btn";
-    }
-  });
-}
-updateMatchStatus();
-setInterval(updateMatchStatus, 60000);
-</script>
-
-<!-- قسم البطولات -->
-<section class="section-box">
-  <div class="section-title">البطولات</div>
-  <div class="leagues-list">
-    <a href="https://www.efa.eg/ar/" target="_blank">الدوري المصري الممتاز</a>
-    <a href="https://spl.com.sa/ar" target="_blank">الدوري السعودي للمحترفين</a>
-    <a href="https://www.premierleague.com/" target="_blank">الدوري الإنجليزي الممتاز</a>
-    <a href="https://www.laliga.com/en-GB" target="_blank">الدوري الإسباني</a>
-    <a href="https://www.legaseriea.it/en" target="_blank">الدوري الإيطالي</a>
-    <a href="https://www.bundesliga.com/en/bundesliga" target="_blank">الدوري الألماني</a>
-    <a href="https://www.ligue1.com/" target="_blank">الدوري الفرنسي</a>
-    <a href="https://www.uefa.com/uefachampionsleague/" target="_blank">دوري أبطال أوروبا</a>
-    <a href="https://www.cafonline.com/" target="_blank">دوري أبطال أفريقيا</a>
-    <a href="https://www.the-afc.com/en/club/afc_champions_league.html" target="_blank">دوري أبطال آسيا</a>
-    <a href="https://www.fifa.com/fifaplus/ar/tournaments/mens/worldcup" target="_blank">كأس العالم</a>
-  </div>
-</section>
-
-<!-- قسم ترتيب الفرق -->
-<section class="section-box">
-  <div class="section-title">ترتيب الفرق في الدوريات</div>
-  <div style="display:flex; flex-wrap:wrap; gap:14px 18px; margin-bottom:10px;">
-    <a href="https://www.yallakora.com/egyptian-league/2935/group-standing/ترتيب-المجموعات-الدوري-المصري" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري المصري</a>
-    <a href="https://www.yallakora.com/ksa-league/2911/standing/الدوري-السعودي" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري السعودي</a>
-    <a href="https://www.premierleague.com/tables" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإنجليزي</a>
-    <a href="https://www.laliga.com/en-GB/laliga-santander/standing" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإسباني</a>
-    <a href="https://www.legaseriea.it/en/serie-a/league-table" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإيطالي</a>
-    <a href="https://www.bundesliga.com/en/bundesliga/table" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الألماني</a>
-    <a href="https://www.ligue1.com/ranking" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الفرنسي</a>
-  </div>
-</section>
-
-<!-- قسم تحليل المباريات -->
-<section class="section-box">
-  <div class="section-title">تحليل مباراة الأهلي وفاركو</div>
-  <p style="font-size:16px; color:#444; line-height:1.8;">
-    في ليلة تاريخية على استاد القاهرة، حقق الأهلي فوزًا ساحقًا على فاركو بنتيجة 6-0 ضمن الجولة الأخيرة من الدوري المصري الممتاز، ليحسم اللقب رقم 45 في تاريخه.<br>
-    تألق المهاجم وسام أبو علي بشكل لافت، مسجلاً 4 أهداف "سوبر هاتريك" ليحصد جائزة رجل المباراة، بينما أضاف حسين الشحات الهدف الخامس، واختتم إمام عاشور مهرجان الأهداف بالسادس.<br>
-    سيطر الأهلي على مجريات اللقاء منذ البداية، وقدم أداءً هجوميًا قويًا، مع حضور جماهيري كبير واحتفالات صاخبة عقب صافرة النهاية.<br>
-    <span style="color:#1766a0;">المصدر: ملخص المباراة - يلا كورة</span>
-  </p>
-</section>
-
-<!-- قسم المقالات الرياضية (بدون تغيير) -->
-<section class="section-box">
-  <div class="section-title">📰 أحدث المقالات الرياضية</div>
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">الأهلي المصري يستعد لمواجهة إنتر ميامي في مباراة ودية</h3>
-    <p style="color:#555; font-size:15px;">النادي الأهلي يواجه إنتر ميامي ضمن جولة تحضيرية في الولايات المتحدة. تعرف على التفاصيل والتوقيت...</p>
-    <a href="articles/article1.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">ريال مدريد يعلن تعيين تشابي ألونسو مدربًا جديدًا</h3>
-    <p style="color:#555; font-size:15px;">النادي الملكي يراهن على نجم الفريق السابق لقيادة المشروع الجديد. إليك تفاصيل التعاقد وخطة الإدارة...</p>
-    <a href="articles/article2.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-  <div class="article" style="margin-bottom:15px;">
-    <h3 style="margin:0; color:#1766a0;">برشلونة يوافق على رحيل إريك غارسيا إلى فالنسيا</h3>
-    <p style="color:#555; font-size:15px;">قرار جديد من تشافي يهدف لتقوية الدفاع وتوفير فرص أكبر للاعبين الشباب...</p>
-    <a href="articles/article3.html" style="color:#2dceef; text-decoration:underline;">اقرأ المزيد</a>
-  </div>
-</section>
-
-<!-- قسم أحدث الأخبار الرياضية -->
-<section class="section-box">
-  <div class="section-title">📢 أحدث الأخبار الرياضية</div>
-  <ul style="list-style:none; padding:0; margin:0;">
-    <li style="margin-bottom:12px;">
-      <strong style="color:#1766a0;">فوز الأهلي على فاركو بنتيجة عريضة 6/0 في ليلة تتويج المارد الأحمر بلقب الدوري الـ45 في تاريخه</strong><br>
-      الأهلي يحقق فوزًا تاريخيًا على فاركو في ختام الدوري المصري الممتاز ويحتفل باللقب رقم 45.<br>
-      <a href="https://www.yallakora.com/egyptian-league/2935/news/486123/الأهلي-يفوز-على-فاركو-6-0-ويتوج-بالدوري-المصري-2025" target="_blank" style="color:#2dceef;">المصدر: يلا كورة</a>
-    </li>
-    <!-- أضف أخبارًا حديثة أخرى من مصادر موثوقة -->
-  </ul>
-</section>
-
-<!-- قسم عرض أمازون -->
-<div class="section-box" style="background:#fffbe6; text-align:right;">
-  <h3 style="color:#1766a0; margin-bottom:10px;">تسوق بثقة عبر أمازون مع كورة ستايل</h3>
-  <p style="color:#444; font-size:15px; margin-bottom:10px;">
-    نحن في <strong>كورة ستايل</strong> نرشح لكم أفضل المنتجات الرياضية والعروض الحصرية من خلال شراكتنا مع موقع أمازون العالمي. عند النقر على الرابط أدناه وشراء أي منتج، فإنك تدعم موقعنا دون أي تكلفة إضافية عليك. نحن نختار لكم دائمًا المنتجات الأعلى تقييمًا والأكثر ملاءمة لعشاق الرياضة.
-  </p>
-  <p style="color:#888; font-size:14px; font-style:italic;">
-    الشفافية تهمنا: قد نحصل على عمولة بسيطة من أمازون عند شرائك عبر رابطنا، وهذا يساعدنا في تطوير محتوى الموقع وتقديم المزيد من التحليلات والأخبار الرياضية مجانًا للجميع.
-  </p>
-  <a href="https://amzn.to/3YZDKL5" target="_blank" style="display:inline-block; margin-top:8px; background:#f7ca00; color:#232f3e; font-weight:bold; padding:10px 18px; border-radius:8px; text-decoration:none; box-shadow:0 2px 8px #ffe47544;">تسوق الآن من أمازون</a>
-</div>
-
-<!-- الفوتر مع سياسة الخصوصية وتواصل معنا -->
-<footer style="background:#1766a0; color:#fff; padding:18px 0 12px 0; text-align:center; border-radius:18px 18px 0 0; margin-top:30px;">
-  جميع الحقوق محفوظة &copy; كورة ستايل 2025 |
-  <a href="privacy-contact.html" style="color:#fff; text-decoration:underline; font-weight:bold;">سياسة الخصوصية وتواصل معنا</a>
-</footer>
-
-</body>
-</html>
