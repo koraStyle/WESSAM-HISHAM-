@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>نيمار جونيور - سيرة اللاعب</title>
+  <meta name="viewport" content="width=600">
+  <style>
+    body {background:#f7fafd; font-family:Tahoma, Arial, sans-serif;}
+    .player-section {background:#fff; border-radius:12px; max-width:600px; margin:30px auto; box-shadow:0 4px 18px #1766a015; padding:24px 18px;}
+    .player-title {color:#1766a0; border-right:4px solid #2dceef; padding-right:12px; margin-bottom:18px;}
+    .info-table {width:100%; border-collapse:collapse; margin-bottom:18px;}
+    .info-table th, .info-table td {padding:8px 6px; text-align:right;}
+    .info-table th {color:#1766a0; font-weight:bold; background:#f7fafd;}
+    .info-table tr:nth-child(even) {background:#f3f3f3;}
+    .bio {font-size:16px; color:#444; margin-bottom:18px;}
+    .back-link {display:inline-block; margin-top:12px; color:#1766a0; font-weight:bold;}
+  </style>
+</head>
+<body>
+  <section class="player-section">
+    <h2 class="player-title">نيمار جونيور</h2>
+    <table class="info-table">
+      <tr><th>الاسم الكامل</th><td>نيمار دا سيلفا سانتوس جونيور</td></tr>
+      <tr><th>تاريخ الميلاد</th><td>5 فبراير 1992</td></tr>
+      <tr><th>العمر</th><td id="age"></td></tr>
+      <tr><th>الجنسية</th><td>برازيلي</td></tr>
+      <tr><th>مركز اللعب</th><td>جناح هجومي / مهاجم</td></tr>
+      <tr><th>الأندية السابقة</th><td>سانتوس، برشلونة، باريس سان جيرمان</td></tr>
+      <tr><th>النادي الحالي</th><td>الهلال السعودي</td></tr>
+      <tr><th>عدد المباريات الدولية</th><td>125+</td></tr>
+      <tr><th>عدد الأهداف الدولية</th><td>80+</td></tr>
+    </table>
+    <div class="bio">
+      نيمار يُعتبر من أبرز المواهب البرازيلية في القرن 21، يمتاز بالمهارات العالية والسرعة والقدرة على المراوغة والتسجيل. حقق ألقابًا مع برشلونة وباريس سان جيرمان ومنتخب البرازيل.
+    </div>
+    <a href="index.html" class="back-link">العودة إلى قائمة اللاعبين</a>
+  </section>
+  <script>
+    document.getElementById('age').textContent = (function(birthDate){
+      const today = new Date();
+      const birth = new Date(birthDate);
+      let age = today.getFullYear() - birth.getFullYear();
+      const m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) { age--; }
+      return age + " سنة";
+    })('1992-02-05');
+  </script>
+</body>
+</html>
