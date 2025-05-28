@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>محمد صلاح - سيرة اللاعب</title>
+  <meta name="viewport" content="width=600">
+  <style>
+    body {background:#f7fafd; font-family:Tahoma, Arial, sans-serif;}
+    .player-section {background:#fff; border-radius:12px; max-width:600px; margin:30px auto; box-shadow:0 4px 18px #1766a015; padding:22px 18px;}
+    .player-img {width:140px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .player-info {font-size:16px; color:#333;}
+    .back-link {display:inline-block; margin-top:18px; color:#1766a0; font-weight:bold;}
+  </style>
+</head>
+<body>
+  <section class="player-section">
+    <h2 style="color:#1766a0; border-right:4px solid #2dceef; padding-right:12px;">محمد صلاح</h2>
+    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <img src="images/mohamed-salah.jpg" alt="محمد صلاح" class="player-img">
+      <div class="player-info">
+        <p><strong>تاريخ الميلاد:</strong> 15 يونيو 1992</p>
+        <p><strong>العمر:</strong> <span id="age"></span> سنة</p>
+        <p><strong>الجنسية:</strong> مصري</p>
+        <p><strong>مركز اللعب:</strong> جناح أيمن</p>
+        <p><strong>الأندية السابقة:</strong> المقاولون العرب، بازل، تشيلسي، فيورنتينا، روما</p>
+        <p><strong>النادي الحالي:</strong> ليفربول</p>
+        <p><strong>عدد المباريات الدولية:</strong> 90+</p>
+        <p><strong>عدد الأهداف الدولية:</strong> 50+</p>
+      </div>
+    </div>
+    <p style="margin-top:18px;">
+      محمد صلاح هو أحد أبرز نجوم كرة القدم في العالم، حقق نجاحات كبيرة مع نادي ليفربول الإنجليزي وقاد منتخب مصر للعديد من الإنجازات. يُعرف بسرعته ومهاراته التهديفية العالية، وحصل على العديد من الجوائز الفردية.
+    </p>
+    <a href="index.html" class="back-link">العودة إلى قائمة اللاعبين</a>
+  </section>
+  <script>
+    // حساب العمر تلقائيًا
+    function calculateAge(birthDate) {
+      const today = new Date();
+      const birth = new Date(birthDate);
+      let age = today.getFullYear() - birth.getFullYear();
+      const m = today.getMonth() - birth.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) { age--; }
+      return age;
+    }
+    document.getElementById('age').textContent = calculateAge('1992-06-15');
+  </script>
+</body>
+</html>
