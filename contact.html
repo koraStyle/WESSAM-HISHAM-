@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>تواصل معنا - كورة ستايل بلس</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background-color: #f9f9f9;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .contact-box {
-      background-color: #ffffff;
-      padding: 30px;
-      margin: auto;
-      max-width: 500px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    p {
-      font-size: 1.2em;
-      margin: 15px 0;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <title>تواصل معنا</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; background: #f9f9f9; margin: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+        h1 { color: #2c3e50; }
+        label { display: block; margin-top: 15px; }
+        input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        textarea { height: 100px; }
+        button { margin-top: 20px; background: #2980b9; color: #fff; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #1c5980; }
+        .contact-info { margin-top: 20px; }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>تواصل معنا</h1>
+        <p>نسعد دائماً بتواصلك معنا! إذا كان لديك أي استفسار أو اقتراح يمكنك التواصل عبر:</p>
+        <div class="contact-info">
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:wessamelqawary92@gmail.com">wessamelqawary92@gmail.com</a></p>
+            <p><strong>رقم الهاتف:</strong> <a href="tel:0582193555">0582193555</a></p>
+        </div>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" placeholder="اكتب اسمك" required />
 
-  <div class="contact-box">
-     <a href="contact.html">تواصل معنا</a>
-    <p>يمكنك التواصل معنا من خلال البريد الإلكتروني أو الهاتف التالي:</p>
-    <p>📧 البريد الإلكتروني: <a href="mailto:wessamelqawary92@gmail.com">wessamelqawary92@gmail.com</a></p>
-    <p>📞 رقم الهاتف: <a href="tel:0582193555">0582193555</a></p>
-    <p><a href="index.html">العودة إلى الصفحة الرئيسية</a></p>
-  </div>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" placeholder="اكتب بريدك الإلكتروني" required />
 
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لتواصلك معنا! سنرد عليك قريباً.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
