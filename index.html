@@ -59,7 +59,7 @@
 
 <!-- قسم 1: جدول مباريات اليوم -->
 <section class="section-box" style="display:flex; justify-content:center;">
-  <div style="width:100%; max-width:480px;">
+  <div style="width:100%; max-width:500px;">
     <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
       <span>⚽️</span>
       <span>مباريات اليوم 2/6</span>
@@ -124,21 +124,23 @@ function renderMatches() {
   matches.forEach(section => {
     html += `<div style="background:#f8f8fa; border-radius:12px; padding:16px 8px; margin-bottom:18px;">
       <div style="font-weight:bold; color:#e67e22; margin-bottom:10px; text-align:center; font-size:1.08em;">${section.league}</div>
-      <div style="display:flex; flex-direction:column; gap:13px;">`;
+      <div style="display:flex; flex-direction:column; gap:16px;">`;
     section.games.forEach(game => {
       const status = getMatchStatus(game.time);
       const matchTime = new Date(game.time);
       const timeStr = matchTime.toLocaleTimeString("ar-EG", {hour:"2-digit", minute:"2-digit"});
       html += `
-        <div style="display:flex; align-items:center; justify-content:center; gap:0; font-size:1.08em;">
-          <span style="color:#1766a0; font-weight:bold; min-width:80px; display:inline-block; text-align:center;">${game.home}</span>
-          <span style="margin:0 18px; background:#eaf4fb; color:#1766a0; font-weight:bold; border-radius:8px; padding:4px 18px; font-size:1.13em; box-shadow:0 1px 4px #1766a011;">
-            ${timeStr}
-          </span>
-          <span style="color:#1766a0; font-weight:bold; min-width:80px; display:inline-block; text-align:center;">${game.away}</span>
-          <span style="margin-right:14px; color:${status.color}; font-weight:bold; font-size:0.98em; min-width:80px; display:inline-block; text-align:center;">
-            ${status.text}
-          </span>
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:1.08em; position:relative;">
+          <span style="color:#1766a0; font-weight:bold; min-width:85px; text-align:right;">${game.home}</span>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+            <span style="background:#eaf4fb; color:#1766a0; font-weight:bold; border-radius:8px; padding:4px 22px; font-size:1.13em; box-shadow:0 1px 4px #1766a011;">
+              ${timeStr}
+            </span>
+            <span style="margin-top:4px; color:${status.color}; font-weight:bold; font-size:0.98em;">
+              ${status.text}
+            </span>
+          </div>
+          <span style="color:#1766a0; font-weight:bold; min-width:85px; text-align:left;">${game.away}</span>
         </div>`;
     });
     html += `</div></div>`;
