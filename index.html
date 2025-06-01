@@ -59,42 +59,62 @@
 
 <!-- قسم 1: جدول مباريات اليوم -->
 <section class="section-box">
-  <div class="section-title">مباريات اليوم 1/6</div>
-  <div style="display:flex; flex-direction:column; gap:18px; margin-top:14px;">
-
-    <!-- مباراة إنتر ميامي × كولومبوس كرو -->
-    <div class="match-row" style="background:#f8f8fa; border-radius:10px; padding:14px 10px; display:flex; align-items:center; justify-content:space-between;">
+  <div class="section-title" style="font-size:1.18em; color:#1766a0; font-weight:bold; margin-bottom:14px; display:flex; align-items:center; gap:7px;">
+    <span>📅</span>
+    <span>مباريات اليوم - 2 يونيو 2025</span>
+  </div>
+  <!-- الدوري الأمريكي لكرة القدم -->
+  <div style="background:#f8f8fa; border-radius:10px; padding:12px 10px; margin-bottom:12px;">
+    <div style="font-weight:bold; color:#e67e22; margin-bottom:6px;">الدوري الأمريكي لكرة القدم</div>
+    <div style="display:flex; flex-direction:column; gap:7px;">
       <div>
-        <strong style="color:#1766a0;">إنتر ميامي</strong>
-        <span style="margin:0 8px; color:#888;">vs</span>
-        <strong style="color:#1766a0;">كولومبوس كرو</strong>
-        <span style="display:block; color:#555; font-size:13px;">الدوري الأمريكي الممتاز | 02:30 ص بتوقيت القاهرة</span>
+        <span style="color:#1766a0; font-weight:bold;">سياتل</span>
+        <span style="margin:0 8px;">01:00 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">مينيسوتا</span>
       </div>
-      <span style="color:#e67e22; font-weight:bold;">لم تبدأ بعد</span>
     </div>
-
-    <!-- مباراة لوس أنجلوس × كلوب أمريكا -->
-    <div class="match-row" style="background:#f8f8fa; border-radius:10px; padding:14px 10px; display:flex; align-items:center; justify-content:space-between;">
+  </div>
+  <!-- الدوري البرازيلي الممتاز -->
+  <div style="background:#f8f8fa; border-radius:10px; padding:12px 10px; margin-bottom:12px;">
+    <div style="font-weight:bold; color:#e67e22; margin-bottom:6px;">الدوري البرازيلي الممتاز</div>
+    <div style="display:flex; flex-direction:column; gap:7px;">
       <div>
-        <strong style="color:#1766a0;">لوس أنجلوس</strong>
-        <span style="margin:0 8px; color:#888;">vs</span>
-        <strong style="color:#1766a0;">كلوب أمريكا</strong>
-        <span style="display:block; color:#555; font-size:13px;">تصفيات كأس العالم للأندية | 05:30 ص بتوقيت القاهرة</span>
+        <span style="color:#1766a0; font-weight:bold;">فلامينغو</span>
+        <span style="margin:0 8px;">12:30 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">فورتاليزا</span>
       </div>
-      <span style="color:#e67e22; font-weight:bold;">لم تبدأ بعد</span>
-    </div>
-
-    <!-- مباراة بيراميدز × صن داونز -->
-    <div class="match-row" style="background:#f8f8fa; border-radius:10px; padding:14px 10px; display:flex; align-items:center; justify-content:space-between;">
       <div>
-        <strong style="color:#1766a0;">بيراميدز</strong>
-        <span style="margin:0 8px; color:#888;">vs</span>
-        <strong style="color:#1766a0;">صن داونز</strong>
-        <span style="display:block; color:#555; font-size:13px;">نهائي دوري أبطال أفريقيا | 08:00 م بتوقيت القاهرة</span>
+        <span style="color:#1766a0; font-weight:bold;">كورينثيانز</span>
+        <span style="margin:0 8px;">12:30 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">فيتوريا</span>
       </div>
-      <span style="color:#e67e22; font-weight:bold;">لم تبدأ بعد</span>
+      <div>
+        <span style="color:#1766a0; font-weight:bold;">سيارا</span>
+        <span style="margin:0 8px;">12:30 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">أتلتيكو مينيرو</span>
+      </div>
+      <div>
+        <span style="color:#1766a0; font-weight:bold;">كروزيرو</span>
+        <span style="margin:0 8px;">01:30 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">بالميراس</span>
+      </div>
+      <div>
+        <span style="color:#1766a0; font-weight:bold;">إنترناسيونال</span>
+        <span style="margin:0 8px;">02:30 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">فلومينينسي</span>
+      </div>
     </div>
-
+  </div>
+  <!-- كأس أبطال الكونكاكاف -->
+  <div style="background:#f8f8fa; border-radius:10px; padding:12px 10px;">
+    <div style="font-weight:bold; color:#e67e22; margin-bottom:6px;">كأس أبطال الكونكاكاف</div>
+    <div style="display:flex; flex-direction:column; gap:7px;">
+      <div>
+        <span style="color:#1766a0; font-weight:bold;">كروز أزول</span>
+        <span style="margin:0 8px;">04:00 ص</span>
+        <span style="color:#1766a0; font-weight:bold;">فانكوفر</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -169,23 +189,33 @@ setInterval(updateMatchStatus, 60000);
 </a>
 <!-- قسم 5: تحليل المباريات -->
 <section class="section-box">
-  <div class="section-title" style="font-size:1.2em; color:#1766a0; font-weight:bold; margin-bottom:18px;">
-    تحليل مباراة إنتر ميلان × باريس سان جيرمان | نهائي دوري أبطال أوروبا 2025
+  <div class="section-title" style="font-size:1.35em; color:#1766a0; font-weight:bold; margin-bottom:18px; letter-spacing:1px; border-bottom:2px solid #e67e22; padding-bottom:7px; display:flex; align-items:center; gap:8px;">
+    <span>📊</span>
+    <span>قسم تحاليل المباريات</span>
   </div>
-  <div style="background:#f8f8fa; border-radius:10px; padding:18px 14px;">
-    <div style="font-size:1.1em; font-weight:bold; color:#e67e22; margin-bottom:10px;">
-      باريس سان جيرمان يكتب التاريخ بخماسية أمام إنتر ويتوج بدوري الأبطال لأول مرة
+  <div style="background:#f8f8fa; border-radius:12px; padding:20px 14px;">
+    <div style="font-size:1.15em; font-weight:bold; color:#e67e22; margin-bottom:12px;">
+      بيراميدز يحقق إنجازًا تاريخيًا ويتوج بدوري أبطال أفريقيا على حساب صن داونز
     </div>
-    <div style="color:#444; font-size:1em; margin-bottom:10px;">
-      حقق باريس سان جيرمان إنجازًا تاريخيًا بتتويجه بلقب دوري أبطال أوروبا للمرة الأولى في تاريخه، بعدما اكتسح إنتر ميلان بنتيجة 5-0 في النهائي الذي أقيم على ملعب أليانز أرينا.<br>
-      سيطر الفريق الباريسي على مجريات اللقاء منذ البداية، ونجح في تسجيل أهدافه الخمسة وسط أداء هجومي ساحق وتألق جماعي لافت، ليحسم اللقب الأغلى ويمنح جماهيره ليلة لا تُنسى.
+    <div style="color:#444; font-size:1.05em; margin-bottom:14px;">
+      في ليلة أفريقية لا تُنسى، حقق بيراميدز المصري فوزًا تاريخيًا على صن داونز الجنوب أفريقي في نهائي دوري أبطال أفريقيا بنتيجة 3-1، ليحصد اللقب لأول مرة في تاريخه.
+      <br><br>
+      تألق المهاجم مايلي بتسجيل هدفين رائعين، وأضاف المدافع أحمد سامي الهدف الثالث، بينما سجل هدف صن داونز الوحيد اللاعب أكرام راينرز.
     </div>
+    <div style="color:#1766a0; font-weight:bold; margin-bottom:6px;">تفاصيل الأهداف:</div>
+    <ul style="color:#555; font-size:1em; margin-bottom:10px; padding-right:20px;">
+      <li>مايلي (بيراميدز) - الهدف الأول (د 17)</li>
+      <li>مايلي (بيراميدز) - الهدف الثاني (د 39)</li>
+      <li>أكرام راينرز (صن داونز) - هدف تقليص الفارق (د 56)</li>
+      <li>أحمد سامي (بيراميدز) - الهدف الثالث (د 81)</li>
+    </ul>
     <div style="color:#555; font-size:1em;">
-      بهذا الفوز، يدخل باريس سان جيرمان سجل الأبطال الأوروبيين ويحقق الحلم الذي طال انتظاره، بينما لم يتمكن إنتر ميلان من مجاراة القوة الهجومية للفريق الفرنسي في ليلة تاريخية للعاصمة باريس.
+      بهذا الإنجاز، يدخل بيراميدز تاريخ الكرة الأفريقية من أوسع أبوابه، بينما اكتفى صن داونز بالمركز الثاني رغم محاولاته المتكررة في الشوط الثاني.
     </div>
   </div>
 </section>
-<section class="section-box">
+
+    <section class="section-box">
   <div class="section-title" style="font-size:1.18em; color:#1766a0; font-weight:bold; margin-bottom:14px; display:flex; align-items:center; gap:7px;">
     <span>⚽️🔥</span>
     <span>نجوم المساهمات التهديفية 2025</span>
@@ -273,55 +303,41 @@ setInterval(updateMatchStatus, 60000);
 
 <!-- قسم 8: أحدث الأخبار الرياضية -->
 <section class="section-box">
-  <div class="section-title" style="font-size:1.25em; color:#1766a0; font-weight:bold; margin-bottom:18px;">
-    أحدث الأخبار الرياضية
+  <div class="section-title" style="font-size:1.25em; color:#1766a0; font-weight:bold; margin-bottom:18px; display:flex; align-items:center; gap:7px;">
+    <span>🏆</span>
+    <span>أحدث الأخبار الرياضية</span>
   </div>
   <div style="display:flex; flex-direction:column; gap:18px;">
-    
     <!-- الخبر الأول -->
     <div style="background:#f8f8fa; border-radius:10px; padding:14px 10px;">
       <div style="font-size:1.1em; font-weight:bold; color:#e67e22;">
-        رسميًا: رحيل علي معلول وعمر السولية عن الأهلي بعد 9 سنوات من الإنجازات
+        بيراميدز يحقق إنجازًا تاريخيًا ويتوج بدوري أبطال أفريقيا لأول مرة
       </div>
       <div style="color:#555; font-size:1em; margin:8px 0 0 0;">
-        أعلن النادي الأهلي رحيل النجم التونسي علي معلول وزميله عمر السولية بعد مسيرة حافلة امتدت لتسع سنوات. <br>
-        الثنائي حقق كل البطولات المحلية والأفريقية ويُعد من أفضل لاعبي الجيل الحالي في القلعة الحمراء.
+        فاز بيراميدز المصري على صن داونز الجنوب أفريقي 2-1 في إياب النهائي، ليحصد لقبه الأفريقي الأول في تاريخه بعد تعادل الذهاب 1-1.<br>
+        بهذا الإنجاز ينضم بيراميدز لقائمة الأندية المصرية المتوجة بدوري الأبطال ويكتب اسمه في سجلات القارة السمراء[1][2][5].
       </div>
     </div>
-    
     <!-- الخبر الثاني -->
     <div style="background:#f8f8fa; border-radius:10px; padding:14px 10px;">
       <div style="font-size:1.1em; font-weight:bold; color:#e67e22;">
-        أول حصة تدريبية لريفيروا مع الأهلي استعدادًا للموسم الجديد
+        بيراميدز يحجز مقعده في مونديال الأندية 2029 بعد التتويج القاري
       </div>
       <div style="color:#555; font-size:1em; margin:8px 0 0 0;">
-        قاد المدرب الجديد ريفيروا أول مران له مع النادي الأهلي وسط أجواء من الحماس والترقب. <br>
-        الجهاز الفني ركز على الجوانب البدنية وتعرف ريفيروا على اللاعبين استعدادًا للتحديات القادمة.
+        ضمن بيراميدز المشاركة في كأس العالم للأندية 2029، ليصبح ثاني نادٍ مصري يحقق هذا الإنجاز بعد الأهلي.<br>
+        بيراميدز ثالث المتأهلين رسميًا للبطولة العالمية بنظامها الجديد بعد تتويجه بدوري أبطال أفريقيا[3][4].
       </div>
     </div>
-    
     <!-- الخبر الثالث -->
     <div style="background:#f8f8fa; border-radius:10px; padding:14px 10px;">
       <div style="font-size:1.1em; font-weight:bold; color:#e67e22;">
-        الزمالك يهزم فاركو في ختام الدوري ويحسم المركز الثالث
+        صن داونز يخسر النهائي الثاني أمام الأندية المصرية في أفريقيا
       </div>
       <div style="color:#555; font-size:1em; margin:8px 0 0 0;">
-        حقق الزمالك فوزًا مهمًا على فاركو في آخر جولات الدوري المصري ليحسم المركز الثالث. <br>
-        بهذا الفوز يضمن الزمالك المشاركة في بطولة الكونفدرالية بالموسم القادم.
+        تكررت عقدة الأندية المصرية لصن داونز، حيث خسر النهائي الأفريقي الثاني له أمام بيراميدز، بعد خسارته أمام الأهلي في نهائي 2001.<br>
+        صن داونز لم ينجح في فك العقدة رغم محاولاته، ليكتفي بالمركز الثاني مجددًا في القارة الأفريقية.
       </div>
     </div>
-    
-    <!-- الخبر الرابع -->
-    <div style="background:#f8f8fa; border-radius:10px; padding:14px 10px;">
-      <div style="font-size:1.1em; font-weight:bold; color:#e67e22;">
-        نهائي الأحلام: بيراميدز وصن داونز في صراع على لقب دوري أبطال أفريقيا
-      </div>
-      <div style="color:#555; font-size:1em; margin:8px 0 0 0;">
-        تتجه أنظار القارة السمراء إلى نهائي دوري أبطال أفريقيا بين بيراميدز وصن داونز. <br>
-        من يظفر باللقب ويحقق الحلم في ليلة كروية أفريقية مرتقبة؟
-      </div>
-    </div>
-
   </div>
 </section>
 
