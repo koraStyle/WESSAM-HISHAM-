@@ -56,6 +56,84 @@
   <h1 class="site-title">كورة ستايل</h1>
   <p class="site-desc">كل جديد في عالم الكرة لحظة بلحظة</p>
 </header>
+<!-- شريط التصنيفات مع فواصل نجوم -->
+<nav style="background:#1766a0; padding:0; box-shadow:0 2px 10px #1766a022; position:relative; z-index:10;">
+  <div style="max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:center;">
+    <a href="#today-matches" class="nav-link">مباريات اليوم</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#teams-ranking" class="nav-link">ترتيب الفرق</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#championships" class="nav-link">البطولات</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#matches-analysis" class="nav-link">تحليل المباريات</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#tactical-analysis" class="nav-link">قسم التحليل التكتيكي</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#stars" class="nav-link">نجوم الملاعب</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#latest-articles" class="nav-link">أحدث المقالات</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#latest-news" class="nav-link">أحدث الأخبار</a>
+    <span class="nav-sep">⭐️</span>
+    <a href="#tv-interviews" class="nav-link">أحدث المقابلات التلفزيونية</a>
+  </div>
+</nav>
+
+<style>
+.nav-link {
+  color:#fff;
+  font-weight:bold;
+  padding:13px 18px;
+  text-decoration:none;
+  font-size:1.05em;
+  transition:background 0.2s, color 0.2s;
+  border-radius:0 0 14px 14px;
+  display:inline-block;
+}
+.nav-link:hover, .nav-link:focus {
+  background: #e67e22;
+  color: #fff !important;
+}
+.nav-sep {
+  color: #ffd700;
+  font-size: 1.18em;
+  margin: 0 2px;
+  user-select: none;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  nav div {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .nav-link {
+    font-size: 0.98em;
+    padding: 11px 10px;
+    margin: 0 2px;
+  }
+  .nav-sep {
+    font-size: 1em;
+    margin: 0 1px;
+  }
+}
+@media (max-width: 600px) {
+  nav div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-link {
+    border-radius: 0 !important;
+    border-bottom: 1px solid #ffffff22;
+    width: 100%;
+    text-align: right;
+    padding-right: 18px;
+  }
+  .nav-sep {
+    display: none;
+  }
+}
+</style>
+<div id="today-matches"></div>
 
 <!-- قسم 1: جدول مباريات اليوم -->
 <section class="section-box" style="display:flex; justify-content:center;">
@@ -157,6 +235,7 @@ function updateMatchStatus() {
 updateMatchStatus();
 setInterval(updateMatchStatus, 60000);
 </script>
+<div id="championships"></div>
 
 <!-- قسم 2: البطولات -->
 <section class="section-box">
@@ -179,6 +258,7 @@ setInterval(updateMatchStatus, 60000);
     <a href="https://www.cafonline.com/caf-womens-champions-league/" target="_blank">دوري أبطال أفريقيا للسيدات</a>
   </div>
 </section>
+<div id="teams-ranking"></div>
 
 <!-- قسم 3: ترتيب الفرق في الدوريات -->
 <section class="section-box">
@@ -200,6 +280,7 @@ setInterval(updateMatchStatus, 60000);
   <span>👑</span>
   <a href="articles/top-scorers.html" style="color:#1766a0; text-decoration:none;">ترتيب هدافي الدوريات الكبرى</a>
 </div>
+<div id="matches-analysis"></div>
 
 <!-- قسم 5: تحليل المباريات -->
 <section class="section-box">
@@ -245,6 +326,8 @@ setInterval(updateMatchStatus, 60000);
 </section>
 <section class="section-box">
   <div class="section-title" style="font-size: 22px; font-weight: bold; color: #1766a0; margin-bottom: 10px;">
+   <div id="tactical-analysis"></div>
+
     📊 قسم التحليل التكتيكي
   </div>
   <ul style="list-style:none; padding:0;">
@@ -260,8 +343,10 @@ setInterval(updateMatchStatus, 60000);
   </a>
 </li>
 </section>
-<!-- قسم 6: نجوم الملاعب -->
-<section class="section-box">
+<div id="stars"></div>
+
+    <!-- قسم 6: نجوم الملاعب -->
+    <section class="section-box">
   <div class="section-title">نجوم الملاعب</div>
   <div class="players-list">
     <a href="player-messi.html" target="_blank">ليونيل ميسي</a>
@@ -276,6 +361,7 @@ setInterval(updateMatchStatus, 60000);
   </div>
   <div class="note">اضغط على اسم أي لاعب لعرض سيرته الكاملة وإحصاءاته الاحترافية، الأندية التي لعب لها، البطولات، الأهداف، والنادي الحالي.</div>
 </section>
+<div id="latest-articles"></div>
 
 <!-- قسم 7: أحدث المقالات الرياضية -->
 <section class="section-box">
@@ -339,6 +425,7 @@ setInterval(updateMatchStatus, 60000);
   </div>
   <div style="color:#555; font-size:14px;">كل ما تريد معرفته عن أهداف، أسيست، بطاقات، ضربات جزاء والمزيد للدوريات الأوروبية الكبرى.</div>
 </section>
+<div id="latest-news"></div>
 
 <!-- قسم 8: أحدث الأخبار الرياضية -->
 <section class="section-box">
@@ -399,6 +486,7 @@ setInterval(updateMatchStatus, 60000);
     </div>
   </div>
 </section>
+<div id="tv-interviews"></div>
 
 <!-- قسم 9: المقابلات التلفزيونية -->
 <section class="section-box">
