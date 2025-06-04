@@ -136,7 +136,7 @@
 <div id="today-matches"></div>
 
 <!-- قسم 1: جدول مباريات اليوم -->
-<section class="section-box" style="max-width:550px;margin:auto;">
+<section class="section-box">
   <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
     <span>⚽️</span> مباريات اليوم 4 / 6
   </div>
@@ -212,11 +212,11 @@ function renderMatches() {
   matches.forEach(match => {
     const status = getMatchStatus(match.time);
     html += `
-      <div style="background:#fff; border-radius:11px; box-shadow:0 2px 12px #1766a011; margin-bottom:18px; padding:18px 10px 10px 10px;">
+      <div style="background:#f8f8fa; border-radius:10px; box-shadow:0 2px 10px #1766a012; margin-bottom:20px; padding:16px 10px 12px 10px;">
         <div style="color:#e67e22; font-weight:bold; font-size:1em; margin-bottom:8px; text-align:center;">
           ${match.tournament}
         </div>
-        <div style="display:flex; align-items:center; justify-content:space-between; font-size:1.16em; font-weight:bold; color:#1766a0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:1.13em; font-weight:bold; color:#1766a0;">
           <span style="flex:1; text-align:right;">${match.team1}</span>
           <span style="flex:0.8; text-align:center; color:#222; font-size:1.09em;">
             ${formatTime(match.time)}
