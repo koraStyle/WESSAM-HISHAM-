@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="google-site-verification" content="N4AJlBefLG-17tda3Kqk6erevrxYoNmSDHAsKtqwpVo" />
-  <title>كورة ستايل - مباريات اليوم 4 يونيو  2025</title>
+  <title>كورة ستايل - مباريات اليوم 5 يونيو  2025</title>
   <meta name="viewport" content="width=950">
   <style>
     body {background:#f7fafd; margin:0; font-family:Tahoma, Arial, sans-serif;}
@@ -136,46 +136,85 @@
 <div id="today-matches"></div>
 
 <!-- قسم 1: جدول مباريات اليوم -->
-<section class="section-box">
+<section class="section-box" id="today-matches">
   <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
-    <span>⚽️</span> مباريات اليوم 4 / 6
+    <span>⚽️</span> مباريات اليوم 5 / 6 / 2025
   </div>
   <div id="matches-list"></div>
 </section>
 
 <script>
-// بيانات المباريات
+// بيانات مباريات اليوم 5/6/2025
 const matches = [
-  {
-    tournament: "كأس الرابطة المصرية",
-    team1: "الإسماعيلي",
-    team2: "سيراميكا",
-    time: "2025-06-04T20:00:00",
-  },
-  {
-    tournament: "كأس الرابطة المصرية",
-    team1: "البنك الأهلي",
-    team2: "إنبي",
-    time: "2025-06-04T20:00:00",
-  },
+  // دوري الأمم الأوروبية
   {
     tournament: "دوري الأمم الأوروبية",
-    team1: "ألمانيا",
-    team2: "البرتغال",
-    time: "2025-06-04T22:00:00",
+    team1: "إسبانيا",
+    team2: "فرنسا",
+    time: "2025-06-05T22:00:00"
   },
+  // تصفيات آسيا المؤهلة لكأس العالم 2026
   {
-    tournament: "دورة تولون الدولية",
-    team1: "الكونغو",
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "أستراليا",
     team2: "اليابان",
-    time: "2025-06-04T15:00:00",
+    time: "2025-06-05T14:10:00"
   },
   {
-    tournament: "دورة تولون الدولية",
-    team1: "المكسيك",
-    team2: "الدنمارك",
-    time: "2025-06-04T18:30:00",
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "أندونيسيا",
+    team2: "الصين",
+    time: "2025-06-05T16:45:00"
   },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "الإمارات",
+    team2: "أوزبكستان",
+    time: "2025-06-05T19:00:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "عمان",
+    team2: "الأردن",
+    time: "2025-06-05T19:00:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "البحرين",
+    team2: "السعودية",
+    time: "2025-06-05T19:00:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "كوريا الشمالية",
+    team2: "قرغيزستان",
+    time: "2025-06-05T21:15:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "قطر",
+    team2: "ايران",
+    time: "2025-06-05T21:15:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "العراق",
+    team2: "كوريا الجنوبية",
+    time: "2025-06-05T21:15:00"
+  },
+  {
+    tournament: "تصفيات آسيا المؤهلة لكأس العالم 2026",
+    team1: "الكويت",
+    team2: "فلسطين",
+    time: "2025-06-05T21:15:00"
+  },
+  // كأس مصر
+  {
+    tournament: "كأس مصر",
+    team1: "الزمالك",
+    team2: "بيراميدز",
+    time: "2025-06-05T20:30:00"
+  }
 ];
 
 // دالة تنسيق الوقت (مثلاً: 08:00 م)
@@ -195,10 +234,13 @@ function getMatchStatus(matchTime) {
   const start = new Date(matchTime);
   const end = new Date(start.getTime() + 105*60000); // 1h45m لكل مباراة
 
+  const diffMinutes = (start - now) / 60000;
+  const diffDays = (start - now) / (1000*60*60*24);
+
   if (now < start) {
-    const diff = (start - now) / 60000; // بالدقائق
-    if (diff > 30) return "لم تبدأ بعد";
-    if (diff > 0) return "بعد قليل";
+    if (diffMinutes > 60) return "لم تبدأ بعد";
+    if (diffMinutes > 30) return "لم تبدأ بعد";
+    if (diffMinutes > 0) return "بعد قليل";
   } else if (now >= start && now <= end) {
     return "مباشر";
   } else {
