@@ -1,103 +1,213 @@
-<section class="section-box" id="tactical-analysis">
-  <div class="section-title" style="font-size:1.3em; color:#1766a0; font-weight:bold; margin-bottom:20px; display:flex; align-items:center; gap:8px; justify-content:center;">
-    <span>📊</span> التحليل التكتيكي لمباراة البرتغال وألمانيا – دوري الأمم الأوروبية
-  </div>
+<!-- تنسيقات CSS خاصة للقسم (يمكنك نقلها لملف CSS خارجي) -->
+<style>
+.match-title {
+  font-size: 1.35em;
+  color: #1766a0;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+.match-summary {
+  color: #333;
+  font-size: 1.08em;
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+.stats-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #1766a022;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.stats-table th, .stats-table td {
+  padding: 10px 8px;
+  font-size: 1em;
+  text-align: center;
+}
+.stats-table th {
+  background: #1766a0;
+  color: #fff;
+  font-weight: bold;
+}
+.stats-table tr:nth-child(even) {
+  background: #f8f8fa;
+}
+.stats-table td.stat-left {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.stats-table td.stat-right {
+  color: #1766a0;
+  font-weight: bold;
+}
+.formation-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.formation-box {
+  background: #f8f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1766a012;
+  padding: 16px 12px;
+  min-width: 270px;
+  flex: 1 1 270px;
+  max-width: 350px;
+}
+.formation-title {
+  color: #e67e22;
+  font-weight: bold;
+  font-size: 1.08em;
+  text-align: center;
+  margin-bottom: 7px;
+}
+.formation-coach {
+  color: #1766a0;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 7px;
+}
+.formation-pitch {
+  background: linear-gradient(180deg, #eaf6fa 70%, #d7f0e8 100%);
+  border-radius: 10px;
+  padding: 10px 0 12px 0;
+  margin: 0 auto 0 auto;
+  min-height: 170px;
+}
+.formation-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.formation-player {
+  background: #fff;
+  border-radius: 50%;
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1766a0;
+  font-weight: bold;
+  font-size: 0.99em;
+  box-shadow: 0 1px 4px #1766a022;
+  border: 2px solid #e67e22;
+}
+.formation-player.red {
+  color: #fff;
+  background: #e74c3c;
+  border: 2px solid #1766a0;
+}
+.formation-player.captain {
+  border: 2px solid #e67e22;
+  box-shadow: 0 2px 8px #e67e2288;
+}
+@media (max-width: 700px) {
+  .formation-container { flex-direction: column; }
+  .formation-box { max-width: 100%; }
+}
+</style>
 
-  <!-- ملخص سريع -->
-  <div style="background:#f8f8fa; border-radius:10px; box-shadow:0 2px 10px #1766a012; padding:18px 14px; margin-bottom:18px;">
-    <div style="font-size:1.08em; color:#e67e22; font-weight:bold; margin-bottom:8px; text-align:center;">
-      البرتغال 2 <span style="color:#1766a0;">–</span> 1 ألمانيا
-    </div>
-    <div style="color:#1766a0; font-size:1.05em; font-weight:bold; margin-bottom:10px; text-align:center;">
-      البرتغال تنهي عقدة ألمانيا وتبلغ النهائي بقيادة رونالدو
-    </div>
-    <div style="color:#222; font-size:1.04em; margin-bottom:10px; line-height:1.85;">
-      المباراة شهدت صراعًا تكتيكيًا متكافئًا بين البرتغال ذات الخبرة بقيادة رونالدو وألمانيا الشابة بقيادة ناجلسمان. بدأ الألمان بقوة واستحواذ، وتقدموا بهدف فيرتز (48)، لكن البرتغال قلبت الطاولة بهدفين متتاليين عبر كونسيساو (63) ورونالدو (68) مستغلة التحولات السريعة والضغط العالي في الثلث الهجومي[1][3][5][6].
-    </div>
-  </div>
+<!-- عنوان المباراة -->
+<div class="match-title">
+  🇩🇪 ألمانيا 1 - 2 البرتغال 🇵🇹<br>
+  <span style="font-size:0.85em; color:#888; font-weight:normal;">دوري الأمم الأوروبية - نصف النهائي</span>
+</div>
 
-  <!-- الإحصائيات الرئيسية -->
-  <div style="margin-bottom:18px;">
-    <div style="font-size:1.09em; color:#1766a0; font-weight:bold; margin-bottom:8px;">الإحصائيات الرئيسية</div>
-    <div style="overflow-x:auto;">
-      <table style="width:100%; background:#fff; border-radius:10px; box-shadow:0 2px 8px #1766a012; border-collapse:collapse; font-size:1.01em;">
-        <thead>
-          <tr style="background:#e67e22; color:#fff;">
-            <th style="padding:8px;">الإحصائية</th>
-            <th style="padding:8px;">البرتغال</th>
-            <th style="padding:8px;">ألمانيا</th>
-          </tr>
-        </thead>
-        <tbody style="color:#222;">
-          <tr><td style="padding:7px;">الاستحواذ (%)</td><td>54</td><td>46</td></tr>
-          <tr><td style="padding:7px;">إجمالي المحاولات</td><td>9</td><td>17</td></tr>
-          <tr><td style="padding:7px;">الهجمات</td><td>31</td><td>48</td></tr>
-          <tr><td style="padding:7px;">الركنيات</td><td>3</td><td>4</td></tr>
-          <tr><td style="padding:7px;">دقة التمرير (%)</td><td>90</td><td>87</td></tr>
-          <tr><td style="padding:7px;">التمريرات المكتملة</td><td>483</td><td>387</td></tr>
-          <tr><td style="padding:7px;">محاولات التمرير</td><td>535</td><td>443</td></tr>
-          <tr><td style="padding:7px;">الكرات المستردة</td><td>33</td><td>40</td></tr>
-          <tr><td style="padding:7px;">التسلل</td><td>3</td><td>0</td></tr>
-          <tr><td style="padding:7px;">التصديات</td><td>4</td><td>4</td></tr>
-          <tr><td style="padding:7px;">البطاقات الصفراء</td><td>3</td><td>4</td></tr>
-          <tr><td style="padding:7px;">البطاقات الحمراء</td><td>0</td><td>0</td></tr>
-          <tr><td style="padding:7px;">الأهداف</td><td>2</td><td>1</td></tr>
-          <tr><td style="padding:7px;">الأهداف داخل المنطقة</td><td>1</td><td>1</td></tr>
-          <tr><td style="padding:7px;">الأهداف خارج المنطقة</td><td>1</td><td>0</td></tr>
-          <tr><td style="padding:7px;">محاولات على المرمى</td><td>5</td><td>6</td></tr>
-          <tr><td style="padding:7px;">محاولات خارج المرمى</td><td>2</td><td>7</td></tr>
-          <tr><td style="padding:7px;">الكتل الدفاعية</td><td>4</td><td>2</td></tr>
-          <tr><td style="padding:7px;">المراوغات الناجحة</td><td>13</td><td>20</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<!-- ملخص وتحليل سريع -->
+<div class="match-summary">
+  مباراة مثيرة شهدت تفوقًا تكتيكيًا للبرتغال في الشوط الثاني، حيث قلبت تأخرها إلى فوز مستحق أمام ألمانيا القوية. سجل فيرتز هدف التقدم للألمان، لكن البرتغال ردت بقوة عبر كونسيساو ثم رونالدو، الذي قاد منتخب بلاده للنهائي بأداء حاسم.<br>
+  المواجهة اتسمت بالندية والسرعة، مع أفضلية ألمانية في الاستحواذ، لكن فعالية البرتغال في التحولات الهجومية صنعت الفارق.
+</div>
 
-  <!-- التشكيل والتكتيك -->
-  <div style="margin-bottom:18px;">
-    <div style="font-size:1.09em; color:#1766a0; font-weight:bold; margin-bottom:8px;">التشكيل الأساسي والتكتيك</div>
-    <div style="color:#222; font-size:1.03em; line-height:1.85; margin-bottom:10px;">
-      <b>ألمانيا (ناجلسمان):</b> اعتمد على خطة هجومية مرنة مع كثافة في وسط الملعب، وظهر تأثير كيميتش وجوريتزكا في الاستحواذ، بينما اعتمد فيرتز وبافلوفيتش على التحركات بين الخطوط لخلق المساحات. الدفاع الألماني عانى أمام التحولات السريعة للبرتغال خاصة في الشوط الثاني.<br>
-      <b>البرتغال (مارتينيز):</b> لعبت بخطة متوازنة، مع الاعتماد على سرعة التحولات والضغط العالي في الثلث الأخير. تألق رونالدو في التحرك داخل المنطقة، بينما كان كونسيساو مفتاح التحول الهجومي السريع، ونجح في استغلال المساحات خلف ظهيري ألمانيا[1][4][6][7].
-    </div>
-  </div>
+<!-- جدول الإحصائيات الرئيسية -->
+<table class="stats-table">
+  <thead>
+    <tr>
+      <th>الإحصائية</th>
+      <th>ألمانيا</th>
+      <th>البرتغال</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>الاستحواذ (%)</td><td class="stat-left">54</td><td class="stat-right">46</td></tr>
+    <tr><td>إجمالي المحاولات</td><td class="stat-left">9</td><td class="stat-right">17</td></tr>
+    <tr><td>الهجمات</td><td class="stat-left">31</td><td class="stat-right">48</td></tr>
+    <tr><td>الركنيات</td><td class="stat-left">3</td><td class="stat-right">4</td></tr>
+    <tr><td>دقة التمرير (%)</td><td class="stat-left">90</td><td class="stat-right">87</td></tr>
+    <tr><td>التمريرات المكتملة</td><td class="stat-left">483</td><td class="stat-right">387</td></tr>
+    <tr><td>محاولات التمرير</td><td class="stat-left">535</td><td class="stat-right">443</td></tr>
+    <tr><td>الكرات المستردة</td><td class="stat-left">33</td><td class="stat-right">40</td></tr>
+    <tr><td>التسلل</td><td class="stat-left">3</td><td class="stat-right">0</td></tr>
+    <tr><td>التصديات</td><td class="stat-left">4</td><td class="stat-right">4</td></tr>
+    <tr><td>البطاقات الصفراء</td><td class="stat-left">3</td><td class="stat-right">4</td></tr>
+    <tr><td>البطاقات الحمراء</td><td class="stat-left">0</td><td class="stat-right">0</td></tr>
+  </tbody>
+</table>
 
-  <!-- ملاحظات تكتيكية وتحليل -->
-  <div style="color:#1766a0; font-size:1.06em; font-weight:bold; margin-bottom:7px;">
-    ملاحظات تكتيكية:
-  </div>
-  <ul style="color:#222; font-size:1.04em; line-height:1.9; padding-right:20px; margin-bottom:10px; font-weight:400;">
-    <li>ألمانيا سيطرت على الاستحواذ وخلقت فرصًا عديدة، لكن البرتغال كانت أكثر فعالية في التحولات واستغلال الفرص.</li>
-    <li>تألق رونالدو في التحركات داخل الصندوق، ونجح في حسم المباراة من هجمة مرتدة نموذجية.</li>
-    <li>البرتغال أغلقت العمق الدفاعي بامتياز في الدقائق الأخيرة، مع تراجع منظم وارتداد سريع.</li>
-    <li>تبديلات مارتينيز منحت البرتغال حيوية هجومية في الشوط الثاني، خاصة مع دخول كونسيساو.</li>
-  </ul>
-
-  <!-- التشكيلتين -->
-  <div style="margin-top:18px;">
-    <div style="font-size:1.09em; color:#1766a0; font-weight:bold; margin-bottom:8px;">تشكيلة الفريقين</div>
-    <div style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center;">
-      <div style="background:#fff; border-radius:8px; box-shadow:0 1px 6px #1766a012; padding:12px 16px; min-width:220px;">
-        <div style="color:#e67e22; font-weight:bold; margin-bottom:7px; text-align:center;">ألمانيا</div>
-        <div style="color:#1766a0; font-weight:bold; margin-bottom:5px;">المدرب: جوليان ناجلسمان</div>
-        <div style="color:#222; font-size:0.99em;">
-          1 تير شتيجن<br>
-          2 أنطون، 3 كوخ، 4 تاه، 6C كيميتش<br>
-          8 جوريتزكا، 11 وولتمايد، 17 فيرتز<br>
-          18 ميتلشتات، 19 عاقل، 25 بافلوفيتش
-        </div>
+<!-- التشكيل الرسمي للفريقين -->
+<div class="formation-container">
+  <!-- تشكيل ألمانيا -->
+  <div class="formation-box">
+    <div class="formation-title">ألمانيا</div>
+    <div class="formation-coach">المدرب: جوليان ناجلسمان</div>
+    <div class="formation-pitch">
+      <div class="formation-row">
+        <div class="formation-player">1<br><span style="font-size:0.8em;">Ter Stegen</span></div>
       </div>
-      <div style="background:#fff; border-radius:8px; box-shadow:0 1px 6px #1766a012; padding:12px 16px; min-width:220px;">
-        <div style="color:#e67e22; font-weight:bold; margin-bottom:7px; text-align:center;">البرتغال</div>
-        <div style="color:#1766a0; font-weight:bold; margin-bottom:5px;">المدرب: روبرتو مارتينيز</div>
-        <div style="color:#222; font-size:0.99em;">
-          1 ديوغو كوستا<br>
-          3 روبن دياس، 7C رونالدو، 8 فرنانديز<br>
-          10 برناردو سيلفا، 14 غونسالو إيناسيو<br>
-          15 جواو نيفيس، 16 فرانسيسكو ترينكاو<br>
-          18 روبن نيفز، 20 بيدرو نيتو، 25 نونو مينديز
-        </div>
+      <div class="formation-row">
+        <div class="formation-player">2<br><span style="font-size:0.8em;">Anton</span></div>
+        <div class="formation-player">4<br><span style="font-size:0.8em;">Tah</span></div>
+        <div class="formation-player">3<br><span style="font-size:0.8em;">Koch</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player captain">6<br><span style="font-size:0.8em;">Kimmich</span></div>
+        <div class="formation-player">25<br><span style="font-size:0.8em;">Pavlović</span></div>
+        <div class="formation-player">8<br><span style="font-size:0.8em;">Goretzka</span></div>
+        <div class="formation-player">18<br><span style="font-size:0.8em;">Mittelstädt</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player">19<br><span style="font-size:0.8em;">Sané</span></div>
+        <div class="formation-player">17<br><span style="font-size:0.8em;">Wirtz</span></div>
+        <div class="formation-player">11<br><span style="font-size:0.8em;">Woltemade</span></div>
       </div>
     </div>
   </div>
-</section>
+  <!-- تشكيل البرتغال -->
+  <div class="formation-box">
+    <div class="formation-title">البرتغال</div>
+    <div class="formation-coach">المدرب: روبرتو مارتينيز</div>
+    <div class="formation-pitch">
+      <div class="formation-row">
+        <div class="formation-player">1<br><span style="font-size:0.8em;">Diogo Costa</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player">25<br><span style="font-size:0.8em;">Nuno Mendes</span></div>
+        <div class="formation-player">14<br><span style="font-size:0.8em;">Gonçalo Inácio</span></div>
+        <div class="formation-player">3<br><span style="font-size:0.8em;">Rúben Dias</span></div>
+        <div class="formation-player">15<br><span style="font-size:0.8em;">João Neves</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player">20<br><span style="font-size:0.8em;">Pedro Neto</span></div>
+        <div class="formation-player">8<br><span style="font-size:0.8em;">Fernandes</span></div>
+        <div class="formation-player">16<br><span style="font-size:0.8em;">Francisco Trincão</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player">10<br><span style="font-size:0.8em;">Bernardo Silva</span></div>
+        <div class="formation-player">18<br><span style="font-size:0.8em;">Rúben Neves</span></div>
+      </div>
+      <div class="formation-row">
+        <div class="formation-player red captain">7<br><span style="font-size:0.8em;">Ronaldo</span></div>
+      </div>
+    </div>
+  </div>
+</div>
