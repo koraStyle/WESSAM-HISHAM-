@@ -426,19 +426,56 @@ setInterval(updateMatchStatus, 60000);
     </div>
   </div>
 </section>
-<section class="section-box">
-  <div class="section-title" style="font-size: 22px; font-weight: bold; color: #1766a0; margin-bottom: 10px;">
-   <div id="tactical-analysis"></div>
+<!-- أضف هذا في <head> أو ملف CSS -->
+<style>
+.section-box {
+  font-size: 1em;
+  color: #222;
+}
+.section-title {
+  font-size: 1.22em;
+  color: #1766a0;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+}
+.players-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.players-list a {
+  color: #1766a0;
+  font-weight: bold;
+  background: #f8f8fa;
+  border-radius: 7px;
+  padding: 7px 18px;
+  text-decoration: none;
+  box-shadow: 0 1px 5px #1766a012;
+  font-size: 1em;
+}
+.note {
+  color: #888;
+  font-size: 1.01em;
+  text-align: center;
+}
+</style>
+
 <!-- قسم التحليل التكتيكي -->
 <section class="section-box" id="tactical-analysis">
-  <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
+  <div class="section-title">
     <span>📊</span> التحليل التكتيكي
   </div>
   <div style="background:#f8f8fa; border-radius:10px; box-shadow:0 2px 10px #1766a012; padding:16px 14px 12px 14px;">
-    <a href="portugal-germany.html" style="font-size:1.12em; font-weight:bold; color:#222; text-decoration:none; display:block; text-align:center; margin-bottom:4px;">
+    <a href="portugal-germany.html" style="display:block; text-align:center; margin-bottom:4px;">
       مباراة البرتغال وألمانيا في دوري الأمم الأوروبية
     </a>
-    <div style="color:#1766a0; font-size:1.01em; text-align:center;">
+    <div style="color:#1766a0; text-align:center;">
       اضغط لقراءة التحليل التكتيكي الكامل للمباراة
     </div>
   </div>
@@ -446,21 +483,21 @@ setInterval(updateMatchStatus, 60000);
 
 <!-- قسم نجوم الملاعب -->
 <section class="section-box" id="stars">
-  <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
+  <div class="section-title">
     <span>🌟</span> نجوم الملاعب
   </div>
-  <div class="players-list" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:10px;">
-    <a href="player-messi.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">ليونيل ميسي</a>
-    <a href="player-ronaldo.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">كريستيانو رونالدو</a>
-    <a href="player-salah.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">محمد صلاح</a>
-    <a href="player-neymar.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">نيمار جونيور</a>
-    <a href="luka-modric.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">لوكا مودريتش</a>
-    <a href="player-kane.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">هاري كين</a>
-    <a href="player-mahrez.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">رياض محرز</a>
-    <a href="player-abu-ali.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">وسام أبو علي</a>
-    <a href="player-emam-ashour.html" target="_blank" style="color:#1766a0; font-weight:bold; background:#f8f8fa; border-radius:7px; padding:7px 18px; text-decoration:none; box-shadow:0 1px 5px #1766a012;">إمام عاشور</a>
+  <div class="players-list">
+    <a href="player-messi.html" target="_blank">ليونيل ميسي</a>
+    <a href="player-ronaldo.html" target="_blank">كريستيانو رونالدو</a>
+    <a href="player-salah.html" target="_blank">محمد صلاح</a>
+    <a href="player-neymar.html" target="_blank">نيمار جونيور</a>
+    <a href="luka-modric.html" target="_blank">لوكا مودريتش</a>
+    <a href="player-kane.html" target="_blank">هاري كين</a>
+    <a href="player-mahrez.html" target="_blank">رياض محرز</a>
+    <a href="player-abu-ali.html" target="_blank">وسام أبو علي</a>
+    <a href="player-emam-ashour.html" target="_blank">إمام عاشور</a>
   </div>
-  <div class="note" style="color:#888; font-size:1.01em; text-align:center;">
+  <div class="note">
     اضغط على اسم أي لاعب لعرض سيرته الكاملة وإحصاءاته الاحترافية، الأندية التي لعب لها، البطولات، الأهداف، والنادي الحالي.
   </div>
 </section>
