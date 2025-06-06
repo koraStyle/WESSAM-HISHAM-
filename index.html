@@ -135,79 +135,52 @@
 </style>
 <div id="today-matches"></div>
 
-<!-- قسم 1: جدول مباريات اليوم -->
+<!-- قسم 1: جدول مباريات اليوم 7 / 6 / 2025 -->
 <section class="section-box" id="today-matches">
   <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
-    <span>⚽️</span> مباريات اليوم 6 / 6 / 2025
+    <span>⚽️</span> مباريات اليوم 7 / 6 / 2025
   </div>
   <div id="matches-list"></div>
 </section>
 
 <script>
-// بيانات مباريات اليوم 6/6/2025
+// بيانات مباريات اليوم 7/6/2025
 const matches = [
-  // تصفيات كأس العالم: أوروبا
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "تشيكيا",
     team2: "مونتينيغرو",
-    time: "2025-06-06T21:45:00"
+    time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "جبل طارق",
     team2: "كرواتيا",
-    time: "2025-06-06T21:45:00"
+    time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "مقدونيا الشمالية",
     team2: "بلجيكا",
-    time: "2025-06-06T21:45:00"
+    time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "ويلز",
     team2: "ليشتنشتاين",
-    time: "2025-06-06T21:45:00"
+    time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "إستونيا",
     team2: "الكيان الصهيوني",
-    time: "2025-06-06T21:45:00"
+    time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
     team1: "النرويج",
     team2: "إيطاليا",
-    time: "2025-06-06T21:45:00"
-  },
-
-  // تصفيات كأس العالم: أمريكا الجنوبية
-  {
-    tournament: "تصفيات كأس العالم: أمريكا الجنوبية",
-    team1: "الاكوادور",
-    team2: "البرازيل",
-    time: "2025-06-07T02:00:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أمريكا الجنوبية",
-    team1: "باراغواي",
-    team2: "أوروغواي",
-    time: "2025-06-07T02:00:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أمريكا الجنوبية",
-    team1: "تشيلي",
-    team2: "الأرجنتين",
-    time: "2025-06-07T04:00:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أمريكا الجنوبية",
-    team1: "كولومبيا",
-    team2: "بيرو",
-    time: "2025-06-06T23:30:00"
+    time: "2025-06-07T21:45:00"
   }
 ];
 
@@ -226,18 +199,16 @@ function formatTime(dateStr) {
 function getMatchStatus(matchTime) {
   const now = new Date();
   const start = new Date(matchTime);
-  const end = new Date(start.getTime() + 105*60000); // 1h45m لكل مباراة
+  const end = new Date(start.getTime() + 105*60000);
 
-  const diffMinutes = (start - now) / 60000;
-
+  const diff = (start - now) / 60000;
   if (now < start) {
-    if (diffMinutes > 30) return "لم تبدأ بعد";
-    if (diffMinutes > 0) return "بعد قليل";
+    if (diff > 30) return "لم تبدأ بعد";
+    if (diff > 0) return "بعد قليل";
   } else if (now >= start && now <= end) {
     return "مباشر";
-  } else {
-    return "انتهت";
   }
+  return "انتهت";
 }
 
 // رسم المباريات
@@ -280,36 +251,7 @@ function renderMatches() {
   document.getElementById('matches-list').innerHTML = html;
 }
 renderMatches();
-
-// تحديث الحالة كل دقيقة
 setInterval(renderMatches, 60000);
-</script>
-
-<script>
-function updateMatchStatus() {
-  const now = new Date();
-  document.querySelectorAll('.status-btn').forEach(btn => {
-    const t = btn.getAttribute('data-time');
-    if (!t) return;
-    const matchTime = new Date(t);
-    const diffMin = (matchTime - now) / 60000;
-    if (diffMin <= -120) {
-      btn.textContent = "انتهت";
-      btn.className = "status-btn";
-    } else if (diffMin <= 0 && diffMin > -120) {
-      btn.textContent = "مباشر";
-      btn.className = "status-btn status-live";
-    } else if (diffMin <= 60) {
-      btn.textContent = "بعد قليل";
-      btn.className = "status-btn status-soon";
-    } else {
-      btn.textContent = "لم تبدأ";
-      btn.className = "status-btn";
-    }
-  });
-}
-updateMatchStatus();
-setInterval(updateMatchStatus, 60000);
 </script>
 <div id="championships"></div>
 
