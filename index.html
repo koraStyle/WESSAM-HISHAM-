@@ -135,7 +135,7 @@
 </style>
 <div id="today-matches"></div>
 
-<!-- قسم 1: جدول مباريات اليوم 7 / 6 / 2025 -->
+<!-- قسم: جدول مباريات اليوم 7/6/2025 -->
 <section class="section-box" id="today-matches">
   <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
     <span>⚽️</span> مباريات اليوم 7 / 6 / 2025
@@ -148,38 +148,38 @@
 const matches = [
   {
     tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "تشيكيا",
-    team2: "مونتينيغرو",
+    team1: "البوسنة والهرسك",
+    team2: "سان مارينو",
+    time: "2025-06-07T16:00:00"
+  },
+  {
+    tournament: "تصفيات كأس العالم: أوروبا",
+    team1: "مالطا",
+    team2: "ليتوانيا",
+    time: "2025-06-07T19:00:00"
+  },
+  {
+    tournament: "تصفيات كأس العالم: أوروبا",
+    team1: "أندورا",
+    team2: "إنجلترا",
+    time: "2025-06-07T19:00:00"
+  },
+  {
+    tournament: "تصفيات كأس العالم: أوروبا",
+    team1: "فنلندا",
+    team2: "هولندا",
     time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "جبل طارق",
-    team2: "كرواتيا",
+    team1: "النمسا",
+    team2: "رومانيا",
     time: "2025-06-07T21:45:00"
   },
   {
     tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "مقدونيا الشمالية",
-    team2: "بلجيكا",
-    time: "2025-06-07T21:45:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "ويلز",
-    team2: "ليشتنشتاين",
-    time: "2025-06-07T21:45:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "إستونيا",
-    team2: "الكيان الصهيوني",
-    time: "2025-06-07T21:45:00"
-  },
-  {
-    tournament: "تصفيات كأس العالم: أوروبا",
-    team1: "النرويج",
-    team2: "إيطاليا",
+    team1: "ألبانيا",
+    team2: "صربيا",
     time: "2025-06-07T21:45:00"
   }
 ];
@@ -199,16 +199,19 @@ function formatTime(dateStr) {
 function getMatchStatus(matchTime) {
   const now = new Date();
   const start = new Date(matchTime);
-  const end = new Date(start.getTime() + 105*60000);
+  const end = new Date(start.getTime() + 105*60000); // 1h45m لكل مباراة
 
-  const diff = (start - now) / 60000;
+  const diffMinutes = (start - now) / 60000;
+
   if (now < start) {
-    if (diff > 30) return "لم تبدأ بعد";
-    if (diff > 0) return "بعد قليل";
+    if (diffMinutes > 60) return "لم تبدأ بعد";
+    if (diffMinutes > 30) return "لم تبدأ بعد";
+    if (diffMinutes > 0) return "بعد قليل";
   } else if (now >= start && now <= end) {
     return "مباشر";
+  } else {
+    return "انتهت";
   }
-  return "انتهت";
 }
 
 // رسم المباريات
@@ -251,6 +254,8 @@ function renderMatches() {
   document.getElementById('matches-list').innerHTML = html;
 }
 renderMatches();
+
+// تحديث الحالة كل دقيقة
 setInterval(renderMatches, 60000);
 </script>
 <div id="championships"></div>
