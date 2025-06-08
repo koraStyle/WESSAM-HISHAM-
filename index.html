@@ -431,27 +431,35 @@ setInterval(renderMatches, 60000);
 <div id="tactical-analysis"></div>
 
 <!-- قسم التحليل التكتيكي -->
-<section class="section-box">
-  <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px;">
-    <span>📊</span>
-    <span>التحليل التكتيكي</span>
+<div class="tactical-analysis-box" style="padding: 20px; background-color: #f5f5f5; border-radius: 10px; margin: 20px 0;">
+  <h2 style="color: #c8102e; font-size: 24px; margin-bottom: 15px;">التحليل التكتيكي</h2>
+
+  <div class="match-analysis-card" style="background-color: white; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+    <h3 style="font-size: 20px; color: #333;">🇵🇹 البرتغال تتوج باللقب القاري بعد ملحمة ضد إسبانيا 🇪🇸</h3>
+    <p style="margin: 15px 0; color: #555;">
+      في نهائي دراماتيكي لدوري الأمم الأوروبية، انتصرت البرتغال على إسبانيا بركلات الترجيح بعد تعادل مثير 2-2 في الأشواط الأصلية والإضافية، حيث خطف أويارزابال وزوبيميندي الأضواء للمنتخب الإسباني، بينما تألق رونالدو ونونو مينديز لقيادة البرتغال نحو المجد الأوروبي.
+    </p>
+    
+    <a href="portugal-vs-spain-analysis.html" style="
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #c8102e;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    ">اقرأ التحليل</a>
   </div>
-  <div style="display:flex; flex-direction:column; gap:24px;">
-    <!-- تحليل هولندا ضد فنلندا -->
-    <div style="background:#f8f8fa; border-radius:10px; padding:14px;">
-      <div style="font-size:1.09em; font-weight:bold; color:#e67e22; margin-bottom:6px;">
-        قراءة تكتيكية: هولندا تتفوق على فنلندا بثنائية نظيفة
-      </div>
-      <div style="color:#555; font-size:1em; margin-bottom:10px;">
-        سيطرة واضحة للمنتخب الهولندي بفضل تحركات دي يونغ وتمركز جاكبو المثالي، في مواجهة دفاع فنلندي هش.
-      </div>
-      <a href="tactical-ned-finland.html" style="background:#e67e22; color:#fff; padding:7px 22px; border-radius:8px; font-weight:bold; text-decoration:none; font-size:1.07em;">
-        اقرأ التحليل
-      </a>
-    </div>
-  </div>
-</section>
-<!-- قسم نجوم الملاعب -->
+</div>
+
+<style>
+  .match-analysis-card a:hover {
+    background-color: #a50e25;
+  }
+</style>
+    <!-- قسم نجوم الملاعب -->
 <section class="section-box" id="stars">
   <div class="section-title">
     <span>🌟</span> نجوم الملاعب
