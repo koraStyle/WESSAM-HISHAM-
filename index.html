@@ -139,31 +139,68 @@
 
 <!-- قسم: جدول مباريات اليوم 17/6/2025 -->
 <section class="section-box" id="today-matches">
-  <div class="section-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
-    <span>🏟️</span> مباريات اليوم 17 / 6 / 2025
+  <div style="display:flex; justify-content:center; align-items:center; gap:12px; margin-bottom:12px;">
+    <a href="index.html" id="today-btn" style="background:#1766a0; color:#fff; font-weight:bold; border-radius:8px 0 0 8px; padding:7px 22px; text-decoration:none; font-size:1.05em;">
+      مباريات اليوم
+    </a>
+    <a href="matches-tomorrow.html" id="tomorrow-btn" style="background:#e7e7e7; color:#1766a0; font-weight:bold; border-radius:0 8px 8px 0; padding:7px 22px; text-decoration:none; font-size:1.05em;">
+      مباريات الغد
+    </a>
+  </div>
+  <div class="section-title" id="matches-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
+    <span>🏟️</span> مباريات اليوم
   </div>
   <div id="matches-list"></div>
 </section>
 
 <script>
-const matches = [
-  { tournament: "كأس العالم للأندية", team1: "بوكا جونيورز", team2: "بنفيكا", time: "2025-06-17T01:00:00" },
-  { tournament: "كأس العالم للأندية", team1: "فلامينغو", team2: "الترجي", time: "2025-06-17T04:00:00" },
-  { tournament: "كأس العالم للأندية", team1: "فلومينينسي", team2: "دورتموند", time: "2025-06-17T19:00:00" },
-  { tournament: "كأس العالم للأندية", team1: "ريفر بليت", team2: "أوراوا ريد", time: "2025-06-17T22:00:00" },
+// بيانات كل يوم
+const allMatches = {
+  "2025-06-18": [
+    { tournament: "كأس العالم للأندية", team1: "أولسان", team2: "صن داونز", time: "2025-06-18T01:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "مونتيري", team2: "إنتر ميلان", time: "2025-06-18T04:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "مان سيتي", team2: "الوداد الرياضي", time: "2025-06-18T19:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "ريال مدريد", team2: "الهلال", time: "2025-06-18T22:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "الدنمارك", team2: "فنلندا", time: "2025-06-18T19:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "هولندا", team2: "أوكرانيا", time: "2025-06-18T19:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "سلوفينيا", team2: "تشيكيا", time: "2025-06-18T22:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "إنجلترا", team2: "ألمانيا", time: "2025-06-18T22:00:00" },
+    { tournament: "كأس الكونكاكاف الذهبية", team1: "كوراساو", team2: "السلفادور", time: "2025-06-18T03:15:00" },
+    { tournament: "كأس الكونكاكاف الذهبية", team1: "كندا", team2: "هندوراس", time: "2025-06-18T05:30:00" }
+  ],
+  "2025-06-19": [
+    { tournament: "كأس العالم للأندية", team1: "باتشوكا", team2: "سالزبورج", time: "2025-06-19T01:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "العين", team2: "يوفنتوس", time: "2025-06-19T04:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "بالميراس", team2: "الأهلي", time: "2025-06-19T19:00:00" },
+    { tournament: "كأس العالم للأندية", team1: "إنتر ميامي", team2: "بورتو", time: "2025-06-19T22:00:00" },
+    { tournament: "كأس الكونكاكاف الذهبية", team1: "كوستاريكا", team2: "جمهورية الدومينيكان", time: "2025-06-19T02:00:00" },
+    { tournament: "كأس الكونكاكاف الذهبية", team1: "سورينام", team2: "المكسيك", time: "2025-06-19T05:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "الدنمارك", team2: "رومانيا", time: "2025-06-19T20:00:00" },
+    { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "مونتينيغرو", team2: "إسبانيا", time: "2025-06-19T20:00:00" }
+  ]
+  // أضف مباريات الأيام القادمة بنفس النمط
+};
 
-  { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "جورجيا", team2: "البرتغال", time: "2025-06-17T19:00:00" },
-  { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "فرنسا", team2: "بولندا", time: "2025-06-17T19:00:00" },
-  { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "رومانيا", team2: "سلوفاكيا", time: "2025-06-17T22:00:00" },
-  { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "إسبانيا", team2: "إيطاليا", time: "2025-06-17T22:00:00" },
+// احصل على تاريخ اليوم بصيغة yyyy-mm-dd
+function getTodayKey() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  let mm = now.getMonth() + 1; mm = mm < 10 ? "0"+mm : mm;
+  let dd = now.getDate(); dd = dd < 10 ? "0"+dd : dd;
+  return `${yyyy}-${mm}-${dd}`;
+}
 
-  { tournament: "كأس الكونكاكاف الذهبية", team1: "بنما", team2: "جوادلوب", time: "2025-06-17T02:00:00" },
-  { tournament: "كأس الكونكاكاف الذهبية", team1: "جامايكا", team2: "جواتيمالا", time: "2025-06-17T05:00:00" },
+// احصل على تاريخ الغد بصيغة yyyy-mm-dd
+function getTomorrowKey() {
+  const now = new Date();
+  now.setDate(now.getDate() + 1);
+  const yyyy = now.getFullYear();
+  let mm = now.getMonth() + 1; mm = mm < 10 ? "0"+mm : mm;
+  let dd = now.getDate(); dd = dd < 10 ? "0"+dd : dd;
+  return `${yyyy}-${mm}-${dd}`;
+}
 
-  { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "النرويج", team2: "هولندا", time: "2025-06-17T17:00:00" },
-  { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "ألمانيا", team2: "إنجلترا", time: "2025-06-17T20:00:00" }
-];
-
+// تنسيق الوقت
 function formatTime(dateStr) {
   const date = new Date(dateStr);
   let h = date.getHours();
@@ -174,6 +211,7 @@ function formatTime(dateStr) {
   return `${h}:${m} ${pm ? "م" : "ص"}`;
 }
 
+// حالة المباراة
 function getMatchStatus(matchTime) {
   const now = new Date();
   const start = new Date(matchTime);
@@ -192,7 +230,13 @@ function getMatchStatus(matchTime) {
   }
 }
 
-function renderMatches() {
+// بناء المباريات
+function renderMatches(matches) {
+  if (!matches || matches.length === 0) {
+    document.getElementById('matches-list').innerHTML =
+      '<div style="color:#e67e22; text-align:center; font-size:1.1em; font-weight:bold; margin:30px 0;">لا توجد مباريات اليوم</div>';
+    return;
+  }
   let html = '';
   matches.forEach(match => {
     const status = getMatchStatus(match.time);
@@ -230,8 +274,19 @@ function renderMatches() {
   });
   document.getElementById('matches-list').innerHTML = html;
 }
-renderMatches();
-setInterval(renderMatches, 60000);
+
+// تحديث العنوان وتحديد اليوم تلقائي
+function updateMatches() {
+  const todayKey = getTodayKey();
+  const matches = allMatches[todayKey] || [];
+  // تحديث العنوان
+  const date = new Date();
+  const title = `مباريات اليوم ${date.getDate()} / ${date.getMonth()+1} / ${date.getFullYear()}`;
+  document.getElementById('matches-title').innerHTML = `<span>🏟️</span> ${title}`;
+  renderMatches(matches);
+}
+updateMatches();
+setInterval(updateMatches, 60000);
 </script>
 
     <div id="championships"></div>
