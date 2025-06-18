@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>كل مباريات الأيام</title>
+</head>
+<body>
+  <h2 style="color:#1766a0; text-align:center;">كل مباريات الأيام</h2>
+  <div style="text-align:center; margin-bottom:20px;">
+    <select id="days" style="padding:7px 18px; border-radius:8px; border:1px solid #ccc; font-size:1.1em;"></select>
+  </div>
+  <div id="matches-list"></div>
+  <div style="margin-top:20px; text-align:center;">
+    <a href="index.html" style="color:#fff; background:#1766a0; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">العودة للصفحة الرئيسية</a>
+  </div>
+
+  <script>
+    // نفس بيانات allMatches من الصفحة الرئيسية
+    const allMatches = {
+      "2025-06-18": [
+        { tournament: "كأس العالم للأندية", team1: "أولسان", team2: "صن داونز", time: "2025-06-18T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "مونتيري", team2: "إنتر ميلان", time: "2025-06-18T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "مان سيتي", team2: "الوداد الرياضي", time: "2025-06-18T19:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "ريال مدريد", team2: "الهلال", time: "2025-06-18T22:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "الدنمارك", team2: "فنلندا", time: "2025-06-18T19:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "هولندا", team2: "أوكرانيا", time: "2025-06-18T19:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "سلوفينيا", team2: "تشيكيا", time: "2025-06-18T22:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 21 سنة", team1: "إنجلترا", team2: "ألمانيا", time: "2025-06-18T22:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "كوراساو", team2: "السلفادور", time: "2025-06-18T03:15:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "كندا", team2: "هندوراس", time: "2025-06-18T05:30:00" }
+      ],
+      "2025-06-19": [
+        { tournament: "كأس العالم للأندية", team1: "باتشوكا", team2: "سالزبورج", time: "2025-06-19T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "العين", team2: "يوفنتوس", time: "2025-06-19T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "بالميراس", team2: "الأهلي", time: "2025-06-19T19:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "إنتر ميامي", team2: "بورتو", time: "2025-06-19T22:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "كوستاريكا", team2: "جمهورية الدومينيكان", time: "2025-06-19T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "سورينام", team2: "المكسيك", time: "2025-06-19T05:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "الدنمارك", team2: "رومانيا", time: "2025-06-19T20:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "مونتينيغرو", team2: "إسبانيا", time: "2025-06-19T20:00:00" }
+      ],
+      "2025-06-20": [
+        { tournament: "كأس العالم للأندية", team1: "سياتل", team2: "أتلتيكو مدريد", time: "2025-06-20T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "باريس", team2: "بوتافوغو", time: "2025-06-20T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "بنفيكا", team2: "أوكلاند سيتي", time: "2025-06-20T19:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "فلامينغو", team2: "تشيلسي", time: "2025-06-20T21:00:00" },
+        { tournament: "الدوري العراقي", team1: "الكرخ", team2: "الزوراء", time: "2025-06-20T20:00:00" },
+        { tournament: "الدوري العراقي", team1: "نفط البصرة", team2: "الشرطة", time: "2025-06-20T20:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "الجيش", team2: "جبلة", time: "2025-06-20T17:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "الطليعة", team2: "الكرامة", time: "2025-06-20T17:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "الوثبة", team2: "الشعلة", time: "2025-06-20T17:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "حطين", team2: "الشرطة", time: "2025-06-20T17:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "أهلي حلب", team2: "تشرين", time: "2025-06-20T17:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "الوحدة", team2: "الفتوة", time: "2025-06-20T17:00:00" },
+        { tournament: "مباراة ودية - أندية", team1: "أودنسه", team2: "ايسبيرغ", time: "2025-06-20T18:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "ترينيداد وتوباغو", team2: "هايتي", time: "2025-06-20T01:45:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "السعودية", team2: "أمريكا", time: "2025-06-20T04:15:00" },
+        { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "النرويج", team2: "ألمانيا", time: "2025-06-20T20:00:00" },
+        { tournament: "بطولة أمم أوروبا تحت 19 سنة", team1: "هولندا", team2: "إنجلترا", time: "2025-06-20T20:00:00" }
+      ],
+      "2025-06-21": [
+        { tournament: "كأس العالم للأندية", team1: "لوس أنجلوس", team2: "الترجي", time: "2025-06-21T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "بايرن ميونخ", team2: "بوكا جونيورز", time: "2025-06-21T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "صن داونز", team2: "دورتموند", time: "2025-06-21T19:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "إنتر ميلان", team2: "أوراوا ريد", time: "2025-06-21T22:00:00" },
+        { tournament: "الدوري العراقي", team1: "الكرمة", team2: "دهوك", time: "2025-06-21T19:00:00" },
+        { tournament: "الدوري العراقي", team1: "الميناء", team2: "الطلبة", time: "2025-06-21T21:30:00" },
+        { tournament: "كأس العرش المغربي", team1: "إتحاد تواركة", team2: "أولمبيك آسفي", time: "2025-06-21T22:00:00" },
+        { tournament: "الرابطة المحترفة الجزائرية الأولى", team1: "شبيبة القبائل", team2: "أولمبي الشلف", time: "2025-06-21T18:00:00" },
+        { tournament: "الرابطة المحترفة الجزائرية الأولى", team1: "بارادو", team2: "ترجي مستغانم", time: "2025-06-21T18:00:00" },
+        { tournament: "الرابطة المحترفة الجزائرية الأولى", team1: "مولودية الجزائر", team2: "نجم مقرة", time: "2025-06-21T18:00:00" },
+        { tournament: "الرابطة المحترفة الجزائرية الأولى", team1: "أولمبيك أقبو", team2: "شباب بلوزداد", time: "2025-06-21T18:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "جامايكا", team2: "جوادلوب", time: "2025-06-21T02:45:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "جواتيمالا", team2: "بنما", time: "2025-06-21T05:00:00" }
+      ],
+      "2025-06-22": [
+        { tournament: "كأس العالم للأندية", team1: "فلومينينسي", team2: "أولسان", time: "2025-06-22T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "ريفر بليت", team2: "مونتيري", time: "2025-06-22T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "يوفنتوس", team2: "الوداد الرياضي", time: "2025-06-22T19:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "ريال مدريد", team2: "باتشوكا", time: "2025-06-22T22:00:00" },
+        { tournament: "كأس العرش المغربي", team1: "المغرب التطواني", team2: "نهضة بركان", time: "2025-06-22T22:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "كوراساو", team2: "كندا", time: "2025-06-22T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "هندوراس", team2: "السلفادور", time: "2025-06-22T05:00:00" }
+      ],
+      "2025-06-23": [
+        { tournament: "كأس العالم للأندية", team1: "سالزبورج", team2: "الهلال", time: "2025-06-23T01:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "مان سيتي", team2: "العين", time: "2025-06-23T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "سياتل", team2: "باريس", time: "2025-06-23T22:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "أتلتيكو مدريد", team2: "بوتافوغو", time: "2025-06-23T22:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "السعودية", team2: "ترينيداد وتوباغو", time: "2025-06-23T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "أمريكا", team2: "هايتي", time: "2025-06-23T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "جمهورية الدومينيكان", team2: "سورينام", time: "2025-06-23T05:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "المكسيك", team2: "كوستاريكا", time: "2025-06-23T05:00:00" }
+      ],
+      "2025-06-24": [
+        { tournament: "كأس العالم للأندية", team1: "إنتر ميامي", team2: "بالميراس", time: "2025-06-24T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "بورتو", team2: "الأهلي", time: "2025-06-24T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "بنفيكا", team2: "بايرن ميونخ", time: "2025-06-24T22:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "أوكلاند سيتي", team2: "بوكا جونيورز", time: "2025-06-24T22:00:00" },
+        { tournament: "الدوري السوري الممتاز", team1: "الوحدة", team2: "حطين", time: "2025-06-24T17:00:00" }
+      ],
+      "2025-06-25": [
+        { tournament: "كأس العالم للأندية", team1: "الترجي", team2: "تشيلسي", time: "2025-06-25T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "لوس أنجلوس", team2: "فلامينغو", time: "2025-06-25T04:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "صن داونز", team2: "فلومينينسي", time: "2025-06-25T22:00:00" },
+        { tournament: "كأس العالم للأندية", team1: "دورتموند", team2: "أولسان", time: "2025-06-25T22:00:00" },
+        { tournament: "الدوري العراقي", team1: "اربيل", team2: "دهوك", time: "2025-06-25T19:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "جوادلوب", team2: "جواتيمالا", time: "2025-06-25T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "بنما", team2: "جامايكا", time: "2025-06-25T02:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "كندا", team2: "السلفادور", time: "2025-06-25T05:00:00" },
+        { tournament: "كأس الكونكاكاف الذهبية", team1: "هندوراس", team2: "كوراساو", time: "2025-06-25T05:00:00" }
+      ]
+    };
+
+    // تنسيق الوقت
+    function formatTime(dateStr) {
+      const date = new Date(dateStr);
+      let h = date.getHours();
+      let m = date.getMinutes();
+      const pm = h >= 12;
+      h = h % 12 || 12;
+      m = m < 10 ? '0'+m : m;
+      return `${h}:${m} ${pm ? "م" : "ص"}`;
+    }
+
+    // حالة المباراة
+    function getMatchStatus(matchTime) {
+      const now = new Date();
+      const start = new Date(matchTime);
+      const end = new Date(start.getTime() + 105*60000);
+      const diffMinutes = (start - now) / 60000;
+      const diffHours = (start - now) / 3600000;
+
+      if (now < start) {
+        if (diffHours > 20) return "لم تبدأ بعد";
+        if (diffMinutes <= 30) return "بعد قليل";
+        return "لم تبدأ بعد";
+      } else if (now >= start && now <= end) {
+        return "مباشر";
+      } else {
+        return "انتهت";
+      }
+    }
+
+    function renderMatches(matches) {
+      if (!matches || matches.length === 0) {
+        document.getElementById('matches-list').innerHTML =
+          '<div style="color:#e67e22; text-align:center; font-size:1.1em; font-weight:bold; margin:30px 0;">لا توجد مباريات في هذا اليوم</div>';
+        return;
+      }
+      let html = '';
+      matches.forEach(match => {
+        const status = getMatchStatus(match.time);
+        html += `
+          <div style="background:#f8f8fa; border-radius:10px; box-shadow:0 2px 10px #1766a012; margin-bottom:20px; padding:16px 10px 12px 10px;">
+            <div style="color:#e67e22; font-weight:bold; font-size:1em; margin-bottom:8px; text-align:center;">
+              ${match.tournament}
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; font-size:1.13em; font-weight:bold; color:#1766a0;">
+              <span style="flex:1; text-align:right;">${match.team1}</span>
+              <span style="flex:0.8; text-align:center; color:#222; font-size:1.09em;">
+                ${formatTime(match.time)}
+              </span>
+              <span style="flex:1; text-align:left;">${match.team2 || '-'}</span>
+            </div>
+            <div style="margin-top:8px; text-align:center;">
+              <span class="match-status" style="
+                display:inline-block;
+                font-size:1em;
+                font-weight:bold;
+                padding:4px 14px;
+                border-radius:7px;
+                background:
+                  ${status=='مباشر' ? '#e74c3c'
+                  : status=='بعد قليل' ? '#f39c12'
+                  : status=='انتهت' ? '#7f8c8d'
+                  : '#1766a0'};
+                color:#fff;
+                letter-spacing:1px;
+                box-shadow:0 1px 5px #0001;
+              ">${status}</span>
+            </div>
+          </div>
+        `;
+      });
+      document.getElementById('matches-list').innerHTML = html;
+    }
+
+    function fillDays() {
+      const select = document.getElementById('days');
+      const days = Object.keys(allMatches).sort();
+      select.innerHTML = days.map(day => `<option value="${day}">${day}</option>`).join('');
+      select.onchange = function() {
+        renderMatches(allMatches[this.value]);
+      };
+      // اختيار اليوم الحالي تلقائياً
+      const now = new Date();
+      const todayKey = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+      if (days.includes(todayKey)) select.value = todayKey;
+      renderMatches(allMatches[select.value]);
+    }
+
+    document.addEventListener('DOMContentLoaded', fillDays);
+  </script>
+</body>
+</html>
