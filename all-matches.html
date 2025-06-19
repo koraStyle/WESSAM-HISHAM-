@@ -2,20 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title> مباريات الأيام القادمة </title>
+  <title>كل مباريات الأيام</title>
 </head>
 <body>
-  <h2 style="color:#1766a0; text-align:center;"> مباريات الأيام القادمة  </h2>
-  <div style="text-align:center; margin-bottom:20px;">
-    <select id="days" style="padding:7px 18px; border-radius:8px; border:1px solid #ccc; font-size:1.1em;"></select>
-  </div>
-  <div id="matches-list"></div>
-  <div style="margin-top:20px; text-align:center;">
-    <a href="index.html" style="color:#fff; background:#1766a0; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">العودة للصفحة الرئيسية</a>
-  </div>
-
+  <section class="section-box" id="all-matches">
+    <div id="dates-bar" style="display:flex; justify-content:center; align-items:center; gap:8px; margin-bottom:20px; flex-wrap:wrap;"></div>
+    <div class="section-title" id="matches-title" style="font-size:1.22em; color:#1766a0; font-weight:bold; margin-bottom:16px; display:flex; align-items:center; gap:7px; justify-content:center;">
+      <span>🏟️</span> مباريات اليوم
+    </div>
+    <div id="matches-list"></div>
+    <div style="margin-top:20px; text-align:center;">
+      <a href="index.html" style="color:#fff; background:#1766a0; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:bold;">العودة للصفحة الرئيسية</a>
+    </div>
+  </section>
   <script>
-    // نفس بيانات allMatches من الصفحة الرئيسية
+    // بيانات كل يوم
     const allMatches = {
       "2025-06-18": [
         { tournament: "كأس العالم للأندية", team1: "أولسان", team2: "صن داونز", time: "2025-06-18T01:00:00" },
@@ -186,21 +187,45 @@
       document.getElementById('matches-list').innerHTML = html;
     }
 
-    function fillDays() {
-      const select = document.getElementById('days');
+    // شريط التواريخ
+    function renderDatesBar(selected) {
       const days = Object.keys(allMatches).sort();
-      select.innerHTML = days.map(day => `<option value="${day}">${day}</option>`).join('');
-      select.onchange = function() {
-        renderMatches(allMatches[this.value]);
-      };
-      // اختيار اليوم الحالي تلقائياً
-      const now = new Date();
-      const todayKey = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
-      if (days.includes(todayKey)) select.value = todayKey;
-      renderMatches(allMatches[select.value]);
+      const bar = document.getElementById('dates-bar');
+      bar.innerHTML = days.map(day => {
+        const d = new Date(day);
+        const label = `${d.getDate()}/${d.getMonth()+1}`;
+        return `<button onclick="selectDay('${day}')" style="
+          padding:8px 18px;
+          border:none;
+          border-radius:8px;
+          margin:0 2px;
+          background:${day===selected?'#1766a0':'#e7e7e7'};
+          color:${day===selected?'#fff':'#1766a0'};
+          font-weight:bold;
+          font-size:1.05em;
+          cursor:pointer;
+          transition:0.2s;
+        ">${label}</button>`;
+      }).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', fillDays);
+    // اختيار اليوم
+    window.selectDay = function(day) {
+      renderDatesBar(day);
+      renderMatches(allMatches[day]);
+      // تحديث العنوان
+      const d = new Date(day);
+      document.getElementById('matches-title').innerHTML = `<span>🏟️</span> مباريات يوم ${d.getDate()} / ${d.getMonth()+1} / ${d.getFullYear()}`;
+    };
+
+    // عند التحميل اختر اليوم الحالي أو أول يوم
+    document.addEventListener('DOMContentLoaded', function() {
+      const now = new Date();
+      const todayKey = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+      const days = Object.keys(allMatches).sort();
+      const defaultDay = days.includes(todayKey) ? todayKey : days[0];
+      selectDay(defaultDay);
+    });
   </script>
 </body>
 </html>
