@@ -1363,7 +1363,6 @@ for (const [date, matches] of Object.entries(allMatches)) {
     // نحسب الوقت بتوقيت القاهرة
     const cairoDate = new Date(originalDate.getTime() + cairoOffset * 3600000);
     return {...m, time: cairoDate.toISOString().substring(0, 19)};
-  });
 }
 
 // يمكنك الآن استخدام allMatchesCairo بدل allMatches لعرض المباريات بالتوقيت الصحيح
