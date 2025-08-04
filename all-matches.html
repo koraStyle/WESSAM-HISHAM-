@@ -1346,16 +1346,18 @@
   ]
     };
 
-    // تنسيق الوقت
-    function formatTime(dateStr) {
-      const date = new Date(dateStr);
-      let h = date.getHours();
-      let m = date.getMinutes();
-      const pm = h >= 12;
-      h = h % 12 || 12;
-      m = m < 10 ? '0'+m : m;
-      return `${h}:${m} ${pm ? "م" : "ص"}`;
-    }
+function formatTime(dateStr) {
+  const dateUtc = new Date(dateStr);
+  const cairoOffsetHours = 3;
+  const localOffsetHours = dateUtc.getTimezoneOffset() / -60;
+  const cairoTime = new Date(dateUtc.getTime() + (cairoOffsetHours - localOffsetHours) * 3600000);
+  let h = cairoTime.getHours();
+  let m = cairoTime.getMinutes();
+  const pm = h >= 12;
+  h = h % 12 || 12;
+  m = m < 10 ? '0' + m : m;
+  return `${h}:${m} ${pm ? "م" : "ص"}`;
+}
 
     // حالة المباراة
     function getMatchStatus(matchTime) {
