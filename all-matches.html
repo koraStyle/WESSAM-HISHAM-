@@ -1353,7 +1353,7 @@
       let mm = now.getMonth() + 1; mm = mm < 10 ? "0"+mm : mm;
       let dd = now.getDate(); dd = dd < 10 ? "0"+dd : dd;
       return `${yyyy}-${mm}-${dd}`;
-    
+    }
 function formatTime(dateStr) {
   const dateUtc = new Date(dateStr);
   const hoursToAdd = 7; // فرق التوقيت المطلوب
