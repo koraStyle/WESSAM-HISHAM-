@@ -1354,18 +1354,24 @@
       let dd = now.getDate(); dd = dd < 10 ? "0"+dd : dd;
       return `${yyyy}-${mm}-${dd}`;
     }
-function formatTime(dateStr) {
-  const dateUtc = new Date(dateStr);
-  const cairoOffsetHours = 3;
-  const localOffsetHours = dateUtc.getTimezoneOffset() / -60;
-  const cairoTime = new Date(dateUtc.getTime() + (cairoOffsetHours - localOffsetHours) * 3600000);
-  let h = cairoTime.getHours();
-  let m = cairoTime.getMinutes();
-  const pm = h >= 12;
-  h = h % 12 || 12;
-  m = m < 10 ? '0' + m : m;
-  return `${h}:${m} ${pm ? "م" : "ص"}`;
+function getCairoOffset(date) {
+  const year = date.getFullYear();
+  const dstStart = new Date(year, 3, 25); // 25 أبريل بداية التوقيت الصيفي
+  const dstEnd = new Date(year, 9, 31);   // 31 أكتوبر نهاية التوقيت الصيفي
+  return (date >= dstStart && date <= dstEnd) ? 3 : 2;
 }
+
+// تحويل كل مواعيد المباريات إلى توقيت القاهرة وتخزينها في كائن جديد
+const allMatchesCairo = {};
+for (const [date, matches] of Object.entries(allMatches)) {
+  allMatchesCairo[date] = matches.map(m => {
+    const originalDate = new Date(m.time + "Z"); // الوقت بصيغة UTC
+    const cairoOffset = getCairoOffset(originalDate);
+    // نحسب الوقت بتوقيت القاهرة
+    const cairoDate = new Date(originalDate.getTime() + cairoOffset * 3600000);
+    return {...m, time: cairoDate.toISOString().substring(0, 19)};
+
+    }
 
 
     // حالة المباراة
