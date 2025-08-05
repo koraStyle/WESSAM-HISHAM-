@@ -1357,18 +1357,13 @@
       return `${yyyy}-${mm}-${dd}`;
     }
 function formatTime(dateStr) {
-  const dateUtc = new Date(dateStr);
-  const hoursToAdd = 7; // فرق التوقيت المطلوب
-
-  const cairoTime = new Date(dateUtc.getTime() + hoursToAdd * 3600000);
-
-  let h = cairoTime.getHours();
-  let m = cairoTime.getMinutes();
-  const pm = h >= 12;
-  h = h % 12 || 12;
-  m = m < 10 ? '0' + m : m;
-
-  return `${h}:${m} ${pm ? "م" : "ص"}`;
+  const dateObj = new Date(dateStr);  // تقرأ الوقت كما هو
+  let hours = dateObj.getHours();
+  let minutes = dateObj.getMinutes();
+  const ampm = hours >= 12 ? "م" : "ص";
+  hours = hours % 12 || 12;
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+  return `${hours}:${minutes} ${ampm}`;
 }
 
 
