@@ -13,14 +13,11 @@
     .formation-table {width:100%; border-collapse:collapse; margin-bottom:7px; font-size:1em; background:#fff;}
     .formation-table th, .formation-table td {padding:8px; text-align:center; border-bottom:1px solid #eee;}
     .formation-table th {background:#f8f8fa; color:#1766a0; font-weight:bold;}
-    .stat-table {width:100%; border-collapse:collapse; margin:18px 0; font-size:1em;}
-    .stat-table th, .stat-table td {padding:8px; text-align:center; border-bottom:1px solid #eee;}
-    .stat-table th {background:#f8f8fa; color:#1766a0;}
-    .goals-table-block {background:#e3f0fa; border-radius:10px; padding:12px 14px; margin-bottom:18px;}
-    .goals-table-block h3 {color:#1766a0; font-size:1.08em; margin-bottom:8px; text-align:center;}
-    .goals-table {width:100%; border-collapse:collapse; font-size:1em; background:#fff;}
-    .goals-table th, .goals-table td {padding:8px; text-align:center; border-bottom:1px solid #eee;}
-    .goals-table th {background:#f8f8fa; color:#1766a0; font-weight:bold;}
+    .stat-table, .goals-table {width:100%; border-collapse:collapse; font-size:1em; background:#fff; margin: 18px 0;}
+    .stat-table th, .stat-table td, .goals-table th, .goals-table td {padding:8px; text-align:center; border-bottom:1px solid #eee;}
+    .stat-table th, .goals-table th {background:#f8f8fa; color:#1766a0; font-weight:bold;}
+    .goals-table-block, .stat-table-block {background:#e3f0fa; border-radius:10px; padding:12px 14px; margin-bottom:18px;}
+    .goals-table-block h3, .stat-table-block h3 {color:#1766a0; font-size:1.08em; margin-bottom:8px; text-align:center;}
     .back-link {display:block; margin-top:30px; text-align:center;}
     .back-link a {text-decoration:none; color:#fff; background-color:#1766a0; padding:10px 20px; border-radius:8px; font-weight:bold;}
   </style>
@@ -40,22 +37,56 @@
     </div>
 
     <!-- إحصائيات المباراة -->
-    <h3 style="color:#1766a0; margin-bottom: 8px; text-align:right; font-size:1.08em;">إحصائيات المباراة</h3>
-    <table class="stat-table">
-      <tr>
-        <th>المؤشر</th>
-        <th>فاينورد</th>
-        <th>فنربخشة</th>
-      </tr>
-      <tr><td>الاستحواذ على الكرة</td><td>45%</td><td>55%</td></tr>
-      <tr><td>التسديدات</td><td>8</td><td>5</td></tr>
-      <tr><td>التسديد على المرمى</td><td>3</td><td>2</td></tr>
-      <tr><td>التسديد بعيدًا عن المرمى</td><td>5</td><td>3</td></tr>
-      <tr><td>الركنيات</td><td>4</td><td>5</td></tr>
-      <tr><td>التسللات</td><td>0</td><td>4</td></tr>
-      <tr><td>المخالفات</td><td>15</td><td>13</td></tr>
-      <tr><td>البطاقات الصفراء</td><td>2</td><td>0</td></tr>
-    </table>
+    <div class="stat-table-block">
+      <h3>إحصائيات المباراة</h3>
+      <table class="stat-table">
+        <tr>
+          <th>المؤشر</th>
+          <th>فاينورد</th>
+          <th>فنربخشة</th>
+        </tr>
+        <tr>
+          <td>الاستحواذ على الكرة</td>
+          <td>45%</td>
+          <td>55%</td>
+        </tr>
+        <tr style="background:#f8f8fa;">
+          <td>التسديدات</td>
+          <td>8</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>التسديد على المرمى</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr style="background:#f8f8fa;">
+          <td>التسديد بعيدًا عن المرمى</td>
+          <td>5</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>الركنيات</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr style="background:#f8f8fa;">
+          <td>التسللات</td>
+          <td>0</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>المخالفات</td>
+          <td>15</td>
+          <td>13</td>
+        </tr>
+        <tr style="background:#f8f8fa;">
+          <td>البطاقات الصفراء</td>
+          <td>2</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
 
     <!-- سجل الأهداف -->
     <div class="goals-table-block">
