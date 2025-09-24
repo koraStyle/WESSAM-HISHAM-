@@ -1191,15 +1191,16 @@ function formatTime(dateStr) {
     <div id="teams-ranking"></div>
 
 <!-- قسم 3: ترتيب الفرق في الدوريات -->
-<section class="section-box" style="margin-top: 30px;">
-  <div class="section-title" style="font-size: 1.18em; color:#1766a0; font-weight: bold; margin-bottom: 14px; display:flex; align-items:center; gap:7px;">
+<section class="section-box" style="margin-top:30px;">
+  <div class="section-title" style="font-size:1.18em; color:#1766a0; font-weight:bold; margin-bottom:14px; display:flex; align-items:center; gap:7px;">
     <span style="font-size:1.3em; vertical-align:middle;">🏆</span>
     <span>ترتيب الفرق في الدوريات</span>
   </div>
   <div style="
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 12px 18px;
+    grid-auto-flow: dense;
     margin-bottom: 10px;
   ">
     <a href="https://www.yallakora.com/egyptian-league/2935/group-standing/ترتيب-المجموعات-الدوري-المصري" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
@@ -1238,6 +1239,10 @@ function formatTime(dateStr) {
     <a href="https://www.uefa.com/uefaeuropaconferenceleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
       دوري المؤتمر الأوروبي
     </a>
+    <!-- إضافات تستغل الفراغ -->
+    <a href="#" class="standings-btn" style="visibility:hidden; background:#1766a0; padding:10px 12px; border-radius:8px;">مساعدة</a>
+    <a href="#" class="standings-btn" style="visibility:hidden; background:#1766a0; padding:10px 12px; border-radius:8px;">مساعدة</a>
+    <a href="#" class="standings-btn" style="visibility:hidden; background:#1766a0; padding:10px 12px; border-radius:8px;">مساعدة</a>
   </div>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7436174159981675"
     crossorigin="anonymous"></script>
