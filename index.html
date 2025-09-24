@@ -1121,35 +1121,70 @@ function formatTime(dateStr) {
     <span style="font-size:1.3em; vertical-align:middle;">🏆</span>
     <span>جميع البطولات العالمية والمحلية</span>
   </div>
-  <div style="display:flex; flex-wrap:wrap; gap:14px 18px; margin-bottom:10px;">
-    <a href="https://spl.com.sa/ar" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري السعودي للمحترفين</a>
-    <a href="https://www.efa.eg/ar/" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري المصري الممتاز</a>
-    <a href="https://www.premierleague.com/" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإنجليزي الممتاز</a>
-    <a href="https://www.laliga.com/en-GB" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإسباني</a>
-    <a href="https://www.legaseriea.it/en" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإيطالي</a>
-    <a href="https://www.bundesliga.com/en/bundesliga" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الألماني</a>
-    <a href="https://www.ligue1.com/" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الفرنسي</a>
-    <a href="https://www.tff.org/Default.aspx?pageID=80" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري التركي الممتاز</a>
-    <a href="https://www.cafonline.com/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال أفريقيا</a>
-    <a href="https://www.uefa.com/uefachampionsleague/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال أوروبا</a>
-    <a href="https://www.conmebol.com/libertadores/" target="_blank" class="standings-btn" style="background:#1766a0;">كوبا ليبرتادوريس</a>
-    <a href="https://www.fifa.com/fifaplus/ar/tournaments/mens/worldcup" target="_blank" class="standings-btn" style="background:#1766a0;">كأس العالم</a>
-    <a href="https://www.the-afc.com/en/club/afc_champions_league.html" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال آسيا</a>
-    <a href="https://www.premierleague.com/women" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإنجليزي للسيدات</a>
-    <a href="https://www.cafonline.com/caf-womens-champions-league/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال أفريقيا للسيدات</a>
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px 18px;
+    margin-bottom: 10px;
+  ">
+    <a href="https://spl.com.sa/ar" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري السعودي للمحترفين
+    </a>
+    <a href="https://www.efa.eg/ar/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري المصري الممتاز
+    </a>
+    <a href="https://www.premierleague.com/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الإنجليزي الممتاز
+    </a>
+    <a href="https://www.laliga.com/en-GB" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الإسباني
+    </a>
+    <a href="https://www.legaseriea.it/en" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الإيطالي
+    </a>
+    <a href="https://www.bundesliga.com/en/bundesliga" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الألماني
+    </a>
+    <a href="https://www.ligue1.com/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الفرنسي
+    </a>
+    <a href="https://www.tff.org/Default.aspx?pageID=80" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري التركي الممتاز
+    </a>
+    <a href="https://www.cafonline.com/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      دوري أبطال أفريقيا
+    </a>
+    <a href="https://www.uefa.com/uefachampionsleague/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      دوري أبطال أوروبا
+    </a>
+    <a href="https://www.conmebol.com/libertadores/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      كوبا ليبرتادوريس
+    </a>
+    <a href="https://www.fifa.com/fifaplus/ar/tournaments/mens/worldcup" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      كأس العالم
+    </a>
+    <a href="https://www.the-afc.com/en/club/afc_champions_league.html" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      دوري أبطال آسيا
+    </a>
+    <a href="https://www.premierleague.com/women" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      الدوري الإنجليزي للسيدات
+    </a>
+    <a href="https://www.cafonline.com/caf-womens-champions-league/" target="_blank" class="standings-btn" style="background:#1766a0; text-align:center; padding:8px 10px; border-radius:6px; display:block; color:#fff; font-weight:bold; text-decoration:none;">
+      دوري أبطال أفريقيا للسيدات
+    </a>
   </div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7436174159981675"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7436174159981675"
      crossorigin="anonymous"></script>
-  <!-- wessam hisham -->
-  <ins class="adsbygoogle"
+<!-- wessam hisham -->
+<ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-7436174159981675"
      data-ad-slot="2825497900"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-  <script>
+<script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+</script>
 </section>
 
     
