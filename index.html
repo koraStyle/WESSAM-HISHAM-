@@ -1191,33 +1191,65 @@ function formatTime(dateStr) {
     <div id="teams-ranking"></div>
 
 <!-- قسم 3: ترتيب الفرق في الدوريات -->
-    <section class="section-box">
-  <div class="section-title">ترتيب الفرق في الدوريات</div>
-  <div style="display:flex; flex-wrap:wrap; gap:14px 18px; margin-bottom:10px;">
-    <a href="https://www.yallakora.com/egyptian-league/2935/group-standing/ترتيب-المجموعات-الدوري-المصري" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري المصري</a>
-    <a href="https://www.yallakora.com/ksa-league/2911/standing/الدوري-السعودي" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري السعودي</a>
-    <a href="https://www.premierleague.com/tables" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإنجليزي</a>
-    <a href="https://www.laliga.com/en-GB/laliga-santander/standing" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإسباني</a>
-    <a href="https://www.legaseriea.it/en/serie-a/league-table" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الإيطالي</a>
-    <a href="https://www.bundesliga.com/en/bundesliga/table" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الألماني</a>
-    <a href="https://www.ligue1.com/ranking" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الفرنسي</a>
-    <a href="https://www.tff.org/Default.aspx?pageID=198" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري التركي</a>
-    <a href="https://www.uefa.com/uefachampionsleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال أوروبا</a>
-    <a href="https://www.cafonline.com/totalenergies-caf-champions-league/standings/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري أبطال أفريقيا</a>
-    <a href="https://www.uefa.com/uefaeuropaleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0;">الدوري الأوروبي</a>
-    <a href="https://www.uefa.com/uefaeuropaconferenceleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0;">دوري المؤتمر الأوروبي</a>
+<section class="section-box" style="margin-top: 30px;">
+  <div class="section-title" style="font-size: 1.18em; color:#1766a0; font-weight: bold; margin-bottom: 14px; display:flex; align-items:center; gap:7px;">
+    <span style="font-size:1.3em; vertical-align:middle;">🏆</span>
+    <span>ترتيب الفرق في الدوريات</span>
+  </div>
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px 18px;
+    margin-bottom: 10px;
+  ">
+    <a href="https://www.yallakora.com/egyptian-league/2935/group-standing/ترتيب-المجموعات-الدوري-المصري" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري المصري
+    </a>
+    <a href="https://www.yallakora.com/ksa-league/2911/standing/الدوري-السعودي" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري السعودي
+    </a>
+    <a href="https://www.premierleague.com/tables" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الإنجليزي
+    </a>
+    <a href="https://www.laliga.com/en-GB/laliga-santander/standing" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الإسباني
+    </a>
+    <a href="https://www.legaseriea.it/en/serie-a/league-table" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الإيطالي
+    </a>
+    <a href="https://www.bundesliga.com/en/bundesliga/table" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الألماني
+    </a>
+    <a href="https://www.ligue1.com/ranking" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الفرنسي
+    </a>
+    <a href="https://www.tff.org/Default.aspx?pageID=198" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري التركي
+    </a>
+    <a href="https://www.uefa.com/uefachampionsleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      دوري أبطال أوروبا
+    </a>
+    <a href="https://www.cafonline.com/totalenergies-caf-champions-league/standings/" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      دوري أبطال أفريقيا
+    </a>
+    <a href="https://www.uefa.com/uefaeuropaleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      الدوري الأوروبي
+    </a>
+    <a href="https://www.uefa.com/uefaeuropaconferenceleague/standings/" target="_blank" class="standings-btn" style="background:#1766a0; color:#fff; font-weight:bold; padding:10px 12px; border-radius:8px; text-align:center; display:block; text-decoration:none;">
+      دوري المؤتمر الأوروبي
+    </a>
   </div>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7436174159981675"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <!-- wessam hisham -->
   <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7436174159981675"
-     data-ad-slot="2825497900"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-7436174159981675"
+    data-ad-slot="2825497900"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
   <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </section>
 
