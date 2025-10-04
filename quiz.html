@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبر معلوماتك الكروية ⚽️🔥</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {font-family:'Cairo', Arial, sans-serif; background:#f7f9fc; padding:20px;}
+    .quiz-container {
+      max-width: 600px; margin: auto; background:#fff; padding: 30px; border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(23,102,160,0.2);
+    }
+    h1 {
+      color:#1766a0; font-size: 2.2em; font-weight: bold; text-align: center; margin-bottom: 25px;
+    }
+    .question {
+      font-weight: 700; margin-bottom: 12px; color:#333;
+    }
+    label {
+      display: block; margin-bottom: 8px; cursor:pointer; font-size: 1.05em; color:#444;
+      transition: color 0.2s ease;
+    }
+    label:hover { color:#1766a0; }
+    button {
+      background:#1766a0; color:#fff; border:none; padding:10px 20px; border-radius:8px;
+      cursor:pointer; font-weight:700; width:100%; font-size:1.1em; margin-top:10px;
+      transition: background 0.3s ease;
+    }
+    button:hover { background:#0f4a73; }
+    #result {
+      margin-top:20px; font-size:1.3em; font-weight:bold; color:#1766a0; text-align:center;
+    }
+    .back-button {
+      display: block; margin: 30px auto 0; text-align:center;
+      text-decoration: none; color:#1766a0; font-weight: bold; font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+<h1>اختبر معلوماتك الكروية ⚽️🔥</h1>
+<form id="quiz-form">
+  <div class="question" id="q1">
+    1. من هو اللاعب الأكثر تسجيلًا للأهداف في تاريخ كأس العالم؟
+    <label><input type="radio" name="q1" value="b" required> ميروسلاف كلوزه</label>
+    <label><input type="radio" name="q1" value="a"> رونالدو البرازيلي</label>
+    <label><input type="radio" name="q1" value="c"> بيليه</label>
+    <label><input type="radio" name="q1" value="d"> ليونيل ميسي</label>
+  </div>
+  <div class="question" id="q2">
+    2. ما اسم الفريق الذي فاز بأكبر عدد من ألقاب دوري أبطال أوروبا؟
+    <label><input type="radio" name="q2" value="a" required> ريال مدريد</label>
+    <label><input type="radio" name="q2" value="b"> بايرن ميونيخ</label>
+    <label><input type="radio" name="q2" value="c"> ليفربول</label>
+    <label><input type="radio" name="q2" value="d"> برشلونة</label>
+  </div>
+  <div class="question" id="q3">
+    3. في أي عام أقيم أول كأس عالم لكرة القدم؟
+    <label><input type="radio" name="q3" value="b" required> 1930</label>
+    <label><input type="radio" name="q3" value="a"> 1920</label>
+    <label><input type="radio" name="q3" value="c"> 1940</label>
+    <label><input type="radio" name="q3" value="d"> 1950</label>
+  </div>
+  <div class="question" id="q4">
+    4. ما هو الحد الأدنى لعدد اللاعبين في فريق كرة القدم لإعلان الفريق فائزا إذا توقف اللعب؟
+    <label><input type="radio" name="q4" value="b" required> 7 لاعبين</label>
+    <label><input type="radio" name="q4" value="a"> 6 لاعبين</label>
+    <label><input type="radio" name="q4" value="c"> 8 لاعبين</label>
+    <label><input type="radio" name="q4" value="d"> 9 لاعبين</label>
+  </div>
+  <div class="question" id="q5">
+    5. أي من اللاعبين التالية أسماؤهم لم يفز بجائزة الكرة الذهبية؟
+    <label><input type="radio" name="q5" value="c" required> نيمار</label>
+    <label><input type="radio" name="q5" value="a"> كريستيانو رونالدو</label>
+    <label><input type="radio" name="q5" value="b"> ليونيل ميسي</label>
+    <label><input type="radio" name="q5" value="d"> زلاتان إبراهيموفيتش</label>
+  </div>
+  
+  <div class="question" id="q6">
+    6. كم عدد اللاعبين في كل فريق كرة قدم أثناء المباراة؟
+    <label><input type="radio" name="q6" value="c" required> 11 لاعب</label>
+    <label><input type="radio" name="q6" value="a"> 9 لاعبين</label>
+    <label><input type="radio" name="q6" value="b"> 10 لاعبين</label>
+    <label><input type="radio" name="q6" value="d"> 12 لاعب</label>
+  </div>
+  
+  <div class="question" id="q7">
+    7. أين يُلعب نهائي دوري أبطال أوروبا عادةً؟
+    <label><input type="radio" name="q7" value="a" required> ملعب محايد</label>
+    <label><input type="radio" name="q7" value="b"> ملعب الفريق المتصدر</label>
+    <label><input type="radio" name="q7" value="c"> ملعب الفائز بدوري الموسم الماضي</label>
+    <label><input type="radio" name="q7" value="d"> ملعب الفريق صاحب أقل بطاقة صفراء</label>
+  </div>
+  
+  <div class="question" id="q8">
+    8. من هو الهداف التاريخي لنادي برشلونة؟
+    <label><input type="radio" name="q8" value="d" required> ليونيل ميسي</label>
+    <label><input type="radio" name="q8" value="a"> تشافي هيرنانديز</label>
+    <label><input type="radio" name="q8" value="b"> لويس سواريز</label>
+    <label><input type="radio" name="q8" value="c"> رونالدينييو</label>
+  </div>
+  
+  <div class="question" id="q9">
+    9. ما هي مدة الشوط الواحد الرسمي في مباراة كرة القدم؟
+    <label><input type="radio" name="q9" value="c" required> 45 دقيقة</label>
+    <label><input type="radio" name="q9" value="a"> 30 دقيقة</label>
+    <label><input type="radio" name="q9" value="b"> 40 دقيقة</label>
+    <label><input type="radio" name="q9" value="d"> 60 دقيقة</label>
+  </div>
+  
+  <div class="question" id="q10">
+    10. ما اسم أول كأس عالم تم تنظيمه لكرة القدم؟
+    <label><input type="radio" name="q10" value="b" required> كأس العالم 1930</label>
+    <label><input type="radio" name="q10" value="a"> كأس العالم 1928</label>
+    <label><input type="radio" name="q10" value="c"> كأس أوروبا 1932</label>
+    <label><input type="radio" name="q10" value="d"> كأس القارات 1934</label>
+  </div>
+  
+  <button type="submit">أرسل إجاباتك</button>
+</form>
+<div id="result"></div>
+<a href="index.html" class="back-button">🔙 العودة إلى الصفحة الرئيسية</a>
+</div>
+
+<script>
+  const correctAnswers = {
+    q1: "b",
+    q2: "a",
+    q3: "b",
+    q4: "b",
+    q5: "c",
+    q6: "c",
+    q7: "a",
+    q8: "d",
+    q9: "c",
+    q10: "b"
+  };
+  const form = document.getElementById('quiz-form');
+  const resultDiv = document.getElementById('result');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let score = 0;
+    const formData = new FormData(form);
+    for (let [name, value] of formData.entries()) {
+      if (correctAnswers[name] === value) score++;
+    }
+    resultDiv.textContent = `لقد أجبت بشكل صحيح على ${score} من 10 أسئلة.`;
+  });
+</script>
+
+</body>
+</html>
