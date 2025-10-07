@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>اختبر معلوماتك الكروية ⚽️🔥</title>
+  <title>اختبر معلوماتك الكروية مع تصحيح الأخطاء وتوضيح الإجابات</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {font-family:'Cairo', Arial, sans-serif; background:#f7f9fc; padding:20px;}
@@ -15,12 +15,29 @@
     }
     .question {
       font-weight: 700; margin-bottom: 12px; color:#1a237e; /* لون السؤال */
+      padding: 10px;
+      border-radius: 8px;
     }
     label {
       display: block; margin-bottom: 8px; cursor:pointer; font-size: 1.05em; color:#004d40; /* لون الاختيارات */
       transition: color 0.2s ease;
     }
     label:hover { color:#1766a0; }
+    .wrong {
+      border: 2px solid #e74c3c;
+      background: #fdecea;
+    }
+    .correct {
+      border: 2px solid #2ecc71;
+      background: #e9f9ee;
+    }
+    .correct-answer {
+      color: #27ae60;
+      font-weight: bold;
+      margin-top: 6px;
+      font-size: 0.95em;
+      text-align: left;
+    }
     button {
       background:#1766a0; color:#fff; border:none; padding:10px 20px; border-radius:8px;
       cursor:pointer; font-weight:700; width:100%; font-size:1.1em; margin-top:10px;
@@ -29,6 +46,7 @@
     button:hover { background:#0f4a73; }
     #result {
       margin-top:20px; font-size:1.3em; font-weight:bold; color:#1766a0; text-align:center;
+      white-space: pre-line;
     }
     .back-button {
       display: block; margin: 30px auto 0; text-align:center;
@@ -123,7 +141,7 @@
     q1: "a",
     q2: "a",
     q3: "a",
-    q4: "b",
+    q4: "c",
     q5: "d",
     q6: "a",
     q7: "d",
@@ -131,17 +149,55 @@
     q9: "c",
     q10: "d"
   };
+
+  const correctText = {
+    q1: "الإجابة الصحيحة: مصر",
+    q2: "الإجابة الصحيحة: كريستيانو رونالدو",
+    q3: "الإجابة الصحيحة: اليونان",
+    q4: "الإجابة الصحيحة: آلان شيرر",
+    q5: "الإجابة الصحيحة: قطر",
+    q6: "الإجابة الصحيحة: سيرجيو راموس",
+    q7: "الإجابة الصحيحة: استاد لوسيل - قطر",
+    q8: "الإجابة الصحيحة: الرجاء المغربي",
+    q9: "الإجابة الصحيحة: صامويل إيتو",
+    q10: "الإجابة الصحيحة: 5 نجوم"
+  };
+  
   const form = document.getElementById('quiz-form');
   const resultDiv = document.getElementById('result');
 
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     let score = 0;
+    let wrongQuestions = [];
     const formData = new FormData(form);
-    for (let [name, value] of formData.entries()) {
-      if (correctAnswers[name] === value) score++;
+    
+    // Reset question styles and previous correct answer messages
+    for (let i = 1; i <= 10; i++) {
+      const section = document.getElementById('q'+i);
+      section.classList.remove('wrong');
+      const prevAnswer = section.querySelector('.correct-answer');
+      if (prevAnswer) prevAnswer.remove();
     }
-    resultDiv.textContent = `لقد أجبت بشكل صحيح على ${score} من 10 أسئلة.`;
+    
+    for (let [name, value] of formData.entries()) {
+      const questionSection = document.getElementById(name);
+      if (correctAnswers[name] === value) {
+        score++;
+        questionSection.classList.remove('wrong');
+      } else {
+        wrongQuestions.push(name);
+        questionSection.classList.add('wrong');
+        // Append correct answer message below question
+        const answerMsg = document.createElement('div');
+        answerMsg.classList.add('correct-answer');
+        answerMsg.textContent = correctText[name];
+        questionSection.appendChild(answerMsg);
+      }
+    }
+    let wrongText = wrongQuestions.length ? "لقد أخطأت في الأسئلة التالية: " + wrongQuestions.map(q => q.slice(1)).join(', ') : "أجبت على كل الأسئلة بشكل صحيح!";
+    resultDiv.textContent = `لقد أجبت بشكل صحيح على ${score} من 10 أسئلة.\n${wrongText}`;
+    resultDiv.style.color = wrongQuestions.length ? '#e74c3c' : '#1766a0';
   });
 </script>
 
