@@ -2,91 +2,43 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>اختبر معلوماتك الكروية مع تصحيح الأخطاء وتوضيح الإجابات</title>
+  <title>اختبر معلوماتك الكروية ⚽️🔥</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {font-family:'Cairo', Arial, sans-serif; background:#f7f9fc; padding:20px;}
-    .quiz-container {
-      max-width: 600px; margin: auto; background:#fff; padding: 30px; border-radius: 15px;
-      box-shadow: 0 4px 14px rgba(23,102,160,0.2);
-      position: relative;
-      overflow: hidden;
-    }
-    h1 {
-      color:#1766a0; font-size: 2.2em; font-weight: bold; text-align: center; margin-bottom: 25px;
-    }
-    .question {
-      font-weight: 700; margin-bottom: 12px; color:#1a237e;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    label {
-      display: block; margin-bottom: 8px; cursor:pointer; font-size: 1.05em; color:#004d40;
-      transition: color 0.2s ease;
-    }
+    .quiz-container {max-width: 600px; margin: auto; background:#fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 14px rgba(23,102,160,0.2); position: relative; overflow: hidden;}
+    h1 {color:#1766a0; font-size: 2.2em; font-weight: bold; text-align: center; margin-bottom: 25px;}
+    .question {font-weight: 700; margin-bottom: 12px; color:#1a237e; padding: 10px; border-radius: 8px;}
+    label {display: block; margin-bottom: 8px; cursor:pointer; font-size: 1.05em; color:#004d40; transition: color 0.2s ease;}
     label:hover { color:#1766a0; }
-    .wrong {
-      border: 2px solid #e74c3c;
-      background: #fdecea;
-    }
-    .correct {
-      border: 2px solid #2ecc71;
-      background: #e9f9ee;
-    }
-    .correct-answer {
-      color: #27ae60;
-      font-weight: bold;
-      margin-top: 6px;
-      font-size: 0.95em;
-      text-align: left;
-    }
-    button {
-      background:#1766a0; color:#fff; border:none; padding:10px 20px; border-radius:8px;
-      cursor:pointer; font-weight:700; width:100%; font-size:1.1em; margin-top: 10px;
-      transition: background 0.3s ease;
-    }
+    .wrong {border: 2px solid #e74c3c; background: #fdecea;}
+    .correct {border: 2px solid #2ecc71; background: #e9f9ee;}
+    .correct-answer {color: #27ae60; font-weight: bold; margin-top: 6px; font-size: 0.95em; text-align: left;}
+    button {background:#1766a0; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:700; width:100%; font-size:1.1em; margin-top: 10px; transition: background 0.3s ease;}
     button:hover { background:#0f4a73; }
-    #result {
-      margin-top:20px; font-size:1.3em; font-weight:bold; color:#1766a0; text-align:center;
-      white-space: pre-line;
-      position: relative;
-      z-index: 10;
+    #result {margin-top:20px; font-size:1.3em; font-weight:bold; color:#1766a0; text-align:center; white-space: pre-line; position: relative; z-index: 10;}
+    .back-button {display: block; margin: 30px auto 0; text-align:center; text-decoration: none; color:#1766a0; font-weight: bold; font-size: 1.1em; position: relative; z-index: 10;}
+    /* مكافأة التصفيق */
+    .reward {
+      display: none;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 2.2em;
+      animation: bounce 1.2s infinite alternate;
     }
-    .back-button {
-      display: block; margin: 30px auto 0; text-align:center;
-      text-decoration: none; color:#1766a0; font-weight: bold; font-size: 1.1em;
-      position: relative;
-      z-index: 10;
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
     }
     .confetti {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: visible;
-      z-index: 5;
+      position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:visible; z-index:5;
     }
     .confetti-piece {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background-color: #f39c12;
-      opacity: 0.9;
-      transform-origin: center;
-      animation: fall 3s linear forwards;
-      border-radius: 3px;
+      position:absolute; width:12px; height:12px; background-color:#f39c12; opacity:0.9; transform-origin:center; animation: fall 3s linear forwards; border-radius:3px;
     }
     @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(300px) rotate(360deg);
-        opacity: 0;
-      }
+      0% {transform: translateY(0) rotate(0deg); opacity:1;}
+      100% {transform: translateY(300px) rotate(360deg); opacity:0;}
     }
   </style>
 </head>
@@ -95,188 +47,124 @@
 <div class="quiz-container">
 <h1>اختبر معلوماتك الكروية ⚽️🔥</h1>
 <form id="quiz-form">
-
   <div class="question" id="q1">
-    1. من هو اللاعب الذي فاز بالكرة الذهبية خمس مرات؟  
-    <label><input type="radio" name="q1" value="a" required> ليونيل ميسي</label>
-    <label><input type="radio" name="q1" value="b"> كريستيانو رونالدو</label>
-    <label><input type="radio" name="q1" value="c"> ميشيل بلاتيني</label>
-    <label><input type="radio" name="q1" value="d"> زين الدين زيدان</label>
+    1. من هو الهداف التاريخي لكأس العالم؟  
+    <label><input type="radio" name="q1" value="a" required> ميروسلاف كلوزه</label>
+    <label><input type="radio" name="q1" value="b"> رونالدو الظاهرة</label>
+    <label><input type="radio" name="q1" value="c"> بيليه</label>
+    <label><input type="radio" name="q1" value="d"> زيدان</label>
   </div>
-
   <div class="question" id="q2">
-    2. أي منتخب حصل على كأس العالم مرة واحدة فقط ولكنه استضاف البطولة مرتين؟  
-    <label><input type="radio" name="q2" value="a" required> المكسيك</label>
-    <label><input type="radio" name="q2" value="b"> البرازيل</label>
-    <label><input type="radio" name="q2" value="c"> إيطاليا</label>
-    <label><input type="radio" name="q2" value="d"> ألمانيا</label>
+    2. أول منتخب عربي يصل لنصف نهائي كأس العالم؟  
+    <label><input type="radio" name="q2" value="a" required> السعودية</label>
+    <label><input type="radio" name="q2" value="b"> المغرب</label>
+    <label><input type="radio" name="q2" value="c"> الجزائر</label>
+    <label><input type="radio" name="q2" value="d"> مصر</label>
   </div>
-
   <div class="question" id="q3">
-    3. من هو هداف الدوري الإسباني عبر التاريخ حتى الآن؟  
-    <label><input type="radio" name="q3" value="a" required> ليونيل ميسي</label>
-    <label><input type="radio" name="q3" value="b"> ألفريدو دي ستيفانو</label>
-    <label><input type="radio" name="q3" value="c"> كريستيانو رونالدو</label>
-    <label><input type="radio" name="q3" value="d"> تيلمو زارا</label>
+    3. كم عدد بطولات دوري أبطال أوروبا يملك ريال مدريد؟  
+    <label><input type="radio" name="q3" value="a" required> 14</label>
+    <label><input type="radio" name="q3" value="b"> 13</label>
+    <label><input type="radio" name="q3" value="c"> 12</label>
+    <label><input type="radio" name="q3" value="d"> 10</label>
   </div>
-
   <div class="question" id="q4">
-    4. أي دولة عربية استضافت كأس أمم أفريقيا أكثر من مرة؟  
-    <label><input type="radio" name="q4" value="a" required> المغرب</label>
-    <label><input type="radio" name="q4" value="b"> مصر</label>
-    <label><input type="radio" name="q4" value="c"> تونس</label>
-    <label><input type="radio" name="q4" value="d"> الجزائر</label>
+    4. من هو اللاعب الذي سجل أكثر من 1000 هدف؟  
+    <label><input type="radio" name="q4" value="a" required> دييغو مارادونا</label>
+    <label><input type="radio" name="q4" value="b"> كريستيانو رونالدو</label>
+    <label><input type="radio" name="q4" value="c"> بيليه</label>
+    <label><input type="radio" name="q4" value="d"> جيرد مولر</label>
   </div>
-
   <div class="question" id="q5">
-    5. ما هو اسم الجائزة التي تمنح لأفضل لاعب في دوري أبطال أوروبا؟  
-    <label><input type="radio" name="q5" value="a" required> جائزة أفضل لاعب</label>
-    <label><input type="radio" name="q5" value="b"> الكرة الذهبية</label>
-    <label><input type="radio" name="q5" value="c"> جائزة الفيفا لأفضل لاعب</label>
-    <label><input type="radio" name="q5" value="d"> الحذاء الذهبي</label>
+    5. كم عدد اللاعبين في كل فريق أثناء المباراة؟  
+    <label><input type="radio" name="q5" value="a" required> 11</label>
+    <label><input type="radio" name="q5" value="b"> 10</label>
+    <label><input type="radio" name="q5" value="c"> 12</label>
+    <label><input type="radio" name="q5" value="d"> 9</label>
   </div>
-
   <div class="question" id="q6">
-    6. من هو اللاعب الذي سجل أسرع هدف في تاريخ كأس العالم؟  
+    6. من هو صاحب أسرع هدف في تاريخ كأس العالم؟  
     <label><input type="radio" name="q6" value="a" required> حكم زيما</label>
-    <label><input type="radio" name="q6" value="b"> محمد صلاح</label>
-    <label><input type="radio" name="q6" value="c"> باولو مالديني</label>
-    <label><input type="radio" name="q6" value="d"> بيليه</label>
+    <label><input type="radio" name="q6" value="b"> جيرارد</label>
+    <label><input type="radio" name="q6" value="c"> محمد صلاح</label>
+    <label><input type="radio" name="q6" value="d"> بيكهام</label>
   </div>
-
   <div class="question" id="q7">
-    7. أي منتخب فاز بكأس العالم للمرة الأولى عام 2010؟  
-    <label><input type="radio" name="q7" value="a" required> إسبانيا</label>
-    <label><input type="radio" name="q7" value="b"> ألمانيا</label>
-    <label><input type="radio" name="q7" value="c"> الأرجنتين</label>
-    <label><input type="radio" name="q7" value="d"> البرازيل</label>
+    7. من هو النادي الذي يُعرف ب"الشياطين الحمر"؟  
+    <label><input type="radio" name="q7" value="a" required> مانشستر يونايتد</label>
+    <label><input type="radio" name="q7" value="b"> ليفربول</label>
+    <label><input type="radio" name="q7" value="c"> آرسنال</label>
+    <label><input type="radio" name="q7" value="d"> ميلان</label>
   </div>
-
   <div class="question" id="q8">
-    8. من هو المدرب الذي فاز بكأس العالم كلاعب ومدرب؟  
-    <label><input type="radio" name="q8" value="a" required> ميشيل بلاتيني</label>
-    <label><input type="radio" name="q8" value="b"> ماريو زاجالو</label>
-    <label><input type="radio" name="q8" value="c"> دييغو مارادونا</label>
-    <label><input type="radio" name="q8" value="d"> بيب جوارديولا</label>
+    8. من هو أول لاعب عربي يفوز بدوري أبطال أوروبا؟  
+    <label><input type="radio" name="q8" value="a" required> محمد صلاح</label>
+    <label><input type="radio" name="q8" value="b"> رابح ماجر</label>
+    <label><input type="radio" name="q8" value="c"> رياض محرز</label>
+    <label><input type="radio" name="q8" value="d"> أحمد حسن</label>
   </div>
-
   <div class="question" id="q9">
-    9. كم عدد لاعبي كرة القدم في الملعب لكل فريق في مباراة قياسية؟  
-    <label><input type="radio" name="q9" value="a" required> 11</label>
-    <label><input type="radio" name="q9" value="b"> 10</label>
-    <label><input type="radio" name="q9" value="c"> 12</label>
-    <label><input type="radio" name="q9" value="d"> 9</label>
+    9. ما المنتخب الذي يمتلك أكبر عدد من بطولات كأس العالم؟  
+    <label><input type="radio" name="q9" value="a" required> الأرجنتين</label>
+    <label><input type="radio" name="q9" value="b"> البرازيل</label>
+    <label><input type="radio" name="q9" value="c"> ألمانيا</label>
+    <label><input type="radio" name="q9" value="d"> فرنسا</label>
   </div>
-
   <div class="question" id="q10">
-    10. من هو الحارس الأكثر حفظًا لشباكه في تاريخ الدوري الإنجليزي؟  
-    <label><input type="radio" name="q10" value="a" required> بيتر تشيك</label>
-    <label><input type="radio" name="q10" value="b"> جيانلويجي بوفون</label>
-    <label><input type="radio" name="q10" value="c"> ديفيد دي خيا</label>
-    <label><input type="radio" name="q10" value="d"> مانويل نوير</label>
+    10. من هو أسطورة برشلونة الملقب بالبرغوث؟  
+    <label><input type="radio" name="q10" value="a" required> تشافي</label>
+    <label><input type="radio" name="q10" value="b"> رونالدينيو</label>
+    <label><input type="radio" name="q10" value="c"> ليونيل ميسي</label>
+    <label><input type="radio" name="q10" value="d"> نيمار</label>
   </div>
-
   <button type="submit">أرسل إجاباتك</button>
-
 </form>
+
 <div id="result"></div>
+<div class="reward" id="reward">👏👏👏 أحسنت! لقد أجبت جميع الأسئلة بشكل مثالي!</div>
 <a href="index.html" class="back-button">🔙 العودة إلى الصفحة الرئيسية</a>
+<div class="confetti"></div>
 </div>
 
-<div class="confetti"></div>
-
 <script>
-  const correctAnswers = {
-    q1: "a",
-    q2: "a",
-    q3: "a",
-    q4: "b",
-    q5: "a",
-    q6: "a",
-    q7: "a",
-    q8: "b",
-    q9: "a",
-    q10: "a"
-  };
+  const correctAnswers={q1:"a",q2:"b",q3:"a",q4:"c",q5:"a",q6:"a",q7:"a",q8:"b",q9:"b",q10:"c"};
+  const correctText={q1:"الإجابة الصحيحة: ميروسلاف كلوزه",q2:"الإجابة الصحيحة: المغرب",q3:"الإجابة الصحيحة: 14",q4:"الإجابة الصحيحة: بيليه",q5:"الإجابة الصحيحة: 11 لاعبًا",q6:"الإجابة الصحيحة: حكم زيما",q7:"الإجابة الصحيحة: مانشستر يونايتد",q8:"الإجابة الصحيحة: رابح ماجر",q9:"الإجابة الصحيحة: البرازيل",q10:"الإجابة الصحيحة: ليونيل ميسي"};
+  const form=document.getElementById('quiz-form'); const res=document.getElementById('result'); const confetti=document.querySelector('.confetti'); const reward=document.getElementById('reward');
 
-  const correctText = {
-    q1: "الإجابة الصحيحة: ليونيل ميسي",
-    q2: "الإجابة الصحيحة: المكسيك",
-    q3: "الإجابة الصحيحة: ليونيل ميسي",
-    q4: "الإجابة الصحيحة: مصر",
-    q5: "الإجابة الصحيحة: جائزة أفضل لاعب",
-    q6: "الإجابة الصحيحة: حكم زيما",
-    q7: "الإجابة الصحيحة: إسبانيا",
-    q8: "الإجابة الصحيحة: ماريو زاجالو",
-    q9: "الإجابة الصحيحة: 11 لاعبًا",
-    q10: "الإجابة الصحيحة: بيتر تشيك"
-  };
-
-  const form = document.getElementById('quiz-form');
-  const resultDiv = document.getElementById('result');
-  const confettiContainer = document.querySelector('.confetti');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    let score = 0;
-    let wrongQuestions = [];
-    const formData = new FormData(form);
-
-    for (let i = 1; i <= 10; i++) {
-      const section = document.getElementById('q'+i);
-      section.classList.remove('wrong');
-      section.classList.remove('correct');
-      const prevAnswer = section.querySelector('.correct-answer');
-      if (prevAnswer) prevAnswer.remove();
+  form.addEventListener('submit',function(e){
+    e.preventDefault(); let score=0;
+    for(let i=1;i<=10;i++){
+      const q=document.getElementById('q'+i);
+      q.classList.remove('wrong','correct');
+      const pre=q.querySelector('.correct-answer'); if(pre)pre.remove();
+      const ans=new FormData(form).get('q'+i);
+      if(ans===correctAnswers['q'+i]){ score++; q.classList.add('correct'); }
+      else{ q.classList.add('wrong'); const a=document.createElement('div'); a.classList.add('correct-answer'); a.textContent=correctText['q'+i]; q.appendChild(a); }
     }
-    confettiContainer.innerHTML = '';
-
-    for (let [name, value] of formData.entries()) {
-      const questionSection = document.getElementById(name);
-      if (correctAnswers[name] === value) {
-        score++;
-        questionSection.classList.add('correct');
-      } else {
-        wrongQuestions.push(name);
-        questionSection.classList.add('wrong');
-        const answerMsg = document.createElement('div');
-        answerMsg.classList.add('correct-answer');
-        answerMsg.textContent = correctText[name];
-        questionSection.appendChild(answerMsg);
-      }
-    }
-    let wrongText = wrongQuestions.length ? "لقد أخطأت في الأسئلة التالية: " + wrongQuestions.map(q => q.slice(1)).join(', ') : "أجبت على كل الأسئلة بشكل صحيح! مبروك! 🎉👏";
-
-    resultDiv.textContent = `لقد أجبت بشكل صحيح على ${score} من 10 أسئلة.\n${wrongText}`;
-    resultDiv.style.color = wrongQuestions.length ? '#e74c3c' : '#1766a0';
-
-    if(score === 10) {
-      launchConfetti();
-    }
+    if(score===10){ res.textContent='🎉 لقد أجبت على جميع الأسئلة بشكل صحيح!'; reward.style.display='block'; launchConfetti(); }
+    else{ res.textContent=`نتيجتك: ${score}/10`; reward.style.display='none'; }
+    res.style.color=score===10?'#27ae60':'#e74c3c';
   });
 
-  function createConfettiPiece() {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti-piece');
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
-    confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
-    confetti.style.animationDelay = (Math.random() * 2) + 's';
-    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-    return confetti;
+  function createPiece(){
+    const el=document.createElement('div');
+    el.classList.add('confetti-piece');
+    el.style.left=Math.random()*100+'vw';
+    el.style.backgroundColor=`hsl(${Math.random()*360},70%,60%)`;
+    el.style.animationDuration=(3+Math.random()*2)+'s';
+    el.style.animationDelay=(Math.random()*2)+'s';
+    el.style.transform=`rotate(${Math.random()*360}deg)`;
+    return el;
   }
-
-  function launchConfetti() {
-    const total = 100;
-    for(let i=0; i<total; i++) {
-      const confetti = createConfettiPiece();
-      confettiContainer.appendChild(confetti);
-      setTimeout(() => {
-        confetti.remove();
-      }, 5000);
+  function launchConfetti(){
+    const total=80;
+    for(let i=0;i<total;i++){
+      const p=createPiece();
+      confetti.appendChild(p);
+      setTimeout(()=>{p.remove();},5000);
     }
   }
 </script>
-
 </body>
 </html>
+
