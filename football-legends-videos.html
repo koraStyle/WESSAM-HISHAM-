@@ -5,18 +5,23 @@
   <title>ركن الأساطير | فيديوهات أمتع نجوم كرة القدم</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {background:#f5f7fa; font-family:'Cairo', Tahoma, Arial, sans-serif;}
+    body {background:#f5f7fa; font-family:'Cairo',Tahoma,Arial,sans-serif;}
     .legend-main {max-width:870px; margin:38px auto 38px; background:#fff; border-radius:18px; box-shadow:0 2px 18px #1766a028; padding:38px 24px;}
     .legend-title {color:#1766a0; font-size:2.1em; font-weight:bold; margin-bottom:28px; text-align:center; letter-spacing:1px;}
-    .player-block {margin-bottom:44px; padding-bottom:17px; border-bottom:3px solid #e7e7e7; position:relative;}
-    .player-pin {position:absolute; right:-19px; top:16px; color:#e67e22; font-size:2.1em; background:#fff; border-radius:50%; box-shadow:0 1px 6px #1766a026; padding:4px;}
-    .player-name {color:#1766a0; font-size:1.24em; font-weight:bold; margin-bottom:13px; text-align:right; letter-spacing:0.5px; display:flex; align-items:center; gap:9px;}
-    .player-summary {color:#1861b6; font-size:1.11em; margin-bottom:12px; text-align:right; font-weight:600;}
-    .player-achievements {font-size:1.07em; color:#444; background:#f7fafd; border-radius:8px; padding:10px 17px; margin-bottom:14px; line-height:2;}
+    .player-block {margin-bottom:44px; padding-bottom:17px; border-bottom:3px solid #e7e7e7;}
+    .player-header {display:flex; align-items:center; gap:10px; margin-bottom:0;}
+    .player-emoji {font-size:1.28em;}
+    .player-name {color:#1766a0; font-size:1.2em; font-weight:bold; letter-spacing:0.5px;}
+    .player-summary {color:#1861b6; font-size:1.11em; margin-top:6px; margin-bottom:10px; text-align:right; font-weight:600;}
+    .player-achievements {font-size:1.065em; color:#444; background:#f7fafd; border-radius:8px; padding:10px 16px 10px 0; margin-bottom:13px; line-height:2;}
+    .player-achievements ul {margin:0 0 0 18px; padding-right:17px;}
+    .player-achievements li {margin-bottom:2px;}
     .video-frame {position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px; margin-bottom:9px;}
     .video-frame iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
     @media (max-width:660px){.legend-main{padding:12px;}}
     .divider {width:60%; margin:32px auto 7px auto; border:0; height:2.5px; background:#1766a0;}
+    .back-link {display:block; margin:36px auto 0 auto; width:max-content; background:#1766a0; color:#fff; padding:12px 34px; border-radius:9px; text-align:center; font-size:1.13em; font-weight:bold; text-decoration:none; box-shadow:0 2px 9px #1766a028;}
+    .back-link:hover{background:#e67e22;}
   </style>
 </head>
 <body>
@@ -25,15 +30,19 @@
 
     <!-- لاعب 1 -->
     <div class="player-block">
-      <div class="player-pin">🌟</div>
-      <div class="player-name">رونالدينيو</div>
+      <div class="player-header">
+        <span class="player-emoji">🌟</span>
+        <span class="player-name">رونالدينيو</span>
+      </div>
       <div class="player-summary">ساحر البرازيل، صاحب الابتسامة الشهيرة وأسطورة المهارة الفردية.</div>
       <div class="player-achievements">
-        الكرة الذهبية 2005<br>
-        كأس العالم 2002<br>
-        دوري أبطال أوروبا 2006<br>
-        مرتين أفضل لاعب في العالم<br>
-        صناعة الترفيه والمتعة الكروية في برشلونة وسان جيرمان
+        <ul>
+          <li>الكرة الذهبية 2005</li>
+          <li>كأس العالم 2002</li>
+          <li>دوري أبطال أوروبا 2006</li>
+          <li>مرتين أفضل لاعب في العالم</li>
+          <li>صناعة المتعة الكروية في برشلونة وسان جيرمان</li>
+        </ul>
       </div>
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/qepFC-l-Aaw?si=KeOOv2o0WmCc-y1N" frameborder="0" allowfullscreen title="رونالدينيو – مهارات"></iframe>
@@ -43,51 +52,63 @@
 
     <!-- لاعب 2 -->
     <div class="player-block">
-      <div class="player-pin">🧠</div>
-      <div class="player-name">زين الدين زيدان</div>
+      <div class="player-header">
+        <span class="player-emoji">🧠</span>
+        <span class="player-name">زين الدين زيدان</span>
+      </div>
       <div class="player-summary">عبقري فرنسا وصاحب أشهر لمسة كرة في العقدين الأخيرين.</div>
       <div class="player-achievements">
-        كأس العالم 1998<br>
-        دوري أبطال أوروبا 2002<br>
-        الكرة الذهبية 1998<br>
-        ثلاث مرات أفضل لاعب في كأس العالم<br>
-        بطل الليغا مع ريال مدريد ويوفنتوس
+        <ul>
+          <li>كأس العالم 1998</li>
+          <li>دوري أبطال أوروبا 2002</li>
+          <li>الكرة الذهبية 1998</li>
+          <li>ثلاث مرات أفضل لاعب في كأس العالم</li>
+          <li>بطل الليغا مع ريال مدريد ويوفنتوس</li>
+        </ul>
       </div>
       <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/VypU44EdEvE?si=E-TjgKCgFis6DA7D" frameborder="0" allowfullscreen title="زين الدين زيدان"></iframe>
+        <iframe src="https://www.youtube.com/embed/VypU44EdEvE?si=E-TjgKCgFis6DA7D" frameborder="0" allowfullscreen title="زيدان – فيديو"></iframe>
       </div>
     </div>
     <hr class="divider" />
 
     <!-- لاعب 3 -->
     <div class="player-block">
-      <div class="player-pin">🚀</div>
-      <div class="player-name">كريستيانو رونالدو</div>
+      <div class="player-header">
+        <span class="player-emoji">🚀</span>
+        <span class="player-name">كريستيانو رونالدو</span>
+      </div>
       <div class="player-summary">آلة تهديف لا تتوقف، صاحب إنجازات مذهلة في أوروبا والسعودية.</div>
       <div class="player-achievements">
-        خمس كرات ذهبية<br>
-        كأس أوروبا للمنتخبات<br>
-        أربع دوري أبطال أوروبا مع ريال مدريد<br>
-        الهداف التاريخي للأبطال<br>
-        أرقام قياسية في جميع الدوريات
+        <ul>
+          <li>خمس كرات ذهبية</li>
+          <li>كأس أوروبا للمنتخبات</li>
+          <li>أربع دوري أبطال أوروبا مع ريال مدريد</li>
+          <li>الهداف التاريخي للأبطال</li>
+          <li>أرقام قياسية في جميع الدوريات</li>
+        </ul>
       </div>
       <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/kqCFO8Ww3Cw?si=zsdHkqscQb63ZCxg" frameborder="0" allowfullscreen title="كريستيانو رونالدو – أهداف تاريخية"></iframe>
+        <iframe src="https://www.youtube.com/embed/kqCFO8Ww3Cw?si=zsdHkqscQb63ZCxg" frameborder="0" allowfullscreen title="رونالدو – فيديو"></iframe>
       </div>
     </div>
     <hr class="divider" />
 
     <!-- لاعب 4 -->
     <div class="player-block">
-      <div class="player-pin">🐐</div>
-      <div class="player-name">ليونيل ميسي</div>
+      <div class="player-header">
+        <span class="player-emoji">🐐</span>
+        <span class="player-name">ليونيل ميسي</span>
+      </div>
       <div class="player-summary">مايسترو المهارات، الهداف التاريخي وصاحب الإنجازات الكبرى.</div>
       <div class="player-achievements">
-        سبع كرات ذهبية<br>
-        كأس العالم 2022<br>
-        أربع دوري أبطال أوروبا<br>
-        الهداف التاريخي لبرشلونة<br>
-        ملك المهارات والانفرادات
+        <ul>
+          <li>سبع كرات ذهبية</li>
+          <li>كأس العالم 2022</li>
+          <li>أربع دوري أبطال أوروبا</li>
+          <li>الهداف التاريخي لبرشلونة</li>
+          <li>ملك المهارات والانفرادات</li>
+        </ul>
       </div>
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/x5GukL-0_sk?si=nXxweR19x_2u-w91" frameborder="0" allowfullscreen title="ليونيل ميسي – أهداف وأرقام"></iframe>
@@ -97,19 +118,24 @@
 
     <!-- لاعب 5 -->
     <div class="player-block">
-      <div class="player-pin">⚡️</div>
-      <div class="player-name">تييري هنري</div>
+      <div class="player-header">
+        <span class="player-emoji">⚡️</span>
+        <span class="player-name">تييري هنري</span>
+      </div>
       <div class="player-summary">سيد الهجوم الفرنسي وصانع الأمجاد مع أرسنال وبرشلونة.</div>
       <div class="player-achievements">
-        كأس العالم 1998<br>
-        هداف الدوري الإنجليزي أعوام عديدة<br>
-        بطل الدوري مع أرسنال وبرشلونة<br>
-        ثاني هدافي فرنسا عبر التاريخ
+        <ul>
+          <li>كأس العالم 1998</li>
+          <li>هداف الدوري الإنجليزي أعوام عديدة</li>
+          <li>بطل الدوري مع أرسنال وبرشلونة</li>
+          <li>ثاني هدافي فرنسا عبر التاريخ</li>
+        </ul>
       </div>
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/qL_5nTtquAk?si=621iGdR_iOes5wqt" frameborder="0" allowfullscreen title="تييري هنري – فن إنهاء الهجمات"></iframe>
       </div>
     </div>
+<a class="back-link" href="index.html#football-legends-videos">العودة إلى قسم ركن الأساطير</a>
   </div>
 </body>
 </html>
