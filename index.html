@@ -1970,53 +1970,46 @@ function formatTime(dateStr) {
       </p>
     </div>
 
-    <!-- 📈 جدول الإحصائيات -->
-    <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:28px;">
-      <h3 style="color:#1766a0;font-size:1.2em;font-weight:700;margin-bottom:10px;text-align:center;">📈 إحصائيات المباراة</h3>
-      <table style="width:100%;border-collapse:collapse;text-align:center;font-size:1.05em;">
-        <thead>
-          <tr style="background:#1766a0;color:#fff;">
-            <th style="padding:10px;border-radius:8px 0 0 0;">الأهلي</th>
-            <th style="padding:10px;">الإحصائية</th>
-            <th style="padding:10px;border-radius:0 8px 0 0;">الزمالك</th>
-          </tr>
-        </thead>
-        <tbody style="background:#f9fbfd;color:#333;font-weight:500;">
-          <tr><td>52%</td><td>الاستحواذ</td><td>48%</td></tr>
-          <tr><td>14</td><td>التسديدات</td><td>7</td></tr>
-          <tr><td>5</td><td>التسديدات على المرمى</td><td>3</td></tr>
-          <tr><td>3</td><td>التسديدات بعيدًا عن المرمى</td><td>4</td></tr>
-          <tr><td>6</td><td>تسديدات تم اعتراضها</td><td>0</td></tr>
-          <tr><td>7</td><td>من داخل الصندوق</td><td>4</td></tr>
-          <tr><td>7</td><td>من خارج الصندوق</td><td>3</td></tr>
-          <tr><td>337</td><td>مجموع التمريرات</td><td>303</td></tr>
-          <tr><td>77%</td><td>دقة التمرير</td><td>76%</td></tr>
-          <tr><td>4</td><td>الركنيات</td><td>2</td></tr>
-          <tr><td>0</td><td>التسللات</td><td>2</td></tr>
-          <tr><td>21</td><td>مخالفات</td><td>15</td></tr>
-          <tr><td>3</td><td>تصديات الحارس</td><td>3</td></tr>
-          <tr><td>4</td><td>البطاقات الصفراء</td><td>3</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <h3>📈 إحصائيات المباراة</h3>
+<table border="1" cellspacing="0" cellpadding="8" style="width:100%; text-align:center; border-collapse:collapse;">
+  <thead>
+    <tr style="background:#1766a0; color:#fff;">
+      <th>الأهلي</th>
+      <th>الإحصائية</th>
+      <th>الزمالك</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>52%</td><td>الاستحواذ</td><td>48%</td></tr>
+    <tr><td>14</td><td>التسديدات</td><td>7</td></tr>
+    <tr><td>5</td><td>التسديدات على المرمى</td><td>3</td></tr>
+    <tr><td>3</td><td>التسديدات بعيدًا عن المرمى</td><td>4</td></tr>
+    <tr><td>6</td><td>تسديدات تم اعتراضها</td><td>0</td></tr>
+    <tr><td>4</td><td>الركنيات</td><td>2</td></tr>
+    <tr><td>0</td><td>التسللات</td><td>2</td></tr>
+    <tr><td>21</td><td>المخالفات</td><td>15</td></tr>
+    <tr><td>3</td><td>تصديات الحارس</td><td>3</td></tr>
+    <tr><td>4</td><td>البطاقات الصفراء</td><td>3</td></tr>
+    <tr><td>0</td><td>البطاقات الحمراء</td><td>0</td></tr>
+  </tbody>
+</table>
 
-    <!-- ⚽ سجل الأهداف والأحداث -->
-    <div style="background:#f8fafc;border-radius:12px;padding:18px;margin-bottom:20px;">
-      <h3 style="color:#1766a0;font-size:1.2em;margin-bottom:10px;text-align:center;">⚽ سجل الأهداف والأحداث</h3>
-      <table style="width:100%;border-collapse:collapse;text-align:center;font-size:1.05em;">
-        <thead>
-          <tr style="background:#1766a0;color:#fff;">
-            <th style="padding:10px;border-radius:8px 0 0 0;">الدقيقة</th>
-            <th style="padding:10px;">الحدث</th>
-            <th style="padding:10px;border-radius:0 8px 0 0;">الفريق</th>
-          </tr>
-        </thead>
-        <tbody style="background:#f9fbfd;color:#333;font-weight:500;">
-          <tr><td>44’</td><td>  احمد سيد زيزو  ←   اشرف بن شرقي  </td><td>الاهلي </td></tr>
-          <tr><td>72’</td><td> طاهر محمد طاهر  تمريرة حاسمة إلى   مروان عطية  (هدف)</td><td>الأهلي</td></tr>
-          <tr><td>79’</td><td>لمسة يد على سيف الدين الجزيري</td><td>الزمالك</td></tr>
-        </tbody>
-      </table>
+<h3>⚽ سجل الأهداف</h3>
+<table border="1" cellspacing="0" cellpadding="8" style="width:100%; text-align:center; border-collapse:collapse;">
+  <thead>
+    <tr style="background:#1766a0; color:#fff;">
+      <th>الدقيقة</th>
+      <th>اللاعب</th>
+      <th>الفريق</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>44’</td><td>أشرف بن شرقي</td><td>الأهلي</td></tr>
+    <tr><td>72’</td><td>مروان عطية (تمريرة حاسمة: طاهر محمد)</td><td>الأهلي</td></tr>
+    <tr><td>79’</td><td>لمسة يد على سيف الدين الجزيري</td><td>الزمالك</td></tr>
+  </tbody>
+</table>
+
     </div>
 
     <!-- 📋 النقاط التحليلية -->
