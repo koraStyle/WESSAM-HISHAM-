@@ -25,20 +25,10 @@
       font-size: 2.2em;
       animation: bounce 1.2s infinite alternate;
     }
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
-    }
-    .confetti {
-      position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:visible; z-index:5;
-    }
-    .confetti-piece {
-      position:absolute; width:12px; height:12px; background-color:#f39c12; opacity:0.9; transform-origin:center; animation: fall 3s linear forwards; border-radius:3px;
-    }
-    @keyframes fall {
-      0% {transform: translateY(0) rotate(0deg); opacity:1;}
-      100% {transform: translateY(300px) rotate(360deg); opacity:0;}
-    }
+    @keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+    .confetti { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:visible; z-index:5; }
+    .confetti-piece { position:absolute; width:12px; height:12px; background-color:#f39c12; opacity:0.9; transform-origin:center; animation: fall 3s linear forwards; border-radius:3px; }
+    @keyframes fall { 0% {transform: translateY(0) rotate(0deg); opacity:1;} 100% {transform: translateY(300px) rotate(360deg); opacity:0;} }
   </style>
 </head>
 <body>
@@ -46,76 +36,87 @@
 <div class="quiz-container">
 <h1>اختبر معلوماتك الكروية ⚽️🔥</h1>
 <form id="quiz-form">
+
   <div class="question" id="q1">
-    1. من هو اللاعب الذي فاز بجائزة الكرة الذهبية عام 2023؟  
-    <label><input type="radio" name="q1" value="a" required> ليونيل ميسي</label>
-    <label><input type="radio" name="q1" value="b"> كيليان مبابي</label>
-    <label><input type="radio" name="q1" value="c"> إيرلينغ هالاند</label>
-    <label><input type="radio" name="q1" value="d"> كيفين دي بروين</label>
+    1. من هو أول منتخب فاز بكأس العالم عبر التاريخ؟
+    <label><input type="radio" name="q1" value="a" required> البرازيل</label>
+    <label><input type="radio" name="q1" value="b"> إيطاليا</label>
+    <label><input type="radio" name="q1" value="c"> الأوروغواي</label>
+    <label><input type="radio" name="q1" value="d"> الأرجنتين</label>
   </div>
+
   <div class="question" id="q2">
-    2. أي منتخب فاز بكأس العالم 2022؟  
-    <label><input type="radio" name="q2" value="a" required> فرنسا</label>
-    <label><input type="radio" name="q2" value="b"> الأرجنتين</label>
-    <label><input type="radio" name="q2" value="c"> كرواتيا</label>
-    <label><input type="radio" name="q2" value="d"> البرازيل</label>
+    2. من هو أكثر لاعب تسجيلًا للأهداف الدولية عبر التاريخ؟
+    <label><input type="radio" name="q2" value="a" required> ليونيل ميسي</label>
+    <label><input type="radio" name="q2" value="b"> علي دائي</label>
+    <label><input type="radio" name="q2" value="c"> كريستيانو رونالدو</label>
+    <label><input type="radio" name="q2" value="d"> روماريو</label>
   </div>
+
   <div class="question" id="q3">
-    3. من هو اللاعب الأكثر تسجيلًا للأهداف في تاريخ كأس العالم؟  
-    <label><input type="radio" name="q3" value="a" required> ميروسلاف كلوزه</label>
-    <label><input type="radio" name="q3" value="b"> رونالدو البرازيلي</label>
-    <label><input type="radio" name="q3" value="c"> جيرد مولر</label>
-    <label><input type="radio" name="q3" value="d"> ليونيل ميسي</label>
+    3. أي نادٍ حقق الثلاثية التاريخية عام 2009؟
+    <label><input type="radio" name="q3" value="a" required> مانشستر يونايتد</label>
+    <label><input type="radio" name="q3" value="b"> برشلونة</label>
+    <label><input type="radio" name="q3" value="c"> بايرن ميونيخ</label>
+    <label><input type="radio" name="q3" value="d"> تشيلسي</label>
   </div>
+
   <div class="question" id="q4">
-    4. أي نادٍ يُلقب بـ “الريدز”؟  
-    <label><input type="radio" name="q4" value="a" required> مانشستر يونايتد</label>
-    <label><input type="radio" name="q4" value="b"> ليفربول</label>
-    <label><input type="radio" name="q4" value="c"> آرسنال</label>
-    <label><input type="radio" name="q4" value="d"> تشيلسي</label>
+    4. من هو المدرب الذي قاد البرتغال لتحقيق يورو 2016؟
+    <label><input type="radio" name="q4" value="a" required> روبيرتو مارتينيز</label>
+    <label><input type="radio" name="q4" value="b"> كارلوس كيروش</label>
+    <label><input type="radio" name="q4" value="c"> فرناندو سانتوس</label>
+    <label><input type="radio" name="q4" value="d"> فيليب سكولاري</label>
   </div>
+
   <div class="question" id="q5">
-    5. من هو المدرب الذي قاد إسبانيا للفوز بكأس العالم 2010؟  
-    <label><input type="radio" name="q5" value="a" required> لويس إنريكي</label>
-    <label><input type="radio" name="q5" value="b"> فيسنتي دل بوسكي</label>
-    <label><input type="radio" name="q5" value="c"> رافاييل بينيتيز</label>
-    <label><input type="radio" name="q5" value="d"> بيب جوارديولا</label>
+    5. من اللاعب الذي سجل أسرع هدف في تاريخ دوري أبطال أوروبا؟
+    <label><input type="radio" name="q5" value="a" required> روي ماكي</label>
+    <label><input type="radio" name="q5" value="b"> محمد صلاح</label>
+    <label><input type="radio" name="q5" value="c"> ليونيل ميسي</label>
+    <label><input type="radio" name="q5" value="d"> كريم بنزيما</label>
   </div>
+
   <div class="question" id="q6">
-    6. كم مرة فاز نادي ميلان بدوري أبطال أوروبا؟  
-    <label><input type="radio" name="q6" value="a" required> 5 مرات</label>
-    <label><input type="radio" name="q6" value="b"> 6 مرات</label>
-    <label><input type="radio" name="q6" value="c"> 7 مرات</label>
-    <label><input type="radio" name="q6" value="d"> 8 مرات</label>
+    6. أي منتخب يحمل الرقم القياسي في الفوز بكوبا أمريكا؟
+    <label><input type="radio" name="q6" value="a" required> البرازيل</label>
+    <label><input type="radio" name="q6" value="b"> الأرجنتين</label>
+    <label><input type="radio" name="q6" value="c"> أوروغواي</label>
+    <label><input type="radio" name="q6" value="d"> تشيلي</label>
   </div>
+
   <div class="question" id="q7">
-    7. من هو اللاعب العربي الوحيد الذي فاز بدوري أبطال أوروبا؟  
-    <label><input type="radio" name="q7" value="a" required> محمد صلاح</label>
-    <label><input type="radio" name="q7" value="b"> أشرف حكيمي</label>
-    <label><input type="radio" name="q7" value="c"> رياض محرز</label>
-    <label><input type="radio" name="q7" value="d"> ياسين بونو</label>
+    7. من هو أصغر لاعب شارك في كأس العالم؟
+    <label><input type="radio" name="q7" value="a" required> دييغو مارادونا</label>
+    <label><input type="radio" name="q7" value="b"> بيليه</label>
+    <label><input type="radio" name="q7" value="c"> نورمان وايتسايد</label>
+    <label><input type="radio" name="q7" value="d"> كيليان مبابي</label>
   </div>
+
   <div class="question" id="q8">
-    8. في أي سنة تأسس نادي برشلونة الإسباني؟  
-    <label><input type="radio" name="q8" value="a" required> 1899</label>
-    <label><input type="radio" name="q8" value="b"> 1905</label>
-    <label><input type="radio" name="q8" value="c"> 1912</label>
-    <label><input type="radio" name="q8" value="d"> 1920</label>
+    8. في أي سنة تأسس نادي مانشستر سيتي؟
+    <label><input type="radio" name="q8" value="a" required> 1880</label>
+    <label><input type="radio" name="q8" value="b"> 1894</label>
+    <label><input type="radio" name="q8" value="c"> 1902</label>
+    <label><input type="radio" name="q8" value="d"> 1910</label>
   </div>
+
   <div class="question" id="q9">
-    9. من هو أكثر لاعب فاز بلقب دوري أبطال أوروبا في التاريخ؟  
+    9. من هو الهداف التاريخي للدوري الإسباني؟
     <label><input type="radio" name="q9" value="a" required> كريستيانو رونالدو</label>
-    <label><input type="radio" name="q9" value="b"> باولو مالديني</label>
-    <label><input type="radio" name="q9" value="c"> فرانشيسكو خينتو</label>
-    <label><input type="radio" name="q9" value="d"> سيرخيو راموس</label>
+    <label><input type="radio" name="q9" value="b"> ليونيل ميسي</label>
+    <label><input type="radio" name="q9" value="c"> تيلمو زارا</label>
+    <label><input type="radio" name="q9" value="d"> لويس سواريز</label>
   </div>
+
   <div class="question" id="q10">
-    10. أي منتخب فاز بأكبر عدد من بطولات كأس الأمم الإفريقية؟  
-    <label><input type="radio" name="q10" value="a" required> الكاميرون</label>
-    <label><input type="radio" name="q10" value="b"> مصر</label>
-    <label><input type="radio" name="q10" value="c"> نيجيريا</label>
-    <label><input type="radio" name="q10" value="d"> غانا</label>
+    10. أي منتخب فاز بأول نسخة من دوري الأمم الأوروبية؟
+    <label><input type="radio" name="q10" value="a" required> فرنسا</label>
+    <label><input type="radio" name="q10" value="b"> البرتغال</label>
+    <label><input type="radio" name="q10" value="c"> هولندا</label>
+    <label><input type="radio" name="q10" value="d"> إسبانيا</label>
   </div>
+
   <button type="submit">أرسل إجاباتك</button>
 </form>
 
@@ -127,43 +128,69 @@
 
 <script>
   const correctAnswers={
-    q1:"a",
-    q2:"b",
-    q3:"a",
-    q4:"b",
-    q5:"b",
+    q1:"c",
+    q2:"c",
+    q3:"b",
+    q4:"c",
+    q5:"a",
     q6:"c",
-    q7:"a",
+    q7:"c",
     q8:"a",
-    q9:"c",
+    q9:"b",
     q10:"b"
   };
+
   const correctText={
-    q1:"الإجابة الصحيحة: ليونيل ميسي",
-    q2:"الإجابة الصحيحة: الأرجنتين",
-    q3:"الإجابة الصحيحة: ميروسلاف كلوزه برصيد 16 هدفًا",
-    q4:"الإجابة الصحيحة: ليفربول يُلقب بـ الريدز",
-    q5:"الإجابة الصحيحة: فيسنتي دل بوسكي",
-    q6:"الإجابة الصحيحة: 7 مرات",
-    q7:"الإجابة الصحيحة: محمد صلاح مع ليفربول 2019",
-    q8:"الإجابة الصحيحة: تأسس برشلونة عام 1899",
-    q9:"الإجابة الصحيحة: فرانشيسكو خينتو فاز بـ 6 ألقاب",
-    q10:"الإجابة الصحيحة: مصر برصيد 7 بطولات"
+    q1:"الإجابة الصحيحة: الأوروغواي – أول بطل لكأس العالم 1930",
+    q2:"الإجابة الصحيحة: كريستيانو رونالدو – أكثر لاعب تسجيلًا دوليًا",
+    q3:"الإجابة الصحيحة: برشلونة – حقق الثلاثية التاريخية 2009",
+    q4:"الإجابة الصحيحة: فرناندو سانتوس",
+    q5:"الإجابة الصحيحة: روي ماكي – سجل بعد 10 ثوانٍ فقط",
+    q6:"الإجابة الصحيحة: أوروغواي – الأكثر تتويجًا بالبطولة",
+    q7:"الإجابة الصحيحة: نورمان وايتسايد – عمره 17 عامًا",
+    q8:"الإجابة الصحيحة: تأسس مانشستر سيتي عام 1880",
+    q9:"الإجابة الصحيحة: ليونيل ميسي – الهداف التاريخي لليغا",
+    q10:"الإجابة الصحيحة: البرتغال – أول بطل لدوري الأمم الأوروبية"
   };
-  const form=document.getElementById('quiz-form'); const res=document.getElementById('result'); const confetti=document.querySelector('.confetti'); const reward=document.getElementById('reward');
+
+  const form=document.getElementById('quiz-form');
+  const res=document.getElementById('result');
+  const confetti=document.querySelector('.confetti');
+  const reward=document.getElementById('reward');
 
   form.addEventListener('submit',function(e){
-    e.preventDefault(); let score=0;
+    e.preventDefault(); 
+    let score=0;
+
     for(let i=1;i<=10;i++){
       const q=document.getElementById('q'+i);
       q.classList.remove('wrong','correct');
-      const pre=q.querySelector('.correct-answer'); if(pre)pre.remove();
+      const pre=q.querySelector('.correct-answer'); 
+      if(pre) pre.remove();
+
       const ans=new FormData(form).get('q'+i);
-      if(ans===correctAnswers['q'+i]){ score++; q.classList.add('correct'); }
-      else{ q.classList.add('wrong'); const a=document.createElement('div'); a.classList.add('correct-answer'); a.textContent=correctText['q'+i]; q.appendChild(a); }
+
+      if(ans===correctAnswers['q'+i]){
+        score++; 
+        q.classList.add('correct');
+      } else {
+        q.classList.add('wrong');
+        const a=document.createElement('div'); 
+        a.classList.add('correct-answer'); 
+        a.textContent=correctText['q'+i]; 
+        q.appendChild(a);
+      }
     }
-    if(score===10){ res.textContent='🎉 لقد أجبت على جميع الأسئلة بشكل صحيح!'; reward.style.display='block'; launchConfetti(); }
-    else{ res.textContent=`نتيجتك: ${score}/10`; reward.style.display='none'; }
+
+    if(score===10){
+      res.textContent='🎉 لقد أجبت على جميع الأسئلة بشكل صحيح!';
+      reward.style.display='block';
+      launchConfetti();
+    } else {
+      res.textContent=`نتيجتك: ${score}/10`;
+      reward.style.display='none';
+    }
+
     res.style.color=score===10?'#27ae60':'#e74c3c';
   });
 
@@ -177,6 +204,7 @@
     el.style.transform=`rotate(${Math.random()*360}deg)`;
     return el;
   }
+
   function launchConfetti(){
     const total=80;
     for(let i=0;i<total;i++){
@@ -186,5 +214,6 @@
     }
   }
 </script>
+
 </body>
 </html>
