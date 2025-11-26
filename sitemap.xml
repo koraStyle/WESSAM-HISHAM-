@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- صفحة مباريات اليوم -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/2025-05-19-daily.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- صفحة البطولات -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/tournaments.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- صفحة الأخبار -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/news.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- صفحة ترتيب الفرق -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/standings.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحة سياسة الخصوصية -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/privacy.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- صفحة تواصل معنا -->
+  <url>
+    <loc>https://korastyle.github.io/WESSAM-HISHAM-/contact.html</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

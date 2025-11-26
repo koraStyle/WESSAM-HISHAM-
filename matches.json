@@ -1,0 +1,72 @@
+{
+  "الدوري المصري": [
+    {
+      "home": "طلائع الجيش",
+      "away": "إنبي",
+      "time": "2025-05-16T20:00:00",
+      "channel": "أون تايم سبورت 1",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/3/3a/Tala%27ea_El_Gaish_SC_Logo.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/5/5a/Enppi_Club_logo.png"
+    },
+    {
+      "home": "الإسماعيلي",
+      "away": "مودرن سبورت",
+      "time": "2025-05-16T20:00:00",
+      "channel": "أون تايم سبورت 2",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/f/fe/Ismaily_SC_Logo.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Modern_Sport_FC_logo.png"
+    },
+    {
+      "home": "سموحة",
+      "away": "الاتحاد السكندري",
+      "time": "2025-05-16T20:00:00",
+      "channel": "أون تايم سبورت 2",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/1/1e/Smouha_SC_Logo.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/6/68/Al_Ittihad_Alex_SC_Logo.png"
+    },
+    {
+      "home": "غزل المحلة",
+      "away": "الجونة",
+      "time": "2025-05-16T20:00:00",
+      "channel": "أون تايم سبورت",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/e/eb/Ghazl_El_Mahalla_SC_Logo.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/0/0f/El_Gouna_FC_Logo.png"
+    }
+  ],
+  "الدوري الإنجليزي": [
+    {
+      "home": "أستون فيلا",
+      "away": "توتنهام",
+      "time": "2025-05-16T21:30:00",
+      "channel": "beIN Sports 2HD",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/f/f9/Aston_Villa_logo.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/b/b4/Tottenham_Hotspur.svg"
+    },
+    {
+      "home": "تشيلسي",
+      "away": "مانشستر يونايتد",
+      "time": "2025-05-16T22:00:00",
+      "channel": "beIN Sports 1HD",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg"
+    }
+  ],
+  "الدوري السعودي": [
+    {
+      "home": "الفتح",
+      "away": "الهلال",
+      "time": "2025-05-16T18:55:00",
+      "channel": "SSC SPORT",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/9/92/Al-Fateh_SC_Logo.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/2/2e/Alhilal_sfc_logo.png"
+    },
+    {
+      "home": "النصر",
+      "away": "التعاون",
+      "time": "2025-05-16T21:00:00",
+      "channel": "SSC SPORT",
+      "homeLogo": "https://upload.wikimedia.org/wikipedia/ar/e/e9/Al-Nassr.png",
+      "awayLogo": "https://upload.wikimedia.org/wikipedia/ar/5/5f/Al-Taawoun_FC_Logo.png"
+    }
+  ]
+}
