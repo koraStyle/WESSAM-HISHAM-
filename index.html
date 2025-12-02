@@ -2716,19 +2716,19 @@ function formatTime(dateStr) {
     /* يمكنك حذف هذا الجزء إذا كنت تستخدم خط Cairo بالفعل في موقعك */
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
     
-    /* تنسيق قسم الخصوصية والتواصل (مناسب الآن لكامل عرض الصفحة) */
+    /* تنسيق قسم الخصوصية والتواصل (متناسق مع حجم المحتوى الرئيسي) */
     .policy-contact-container {
         width: 100%;
-        /* تمت إزالة خاصية max-width: 350px; ليصبح القسم بكامل عرضه */
+        max-width: 800px; /* تحديد عرض أقصى ليتناسق مع محتوى الصفحة الرئيسي */
         padding: 0 15px;
-        margin: 40px auto 60px auto;
+        margin: 40px auto 60px auto; /* تمركز في المنتصف */
         box-sizing: border-box;
     }
     
     .section-box-pro {
         background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; /* تم تعديله ليتناسق مع كروت المحتوى الأخرى */
+        box-shadow: 0 2px 10px #1766a012; /* ظل خفيف متناسق مع كود المقابلات */
         padding: 20px;
         border-top: 5px solid var(--main-blue);
         direction: rtl;
@@ -2829,7 +2829,7 @@ function formatTime(dateStr) {
     }
 </style>
 
-<!-- القسم الذي يضم سياسة الخصوصية والتواصل (مناسب لعمود جانبي أو أسفل المحتوى) -->
+<!-- القسم الذي يضم سياسة الخصوصية والتواصل (متناسق في الحجم مع المحتوى الرئيسي) -->
 <div class="policy-contact-container">
     <section class="section-box-pro">
         <div class="section-title-pro">خدمة العملاء والمعلومات</div>
