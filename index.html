@@ -2716,13 +2716,13 @@ function formatTime(dateStr) {
     /* يمكنك حذف هذا الجزء إذا كنت تستخدم خط Cairo بالفعل في موقعك */
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
     
-    /* تنسيق قسم الخصوصية والتواصل (مناسب لوضعه في عمود جانبي) */
+    /* تنسيق قسم الخصوصية والتواصل (مناسب الآن لكامل عرض الصفحة) */
     .policy-contact-container {
         width: 100%;
-        max-width: 350px; /* لضمان ألا يكون عريضًا جدًا في التصميم */
+        /* تمت إزالة خاصية max-width: 350px; ليصبح القسم بكامل عرضه */
         padding: 0 15px;
-        margin: 40px auto 60px auto; /* تمركز في حالة عدم وجود تخطيط أعمدة */
-        box-sizing: border-box; /* لضمان دمج البادينج ضمن العرض */
+        margin: 40px auto 60px auto;
+        box-sizing: border-box;
     }
     
     .section-box-pro {
