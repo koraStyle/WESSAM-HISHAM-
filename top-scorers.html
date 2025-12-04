@@ -1,123 +1,226 @@
-<section id="top-scorers" style="margin: 40px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <h2 style="text-align:center; color:#222; font-size: 28px; margin-bottom: 30px;">🎯 ترتيب هدافي الدوريات الكبرى موسم 2025-2026</h2>
-  <style>
-    .league-title {
-      font-size: 22px;
-      color: #1a1a1a;
-      margin: 25px 0 10px;
-      border-right: 6px solid #007bff;
-      padding-right: 10px;
-    }
-    .scorers-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .scorers-table th {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px;
-      font-weight: bold;
-      text-align: center;
-    }
-    .scorers-table td {
-      padding: 10px;
-      text-align: center;
-      font-size: 15px;
-    }
-    .scorers-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-    .rank-cell {
-      font-weight: bold;
-      color: #007bff;
-      font-size: 16px;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ترتيب هدافي الدوريات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- استخدام خطوط جذابة تدعم العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- الدوري الإنجليزي -->
-  <h3 class="league-title">🏴 الدوري الإنجليزي الممتاز</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+    <!-- استخدام Tailwind CSS للتنسيق الاحترافي -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* تم إزالة تنسيقات body العامة لضمان عدم التعارض مع باقي أقسام الموقع */
 
-    <tr><td class="rank-cell">1</td><td>إيرلينغ هالاند</td><td>مان سيتي</td><td><strong>15</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>ايجور تياجو</td><td>برينتفورد</td><td><strong>11</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>جون فيليب ماتيتا</td><td>كريستال بالاس</td><td><strong>7</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>داني ويلبك</td><td>برايتون</td><td><strong>7</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>أنطوان سيمنيو</td><td>بورنموث</td><td><strong>6</strong></td></tr>
-  </table>
+        /* تنسيقات مخصصة لـ Tailwind */
+        .top-scorers-section {
+            font-family: 'Cairo', sans-serif; /* تحديد الخط للقسم فقط */
+            direction: rtl; /* ضمان الاتجاه من اليمين لليسار للقسم فقط */
+            background-color: #f3f4f6; /* خلفية خفيفة للقسم نفسه لتمييزه */
+            padding: 1rem 0; /* هوامش حول القسم على الجوال */
+        }
 
-  <!-- الدوري الإسباني -->
-  <h3 class="league-title">🇪🇸 الدوري الإسباني</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+        .league-card {
+            background: #ffffff;
+            border-radius: 1rem; /* 16px */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+        }
 
-    <tr><td class="rank-cell">1</td><td>كيليان مبابي</td><td>ريال مدريد</td><td><strong>16</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>فيدات موريكي</td><td>ريال مايوركا</td><td><strong>8</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>روبرت ليفاندوفسكي</td><td>برشلونة</td><td><strong>8</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>فيران توريس</td><td>برشلونة</td><td><strong>8</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>جوليان ألفاريز</td><td>أتلتيكو مدريد</td><td><strong>7</strong></td></tr>
-  </table>
+        .league-title-bar {
+            border-right: 6px solid #f97316; /* لون برتقالي مميز */
+            padding-right: 1.5rem;
+            color: #111827; /* Dark Gray */
+            font-size: 1.375rem; /* 22px */
+            font-weight: 700;
+            background-color: #fef3e5; /* خلفية خفيفة للعنوان */
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
 
-  <!-- الدوري الإيطالي -->
-  <h3 class="league-title">🇮🇹 الدوري الإيطالي</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+        .scorers-table th {
+            background-color: #1766a0; /* لون أزرق مميز */
+            color: #ffffff;
+            padding: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
 
-    <tr><td class="rank-cell">1</td><td>ريكاردو أورسوليني</td><td>بولونيا</td><td><strong>6</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>لاوتارو مارتينيز</td><td>إنتر ميلان</td><td><strong>6</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>هاكان تشالهان أوغلو</td><td>إنتر ميلان</td><td><strong>5</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>رفائيل لياو</td><td>ميلان</td><td><strong>5</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>نيكو باز</td><td>كومو</td><td><strong>5</strong></td></tr>
-  </table>
+        .scorers-table td {
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 1rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
 
-  <!-- الدوري الفرنسي -->
-  <h3 class="league-title">🇫🇷 الدوري الفرنسي</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+        .scorers-table tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        /* تأثير التفاعل (Hover) على صفوف الجدول */
+        .scorers-table tbody tr:hover {
+            background-color: #e5f4ff; /* لون أزرق فاتح عند التمرير */
+            transition: background-color 0.2s;
+        }
 
-    <tr><td class="rank-cell">1</td><td>ماسون جرينوود</td><td>مارسيليا</td><td><strong>10</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>خواكين بانيتشيلي</td><td>ستراسبورغ</td><td><strong>9</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>استيبان ليبول</td><td>أنجيه</td><td><strong>8</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>رومان ديل كاستيو</td><td>بريست</td><td><strong>6</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>إيلان كبال</td><td>نادي باريس</td><td><strong>6</strong></td></tr>
-  </table>
+        /* تنسيق المركز الأول */
+        .rank-gold {
+            background-color: #ffb700; /* ذهبي */
+            color: #111827;
+            font-weight: 900;
+            font-size: 1.1rem;
+            border-radius: 0.375rem;
+            padding: 0.2rem 0.6rem;
+        }
 
-  <!-- الدوري الألماني -->
-  <h3 class="league-title">🇩🇪 الدوري الألماني</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+        /* تنسيق المراكز الأخرى */
+        .rank-default {
+            font-weight: 700;
+            color: #1766a0;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<!-- تم إزالة تنسيقات body للحفاظ على تناسق الموقع -->
+<body> 
+    <!-- استخدام div كـ "Snippet Container" لتحديد الأسلوب والاتجاه داخل هذا القسم فقط -->
+    <div class="top-scorers-section">
 
-    <tr><td class="rank-cell">1</td><td>هاري كين</td><td>بايرن ميونخ</td><td><strong>14</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>جوناثان بوركاردت</td><td>ماينتس</td><td><strong>8</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>لويس دياز</td><td>بايرن ميونخ</td><td><strong>7</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>هاريس تاباكوفيتش</td><td>هوفنهايم</td><td><strong>7</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>دينيز أونديف</td><td>شتوتجارت</td><td><strong>7</strong></td></tr>
-  </table>
+        <section id="top-scorers" class="max-w-6xl mx-auto p-4 md:p-8">
+            <!-- العنوان الرئيسي للقسم -->
+            <h2 class="text-3xl text-center font-extrabold text-[#1766a0] mb-8 mt-4 border-b-4 border-[#f97316] pb-3">
+                <span class="ml-2">🎯</span> ترتيب هدافي الدوريات الكبرى موسم 2025-2026
+            </h2>
 
-  <!-- الدوري السعودي -->
-  <h3 class="league-title">🇸🇦 الدوري السعودي</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+            <!-- ============================================= -->
+            <!-- الدوري الإنجليزي -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🏴 الدوري الإنجليزي الممتاز</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>إيرلينغ هالاند</td><td>مان سيتي</td><td><strong>15</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>ايجور تياجو</td><td>برينتفورد</td><td><strong>11</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>جون فيليب ماتيتا</td><td>كريستال بالاس</td><td><strong>7</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>داني ويلبك</td><td>برايتون</td><td><strong>7</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>أنطوان سيمنيو</td><td>بورنموث</td><td><strong>6</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <tr><td class="rank-cell">1</td><td>جواو فيليكس</td><td>النصر</td><td><strong>11</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>كريستيانو رونالدو</td><td>النصر</td><td><strong>10</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>جوشوا كينج</td><td>الخليج</td><td><strong>9</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>روجر مارتينيز</td><td>التعاون</td><td><strong>6</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>جوليان كوينونيس</td><td>القادسية</td><td><strong>6</strong></td></tr>
-  </table>
+            <!-- ============================================= -->
+            <!-- الدوري الإسباني -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🇪🇸 الدوري الإسباني</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>كيليان مبابي</td><td>ريال مدريد</td><td><strong>16</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>فيدات موريكي</td><td>ريال مايوركا</td><td><strong>8</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>روبرت ليفاندوفسكي</td><td>برشلونة</td><td><strong>8</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>فيران توريس</td><td>برشلونة</td><td><strong>8</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>جوليان ألفاريز</td><td>أتلتيكو مدريد</td><td><strong>7</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-  <!-- دوري أبطال أوروبا -->
-  <h3 class="league-title">🏆 دوري أبطال أوروبا</h3>
-  <table class="scorers-table">
-    <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+            <!-- ============================================= -->
+            <!-- الدوري الإيطالي -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🇮🇹 الدوري الإيطالي</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>ريكاردو أورسوليني</td><td>بولونيا</td><td><strong>6</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>لاوتارو مارتينيز</td><td>إنتر ميلان</td><td><strong>6</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>هاكان تشالهان أوغلو</td><td>إنتر ميلان</td><td><strong>5</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>رفائيل لياو</td><td>ميلان</td><td><strong>5</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>نيكو باز</td><td>كومو</td><td><strong>5</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <tr><td class="rank-cell">1</td><td>كيليان مبابي</td><td>ريال مدريد</td><td><strong>9</strong></td></tr>
-    <tr><td class="rank-cell">2</td><td>فيكتور أوسيمين</td><td>غلطة سراي</td><td><strong>6</strong></td></tr>
-    <tr><td class="rank-cell">3</td><td>هاري كين</td><td>بايرن ميونخ</td><td><strong>5</strong></td></tr>
-    <tr><td class="rank-cell">4</td><td>إيرلينغ هالاند</td><td>مان سيتي</td><td><strong>5</strong></td></tr>
-    <tr><td class="rank-cell">5</td><td>أنتوني غوردون</td><td>نيوكاسل</td><td><strong>4</strong></td></tr>
-  </table>
+            <!-- ============================================= -->
+            <!-- الدوري الفرنسي -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🇫🇷 الدوري الفرنسي</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>ماسون جرينوود</td><td>مارسيليا</td><td><strong>10</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>خواكين بانيتشيلي</td><td>ستراسبورغ</td><td><strong>9</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>استيبان ليبول</td><td>أنجيه</td><td><strong>8</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>رومان ديل كاستيو</td><td>بريست</td><td><strong>6</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>إيلان كبال</td><td>نادي باريس</td><td><strong>6</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-</section>
+            <!-- ============================================= -->
+            <!-- الدوري الألماني -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🇩🇪 الدوري الألماني</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>هاري كين</td><td>بايرن ميونخ</td><td><strong>14</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>جوناثان بوركاردت</td><td>ماينتس</td><td><strong>8</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>لويس دياز</td><td>بايرن ميونخ</td><td><strong>7</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>هاريس تاباكوفيتش</td><td>هوفنهايم</td><td><strong>7</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>دينيز أونديف</td><td>شتوتجارت</td><td><strong>7</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- الدوري السعودي -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🇸🇦 الدوري السعودي</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>جواو فيليكس</td><td>النصر</td><td><strong>11</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>كريستيانو رونالدو</td><td>النصر</td><td><strong>10</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>جوشوا كينج</td><td>الخليج</td><td><strong>9</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>روجر مارتينيز</td><td>التعاون</td><td><strong>6</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>جوليان كوينونيس</td><td>القادسية</td><td><strong>6</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- دوري أبطال أوروبا -->
+            <div class="league-card">
+                <h3 class="league-title-bar">🏆 دوري أبطال أوروبا</h3>
+                <table class="scorers-table w-full">
+                    <thead>
+                        <tr><th>المركز</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="rank-gold">1</td><td>كيليان مبابي</td><td>ريال مدريد</td><td><strong>9</strong></td></tr>
+                        <tr><td class="rank-default">2</td><td>فيكتور أوسيمين</td><td>غلطة سراي</td><td><strong>6</strong></td></tr>
+                        <tr><td class="rank-default">3</td><td>هاري كين</td><td>بايرن ميونخ</td><td><strong>5</strong></td></tr>
+                        <tr><td class="rank-default">4</td><td>إيرلينغ هالاند</td><td>مان سيتي</td><td><strong>5</strong></td></tr>
+                        <tr><td class="rank-default">5</td><td>أنتوني غوردون</td><td>نيوكاسل</td><td><strong>4</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
