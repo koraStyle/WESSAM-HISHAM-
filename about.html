@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>نبذة عن الموقع</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {background:#f7fafd; font-family:Tajawal, Tahoma, Arial, sans-serif; padding:24px;}
-    .about-box {max-width:650px; margin:auto; background:#fff; border-radius:14px; box-shadow:0 4px 18px #1766a015; padding:32px;}
-    .about-title {color:#1766a0; font-size:1.5em; font-weight:bold; margin-bottom:18px;}
-    .about-text {color:#444; font-size:1.08em; line-height:1.9;}
-  </style>
+    <meta charset="UTF-8" />
+    <title>نبذة عن الموقع - كورة ستايل</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- استخدام خط Cairo الداعم للعربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- استخدام Tailwind CSS للتنسيق الاحترافي -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* تعريف الخط الأساسي وضمان الإعدادات العربية */
+        .page-container {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            background-color: #f7fafd; /* خلفية فاتحة متناسقة */
+            min-height: 100vh;
+        }
+
+        /* تنسيق العنوان */
+        .about-title-styled {
+            color: #1766a0;
+            font-weight: 700;
+            font-size: 2rem; /* 32px */
+            border-bottom: 3px solid #f97316; /* شريط برتقالي سفلي */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* تنسيق النصوص الرئيسية */
+        .main-text {
+            color: #444;
+            font-size: 1.15rem; /* 18px */
+            line-height: 2;
+            text-align: justify;
+        }
+    </style>
 </head>
-<body>
-  <div class="about-box">
-    <div class="about-title">نبذة عن الموقع</div>
-    <div class="about-text">
-      موقعنا الرياضي يهتم بتغطية كل جديد في عالم كرة القدم والرياضة العربية والعالمية.<br>
-      نقدم لك آخر الأخبار، تحليلات المباريات، جدول البطولات، مقابلات حصرية مع النجوم، وترتيب الفرق لحظة بلحظة.<br>
-      هدفنا تقديم محتوى رياضي احترافي وموثوق لعشاق الرياضة في كل مكان.
+<body class="page-container flex justify-center items-center py-10 px-4">
+    
+    <!-- البطاقة الرئيسية (الـ Card) -->
+    <div class="max-w-3xl w-full bg-white p-8 md:p-12 rounded-3xl shadow-2xl shadow-blue-900/15 border border-gray-100">
+        
+        <h1 class="about-title-styled">
+            <svg class="w-8 h-8 ml-3 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414L7 9.586V7a1 1 0 10-2 0v2.586l-.293-.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3z" clip-rule="evenodd"/>
+            </svg>
+            رحلتنا في "كورة ستايل"
+        </h1>
+        
+        <div class="main-text">
+            <p class="mb-6">
+                مرحباً بك في <strong class="text-[#1766a0] font-bold">كورة ستايل</strong>، وجهتك الأولى لتغطية شاملة ومحتوى تحليلي احترافي في عالم كرة القدم والرياضة. نحن شغوفون باللعبة ونؤمن بأن لكل هدف وحركة قصة تستحق أن تُروى بعمق وشفافية.
+            </p>
+            
+            <p class="mb-6">
+                <strong class="text-orange-600">ماذا نقدم؟</strong>
+                <ul class="list-none pr-0 mt-2 space-y-2">
+                    <li class="flex items-start">
+                        <span class="text-[#1766a0] font-bold text-xl ml-2">•</span>
+                        <span class="flex-1">
+                            <strong class="text-gray-900">أخبار فورية وموثوقة:</strong> تغطية لحظية لآخر المستجدات في الدوريات العربية والعالمية الكبرى.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#1766a0] font-bold text-xl ml-2">•</span>
+                        <span class="flex-1">
+                            <strong class="text-gray-900">تحليلات تكتيكية معمقة:</strong> تفكيك لأداء الفرق والنجوم، مع مقالات متخصصة في خطط المدربين.
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#1766a0] font-bold text-xl ml-2">•</span>
+                        <span class="flex-1">
+                            <strong class="text-gray-900">إحصائيات وجداول محدثة:</strong> تحديث مستمر لجداول الترتيب والهدافين ونتائج المباريات.
+                        </span>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="pt-4 border-t border-gray-100">
+                هدفنا هو أن نكون المصدر الموثوق لكل عاشق لكرة القدم، حيث نجمع بين الشغف الرياضي والتقديم الاحترافي والمحايد. انضم إلينا وكن جزءاً من مجتمعنا الرياضي!
+            </p>
+        </div>
+        
     </div>
-  </div>
 </body>
 </html>
