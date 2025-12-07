@@ -2,575 +2,293 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سوق الانتقالات | جميع الصفقات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
+    :root {
+      /* الألوان المحدثة بناءً على طلبك */
+      --primary-color: #0073B3; /* الأزرق الداكن/البترولي */
+      --secondary-color: #E67E22; /* البرتقالي الحيوي */
+      --text-dark: #343a40;
+      --bg-page: #f4f6fb;
+      --bg-table-header: var(--primary-color);
+      --bg-table-stripe: #f3f6fb;
+      --bg-table-hover: #eaf4fc;
+    }
+
     body {
-      font-family: 'Cairo', Tahoma, Arial, sans-serif;
-      background: #f4f6fb;
-      color: #222;
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-dark);
       margin: 0;
       padding: 0;
     }
+
     .container {
       max-width: 1200px;
       margin: 40px auto 30px auto;
       background: #fff;
-      padding: 32px 10px 38px 10px;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px #00000018;
+      padding: 35px 20px 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
+
     h1 {
-      color: #1766a0;
+      color: var(--primary-color);
       text-align: center;
-      font-size: 2.1em;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+      font-size: 2.5em;
+      margin-bottom: 5px;
+      font-weight: 900;
     }
+    
     .subtitle {
-      color: #e67e22;
+      color: var(--secondary-color);
       text-align: center;
-      font-size: 1.18em;
-      margin-bottom: 28px;
-      font-weight: bold;
+      font-size: 1.25em;
+      margin-bottom: 30px;
+      font-weight: 600;
       letter-spacing: 0.5px;
     }
+
+    /* تصميم الجدول الجديد */
     .transfers-table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 18px;
+      margin: 0 auto;
       font-size: 1em;
-      background: #f8f8fa;
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 15px;
       overflow: hidden;
       direction: rtl;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
-    .transfers-table th, .transfers-table td {
-      padding: 9px 4px;
-      text-align: center;
-      border-bottom: 1px solid #e5e5e5;
-      font-size: 0.97em;
+    
+    .transfers-table thead tr {
+        background: var(--bg-table-header);
+        color: #fff;
     }
+    
     .transfers-table th {
-      background: #1766a0;
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.03em;
+        padding: 12px 6px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.05em;
+        /* تم إضافة تدرج لوني خفيف لرأس الجدول */
+        background: linear-gradient(135deg, #0073B3, #005a8f); 
+        border-bottom: 3px solid var(--secondary-color);
     }
-    .transfers-table tr:nth-child(even) td {
-      background: #f3f6fb;
+    
+    .transfers-table td {
+        padding: 10px 6px;
+        text-align: center;
+        border-bottom: 1px solid #e9e9e9;
+        font-size: 0.95em;
     }
-    .transfers-table tr:hover td {
-      background: #eaf4fc;
-      transition: 0.2s;
+    
+    /* تظليل الصفوف المتناوبة */
+    .transfers-table tbody tr:nth-child(even) {
+        background: var(--bg-table-stripe);
     }
-    .player { font-weight: bold; color: #1766a0; }
-    .club { font-weight: bold; color: #e67e22; }
-    .pos { font-size: 0.98em; color: #444; }
-    .deal { font-size: 0.98em; color: #2a8c3a; }
-    .amount { font-weight: bold; color: #1766a0; }
-    .back-link {
-      display: block;
-      margin: 38px auto 0 auto;
+    
+    /* تأثير التفاعل */
+    .transfers-table tbody tr:hover {
+        background: var(--bg-table-hover);
+        transition: background 0.2s ease-in-out;
+    }
+
+    /* تنسيق ألوان البيانات */
+    .player { 
+        font-weight: bold; 
+        color: var(--primary-color); /* لون اللاعب */
+    }
+    
+    .club-from { 
+        font-weight: 500; 
+        color: #6c757d; 
+    }
+    
+    .club-to { 
+        font-weight: bold; 
+        color: var(--secondary-color); /* إبراز النادي الجديد */
+    }
+    
+    .pos { 
+        font-size: 0.95em; 
+        color: #495057; 
+    }
+    
+    .deal { 
+        font-weight: 600; 
+        font-size: 0.95em;
+        padding: 3px 8px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    /* تلوين أنواع الصفقات */
+    .deal[data-type="انتقال"] { background-color: #e6f7ff; color: #108ee9; }
+    .deal[data-type="انتقال حر"] { background-color: #e8f9e8; color: #52c41a; }
+    .deal[data-type="إعارة"] { background-color: #fffbe6; color: #faad14; }
+    .deal[data-type="نهاية إعارة"] { background-color: #f0f0f0; color: #595959; }
+
+    .amount { 
+        font-weight: 700; 
+        color: var(--primary-color);
+        font-size: 1.05em;
+    }
+    
+    .contract-end {
+        font-size: 0.9em;
+        color: #8c8c8c;
+    }
+
+    /* رابط العودة */
+    .back-link-wrapper {
+      margin: 40px auto 0 auto;
       text-align: center;
     }
+
     .back-link a {
+      display: inline-block;
       text-decoration: none;
       color: #fff;
-      background-color: #1766a0;
-      padding: 12px 32px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1.08em;
-      box-shadow: 0 2px 8px #0001;
-      transition: background 0.18s;
+      background-color: var(--primary-color);
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1em;
+      box-shadow: 0 4px 15px rgba(0, 115, 179, 0.4);
+      transition: all 0.3s ease;
     }
+
     .back-link a:hover {
-      background-color: #e67e22;
+      background-color: var(--secondary-color);
+      box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+      transform: translateY(-2px);
     }
-    @media (max-width: 900px) {
-      .container { padding: 10px 2px; }
-      .transfers-table th, .transfers-table td { padding: 6px 2px; font-size: 0.93em; }
+
+    /* التجاوبية (Responsiveness) */
+    @media (max-width: 1000px) {
+      .container { padding: 20px 10px; margin: 20px auto; }
+      .transfers-table th, .transfers-table td { padding: 8px 3px; font-size: 0.9em; }
     }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.3em; }
-      .subtitle { font-size: 1em; }
-      .transfers-table { font-size: 0.9em; }
-      .transfers-table th, .transfers-table td { padding: 4px 1px; }
+    @media (max-width: 768px) {
+      /* جعل الجدول قابلاً للتمرير أفقياً على الشاشات الصغيرة */
+      .container { overflow-x: auto; }
+      .transfers-table { min-width: 700px; /* ضمان أن الجدول لا يتقلص أكثر من اللازم */ }
+      h1 { font-size: 2em; }
+      .subtitle { font-size: 1.1em; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>سوق الانتقالات</h1>
-    <div class="subtitle">جميع صفقات الأندية لصيف 2025</div>
+    <h1>سوق الانتقالات ⚽</h1>
+    <div class="subtitle">تغطية شاملة لجميع صفقات الأندية لصيف 2025</div>
+    
     <table class="transfers-table">
-      <tr>
-        <th>اللاعب</th>
-        <th>النادي السابق</th>
-        <th>النادي الجديد</th>
-        <th>المركز</th>
-        <th>نوع الصفقة</th>
-        <th>القيمة</th>
-        <th>نهاية العقد</th>
-      </tr>
-      <tr>
-        <td class="player">ميكايل مالسا</td>
-        <td class="club">الوداد</td>
-        <td class="club">-</td>
-        <td class="pos">خط وسط مدافع</td>
-        <td class="deal">انتقال</td>
-        <td class="amount">-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td class="player">ماركو غروجيتش</td>
-        <td class="club">ليفربول</td>
-        <td class="club">ايك اثينا</td>
-        <td class="pos">خط وسط مدافع</td>
-        <td class="deal">انتقال حر</td>
-        <td class="amount">2.0M EUR</td>
-        <td>2026-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">إلكاي جوندوجان</td>
-        <td class="club">السيتي </td>
-        <td class="club">غلطة سراي</td>
-        <td class="pos">خط وسط</td>
-        <td class="deal">انتقال حر</td>
-        <td class="amount">-</td>
-        <td>2027-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">إديرسون مورايس</td>
-        <td class="club">السيتي </td>
-        <td class="club">فنربخشة</td>
-        <td class="pos">حارس المرمى</td>
-        <td class="deal">انتقال</td>
-        <td class="amount">11.0M €</td>
-        <td>2028-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">بيدرو ليما</td>
-        <td class="club">ولفرهمتون</td>
-        <td class="club">بورتو</td>
-        <td class="pos">ظهير أيمن</td>
-        <td class="deal">إعارة</td>
-        <td class="amount">-</td>
-        <td>2026-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">مجتبى محسن</td>
-        <td class="club">نوروز</td>
-        <td class="club">القوة الجوية</td>
-        <td class="pos">خط وسط</td>
-        <td class="deal">انتقال</td>
-        <td class="amount">-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td class="player">مافيس تشيبوتا</td>
-        <td class="club">انترناسونال</td>
-        <td class="club">الريان</td>
-        <td class="pos">وسط</td>
-        <td class="deal">انتقال حر</td>
-        <td class="amount">-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td class="player">ماركو بركلياكا</td>
-        <td class="club">دينامو زغرب</td>
-        <td class="club"> باس جيانينا </td>
-        <td class="pos">وسط</td>
-        <td class="deal">انتقال حر</td>
-        <td class="amount">-</td>
-        <td>2026-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">ريان بونيدا</td>
-        <td class="club">أياكس U21</td>
-        <td class="club">أياكس أمستردام</td>
-        <td class="pos">خط وسط مهاجم</td>
-        <td class="deal">انتقال</td>
-        <td class="amount">-</td>
-        <td>2028-06-30</td>
-      </tr>
-      <tr>
-        <td class="player">آرون بومان</td>
-        <td class="club">أياكس U21</td>
-        <td class="club">أياكس أمستردام</td>
-        <td class="pos">قلب دفاع</td>
-        <td class="deal">انتقال</td>
-        <td class="amount">-</td>
-        <td>2027-06-30</td>
-      </tr>
-    <tr>
-   <td class="player">مارتن زوباميندي</td>
-  <td class="club">ريال سوسيداد</td>
-  <td class="club">آرسنال</td>
-  <td class="pos">خط وسط</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">كريستيان نورجارد</td>
-  <td class="club">برينتفورد</td>
-  <td class="club">آرسنال</td>
-  <td class="pos">خط وسط</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">تيو هيرنانديز</td>
-  <td class="club">ميلان</td>
-  <td class="club">الهلال السعودي</td>
-  <td class="pos">ظهير أيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">إيدين دزيكو</td>
-  <td class="club">فنربخشة</td>
-  <td class="club">فيورنتينا</td>
-  <td class="pos">قلب هجوم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">تشيرو إيموبيلي</td>
-  <td class="club">بشكتاش</td>
-  <td class="club">بولونيا</td>
-  <td class="pos">قلب هجوم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">سيمون أدينجرا</td>
-  <td class="club">برايتون</td>
-  <td class="club">سندرلاند</td>
-  <td class="pos">جناح أيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">جاسيروفسكي نت</td>
-  <td class="club">فالنسيا</td>
-  <td class="club">آيندهوفن</td>
-  <td class="pos">-</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">شمس الدين طالبي</td>
-  <td class="club">كلوب بروج</td>
-  <td class="club">سندرلاند</td>
-  <td class="pos">جناح أيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">تيرنو باري</td>
-  <td class="club">فياريال</td>
-  <td class="club">إيفرتون</td>
-  <td class="pos">-</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">أوركون كوكسو</td>
-  <td class="club">بنفيكا</td>
-  <td class="club">بشكناش</td>
-  <td class="pos">خط وسط</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">أنتوني إيلانغا</td>
-  <td class="club">مان يونايتد</td>
-  <td class="club">نيوكاسل يونايتد</td>
-  <td class="pos">الجناح الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">61.4M €</td>
-  <td>2030-06-30</td>
-</tr>
-<tr>
-  <td class="player">بورنا سوسا</td>
-  <td class="club">أياكس</td>
-  <td class="club">كريستال بالاس</td>
-  <td class="pos">خط الوسط الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">2.3M €</td>
-  <td>2028-06-30</td>
-</tr>
-<tr>
-  <td class="player">لياندرو باريديس</td>
-  <td class="club">روما</td>
-  <td class="club">بوكا جونيورز</td>
-  <td class="pos">خط وسط مدافع</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2028-12-31</td>
-</tr>
-<tr>
-  <td class="player">محمد قدوس</td>
-  <td class="club">وست هام</td>
-  <td class="club">توتنهام</td>
-  <td class="pos">الجناح الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">63.8M €</td>
-  <td>2031-06-30</td>
-</tr>
-<tr>
-  <td class="player">عبد الرزاق حمد الله</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">قلب الهجوم</td>
-  <td class="deal">نهاية إعارة</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">توماس كونيشني</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الجناح الأيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2029-12-31</td>
-</tr>
-<tr>
-  <td class="player">جاكوب برون لارسن</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الجناح الأيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">4.0M €</td>
-  <td>2029-06-30</td>
-</tr>
-<tr>
-  <td class="player">كيفيسون</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الظهير الأيسر</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2025-12-31</td>
-</tr>
-<tr>
-  <td class="player">أوسكار زوادا</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">قلب الهجوم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2028-06-30</td>
-</tr>
-<tr>
-  <td class="player">بيدرو سانتوس</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الجناح الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2028-06-30</td>
-</tr>
-<tr>
-  <td class="player">ماتياس مانسيلا</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">حارس المرمى</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">يوسف عزيز</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">مهاجم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2029-07-11</td>
-</tr>
-<tr>
-  <td class="player">يوري بالكوفيتش</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الظهير الأيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">رافاييل أوبرادور</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الظهير الأيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2030-06-30</td>
-</tr>
-<tr>
-  <td class="player">جو رانكين كوستيلو</td>
-  <td class="club">-</td>
-  <td class="club">-</td>
-  <td class="pos">الظهير الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2029-06-30</td>
-</tr>
-<tr>
-  <td class="player">فيكتور مونوز</td>
-  <td class="club">ريال مدريد كاستيا</td>
-  <td class="club">أوساسونا</td>
-  <td class="pos">الجناح الأيسر</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">5.0M €</td>
-  <td>2030-06-30</td>
-</tr>
-<tr>
-  <td class="player">جونيور سامبيا</td>
-  <td class="club">ساليرنيتانا</td>
-  <td class="club">بدون نادي</td>
-  <td class="pos">الظهير الأيمن</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>-</td>
-</tr>
-<tr>
-  <td class="player">رامي الحاج</td>
-  <td class="club">بليموث أرجايل</td>
-  <td class="club">سيلكيبورج</td>
-  <td class="pos">خط وسط مهاجم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2029-06-30</td>
-</tr>
-<tr>
-  <td class="player">هيفرتون سانتوس</td>
-  <td class="club">كوينز بارك رينجرز</td>
-  <td class="club">جيل فيسينتي</td>
-  <td class="pos">الظهير الأيمن</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">جورجي تسيتيشفيلي</td>
-  <td class="club">دينامو كييف</td>
-  <td class="club">ميتز</td>
-  <td class="pos">الجناح الأيسر</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">غابرييل كالفاني</td>
-  <td class="club">جنوى</td>
-  <td class="club">فروزينوني</td>
-  <td class="pos">قلب دفاع</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">جوناس هاردر</td>
-  <td class="club">فيورنتينا U19</td>
-  <td class="club">بادوفا</td>
-  <td class="pos">خط وسط</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">ليو بيتروت</td>
-  <td class="club">سانت إتيان</td>
-  <td class="club">إلتشي</td>
-  <td class="pos">الظهير الأيسر</td>
-  <td class="deal">انتقال حر</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">أتيلا سالاي</td>
-  <td class="club">هوفنهايم</td>
-  <td class="club">قاسم باشا</td>
-  <td class="pos">قلب دفاع</td>
-  <td class="deal">إعارة</td>
-  <td class="amount">-</td>
-  <td>2026-06-30</td>
-</tr>
-<tr>
-  <td class="player">جونينهو باكونا</td>
-  <td class="club">الوحدة السعودي</td>
-  <td class="club">غازي عنتاب</td>
-  <td class="pos">خط وسط</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2027-06-30</td>
-</tr>
-<tr>
-  <td class="player">يوسف باراسي</td>
-  <td class="club">أضنة دمير سبور</td>
-  <td class="club">قاسم باشا</td>
-  <td class="pos">قلب الهجوم</td>
-  <td class="deal">انتقال</td>
-  <td class="amount">-</td>
-  <td>2028-06-30</td>
-</tr>
-
-      <tr><td class="player">عادل بولبينة</td><td class="club">بارادو</td><td class="club">الدحيل</td><td class="pos">جناح أيسر</td><td class="deal">انتقال</td><td class="amount">3.3M €</td><td>2030-06-30</td></tr>
-      <tr><td class="player">يوسف سابالي</td><td class="club">ريال بيتيس</td><td class="club">الدحيل</td><td class="pos">ظهير أيمن</td><td class="deal">انتقال</td><td class="amount">2.0M €</td><td>2027-06-30</td></tr>
-      <tr><td class="player">إيريك داير</td><td class="club">بايرن ميونخ</td><td class="club">موناكو</td><td class="pos">قلب دفاع</td><td class="deal">انتقال حر</td><td class="amount">-</td><td>2028-06-30</td></tr>
-      <tr><td class="player">أليكس كويادو</td><td class="club">ريال بيتيس</td><td class="club">الشمال</td><td class="pos">جناح أيمن</td><td class="deal">انتقال</td><td class="amount">2.5M €</td><td>2028-06-30</td></tr>
-      <tr><td class="player">جوان جارسيا</td><td class="club">إسبانيول</td><td class="club">برشلونة</td><td class="pos">حارس مرمى</td><td class="deal">انتقال</td><td class="amount">25.0M €</td><td>2031-06-30</td></tr>
-      <tr><td class="player">عصام سميري</td><td class="club">بدون نادي</td><td class="club">السلط</td><td class="pos">خط وسط</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">أليكس كويادو</td><td class="club">الخلود</td><td class="club">ريال بيتيس</td><td class="pos">جناح أيمن</td><td class="deal">نهاية إعارة</td><td class="amount">-</td><td>2025-06-30</td></tr>
-      <tr><td class="player">سلمان البوص</td><td class="club">القادسية الكويتي</td><td class="club">بدون نادي</td><td class="pos">جناح أيسر</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">صهيب أبو هشهش</td><td class="club">الفيصلي الأردني</td><td class="club">السلط</td><td class="pos">جناح أيسر</td><td class="deal">انتقال</td><td class="amount">-</td><td>2026-06-30</td></tr>
-      <tr><td class="player">ميدانا كاساما</td><td class="club">دبا الحصن</td><td class="club">دبا الفجيرة</td><td class="pos">قلب الهجوم</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">عبدالله سالم المقدحي</td><td class="club">دبا الفجيرة</td><td class="club">الوصل</td><td class="pos">حارس مرمى</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">أحمد الحراحشة</td><td class="club">مغير السرحان</td><td class="club">الوحدات</td><td class="pos">قلب الهجوم</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">قتيبة العجالين</td><td class="club">العقبة</td><td class="club">الأهلي الأردني</td><td class="pos">جناح أيسر</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">محمد الحلاق</td><td class="club">الرفاع</td><td class="club">الفيصلي الأردني</td><td class="pos">جناح أيمن</td><td class="deal">انتقال</td><td class="amount">-</td><td>2026-06-30</td></tr>
-      <tr><td class="player">إبراهيما ديالو</td><td class="club">الخور</td><td class="club">الأهلي القطري</td><td class="pos">خط وسط مدافع</td><td class="deal">إعارة</td><td class="amount">-</td><td>2026-06-30</td></tr>
-      <tr><td class="player">دينو هوتيتش</td><td class="club">ليخ بوزنان</td><td class="club">عجمان</td><td class="pos">جناح أيمن</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">محمد أبو رزق</td><td class="club">السلط</td><td class="club">الوحدات</td><td class="pos">قلب الهجوم</td><td class="deal">نهاية إعارة</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">بشار الذيابات</td><td class="club">الرمثا</td><td class="club">الفيصلي الأردني</td><td class="pos">خط وسط مهاجم</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">عبدالرحمن أبو الكاس</td><td class="club">الناصرية</td><td class="club">الأهلي الأردني</td><td class="pos">خط وسط</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">عبدالله خالد عوض</td><td class="club">الفيصلي الأردني</td><td class="club">الأهلي الأردني</td><td class="pos">قلب الهجوم</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">فيصل ابو شنب</td><td class="club">الفيصلي الأردني</td><td class="club">الأهلي الأردني</td><td class="pos">ظهير أيسر</td><td class="deal">انتقال</td><td class="amount">-</td><td>2027-06-30</td></tr>
-      <tr><td class="player">مصطفى معوض</td><td class="club">الجزيرة الأردني</td><td class="club">الوحدات</td><td class="pos">قلب دفاع</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">أحمد توبة</td><td class="club">باشاك شهير</td><td class="club">باناثينايكوس</td><td class="pos">قلب دفاع</td><td class="deal">انتقال</td><td class="amount">1.0M €</td><td>-</td></tr>
-      <tr><td class="player">ريتشارد ليديزما</td><td class="club">بي إس في آيندهوفن</td><td class="club">غوادالاخارا</td><td class="pos">ظهير أيمن</td><td class="deal">انتقال حر</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">راشد علي</td><td class="club">الوحدة الإماراتي</td><td class="club">خورفكان</td><td class="pos">حارس مرمى</td><td class="deal">انتقال حر</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">أحمد برمان</td><td class="club">العين</td><td class="club">خورفكان</td><td class="pos">خط وسط</td><td class="deal">انتقال حر</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">يوسف ابو الجزر</td><td class="club">الوحدات</td><td class="club">كاظمة</td><td class="pos">خط وسط مدافع</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">أديسون سواريس</td><td class="club">أميريكا مينيرو</td><td class="club">شباب الأهلي</td><td class="pos">جناح أيمن</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">كينجي غوري</td><td class="club">أم صلال</td><td class="club">بدون نادي</td><td class="pos">جناح أيسر</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">فيكتور لكحل</td><td class="club">أم صلال</td><td class="club">بدون نادي</td><td class="pos">خط وسط مدافع</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">مروان لوداني</td><td class="club">أم صلال</td><td class="club">بدون نادي</td><td class="pos">قلب دفاع</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">إياد بلوافي</td><td class="club">اتحاد بن قردان</td><td class="club">النادي الرياضي الصفاقسي</td><td class="pos">جناح أيمن</td><td class="deal">نهاية إعارة</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">موزيس أوركوما</td><td class="club">الإتحاد المنستيري</td><td class="club">الرجاء الرياضي</td><td class="pos">خط وسط مدافع</td><td class="deal">انتقال حر</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">كارلينهوس</td><td class="club">نادي قطر</td><td class="club">بورتيمونينسي</td><td class="pos">خط وسط مهاجم</td><td class="deal">نهاية إعارة</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">بين مالانغو نغيتا</td><td class="club">نادي قطر</td><td class="club">بدون نادي</td><td class="pos">قلب الهجوم</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">بيرسي تاو</td><td class="club">نادي قطر</td><td class="club">بدون نادي</td><td class="pos">جناح أيمن</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-      <tr><td class="player">خافيير مارتينيز</td><td class="club">نادي قطر</td><td class="club">بدون نادي</td><td class="pos">قلب دفاع</td><td class="deal">انتقال</td><td class="amount">-</td><td>-</td></tr>
-
+      <thead>
+        <tr>
+          <th>اللاعب</th>
+          <th>النادي السابق</th>
+          <th>النادي الجديد</th>
+          <th>المركز</th>
+          <th>نوع الصفقة</th>
+          <th>القيمة</th>
+          <th>نهاية العقد</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="player">ميكايل مالسا</td><td class="club club-from">الوداد</td><td class="club club-to">-</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">ماركو غروجيتش</td><td class="club club-from">ليفربول</td><td class="club club-to">ايك اثينا</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">2.0M EUR</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">إلكاي جوندوجان</td><td class="club club-from">السيتي</td><td class="club club-to">غلطة سراي</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">إديرسون مورايس</td><td class="club club-from">السيتي</td><td class="club club-to">فنربخشة</td><td class="pos">حارس المرمى</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">11.0M €</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">بيدرو ليما</td><td class="club club-from">ولفرهمتون</td><td class="club club-to">بورتو</td><td class="pos">ظهير أيمن</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">مجتبى محسن</td><td class="club club-from">نوروز</td><td class="club club-to">القوة الجوية</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">مافيس تشيبوتا</td><td class="club club-from">انترناسونال</td><td class="club club-to">الريان</td><td class="pos">وسط</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">ماركو بركلياكا</td><td class="club club-from">دينامو زغرب</td><td class="club club-to">باس جيانينا</td><td class="pos">وسط</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">ريان بونيدا</td><td class="club club-from">أياكس U21</td><td class="club club-to">أياكس أمستردام</td><td class="pos">خط وسط مهاجم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">آرون بومان</td><td class="club club-from">أياكس U21</td><td class="club club-to">أياكس أمستردام</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">مارتن زوباميندي</td><td class="club club-from">ريال سوسيداد</td><td class="club club-to">آرسنال</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">كريستيان نورجارد</td><td class="club club-from">برينتفورد</td><td class="club club-to">آرسنال</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">تيو هيرنانديز</td><td class="club club-from">ميلان</td><td class="club club-to">الهلال السعودي</td><td class="pos">ظهير أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">إيدين دزيكو</td><td class="club club-from">فنربخشة</td><td class="club club-to">فيورنتينا</td><td class="pos">قلب هجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">تشيرو إيموبيلي</td><td class="club club-from">بشكتاش</td><td class="club club-to">بولونيا</td><td class="pos">قلب هجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">سيمون أدينجرا</td><td class="club club-from">برايتون</td><td class="club club-to">سندرلاند</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">جاسيروفسكي نت</td><td class="club club-from">فالنسيا</td><td class="club club-to">آيندهوفن</td><td class="pos">-</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">شمس الدين طالبي</td><td class="club club-from">كلوب بروج</td><td class="club club-to">سندرلاند</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">تيرنو باري</td><td class="club club-from">فياريال</td><td class="club club-to">إيفرتون</td><td class="pos">-</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أوركون كوكسو</td><td class="club club-from">بنفيكا</td><td class="club club-to">بشكتاش</td><td class="pos">خط وسط</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">أنتوني إيلانغا</td><td class="club club-from">مان يونايتد</td><td class="club club-to">نيوكاسل يونايتد</td><td class="pos">الجناح الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">61.4M €</td><td class="contract-end">2030-06-30</td></tr>
+        <tr><td class="player">بورنا سوسا</td><td class="club club-from">أياكس</td><td class="club club-to">كريستال بالاس</td><td class="pos">خط الوسط الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">2.3M €</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">لياندرو باريديس</td><td class="club club-from">روما</td><td class="club club-to">بوكا جونيورز</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2028-12-31</td></tr>
+        <tr><td class="player">محمد قدوس</td><td class="club club-from">وست هام</td><td class="club club-to">توتنهام</td><td class="pos">الجناح الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">63.8M €</td><td class="contract-end">2031-06-30</td></tr>
+        <tr><td class="player">عبد الرزاق حمد الله</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="نهاية إعارة">نهاية إعارة</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">توماس كونيشني</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الجناح الأيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2029-12-31</td></tr>
+        <tr><td class="player">جاكوب برون لارسن</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الجناح الأيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">4.0M €</td><td class="contract-end">2029-06-30</td></tr>
+        <tr><td class="player">كيفيسون</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الظهير الأيسر</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2025-12-31</td></tr>
+        <tr><td class="player">أوسكار زوادا</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">بيدرو سانتوس</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الجناح الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">ماتياس مانسيلا</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">حارس المرمى</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">يوسف عزيز</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">مهاجم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2029-07-11</td></tr>
+        <tr><td class="player">يوري بالكوفيتش</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الظهير الأيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">رافاييل أوبرادور</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الظهير الأيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2030-06-30</td></tr>
+        <tr><td class="player">جو رانكين كوستيلو</td><td class="club club-from">-</td><td class="club club-to">-</td><td class="pos">الظهير الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2029-06-30</td></tr>
+        <tr><td class="player">فيكتور مونوز</td><td class="club club-from">ريال مدريد كاستيا</td><td class="club club-to">أوساسونا</td><td class="pos">الجناح الأيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">5.0M €</td><td class="contract-end">2030-06-30</td></tr>
+        <tr><td class="player">جونيور سامبيا</td><td class="club club-from">ساليرنيتانا</td><td class="club club-to">بدون نادي</td><td class="pos">الظهير الأيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">رامي الحاج</td><td class="club club-from">بليموث أرجايل</td><td class="club club-to">سيلكيبورج</td><td class="pos">خط وسط مهاجم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2029-06-30</td></tr>
+        <tr><td class="player">هيفرتون سانتوس</td><td class="club club-from">كوينز بارك رينجرز</td><td class="club club-to">جيل فيسينتي</td><td class="pos">الظهير الأيمن</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">جورجي تسيتيشفيلي</td><td class="club club-from">دينامو كييف</td><td class="club club-to">ميتز</td><td class="pos">الجناح الأيسر</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">غابرييل كالفاني</td><td class="club club-from">جنوى</td><td class="club club-to">فروزينوني</td><td class="pos">قلب دفاع</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">جوناس هاردر</td><td class="club club-from">فيورنتينا U19</td><td class="club club-to">بادوفا</td><td class="pos">خط وسط</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">ليو بيتروت</td><td class="club club-from">سانت إتيان</td><td class="club club-to">إلتشي</td><td class="pos">الظهير الأيسر</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">أتيلا سالاي</td><td class="club club-from">هوفنهايم</td><td class="club club-to">قاسم باشا</td><td class="pos">قلب دفاع</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">جونينهو باكونا</td><td class="club club-from">الوحدة السعودي</td><td class="club club-to">غازي عنتاب</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">يوسف باراسي</td><td class="club club-from">أضنة دمير سبور</td><td class="club club-to">قاسم باشا</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">عادل بولبينة</td><td class="club club-from">بارادو</td><td class="club club-to">الدحيل</td><td class="pos">جناح أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">3.3M €</td><td class="contract-end">2030-06-30</td></tr>
+        <tr><td class="player">يوسف سابالي</td><td class="club club-from">ريال بيتيس</td><td class="club club-to">الدحيل</td><td class="pos">ظهير أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">2.0M €</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">إيريك داير</td><td class="club club-from">بايرن ميونخ</td><td class="club club-to">موناكو</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">أليكس كويادو</td><td class="club club-from">ريال بيتيس</td><td class="club club-to">الشمال</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">2.5M €</td><td class="contract-end">2028-06-30</td></tr>
+        <tr><td class="player">جوان جارسيا</td><td class="club club-from">إسبانيول</td><td class="club club-to">برشلونة</td><td class="pos">حارس مرمى</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">25.0M €</td><td class="contract-end">2031-06-30</td></tr>
+        <tr><td class="player">عصام سميري</td><td class="club club-from">بدون نادي</td><td class="club club-to">السلط</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أليكس كويادو</td><td class="club club-from">الخلود</td><td class="club club-to">ريال بيتيس</td><td class="pos">جناح أيمن</td><td class="deal" data-type="نهاية إعارة">نهاية إعارة</td><td class="amount">-</td><td class="contract-end">2025-06-30</td></tr>
+        <tr><td class="player">سلمان البوص</td><td class="club club-from">القادسية الكويتي</td><td class="club club-to">بدون نادي</td><td class="pos">جناح أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">صهيب أبو هشهش</td><td class="club club-from">الفيصلي الأردني</td><td class="club club-to">السلط</td><td class="pos">جناح أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">ميدانا كاساما</td><td class="club club-from">دبا الحصن</td><td class="club club-to">دبا الفجيرة</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">عبدالله سالم المقدحي</td><td class="club club-from">دبا الفجيرة</td><td class="club club-to">الوصل</td><td class="pos">حارس مرمى</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أحمد الحراحشة</td><td class="club club-from">مغير السرحان</td><td class="club club-to">الوحدات</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">قتيبة العجالين</td><td class="club club-from">العقبة</td><td class="club club-to">الأهلي الأردني</td><td class="pos">جناح أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">محمد الحلاق</td><td class="club club-from">الرفاع</td><td class="club club-to">الفيصلي الأردني</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">إبراهيما ديالو</td><td class="club club-from">الخور</td><td class="club club-to">الأهلي القطري</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="إعارة">إعارة</td><td class="amount">-</td><td class="contract-end">2026-06-30</td></tr>
+        <tr><td class="player">دينو هوتيتش</td><td class="club club-from">ليخ بوزنان</td><td class="club club-to">عجمان</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">محمد أبو رزق</td><td class="club club-from">السلط</td><td class="club club-to">الوحدات</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="نهاية إعارة">نهاية إعارة</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">بشار الذيابات</td><td class="club club-from">الرمثا</td><td class="club club-to">الفيصلي الأردني</td><td class="pos">خط وسط مهاجم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">عبدالرحمن أبو الكاس</td><td class="club club-from">الناصرية</td><td class="club club-to">الأهلي الأردني</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">عبدالله خالد عوض</td><td class="club club-from">الفيصلي الأردني</td><td class="club club-to">الأهلي الأردني</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">فيصل ابو شنب</td><td class="club club-from">الفيصلي الأردني</td><td class="club club-to">الأهلي الأردني</td><td class="pos">ظهير أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">2027-06-30</td></tr>
+        <tr><td class="player">مصطفى معوض</td><td class="club club-from">الجزيرة الأردني</td><td class="club club-to">الوحدات</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أحمد توبة</td><td class="club club-from">باشاك شهير</td><td class="club club-to">باناثينايكوس</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">1.0M €</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">ريتشارد ليديزما</td><td class="club club-from">بي إس في آيندهوفن</td><td class="club club-to">غوادالاخارا</td><td class="pos">ظهير أيمن</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">راشد علي</td><td class="club club-from">الوحدة الإماراتي</td><td class="club club-to">خورفكان</td><td class="pos">حارس مرمى</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أحمد برمان</td><td class="club club-from">العين</td><td class="club club-to">خورفكان</td><td class="pos">خط وسط</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">يوسف ابو الجزر</td><td class="club club-from">الوحدات</td><td class="club club-to">كاظمة</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">أديسون سواريس</td><td class="club club-from">أميريكا مينيرو</td><td class="club club-to">شباب الأهلي</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">كينجي غوري</td><td class="club club-from">أم صلال</td><td class="club club-to">بدون نادي</td><td class="pos">جناح أيسر</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">فيكتور لكحل</td><td class="club club-from">أم صلال</td><td class="club club-to">بدون نادي</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">مروان لوداني</td><td class="club club-from">أم صلال</td><td class="club club-to">بدون نادي</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">إياد بلوافي</td><td class="club club-from">اتحاد بن قردان</td><td class="club club-to">النادي الرياضي الصفاقسي</td><td class="pos">جناح أيمن</td><td class="deal" data-type="نهاية إعارة">نهاية إعارة</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">موزيس أوركوما</td><td class="club club-from">الإتحاد المنستيري</td><td class="club club-to">الرجاء الرياضي</td><td class="pos">خط وسط مدافع</td><td class="deal" data-type="انتقال حر">انتقال حر</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">كارلينهوس</td><td class="club club-from">نادي قطر</td><td class="club club-to">بورتيمونينسي</td><td class="pos">خط وسط مهاجم</td><td class="deal" data-type="نهاية إعارة">نهاية إعارة</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">بين مالانغو نغيتا</td><td class="club club-from">نادي قطر</td><td class="club club-to">بدون نادي</td><td class="pos">قلب الهجوم</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">بيرسي تاو</td><td class="club club-from">نادي قطر</td><td class="club club-to">بدون نادي</td><td class="pos">جناح أيمن</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+        <tr><td class="player">خافيير مارتينيز</td><td class="club club-from">نادي قطر</td><td class="club club-to">بدون نادي</td><td class="pos">قلب دفاع</td><td class="deal" data-type="انتقال">انتقال</td><td class="amount">-</td><td class="contract-end">-</td></tr>
+      </tbody>
     </table>
-      <div class="back-link">
-<a class="back-link" href="index.html#transfers">🔙 العودة إلى سوق الانتقالات</a>
-
-      </div>
+    
+    <div class="back-link-wrapper back-link">
+      <a href="index.html#transfers">🔙 العودة إلى سوق الانتقالات</a>
+    </div>
   </div>
 </body>
 </html>
