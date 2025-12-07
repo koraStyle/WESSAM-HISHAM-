@@ -2,143 +2,345 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>إحصائيات الدوريات الخمس الكبرى | stats</title>
+  <title>إحصائيات الدوريات الخمس الكبرى | تحليل شامل</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body {background:#f7fafd; font-family:Tajawal, Tahoma, Arial, sans-serif; margin:0;}
-    .stats-container {max-width:850px; margin:36px auto 24px auto; background:#fff; border-radius:18px; box-shadow:0 4px 22px #1766a015; padding:32px 18px 28px 18px;}
-    .stats-title {color:#1766a0; font-size:1.4em; font-weight:bold; margin-bottom:18px;}
-    .league-block {background:#f8f8fa; border-radius:10px; margin-bottom:28px; padding:18px 14px;}
-    .league-name {color:#e67e22; font-size:1.18em; font-weight:bold; margin-bottom:12px;}
-    .stats-table {width:100%; border-collapse:collapse; margin-top:10px;}
-    .stats-table th, .stats-table td {padding:8px 0; text-align:center;}
-    .stats-table th {color:#1766a0; font-size:1em;}
-    .stats-table td {color:#444; font-size:1.04em;}
-    .stats-table tr:nth-child(even) {background:#f3f3f3;}
-    @media (max-width: 700px) {.stats-container{padding:10px 2vw;}}
+    :root {
+      /* الألوان المعتمدة للتناسق */
+      --primary-color: #004d99; /* الأزرق الاحترافي */
+      --secondary-color: #e67e22; /* البرتقالي المميز */
+      --bg-page: #f0f3f7;
+      --bg-card: #ffffff;
+      --text-dark: #343a40;
+      --icon-color: #1766a0;
+      --goal-color: #28a745; /* أخضر للأهداف */
+    }
+
+    body {
+      background: var(--bg-page);
+      font-family: 'Cairo', sans-serif;
+      color: var(--text-dark);
+      margin: 0;
+      padding: 20px 10px;
+      direction: rtl;
+    }
+
+    .stats-container {
+      max-width: 950px;
+      margin: 20px auto;
+      background: var(--bg-card);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 77, 153, 0.1);
+      padding: 40px 30px;
+    }
+
+    .stats-title {
+      color: var(--primary-color);
+      font-size: 2.3em;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .stats-subtitle {
+        text-align: center;
+        color: #777;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    /* تصميم بطاقة الدوري */
+    .league-block {
+      background: #f8fafd;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .league-block:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 77, 153, 0.1);
+    }
+
+    .league-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 10px;
+    }
+    
+    .league-header span {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    .league-name {
+      color: var(--primary-color);
+      font-size: 1.4em;
+      font-weight: 800;
+    }
+    
+    .league-subname {
+        font-size: 1em;
+        color: #6c757d;
+        font-weight: 600;
+    }
+
+    /* نظام الشبكة للإحصائيات */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .stat-item {
+        background: var(--bg-card);
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-right: 4px solid var(--icon-color);
+    }
+
+    .stat-item.goals { border-right-color: var(--goal-color); }
+    .stat-item.assists { border-right-color: var(--secondary-color); }
+    .stat-item.cards-y { border-right-color: #ffc107; }
+    .stat-item.cards-r { border-right-color: #dc3545; }
+    
+    .stat-icon {
+        font-size: 1.2em;
+        color: var(--icon-color);
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+    
+    .stat-value {
+        font-size: 1.5em;
+        font-weight: 900;
+        color: var(--text-dark);
+        line-height: 1.1;
+    }
+    
+    .stat-value.goals-val { color: var(--goal-color); }
+    .stat-value.assists-val { color: var(--secondary-color); }
+    
+    .source-note {
+      margin-top: 25px; 
+      color: #888; 
+      font-size: 0.95em; 
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px dashed #ddd;
+    }
+
+    /* التجاوبية */
+    @media (max-width: 600px) {
+        .stats-title { font-size: 1.8em; }
+        .league-header { flex-direction: column; align-items: flex-start; }
+        .league-header span { margin-left: 0; margin-bottom: 5px; }
+        .league-name { font-size: 1.2em; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .stat-value { font-size: 1.2em; }
+        .stat-item { padding: 8px; }
+    }
+    
   </style>
 </head>
 <body>
   <div class="stats-container">
-    <div class="stats-title">إحصائيات الدوريات الخمس الكبرى 2024/2025</div>
+    <div class="stats-title">📊 إحصائيات الدوريات الخمس الكبرى</div>
+    <div class="stats-subtitle">مقارنة شاملة لأداء البطولات الأوروبية الكبرى موسم 2024/2025</div>
 
-    <!-- الدوري الإنجليزي الممتاز -->
     <div class="league-block">
-      <div class="league-name">الدوري الإنجليزي الممتاز (Premier League)</div>
-      <table class="stats-table">
-        <tr>
-          <th>عدد المباريات</th>
-          <th>عدد الأهداف</th>
-          <th>عدد الأسيست</th>
-          <th>عدد البطاقات الصفراء</th>
-          <th>عدد البطاقات الحمراء</th>
-          <th>ضربات الجزاء</th>
-        </tr>
-        <tr>
-          <td>380</td>
-          <td>1,085</td>
-          <td>760</td>
-          <td>1,420</td>
-          <td>45</td>
-          <td>102</td>
-        </tr>
-      </table>
+      <div class="league-header">
+        <span>🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+        <div>
+            <div class="league-name">الدوري الإنجليزي الممتاز</div>
+            <div class="league-subname">(Premier League)</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item goals">
+          <div class="stat-icon">⚽ الأهداف</div>
+          <div class="stat-value goals-val">1,085</div>
+        </div>
+        <div class="stat-item assists">
+          <div class="stat-icon">👟 الأسيست</div>
+          <div class="stat-value assists-val">760</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🥅 المباريات</div>
+          <div class="stat-value">380</div>
+        </div>
+        <div class="stat-item cards-y">
+          <div class="stat-icon">🟨 بطاقات صفراء</div>
+          <div class="stat-value">1,420</div>
+        </div>
+        <div class="stat-item cards-r">
+          <div class="stat-icon">🟥 بطاقات حمراء</div>
+          <div class="stat-value">45</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎯 ضربات الجزاء</div>
+          <div class="stat-value">102</div>
+        </div>
+      </div>
     </div>
 
-    <!-- الدوري الإسباني -->
     <div class="league-block">
-      <div class="league-name">الدوري الإسباني (La Liga)</div>
-      <table class="stats-table">
-        <tr>
-          <th>عدد المباريات</th>
-          <th>عدد الأهداف</th>
-          <th>عدد الأسيست</th>
-          <th>عدد البطاقات الصفراء</th>
-          <th>عدد البطاقات الحمراء</th>
-          <th>ضربات الجزاء</th>
-        </tr>
-        <tr>
-          <td>380</td>
-          <td>980</td>
-          <td>690</td>
-          <td>1,700</td>
-          <td>65</td>
-          <td>110</td>
-        </tr>
-      </table>
+      <div class="league-header">
+        <span>🇪🇸</span>
+        <div>
+            <div class="league-name">الدوري الإسباني</div>
+            <div class="league-subname">(La Liga)</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item goals">
+          <div class="stat-icon">⚽ الأهداف</div>
+          <div class="stat-value goals-val">980</div>
+        </div>
+        <div class="stat-item assists">
+          <div class="stat-icon">👟 الأسيست</div>
+          <div class="stat-value assists-val">690</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🥅 المباريات</div>
+          <div class="stat-value">380</div>
+        </div>
+        <div class="stat-item cards-y">
+          <div class="stat-icon">🟨 بطاقات صفراء</div>
+          <div class="stat-value">1,700</div>
+        </div>
+        <div class="stat-item cards-r">
+          <div class="stat-icon">🟥 بطاقات حمراء</div>
+          <div class="stat-value">65</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎯 ضربات الجزاء</div>
+          <div class="stat-value">110</div>
+        </div>
+      </div>
     </div>
 
-    <!-- الدوري الإيطالي -->
     <div class="league-block">
-      <div class="league-name">الدوري الإيطالي (Serie A)</div>
-      <table class="stats-table">
-        <tr>
-          <th>عدد المباريات</th>
-          <th>عدد الأهداف</th>
-          <th>عدد الأسيست</th>
-          <th>عدد البطاقات الصفراء</th>
-          <th>عدد البطاقات الحمراء</th>
-          <th>ضربات الجزاء</th>
-        </tr>
-        <tr>
-          <td>380</td>
-          <td>1,030</td>
-          <td>710</td>
-          <td>1,500</td>
-          <td>55</td>
-          <td>120</td>
-        </tr>
-      </table>
+      <div class="league-header">
+        <span>🇮🇹</span>
+        <div>
+            <div class="league-name">الدوري الإيطالي</div>
+            <div class="league-subname">(Serie A)</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item goals">
+          <div class="stat-icon">⚽ الأهداف</div>
+          <div class="stat-value goals-val">1,030</div>
+        </div>
+        <div class="stat-item assists">
+          <div class="stat-icon">👟 الأسيست</div>
+          <div class="stat-value assists-val">710</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🥅 المباريات</div>
+          <div class="stat-value">380</div>
+        </div>
+        <div class="stat-item cards-y">
+          <div class="stat-icon">🟨 بطاقات صفراء</div>
+          <div class="stat-value">1,500</div>
+        </div>
+        <div class="stat-item cards-r">
+          <div class="stat-icon">🟥 بطاقات حمراء</div>
+          <div class="stat-value">55</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎯 ضربات الجزاء</div>
+          <div class="stat-value">120</div>
+        </div>
+      </div>
     </div>
 
-    <!-- الدوري الألماني -->
     <div class="league-block">
-      <div class="league-name">الدوري الألماني (Bundesliga)</div>
-      <table class="stats-table">
-        <tr>
-          <th>عدد المباريات</th>
-          <th>عدد الأهداف</th>
-          <th>عدد الأسيست</th>
-          <th>عدد البطاقات الصفراء</th>
-          <th>عدد البطاقات الحمراء</th>
-          <th>ضربات الجزاء</th>
-        </tr>
-        <tr>
-          <td>306</td>
-          <td>960</td>
-          <td>640</td>
-          <td>1,180</td>
-          <td>42</td>
-          <td>95</td>
-        </tr>
-      </table>
+      <div class="league-header">
+        <span>🇩🇪</span>
+        <div>
+            <div class="league-name">الدوري الألماني</div>
+            <div class="league-subname">(Bundesliga)</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item goals">
+          <div class="stat-icon">⚽ الأهداف</div>
+          <div class="stat-value goals-val">960</div>
+        </div>
+        <div class="stat-item assists">
+          <div class="stat-icon">👟 الأسيست</div>
+          <div class="stat-value assists-val">640</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🥅 المباريات</div>
+          <div class="stat-value">306</div>
+        </div>
+        <div class="stat-item cards-y">
+          <div class="stat-icon">🟨 بطاقات صفراء</div>
+          <div class="stat-value">1,180</div>
+        </div>
+        <div class="stat-item cards-r">
+          <div class="stat-icon">🟥 بطاقات حمراء</div>
+          <div class="stat-value">42</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎯 ضربات الجزاء</div>
+          <div class="stat-value">95</div>
+        </div>
+      </div>
     </div>
 
-    <!-- الدوري الفرنسي -->
     <div class="league-block">
-      <div class="league-name">الدوري الفرنسي (Ligue 1)</div>
-      <table class="stats-table">
-        <tr>
-          <th>عدد المباريات</th>
-          <th>عدد الأهداف</th>
-          <th>عدد الأسيست</th>
-          <th>عدد البطاقات الصفراء</th>
-          <th>عدد البطاقات الحمراء</th>
-          <th>ضربات الجزاء</th>
-        </tr>
-        <tr>
-          <td>306</td>
-          <td>870</td>
-          <td>590</td>
-          <td>1,220</td>
-          <td>38</td>
-          <td>88</td>
-        </tr>
-      </table>
+      <div class="league-header">
+        <span>🇫🇷</span>
+        <div>
+            <div class="league-name">الدوري الفرنسي</div>
+            <div class="league-subname">(Ligue 1)</div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item goals">
+          <div class="stat-icon">⚽ الأهداف</div>
+          <div class="stat-value goals-val">870</div>
+        </div>
+        <div class="stat-item assists">
+          <div class="stat-icon">👟 الأسيست</div>
+          <div class="stat-value assists-val">590</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🥅 المباريات</div>
+          <div class="stat-value">306</div>
+        </div>
+        <div class="stat-item cards-y">
+          <div class="stat-icon">🟨 بطاقات صفراء</div>
+          <div class="stat-value">1,220</div>
+        </div>
+        <div class="stat-item cards-r">
+          <div class="stat-icon">🟥 بطاقات حمراء</div>
+          <div class="stat-value">38</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎯 ضربات الجزاء</div>
+          <div class="stat-value">88</div>
+        </div>
+      </div>
     </div>
 
-    <div style="margin-top:18px; color:#888; font-size:14px;">
-      <span>المصدر: <a href="https://www.transfermarkt.com" target="_blank" style="color:#1766a0;">Transfermarkt</a> – <a href="https://www.whoscored.com/" target="_blank" style="color:#1766a0;">WhoScored</a> – <a href="https://www.sofascore.com/" target="_blank" style="color:#1766a0;">SofaScore</a></span>
+    <div class="source-note">
+      المصدر: Transfermarkt – WhoScored – SofaScore (إحصائيات موسم 2024/2025 التقديرية)
     </div>
 
   </div>
