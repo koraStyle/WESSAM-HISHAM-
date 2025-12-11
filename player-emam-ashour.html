@@ -1,44 +1,195 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>إمام عاشور | نجوم الملاعب</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {background:#f7fafd; font-family:Tahoma, Arial, sans-serif;}
-    .profile-box {background:#fff; border-radius:18px; max-width:540px; margin:48px auto 24px auto; box-shadow:0 4px 18px #1766a015; padding:32px 18px 28px 18px;}
-    .profile-title {color:#1766a0; font-size:1.5em; font-weight:bold; margin-bottom:12px;}
-    .profile-img {width:110px; height:110px; border-radius:50%; object-fit:cover; border:3px solid #e67e22; margin-bottom:14px;}
-    .profile-info {font-size:1.1em; color:#444; margin-bottom:10px;}
-    .profile-info strong {color:#1766a0;}
-    .profile-desc {color:#444; font-size:1em; line-height:1.8; margin-bottom:16px;}
-    .profile-list {margin-bottom:10px;}
-    .profile-list li {margin-bottom:4px; color:#1766a0;}
-    .profile-links a {color:#e67e22; text-decoration:underline; margin-left:12px;}
-    @media (max-width: 600px) {.profile-box{max-width:98vw; padding:12px 2vw;}}
-  </style>
+    <meta charset="UTF-8">
+    <title>إمام عاشور | الملف الشخصي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e3002b; /* الأحمر الداكن / لون الأهلي المصري */
+            --secondary-color: #ffffff; /* الأبيض */
+            --accent-color: #008000; /* لمسة خضراء */
+            --bg-light: #f4f6fa;
+            --text-dark: #333;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border-radius: 20px;
+            max-width: 400px;
+            width: 95%;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 50, 100, 0.15);
+            text-align: center;
+            border-top: 5px solid var(--primary-color); /* لون الأهلي الأساسي */
+        }
+
+        .profile-header {
+            margin-bottom: 25px;
+        }
+
+        .profile-title {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: transparent;
+            /* تدرج لوني يعكس ألوان الأهلي */
+            background: linear-gradient(90deg, var(--primary-color) 0%, #ff4d4f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-bottom: 5px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .profile-img-container {
+            margin: 0 auto 20px auto;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-color); /* إطار بلون الأهلي */
+            box-shadow: 0 0 0 4px #ccc;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img-container:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            padding: 8px 15px;
+            background: #f8fafd;
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        .profile-info strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .profile-desc {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.8;
+            margin: 25px 0;
+            padding: 15px;
+            border-left: 5px solid var(--primary-color);
+            background: #f8fafd;
+            text-align: justify;
+        }
+
+        .profile-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+
+        .profile-list li {
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 0.95em;
+        }
+
+        .profile-list li strong {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-left: 8px;
+        }
+
+        .profile-links {
+            margin-top: 20px;
+            border-top: 1px dashed #ddd;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .profile-links a {
+            color: #fff;
+            background: var(--primary-color); 
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(227, 0, 43, 0.4);
+        }
+
+        .profile-links a:hover {
+            background: #b80424;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-  <div class="profile-box" dir="rtl">
-    <div class="profile-title">إمام عاشور</div>
-    <img class="profile-img" src="https://img.kooora.com/?i=players%2F2%2F137865-kooora.jpg" alt="إمام عاشور">
-    <div class="profile-info"><strong>الجنسية:</strong> مصر</div>
-    <div class="profile-info"><strong>النادي الحالي:</strong> الأهلي المصري</div>
-    <div class="profile-info"><strong>المركز:</strong> وسط ميدان هجومي</div>
-    <div class="profile-info"><strong>تاريخ الميلاد:</strong> 20 فبراير 1998</div>
-    <div class="profile-desc">
-      لاعب وسط هجومي مميز، بدأ مسيرته في غزل المحلة وتألق مع الزمالك ثم انتقل إلى الأهلي. يتميز بالقوة البدنية والتسديدات القوية، وسجل هدفًا رائعًا في مباراة التتويج بالدوري 2025.
+    <div class="profile-card" dir="rtl">
+        <div class="profile-header">
+            <div class="profile-title">إمام عاشور</div>
+            <div class="profile-img-container">
+                <img class="profile-img" src="https://img.kooora.com/?i=players%2F2%2F137865-kooora.jpg" alt="إمام عاشور">
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <span>🌍 <strong>الجنسية:</strong></span>
+            <span>مصر</span>
+        </div>
+        <div class="profile-info">
+            <span>⚽ <strong>النادي الحالي:</strong></span>
+            <span>الأهلي المصري</span>
+        </div>
+        <div class="profile-info">
+            <span>ポジション <strong>المركز:</strong></span>
+            <span>وسط ميدان هجومي</span>
+        </div>
+        <div class="profile-info">
+            <span>🎂 <strong>تاريخ الميلاد:</strong></span>
+            <span>20 فبراير 1998</span>
+        </div>
+
+        <div class="profile-desc">
+            لاعب وسط هجومي مميز يتمتع بمهارات فردية عالية وقوة بدنية وتسديدات صاروخية. بدأ مسيرته في غزل المحلة وتألق مع الزمالك، ثم خاض تجربة احترافية قصيرة مع ميتلاند الدنماركي قبل العودة إلى مصر عبر بوابة الأهلي، حيث ساهم في تحقيق الألقاب المحلية والقارية.
+        </div>
+
+        <ul class="profile-list">
+            <li><strong>الأندية الكبرى:</strong> غزل المحلة، الزمالك، ميتلاند (الدنمارك)، الأهلي المصري.</li>
+            <li><strong>أبرز البطولات:</strong> الدوري المصري، كأس مصر، السوبر المصري، دوري أبطال أفريقيا (مع الأهلي).</li>
+            <li><strong>إجمالي الأهداف (تقريبي):</strong> +30 هدفًا مع الأندية والمنتخب.</li>
+        </ul>
+
+        <div class="profile-links">
+            <a href="https://www.alahlyegypt.com/ar/players/view/137865" target="_blank">الموقع الرسمي للأهلي</a>
+            <a href="https://www.kooora.com/?player=137865&mode=n" target="_blank">كووورة</a>
+            <a href="https://ar.wikipedia.org/wiki/إمام_عاشور" target="_blank">ويكيبيديا</a>
+        </div>
     </div>
-    <ul class="profile-list">
-      <li><strong>الأندية التي لعب لها:</strong> غزل المحلة، حرس الحدود، الزمالك، ميتلاند (الدنمارك)، الأهلي المصري</li>
-      <li><strong>البطولات التي حققها:</strong> الدوري المصري (مع الزمالك والأهلي)، كأس مصر، السوبر المصري</li>
-      <li><strong>عدد الأهداف:</strong> +30 هدفًا مع الأندية والمنتخب</li>
-    </ul>
-    <div class="profile-links">
-      <a href="https://www.alahlyegypt.com/ar/players/view/137865" target="_blank">الموقع الرسمي للأهلي</a>
-      <a href="https://www.kooora.com/?player=137865&mode=n" target="_blank">كووورة</a>
-      <a href="https://ar.wikipedia.org/wiki/إمام_عاشور" target="_blank">ويكيبيديا</a>
-    </div>
-  </div>
 </body>
 </html>
