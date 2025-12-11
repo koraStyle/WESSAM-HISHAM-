@@ -4,13 +4,11 @@
 	<meta charset="UTF-8" />
 	<title>اختبر معلوماتك الرياضية - تحدي الأبطال 🏆</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- تضمين خط Cairo من Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 	<style>
-        /* الأنماط الأساسية */
-		body {
+        body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* تدرج أزرق جذاب */
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             padding: 20px;
             display: flex;
             justify-content: center;
@@ -25,28 +23,26 @@
             background:#ffffff;
             padding: 35px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* ظل أعمق وأكثر احترافية */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
 		h1 {
             color:#1766a0;
             font-size: 2.2em;
-            font-weight: 900; /* خط ثقيل للعنوان */
+            font-weight: 900;
             text-align: center;
             margin-bottom: 30px;
             border-bottom: 3px solid #3b82f6;
             padding-bottom: 15px;
         }
-
-        /* أنماط الأسئلة */
 		.question {
             font-weight: 700;
             margin-bottom: 20px;
             color:#333;
             padding: 15px;
             border-radius: 12px;
-            background: #e9efff; /* خلفية فاتحة للأسئلة */
+            background: #e9efff;
             border: 1px solid #c3dafe;
             transition: all 0.3s ease;
         }
@@ -54,10 +50,8 @@
             background: #dbe3ff;
             transform: translateY(-2px);
         }
-        
-        /* أنماط خيارات الإجابة */
 		label {
-            display: flex; /* لترتيب الراديو بوتون والنص */
+            display: flex;
             align-items: center;
             margin-bottom: 10px;
             cursor:pointer;
@@ -65,30 +59,13 @@
             color:#222;
             padding: 8px 10px;
             border-radius: 6px;
-            transition: background 0.2s ease, color 0.2s ease;
             background: #f8f8f8;
             border: 1px solid #eee;
         }
-		label:hover {
-            background:#eef2ff;
-            color:#1766a0;
-        }
-        input[type="radio"] {
-            margin-left: 10px;
-            accent-color: #1766a0; /* لون الراديو بوتون */
-        }
-        
-        /* أنماط التقييم بعد الإرسال */
-		.wrong {
-            border: 2px solid #ef4444 !important;
-            background: #fee2e2 !important;
-            box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
-        }
-		.correct {
-            border: 2px solid #10b981 !important;
-            background: #d1fae5 !important;
-            box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
-        }
+		label:hover { background:#eef2ff; color:#1766a0; }
+        input[type="radio"] { margin-left: 10px; accent-color: #1766a0; }
+		.wrong { border: 2px solid #ef4444 !important; background: #fee2e2 !important; }
+		.correct { border: 2px solid #10b981 !important; background: #d1fae5 !important; }
 		.correct-answer {
             color: #059669;
             font-weight: bold;
@@ -100,8 +77,6 @@
             text-align: right;
             border-right: 4px solid #059669;
         }
-
-        /* أنماط الزر */
 		button {
             background: linear-gradient(90deg, #1766a0, #3b82f6);
             color:#fff;
@@ -119,10 +94,7 @@
 		button:hover {
             background: linear-gradient(90deg, #0f4a73, #1e3a8a);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(23,102,160,0.6);
         }
-        
-        /* أنماط عرض النتيجة */
 		#result {
             margin-top:25px;
             font-size:1.5em;
@@ -134,11 +106,7 @@
             background: #e0f2fe;
             border: 2px dashed #93c5fd;
             white-space: pre-line;
-            position: relative;
-            z-index: 10;
         }
-
-        /* أنماط زر العودة */
 		.back-button {
             display: block;
             margin: 30px auto 0;
@@ -149,14 +117,8 @@
             font-size: 1.1em;
             padding: 10px;
             border-radius: 8px;
-            transition: background 0.3s ease;
-            z-index: 10;
         }
-        .back-button:hover {
-            background: #e0f2fe;
-        }
-
-        /* أنماط المكافأة والتأثيرات */
+        .back-button:hover { background: #e0f2fe; }
 		.reward {
 			display: none;
 			text-align: center;
@@ -165,19 +127,15 @@
 			font-weight: 900;
 			color: #f59e0b;
 			animation: bounce 1.2s infinite alternate;
-			z-index: 15;
 		}
-		@keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-12px); } }
-		
-		/* أنماط قصاصات الورق الملونة */
-		.confetti {
-            position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; z-index:5;
-        }
+		@keyframes bounce { 0% { transform: translateY(0);} 100% { transform: translateY(-12px);} }
+		.confetti { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
 		.confetti-piece {
-            position:absolute; width:10px; height:10px; opacity:0.8; transform-origin:center; animation: fall 4s linear forwards; border-radius:50%;
+            position:absolute; width:10px; height:10px; opacity:0.8;
+            transform-origin:center; animation: fall 4s linear forwards; border-radius:50%;
         }
 		@keyframes fall {
-            0% {transform: translateY(0) rotate(0deg); opacity:1;}
+            0% {transform: translateY(0) rotate(0deg);}
             100% {transform: translateY(100vh) rotate(720deg); opacity:0;}
         }
 	</style>
@@ -190,92 +148,92 @@
 
 	<!-- سؤال 1 -->
 	<div class="question" id="q1">
-		1. من هو المدرب الوحيد الذي فاز بلقب دوري أبطال أوروبا مع ثلاثة أندية مختلفة؟
-		<label><input type="radio" name="q1" value="a" required> بيب غوارديولا</label>
-		<label><input type="radio" name="q1" value="b"> كارلو أنشيلوتي</label>
-		<label><input type="radio" name="q1" value="c"> جوزيه مورينيو</label>
-		<label><input type="radio" name="q1" value="d"> زين الدين زيدان</label>
+1. من هو أول لاعب يسجل 100 هدف في تاريخ دوري أبطال أوروبا؟
+<label><input type="radio" name="q1" value="a" required> ليونيل ميسي</label>
+<label><input type="radio" name="q1" value="b"> كريستيانو رونالدو</label>
+<label><input type="radio" name="q1" value="c"> راؤول غونزاليس</label>
+<label><input type="radio" name="q1" value="d"> لويس فيغو</label>
 	</div>
 
 	<!-- سؤال 2 -->
 	<div class="question" id="q2">
-		2. ما هو النادي الذي يُلقب بـ "الريدز" ويشارك في الدوري الإنجليزي الممتاز؟
-		<label><input type="radio" name="q2" value="a" required> مانشستر يونايتد</label>
-		<label><input type="radio" name="q2" value="b"> ليفربول</label>
-		<label><input type="radio" name="q2" value="c"> آرسنال</label>
-		<label><input type="radio" name="q2" value="d"> نوتينغهام فورست</label>
+2. من هو المنتخب الذي فاز بأول نسخة من كأس العالم عام 1930؟
+<label><input type="radio" name="q2" value="a" required> الأرجنتين</label>
+<label><input type="radio" name="q2" value="b"> البرازيل</label>
+<label><input type="radio" name="q2" value="c"> الأوروغواي</label>
+<label><input type="radio" name="q2" value="d"> إيطاليا</label>
 	</div>
 
 	<!-- سؤال 3 -->
 	<div class="question" id="q3">
-		3. كم مرة فاز المنتخب البرازيلي بكأس العالم؟
-		<label><input type="radio" name="q3" value="a" required> 4 مرات</label>
-		<label><input type="radio" name="q3" value="b"> 5 مرات</label>
-		<label><input type="radio" name="q3" value="c"> 6 مرات</label>
-		<label><input type="radio" name="q3" value="d"> 7 مرات</label>
+3. ما هو النادي الأكثر تتويجًا بالدوري الإسباني؟
+<label><input type="radio" name="q3" value="a" required> برشلونة</label>
+<label><input type="radio" name="q3" value="b"> ريال مدريد</label>
+<label><input type="radio" name="q3" value="c"> أتلتيكو مدريد</label>
+<label><input type="radio" name="q3" value="d"> فالنسيا</label>
 	</div>
 
 	<!-- سؤال 4 -->
 	<div class="question" id="q4">
-		4. من هو اللاعب التاريخي الذي سجل هدف "يد الإله" في كأس العالم 1986؟
-		<label><input type="radio" name="q4" value="a" required> بيليه</label>
-		<label><input type="radio" name="q4" value="b"> ليونيل ميسي</label>
-		<label><input type="radio" name="q4" value="c"> دييغو مارادونا</label>
-		<label><input type="radio" name="q4" value="d"> رونالدو نازاريو</label>
+4. من هو اللاعب الذي يُلقب بـ “الغزال الأسمر”؟
+<label><input type="radio" name="q4" value="a" required> جورج وياه</label>
+<label><input type="radio" name="q4" value="b"> محمد أبو تريكة</label>
+<label><input type="radio" name="q4" value="c"> محمد صلاح</label>
+<label><input type="radio" name="q4" value="d"> سعيد العويران</label>
 	</div>
 
 	<!-- سؤال 5 -->
 	<div class="question" id="q5">
-		5. ما هو الملعب الذي يُعرف بـ "المسرح الحالم" (Theatre of Dreams)؟
-		<label><input type="radio" name="q5" value="a" required> ويمبلي (لندن)</label>
-		<label><input type="radio" name="q5" value="b"> كامب نو (برشلونة)</label>
-		<label><input type="radio" name="q5" value="c"> أولد ترافورد (مانشستر)</label>
-		<label><input type="radio" name="q5" value="d"> سانتياغو برنابيو (مدريد)</label>
+5. ما هو النادي الذي حقق الدوري الإنجليزي دون أي هزيمة موسم 2004؟
+<label><input type="radio" name="q5" value="a" required> مانشستر يونايتد</label>
+<label><input type="radio" name="q5" value="b"> تشيلسي</label>
+<label><input type="radio" name="q5" value="c"> آرسنال</label>
+<label><input type="radio" name="q5" value="d"> ليفربول</label>
 	</div>
 
 	<!-- سؤال 6 -->
 	<div class="question" id="q6">
-		6. من هو هداف دوري أبطال أوروبا التاريخي؟
-		<label><input type="radio" name="q6" value="a" required> ليونيل ميسي</label>
-		<label><input type="radio" name="q6" value="b"> كريستيانو رونالدو</label>
-		<label><input type="radio" name="q6" value="c"> روبرت ليفاندوفسكي</label>
-		<label><input type="radio" name="q6" value="d"> كريم بنزيما</label>
+6. من هو أكثر لاعب سجل أهدافًا في تاريخ كأس العالم؟
+<label><input type="radio" name="q6" value="a" required> رونالدو البرازيلي</label>
+<label><input type="radio" name="q6" value="b"> كلوزه</label>
+<label><input type="radio" name="q6" value="c"> بيليه</label>
+<label><input type="radio" name="q6" value="d"> غارلينشا</label>
 	</div>
 
 	<!-- سؤال 7 -->
 	<div class="question" id="q7">
-		7. ما هو النادي الذي فاز بأول نسخة من الدوري السعودي للمحترفين (بمسماه الجديد)؟
-		<label><input type="radio" name="q7" value="a" required> الهلال</label>
-		<label><input type="radio" name="q7" value="b"> النصر</label>
-		<label><input type="radio" name="q7" value="c"> الاتحاد</label>
-		<label><input type="radio" name="q7" value="d"> الشباب</label>
+7. ما هو النادي الذي يُعرف بلقب “الشياطين الحمر”؟
+<label><input type="radio" name="q7" value="a" required> ميلان</label>
+<label><input type="radio" name="q7" value="b"> مانشستر يونايتد</label>
+<label><input type="radio" name="q7" value="c"> ليفربول</label>
+<label><input type="radio" name="q7" value="d"> بايرن ميونخ</label>
 	</div>
 
 	<!-- سؤال 8 -->
 	<div class="question" id="q8">
-		8. أي دولة فازت بأول كأس أمم آسيا في عام 1956؟
-		<label><input type="radio" name="q8" value="a" required> كوريا الجنوبية</label>
-		<label><input type="radio" name="q8" value="b"> هونغ كونغ</label>
-		<label><input type="radio" name="q8" value="c"> إسرائيل</label>
-		<label><input type="radio" name="q8" value="d"> إيران</label>
+8. أي منتخب حقق كأس الأمم الأوروبية “يورو 2004” في مفاجأة تاريخية؟
+<label><input type="radio" name="q8" value="a" required> ألمانيا</label>
+<label><input type="radio" name="q8" value="b"> اليونان</label>
+<label><input type="radio" name="q8" value="c"> إسبانيا</label>
+<label><input type="radio" name="q8" value="d"> هولندا</label>
 	</div>
 
 	<!-- سؤال 9 -->
 	<div class="question" id="q9">
-		9. ما هو اللقب الذي يُطلق على نادي يوفنتوس الإيطالي؟
-		<label><input type="radio" name="q9" value="a" required> الروسونيري</label>
-		<label><input type="radio" name="q9" value="b"> البيانكونيري</label>
-		<label><input type="radio" name="q9" value="c"> النيرازوري</label>
-		<label><input type="radio" name="q9" value="d"> اللا شيالي</label>
+9. من هو اللاعب الذي سجل أسرع هدف في تاريخ كأس العالم؟
+<label><input type="radio" name="q9" value="a" required> ديفيد فيا</label>
+<label><input type="radio" name="q9" value="b"> تيم كاهيل</label>
+<label><input type="radio" name="q9" value="c"> هاكان شوكور</label>
+<label><input type="radio" name="q9" value="d"> كلوزه</label>
 	</div>
 
 	<!-- سؤال 10 -->
 	<div class="question" id="q10">
-		10. من هو اللاعب الإفريقي الوحيد الذي فاز بالكرة الذهبية (Ballon d'Or)؟
-		<label><input type="radio" name="q10" value="a" required> ديدييه دروغبا</label>
-		<label><input type="radio" name="q10" value="b"> صامويل إيتو</label>
-		<label><input type="radio" name="q10" value="c"> جورج وياه</label>
-		<label><input type="radio" name="q10" value="d"> محمد صلاح</label>
+10. من هو أكثر نادٍ فاز بدوري أبطال أفريقيا؟
+<label><input type="radio" name="q10" value="a" required> الزمالك</label>
+<label><input type="radio" name="q10" value="b"> الأهلي المصري</label>
+<label><input type="radio" name="q10" value="c"> الترجي التونسي</label>
+<label><input type="radio" name="q10" value="d"> الوداد المغربي</label>
 	</div>
 
 	<button type="submit" id="submit-button">أرسل إجاباتك واختبر معلوماتك</button>
@@ -288,113 +246,88 @@
 </div>
 
 <script>
-    // الإجابات الصحيحة للأسئلة الجديدة
 	const correctAnswers = {
-		q1: "b", // كارلو أنشيلوتي
-		q2: "b", // ليفربول
-		q3: "b", // 5 مرات
-		q4: "c", // دييغو مارادونا
-		q5: "c", // أولد ترافورد
-		q6: "b", // كريستيانو رونالدو
-		q7: "a", // الهلال (أول بطل لمسمى دوري المحترفين في 2008/2009)
-		q8: "a", // كوريا الجنوبية
-		q9: "b", // البيانكونيري
-		q10: "c" // جورج وياه
+		q1: "b",
+		q2: "c",
+		q3: "b",
+		q4: "d",
+		q5: "c",
+		q6: "b",
+		q7: "b",
+		q8: "b",
+		q9: "c",
+		q10: "b"
 	};
 
-    // نصوص الشرح للإجابات الصحيحة
 	const correctText = {
-		q1: "كارلو أنشيلوتي هو المدرب الوحيد الذي فاز بلقب دوري الأبطال مع 3 أندية مختلفة (ميلان، ريال مدريد، بايرن ميونخ)",
-		q2: "نادي ليفربول هو من يُلقب بالـ 'الريدز' (الحُمر)",
-		q3: "فازت البرازيل بكأس العالم 5 مرات (رقم قياسي)",
-		q4: "دييغو مارادونا سجل هدف 'يد الإله' أمام إنجلترا في ربع نهائي مونديال 1986",
-		q5: "ملعب أولد ترافورد، معقل مانشستر يونايتد، هو المعروف بـ 'المسرح الحالم'",
-		q6: "كريستيانو رونالدو هو هداف دوري أبطال أوروبا التاريخي بفارق كبير",
-		q7: "نادي الهلال هو أول بطل للدوري السعودي للمحترفين في موسم 2008/2009",
-		q8: "فازت كوريا الجنوبية بأول نسخة من كأس أمم آسيا عام 1956",
-		q9: "يوفنتوس يُعرف بلقب 'البيانكونيري' (الأبيض والأسود)",
-		q10: "جورج وياه (ليبيريا) هو اللاعب الإفريقي الوحيد الذي فاز بالكرة الذهبية (1995)"
+		q1: "كريستيانو رونالدو هو أول لاعب يسجل 100 هدف في دوري الأبطال.",
+		q2: "الأوروغواي فازت بأول كأس عالم عام 1930.",
+		q3: "ريال مدريد هو أكثر من فاز بالدوري الإسباني.",
+		q4: "سعيد العويران يُلقّب بالغزال الأسمر.",
+		q5: "آرسنال حقق الدوري دون هزيمة عام 2004.",
+		q6: "ميروسلاف كلوزه هو الهداف التاريخي لكأس العالم.",
+		q7: "مانشستر يونايتد يُعرف بلقب الشياطين الحمر.",
+		q8: "اليونان حققت يورو 2004 في مفاجأة كبيرة.",
+		q9: "هاكان شوكور سجل أسرع هدف في تاريخ كأس العالم (11 ثانية).",
+		q10: "الأهلي هو أكثر نادٍ توج بدوري أبطال أفريقيا."
 	};
 
 	const form = document.getElementById('quiz-form');
 	const res = document.getElementById('result');
 	const confetti = document.querySelector('.confetti');
 	const reward = document.getElementById('reward');
-    const questions = 10;
-    const colors = ['#f39c12', '#e74c3c', '#2ecc71', '#3498db', '#9b59b6']; // ألوان متنوعة لقصاصات الورق
+    const colors = ['#f39c12','#e74c3c','#2ecc71','#3498db','#9b59b6'];
 
 	form.addEventListener('submit', function(e){
-		e.preventDefault();	
+		e.preventDefault();
 		let score = 0;
-
-        // مسح النتائج السابقة
         res.innerHTML = '';
         reward.style.display = 'none';
-        
-		for(let i=1; i<=questions; i++){
+		for(let i=1; i<=10; i++){
 			const q = document.getElementById('q'+i);
 			q.classList.remove('wrong','correct');
-			// إزالة الشرح القديم للإجابة الصحيحة
-			const pre = q.querySelector('.correct-answer');	
-			if(pre) pre.remove();
-
-			const selectedAnswer = new FormData(form).get('q'+i);
-            const correctAnswerKey = correctAnswers['q'+i];
-
-			if(selectedAnswer === correctAnswerKey){
-				score++;	
+			const old = q.querySelector('.correct-answer');
+			if(old) old.remove();
+			const selected = new FormData(form).get('q'+i);
+			if(selected === correctAnswers['q'+i]){
+				score++;
 				q.classList.add('correct');
 			} else {
-                // وضع علامة الخطأ
 				q.classList.add('wrong');
-                // عرض الإجابة الصحيحة
-				const correctExplainer = document.createElement('div');	
-				correctExplainer.classList.add('correct-answer');	
-				correctExplainer.textContent = 'الإجابة الصحيحة: ' + correctText['q'+i];	
-				q.appendChild(correctExplainer);
+				const div = document.createElement('div');
+				div.classList.add('correct-answer');
+				div.textContent = 'الإجابة الصحيحة: ' + correctText['q'+i];
+				q.appendChild(div);
 			}
 		}
 
-        // عرض النتيجة النهائية
-		if(score === questions){
-			res.textContent = `🎉 نتيجتك هي ${score}/${questions} (علامة كاملة!) 🎉`;
+		if(score === 10){
+			res.textContent = `🎉 نتيجتك ${score}/10 — ممتاز!`;
 			res.style.color = '#10b981';
-			res.style.borderColor = '#10b981';
 			reward.style.display = 'block';
 			launchConfetti();
 		} else {
-			res.textContent = `نتيجتك النهائية: ${score}/${questions}. \n راجع إجاباتك الخاطئة وحاول مرة أخرى!`;
+			res.textContent = `نتيجتك: ${score}/10 — حاول مرة أخرى!`;
 			res.style.color = '#ef4444';
-			res.style.borderColor = '#ef4444';
-            // إيقاف أي تأثيرات متبقية لقصاصات الورق
-            confetti.innerHTML = '';
+			confetti.innerHTML = '';
 		}
-
 	});
 
-    // وظيفة إنشاء قطعة قصاصات ملونة
 	function createPiece(){
 		const el = document.createElement('div');
 		el.classList.add('confetti-piece');
-		el.style.left = Math.random()*100+'%'; // توزيع القطع أفقياً
-		el.style.top = '-20px'; // تبدأ من الأعلى
+		el.style.left = Math.random()*100+'%';
 		el.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
-		el.style.animationDuration = (3 + Math.random() * 2) + 's';
-		el.style.animationDelay = (Math.random() * 0.5) + 's';
-		el.style.transform = `rotate(${Math.random()*360}deg)`;
-        el.style.width = el.style.height = (8 + Math.random() * 8) + 'px'; // أحجام مختلفة
+		el.style.animationDuration = (3 + Math.random()*2) + 's';
 		return el;
 	}
 
-    // وظيفة إطلاق قصاصات الورق الملونة
 	function launchConfetti(){
-		const total = 100;
-        // تنظيف الحاوية قبل الإطلاق
-        confetti.innerHTML = ''; 
-		for(let i=0; i<total; i++){
-			const p = createPiece();
+		confetti.innerHTML = '';
+		for(let i=0;i<80;i++){
+			let p = createPiece();
 			confetti.appendChild(p);
-			setTimeout(()=>{p.remove();}, 5000); // إزالة القطع بعد انتهاء الحركة
+			setTimeout(()=>p.remove(),5000);
 		}
 	}
 </script>
