@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>ماستر كلاس | الدليل الشامل لأسرار التكتيك الحديث</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #1766a0;
+            --secondary-color: #e67e22;
+            --dark-blue: #0a2e4a;
+            --light-bg: #f4f7f9;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Cairo', Tahoma, Arial, sans-serif;
+            background: var(--light-bg);
+            margin: 0;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--white);
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border-top: 12px solid var(--primary-color);
+        }
+
+        /* الهيدر الرئيسي */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            padding: 60px 30px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .main-header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .main-header p {
+            opacity: 0.9;
+            font-size: 1.3em;
+            margin-top: 15px;
+        }
+
+        .content-padding {
+            padding: 40px;
+        }
+
+        /* تنسيق الأقسام والدروس */
+        .lesson-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .lesson-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .lesson-badge {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 4px 15px;
+            border-radius: 8px;
+            font-size: 0.5em;
+            vertical-align: middle;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        h2.lesson-title {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            border-right: 5px solid var(--secondary-color);
+            padding-right: 12px;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+
+        p {
+            font-size: 1.15em;
+            text-align: justify;
+            color: #444;
+        }
+
+        /* صناديق التميز */
+        .info-box {
+            background: #fffbe6;
+            border: 1px solid #ffe58f;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .pro-tip {
+            background: #e6f7ff;
+            border: 1px solid #91d5ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        /* الجداول */
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 18px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* القوائم */
+        ul.styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.styled-list li {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        ul.styled-list li::before {
+            content: "🔹";
+            position: absolute;
+            right: 0;
+            color: var(--primary-color);
+        }
+
+        /* التذييل */
+        .footer-bar {
+            background: #f8f9fb;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .exclusive-tag {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 45px;
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="article-container">
+    
+    <header class="main-header">
+        <h1>🎓 ماستر كلاس التكتيك</h1>
+    </header>
+
+    <div class="content-padding">
+
+        <section class="lesson-section">
+            <h2 class="lesson-title"><span class="lesson-badge">الدرس الأول</span> فلسفة الضغط العكسي</h2>
+            <h3>📌 مقدمة الدرس: ما هو الـ Gegenpressing؟</h3>
+            <p>في كرة القدم الحديثة عام 2025، لم يعد الدفاع يبدأ من منطقة جزاء فريقك، بل يبدأ من اللحظة التي تفقد فيها الكرة في منطقة الخصم. الضغط العكسي ليس مجرد ركض عشوائي خلف الكرة، بل هو نظام منظم يهدف إلى استغلال "لحظة الارتباك" لدى الخصم فور استخلاصه للكرة.</p>
+
+            <div class="info-box">
+                <strong>💡 قاعدة الـ 5 ثوانٍ:</strong><br>
+                أشهر الفرق التي تطبق هذا الأسلوب تضع قاعدة صارمة: إذا لم نستعد الكرة خلال 5 ثوانٍ من فقدانها، نتوقف عن الضغط العنيف ونبدأ في تنظيم دفاعنا بشكل كلاسيكي.
+            </div>
+
+            <h3>📉 مقارنة تكتيكية: الضغط العالي vs الضغط العكسي</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الإحصائية</th>
+                            <th>الضغط العالي (High Press)</th>
+                            <th>الضغط العكسي (Gegenpressing)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>متى يبدأ؟</td>
+                            <td>عندما يبدأ الخصم بناء الهجمة</td>
+                            <td>فور فقدان فريقك للكرة مباشرة</td>
+                        </tr>
+                        <tr>
+                            <td>الهدف الأساسي</td>
+                            <td>منع الخصم من التقدم</td>
+                            <td>استعادة الكرة لشن هجمة مرتدة</td>
+                        </tr>
+                        <tr>
+                            <td>المخاطرة</td>
+                            <td>ترك مساحات خلف المدافعين</td>
+                            <td>إرهاق بدني شديد للاعبي الوسط</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🧠 التحليل العميق: مثلثات الخنق</h3>
+            <p>يعتمد الضغط العكسي الناجح على تشكيل "مثلثات" حول حامل الكرة. اللاعب الأول يضغط مباشرة، اللاعب الثاني يغلق أقرب زاوية تمرير، واللاعب الثالث يراقب اللاعب الذي قد يستقبل الكرة الطويلة.</p>
+            
+            <div class="pro-tip">
+                <strong>✅ نصيحة للمشاهد الخبير:</strong><br>
+                في المرة القادمة التي تشاهد فيها مباراة كبرى، لا تنظر إلى الكرة، بل انظر إلى اللاعبين البعيدين عن الكرة فور فقدانها؛ ستجدهم يركضون نحو "المساحات" وليس نحو اللاعب.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2 class="lesson-title"><span class="lesson-badge">الدرس الثاني</span> ثورة المهاجم الوهمي (False 9)</h2>
+            <p>لم يعد رقم 9 مجرد لاعب ينتظر الكرة في منطقة الجزاء. المهاجم الوهمي هو "صانع ألعاب متنكر" في زي مهاجم، يسقط لوسط الملعب ليسحب معه قلبي الدفاع ويخلق فجوات قاتلة.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الميزة</th>
+                            <th>المهاجم التقليدي</th>
+                            <th>المهاجم الوهمي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>المهمة</td>
+                            <td>إنهاء الهجمات داخل الصندوق</td>
+                            <td>سحب المدافعين وصناعة اللعب</td>
+                        </tr>
+                        <tr>
+                            <td>التحرك</td>
+                            <td>عمودي نحو المرمى</td>
+                            <td>أفقي وعمودي لوسط الملعب</td>
+                        </tr>
+                        <tr>
+                            <td>الهدف التكتيكي</td>
+                            <td>تثبيت المدافعين</td>
+                            <td>خلق "مساحة وهمية" للقادمين من الخلف</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pro-tip">
+                <strong>💡 لماذا هو مدمر؟</strong> عندما يخرج المهاجم من منطقة الجزاء، يترك قلبي الدفاع في حيرة: هل نتبعه ونترك مساحة خلفنا؟ أم نبقى ونتركه حراً؟ هذه الحيرة هي مفتاح الأهداف.
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2 class="lesson-title"><span class="lesson-badge">الدرس الثالث</span> الأظهرة الوهمية (Inverted Full-backs)</h2>
+            <p>أحدث تطور تكتيكي في عام 2025 هو تحول الظهير إلى لاعب وسط إضافي. بدلاً من الركض على الخط، يدخل الظهير لعمق الملعب ليشكل "محور مزدوج" مع لاعب الارتكاز.</p>
+            
+            <h3>الفوائد التكتيكية لهذا المركز:</h3>
+            <ul class="styled-list">
+                <li><strong>السيطرة على الوسط:</strong> خلق تفوق عددي (4 ضد 3) في قلب الملعب.</li>
+                <li><strong>الحماية من المرتدات:</strong> التواجد في قلب الملعب يمنع الخصم من شن مرتدات سريعة من العمق.</li>
+                <li><strong>تحرير الأجنحة:</strong> دخول الظهير للداخل يجبر جناح الخصم على التبعية، مما يترك جناح فريقك في وضع "واحد ضد واحد" مثالي.</li>
+            </ul>
+        </section>
+
+        </div>
+
+    <footer class="footer-bar">
+        <div class="exclusive-tag">✨ محتوى حصري لـ Kora-Style.com</div>
+        <p style="color:#777; font-size:0.9em; margin:0;">جميع الحقوق محفوظة © 2025</p>
+        <a href="index.html#masterclass-section" class="back-btn">🔙 العودة للرئيسية</a>
+    </footer>
+</div>
+
+</body>
+</html>
