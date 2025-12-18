@@ -17,14 +17,16 @@
     h3 {color:#1766a0; text-align:center; margin-top:40px; font-size:1.5em; position: relative; padding-bottom: 10px;}
     h3::after {content: ''; width: 60px; height: 3px; background: #e67e22; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
 
-    /* جدول الإحصائيات - خانات منتظمة ومتساوية */
-    .stats-table {width:100%; border-collapse:collapse; margin-top:20px; table-layout: fixed; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
-    .stats-table th, .stats-table td {padding:15px; border:1px solid #eee; text-align:center; word-wrap: break-word;}
-    .stats-table th {background:#1766a0; color:#fff; font-weight: 700; font-size: 1.1em;}
-    .stats-table tr:nth-child(even) {background: #f9fbff;}
-    .stats-table td:nth-child(2) {background: #f0f4f8; font-weight: bold; color: #555; width: 40%;} /* عمود اسم الإحصائية */
+    /* تنسيق الجداول الموحد - اللون الأزرق #1766a0 */
+    .custom-table {width:100%; border-collapse:collapse; margin-top:20px; table-layout: fixed; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
+    .custom-table th, .custom-table td {padding:15px; border:1px solid #eee; text-align:center; word-wrap: break-word;}
+    .custom-table th {background:#1766a0; color:#fff; font-weight: 700; font-size: 1.1em; border: none;}
+    .custom-table tr:nth-child(even) {background: #f9fbff;}
+    
+    /* عمود التميز في جدول الإحصائيات */
+    .stats-col-name {background: #f0f4f8 !important; font-weight: bold; color: #555; width: 40%;}
 
-    /* جدول ركلات الترجيح - نظام وترتيب ممتاز */
+    /* جدول ركلات الترجيح */
     .penalty-box {margin-top: 20px; border: 2px solid #1766a0; border-radius: 15px; overflow: hidden; background: #fff;}
     .penalty-header {background: #1766a0; color: white; padding: 12px; text-align: center; font-weight: bold; font-size: 1.2em;}
     .penalty-table {width: 100%; border-collapse: collapse; table-layout: fixed;}
@@ -55,13 +57,13 @@
   <div class="article-subtitle">باريس سان جيرمان 🆚 فلامينغو | صراع العمالقة على عرش الإنتركونتيننتال</div>
 
   <div class="article-content">
-دخل باريس سان جيرمان المباراة بقيادة المدرب **لويس إنريكي** برسم تكتيكي **4-3-3**، معتمداً على الاستحواذ الإيجابي والضغط العالي. نجح الفريق الباريسي في ترجمة سيطرته في الشوط الأول بفضل تحركات **كفاراتسخيليا** الذي سجل هدف التقدم في الدقيقة 38.
+دخل باريس سان جيرمان المباراة بقيادة المدرب **لويس إنريكي** برسم تكتيكي **4-3-3**، معتمداً على الاستحواذ الإيجابي والضغط العالي. نجح الفريق الباريسي في فرض إيقاعه في الشوط الأول بفضل تحركات **كفاراتسخيليا** الذي سجل هدف التقدم في الدقيقة 38.
 
 بالمقابل، قدم **فيليبي لويس** مع فلامينغو مباراة دفاعية منظمة بخطة **4-2-3-1**، معتمداً على التحولات السريعة. استطاع الفريق البرازيلي العودة في النتيجة عبر ركلة جزاء سجلها **جورجينيو** في الدقيقة 62. استمرت الندية بين الفريقين طوال الأشواط الإضافية، لتبتسم ركلات الترجيح في النهاية للعملاق الفرنسي.
   </div>
 
   <h3>📈 إحصائيات المباراة</h3>
-  <table class="stats-table">
+  <table class="custom-table">
     <thead>
       <tr>
         <th>باريس سان جيرمان</th>
@@ -70,26 +72,49 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>63%</td><td>الاستحواذ</td><td>37%</td></tr>
-      <tr><td>23</td><td>التسديدات</td><td>11</td></tr>
-      <tr><td>9</td><td>التسديد على المرمى</td><td>2</td></tr>
-      <tr><td>8</td><td>التسديد بعيدًا عن المرمى</td><td>4</td></tr>
-      <tr><td>6</td><td>تسديدات تم اعتراضها</td><td>5</td></tr>
-      <tr><td>15</td><td>داخل الصندوق</td><td>5</td></tr>
-      <tr><td>8</td><td>خارج الصندوق</td><td>6</td></tr>
-      <tr><td>789</td><td>مجموع التمريرات</td><td>473</td></tr>
-      <tr><td>89%</td><td>دقة التمرير</td><td>78%</td></tr>
-      <tr><td>10</td><td>الركنيات</td><td>3</td></tr>
-      <tr><td>2</td><td>التسللات</td><td>2</td></tr>
-      <tr><td>15</td><td>المخالفات</td><td>16</td></tr>
-      <tr><td>1</td><td>تصديات الحارس</td><td>7</td></tr>
-      <tr><td>3</td><td>بطاقات صفراء</td><td>6</td></tr>
+      <tr><td>63%</td><td class="stats-col-name">الاستحواذ</td><td>37%</td></tr>
+      <tr><td>23</td><td class="stats-col-name">التسديدات</td><td>11</td></tr>
+      <tr><td>9</td><td class="stats-col-name">التسديد على المرمى</td><td>2</td></tr>
+      <tr><td>8</td><td class="stats-col-name">التسديد بعيدًا عن المرمى</td><td>4</td></tr>
+      <tr><td>6</td><td class="stats-col-name">تم اعتراضها</td><td>5</td></tr>
+      <tr><td>15</td><td class="stats-col-name">داخل الصندوق</td><td>5</td></tr>
+      <tr><td>8</td><td class="stats-col-name">خارج الصندوق</td><td>6</td></tr>
+      <tr><td>789</td><td class="stats-col-name">مجموع التمريرات</td><td>473</td></tr>
+      <tr><td>89%</td><td class="stats-col-name">دقة التمرير</td><td>78%</td></tr>
+      <tr><td>10</td><td class="stats-col-name">الركنيات</td><td>3</td></tr>
+      <tr><td>2</td><td class="stats-col-name">التسللات</td><td>2</td></tr>
+      <tr><td>15</td><td class="stats-col-name">المخالفات</td><td>16</td></tr>
+      <tr><td>1</td><td class="stats-col-name">تصديات الحارس</td><td>7</td></tr>
+      <tr><td>3</td><td class="stats-col-name">بطاقات صفراء</td><td>6</td></tr>
     </tbody>
   </table>
 
-  <h3>🧤 نتائج ركلات الترجيح</h3>
+  <h3>⚽ أهداف المباراة (الوقت الأصلي)</h3>
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">الدقيقة</th>
+        <th style="width: 45%;">اللاعب</th>
+        <th style="width: 35%;">التفاصيل</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>38’</td>
+        <td>خفيشا كفاراتسخيليا (باريس)</td>
+        <td>⚽ هدف ميداني</td>
+      </tr>
+      <tr>
+        <td>62’</td>
+        <td>جورجينيو (فلامينغو)</td>
+        <td>🥅 ضربة جزاء</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>🧤 نتائج ركلات الترجيح الحاسمة</h3>
   <div class="penalty-box">
-    <div class="penalty-header">باريس (2) - (1) فلامينغو</div>
+    <div class="penalty-header">نتيجة الترجيح: باريس (2) - (1) فلامينغو</div>
     <table class="penalty-table">
       <thead>
         <tr>
@@ -122,7 +147,7 @@
     </table>
   </div>
 
-  <h3>🧩 التشكيل الرسمي</h3>
+  <h3>🧩 التشكيل الرسمي للفريقين</h3>
   <table class="lineup-table">
     <thead><tr><th colspan="2">باريس سان جيرمان (4-3-3) - لويس إنريكي</th></tr></thead>
     <tbody>
@@ -136,7 +161,7 @@
   <table class="lineup-table" style="margin-top:20px;">
     <thead><tr><th colspan="2">فلامينغو (4-2-3-1) - فيليبي لويس</th></tr></thead>
     <tbody>
-      <tr><td><strong>الهجوم</strong></td><td>هنريكي</td></tr>
+      <tr><td><strong>الهجوم</strong></td><td>برونو هنريكي</td></tr>
       <tr><td><strong>الوسط الهجومي</strong></td><td>أراسكايتا، كاراسكال، بلاتا</td></tr>
       <tr><td><strong>الوسط الدفاعي</strong></td><td>بولغار، جورجينيو</td></tr>
       <tr><td><strong>الدفاع</strong></td><td>ساندرو، أورتيز، بيريرا، فاريلا</td></tr>
