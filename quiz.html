@@ -164,7 +164,7 @@
 
 	<div class="question" id="q3">
 3. من هو اللاعب الذي فاز بجائزة أفضل لاعب شاب في يورو 2024؟
-<label><input type="radio" name="q3" value="a" required> لamine يامال</label>
+<label><input type="radio" name="q3" value="a" required> لامين يامال</label>
 <label><input type="radio" name="q3" value="b"> أردا غولر</label>
 <label><input type="radio" name="q3" value="c"> جمال موسيالا</label>
 <label><input type="radio" name="q3" value="d"> كوبي ماينو</label>
@@ -226,6 +226,46 @@
 <label><input type="radio" name="q10" value="d"> 9 كرات</label>
 	</div>
 
+    <div class="question" id="q11">
+11. من هو المنتخب الذي فاز بلقب يورو 2024 التي أقيمت في ألمانيا؟
+<label><input type="radio" name="q11" value="a" required> إنجلترا</label>
+<label><input type="radio" name="q11" value="b"> فرنسا</label>
+<label><input type="radio" name="q11" value="c"> ألمانيا</label>
+<label><input type="radio" name="q11" value="d"> إسبانيا</label>
+    </div>
+
+    <div class="question" id="q12">
+12. أي منتخب فاز بلقب كوبا أمريكا 2024؟
+<label><input type="radio" name="q12" value="a" required> البرازيل</label>
+<label><input type="radio" name="q12" value="b"> كولومبيا</label>
+<label><input type="radio" name="q12" value="c"> الأرجنتين</label>
+<label><input type="radio" name="q12" value="d"> الأوروغواي</label>
+    </div>
+
+    <div class="question" id="q13">
+13. من هو الهداف التاريخي لنهائيات كأس العالم (بإجمالي 16 هدفاً)؟
+<label><input type="radio" name="q13" value="a" required> ميروسلاف كلوزه</label>
+<label><input type="radio" name="q13" value="b"> رونالدو الظاهرة</label>
+<label><input type="radio" name="q13" value="c"> جيرد مولر</label>
+<label><input type="radio" name="q13" value="d"> بيليه</label>
+    </div>
+
+    <div class="question" id="q14">
+14. أين ستقام أول نسخة من كأس العالم للأندية بنظامها الجديد (32 فريقاً) عام 2025؟
+<label><input type="radio" name="q14" value="a" required> الصين</label>
+<label><input type="radio" name="q14" value="b"> الولايات المتحدة</label>
+<label><input type="radio" name="q14" value="c"> السعودية</label>
+<label><input type="radio" name="q14" value="d"> الإمارات</label>
+    </div>
+
+    <div class="question" id="q15">
+15. من هو اللاعب الأفريقي الوحيد الذي فاز بالكرة الذهبية (Ballon d'Or)؟
+<label><input type="radio" name="q15" value="a" required> صامويل إيتو</label>
+<label><input type="radio" name="q15" value="b"> جورج وياه</label>
+<label><input type="radio" name="q15" value="c"> محمد صلاح</label>
+<label><input type="radio" name="q15" value="d"> ديدييه دروغبا</label>
+    </div>
+
 	<button type="submit" id="submit-button">أرسل إجاباتك واكتشف مستواك</button>
 </form>
 
@@ -237,16 +277,9 @@
 
 <script>
 	const correctAnswers = {
-		q1: "b", // بيليه
-		q2: "c", // المغرب
-		q3: "a", // لامين يامال
-		q4: "c", // 48 منتخباً
-		q5: "c", // كريستيانو رونالدو
-		q6: "b", // يوفنتوس
-		q7: "c", // الأوروغواي
-		q8: "c", // السعودية
-		q9: "b", // تشابي ألونسو
-		q10: "c" // 8 كرات
+		q1: "b", q2: "c", q3: "a", q4: "c", q5: "c",
+		q6: "b", q7: "c", q8: "c", q9: "b", q10: "c",
+        q11: "d", q12: "c", q13: "a", q14: "b", q15: "b"
 	};
 
 	const correctText = {
@@ -260,6 +293,11 @@
 		q8: "المملكة العربية السعودية هي المستضيف الرسمي لمونديال 2034.",
 		q9: "تشابي ألونسو حقق معجزة كروية مع باير ليفركوزن في موسم 2023-2024.",
 		q10: "ليونيل ميسي هو الأكثر تتويجاً بالكرة الذهبية في التاريخ بـ 8 مرات.",
+        q11: "إسبانيا فازت بلقب يورو 2024 بعد أداء مثالي طوال البطولة.",
+        q12: "الأرجنتين حافظت على لقبها وحققت كوبا أمريكا 2024.",
+        q13: "الألماني ميروسلاف كلوزه هو الهداف التاريخي للمونديال برصيد 16 هدفاً.",
+        q14: "الولايات المتحدة الأمريكية ستستضيف مونديال الأندية 2025 بنظامه الجديد.",
+        q15: "جورج وياه (رئيس ليبيريا السابق) هو الأفريقي الوحيد الذي نال الكرة الذهبية عام 1995."
 	};
 
 	const form = document.getElementById('quiz-form');
@@ -271,9 +309,11 @@
 	form.addEventListener('submit', function(e){
 		e.preventDefault();
 		let score = 0;
+        const totalQuestions = 15;
         res.innerHTML = '';
         reward.style.display = 'none';
-		for(let i=1; i<=10; i++){
+        
+		for(let i=1; i<=totalQuestions; i++){
 			const q = document.getElementById('q'+i);
 			q.classList.remove('wrong','correct');
 			const old = q.querySelector('.correct-answer');
@@ -291,16 +331,16 @@
 			}
 		}
 
-		if(score === 10){
-			res.textContent = `🎉 نتيجتك ${score}/10 — ملك التوقعات والتحليل!`;
+		if(score === 15){
+			res.textContent = `🎉 نتيجتك ${score}/15 — ملك التوقعات والتحليل!`;
 			res.style.color = '#10b981';
 			reward.style.display = 'block';
 			launchConfetti();
-		} else if(score >= 7) {
-			res.textContent = `👏 نتيجتك: ${score}/10 — خبير كروي متمكن!`;
+		} else if(score >= 10) {
+			res.textContent = `👏 نتيجتك: ${score}/15 — خبير كروي متمكن!`;
 			res.style.color = '#3b82f6';
 		} else {
-			res.textContent = `نتيجتك: ${score}/10 — تحتاج لمتابعة كورة ستايل أكثر!`;
+			res.textContent = `نتيجتك: ${score}/15 — تحتاج لمتابعة كورة ستايل أكثر!`;
 			res.style.color = '#ef4444';
 			confetti.innerHTML = '';
 		}
