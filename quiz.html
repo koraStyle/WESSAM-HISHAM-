@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-	<meta charset="UTF-8" />
-	<title>تحدي خبراء كرة القدم 2026 - كورة ستايل 🏆</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>تحدي خبراء كرة القدم 2026 - كورة ستايل 🏆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-	<style>
+    <style>
         body {
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -16,7 +16,7 @@
             min-height: 100vh;
             margin: 0;
         }
-		.quiz-container {
+        .quiz-container {
             max-width: 700px;
             width: 100%;
             margin: auto;
@@ -27,7 +27,7 @@
             position: relative;
             overflow: hidden;
         }
-		h1 {
+        h1 {
             color:#1766a0;
             font-size: 2.2em;
             font-weight: 900;
@@ -36,7 +36,7 @@
             border-bottom: 3px solid #3b82f6;
             padding-bottom: 15px;
         }
-		.question {
+        .question {
             font-weight: 700;
             margin-bottom: 20px;
             color:#333;
@@ -50,7 +50,7 @@
             background: #dbe3ff;
             transform: translateY(-2px);
         }
-		label {
+        label {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -62,11 +62,11 @@
             background: #f8f8f8;
             border: 1px solid #eee;
         }
-		label:hover { background:#eef2ff; color:#1766a0; }
+        label:hover { background:#eef2ff; color:#1766a0; }
         input[type="radio"] { margin-left: 10px; accent-color: #1766a0; }
-		.wrong { border: 2px solid #ef4444 !important; background: #fee2e2 !important; }
-		.correct { border: 2px solid #10b981 !important; background: #d1fae5 !important; }
-		.correct-answer {
+        .wrong { border: 2px solid #ef4444 !important; background: #fee2e2 !important; }
+        .correct { border: 2px solid #10b981 !important; background: #d1fae5 !important; }
+        .correct-answer {
             color: #059669;
             font-weight: bold;
             margin-top: 10px;
@@ -77,7 +77,7 @@
             text-align: right;
             border-right: 4px solid #059669;
         }
-		button {
+        button {
             background: linear-gradient(90deg, #1766a0, #3b82f6);
             color:#fff;
             border:none;
@@ -91,11 +91,11 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(23,102,160,0.4);
         }
-		button:hover {
+        button:hover {
             background: linear-gradient(90deg, #0f4a73, #1e3a8a);
             transform: translateY(-2px);
         }
-		#result {
+        #result {
             margin-top:25px;
             font-size:1.5em;
             font-weight:900;
@@ -107,7 +107,7 @@
             border: 2px dashed #93c5fd;
             white-space: pre-line;
         }
-		.back-button {
+        .back-button {
             display: block;
             margin: 30px auto 0;
             text-align:center;
@@ -119,26 +119,26 @@
             border-radius: 8px;
         }
         .back-button:hover { background: #e0f2fe; }
-		.reward {
-			display: none;
-			text-align: center;
-			margin-top: 20px;
-			font-size: 2.5em;
-			font-weight: 900;
-			color: #f59e0b;
-			animation: bounce 1.2s infinite alternate;
-		}
-		@keyframes bounce { 0% { transform: translateY(0);} 100% { transform: translateY(-12px);} }
-		.confetti { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
-		.confetti-piece {
+        .reward {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #f59e0b;
+            animation: bounce 1.2s infinite alternate;
+        }
+        @keyframes bounce { 0% { transform: translateY(0);} 100% { transform: translateY(-12px);} }
+        .confetti { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+        .confetti-piece {
             position:absolute; width:10px; height:10px; opacity:0.8;
             transform-origin:center; animation: fall 4s linear forwards; border-radius:50%;
         }
-		@keyframes fall {
+        @keyframes fall {
             0% {transform: translateY(0) rotate(0deg);}
             100% {transform: translateY(100vh) rotate(720deg); opacity:0;}
         }
-	</style>
+    </style>
 </head>
 <body>
 
@@ -146,87 +146,87 @@
 <h1>اختبر معلوماتك الكروية 🏆 تحدي الخبراء 2026</h1>
 <form id="quiz-form">
 
-	<div class="question" id="q1">
-1. من هو اللاعب الوحيد في التاريخ الذي سجل في "ثلاث" نهائيات مختلفة لكأس العالم؟
-<label><input type="radio" name="q1" value="a" required> ليونيل ميسي</label>
-<label><input type="radio" name="q1" value="b"> بيليه</label>
-<label><input type="radio" name="q1" value="c"> كيليان مبابي</label>
-<label><input type="radio" name="q1" value="d"> زين الدين زيدان</label>
-	</div>
+    <div class="question" id="q1">
+1. من هو النادي السعودي الأكثر تتويجاً بلقب "كأس خادم الحرمين الشريفين" عبر التاريخ؟
+<label><input type="radio" name="q1" value="a" required> النصر</label>
+<label><input type="radio" name="q1" value="b"> الاتحاد</label>
+<label><input type="radio" name="q1" value="c"> الهلال</label>
+<label><input type="radio" name="q1" value="d"> الأهلي</label>
+    </div>
 
-	<div class="question" id="q2">
-2. أي نادٍ أوروبي يلقب بـ "الغواصات الصفراء" (The Yellow Submarine)؟
-<label><input type="radio" name="q2" value="a" required> بورتو</label>
-<label><input type="radio" name="q2" value="b"> فياريال</label>
-<label><input type="radio" name="q2" value="c"> بوروسيا دورتموند</label>
-<label><input type="radio" name="q2" value="d"> واتفورد</label>
-	</div>
+    <div class="question" id="q2">
+2. من هو اللاعب الذي يحمل الرقم القياسي كأكثر من سجل أهدافاً في نسخة واحدة من دوري روشن السعودي (35 هدفاً)؟
+<label><input type="radio" name="q2" value="a" required> عبد الرزاق حمدالله</label>
+<label><input type="radio" name="q2" value="b"> كريستيانو رونالدو</label>
+<label><input type="radio" name="q2" value="c"> عمر السومة</label>
+<label><input type="radio" name="q2" value="d"> ألكساندر ميتروفيتش</label>
+    </div>
 
-	<div class="question" id="q3">
-3. ما هو المنتخب الأفريقي الأول الذي نجح في الوصول إلى نصف نهائي كأس العالم؟
-<label><input type="radio" name="q3" value="a" required> الكاميرون (1990)</label>
-<label><input type="radio" name="q3" value="b"> السنغال (2002)</label>
-<label><input type="radio" name="q3" value="c"> غانا (2010)</label>
-<label><input type="radio" name="q3" value="d"> المغرب (2022)</label>
-	</div>
+    <div class="question" id="q3">
+3. أي منتخب هو الوحيد الذي شارك في جميع نسخ نهائيات كأس العالم منذ انطلاقها عام 1930؟
+<label><input type="radio" name="q3" value="a" required> ألمانيا</label>
+<label><input type="radio" name="q3" value="b"> إيطاليا</label>
+<label><input type="radio" name="q3" value="c"> الأرجنتين</label>
+<label><input type="radio" name="q3" value="d"> البرازيل</label>
+    </div>
 
-	<div class="question" id="q4">
-4. كم عدد بطولات "كأس العالم" التي فازت بها ألمانيا في تاريخها (بما فيها ألمانيا الغربية)؟
-<label><input type="radio" name="q4" value="a" required> 3 بطولات</label>
-<label><input type="radio" name="q4" value="b"> 4 بطولات</label>
-<label><input type="radio" name="q4" value="c"> 5 بطولات</label>
-<label><input type="radio" name="q4" value="d"> 2 بطولة</label>
-	</div>
+    <div class="question" id="q4">
+4. ما هو النادي الذي فاز بأول نسخة من دوري أبطال آسيا بنظامها الجديد (2002-2003)؟
+<label><input type="radio" name="q4" value="a" required> الهلال السعودي</label>
+<label><input type="radio" name="q4" value="b"> العين الإماراتي</label>
+<label><input type="radio" name="q4" value="c"> الاتحاد السعودي</label>
+<label><input type="radio" name="q4" value="d"> أوراوا ريد دياموندز</label>
+    </div>
 
-	<div class="question" id="q5">
-5. من هو المدرب صاحب الرقم القياسي في الفوز بلقب دوري أبطال أوروبا (5 ألقاب)؟
-<label><input type="radio" name="q5" value="a" required> بيب جوارديولا</label>
-<label><input type="radio" name="q5" value="b"> سير أليكس فيرجسون</label>
-<label><input type="radio" name="q5" value="c"> كارلو أنشيلوتي</label>
-<label><input type="radio" name="q5" value="d"> زين الدين زيدان</label>
-	</div>
+    <div class="question" id="q5">
+5. من هو اللاعب الوحيد الذي فاز بلقب دوري أبطال أوروبا مع 3 أندية مختلفة (أياكس، ريال مدريد، ميلان)؟
+<label><input type="radio" name="q5" value="a" required> كريستيانو رونالدو</label>
+<label><input type="radio" name="q5" value="b"> كلارنس سيدورف</label>
+<label><input type="radio" name="q5" value="c"> صامويل إيتو</label>
+<label><input type="radio" name="q5" value="d"> زلاتان إبراهيموفيتش</label>
+    </div>
 
-	<div class="question" id="q6">
-6. أي لاعب يحمل لقب "الهداف التاريخي" لبطولة دوري أبطال أوروبا؟
-<label><input type="radio" name="q6" value="a" required> ليونيل ميسي</label>
-<label><input type="radio" name="q6" value="b"> كريم بنزيما</label>
-<label><input type="radio" name="q6" value="c"> كريستيانو رونالدو</label>
-<label><input type="radio" name="q6" value="d"> روبرت ليفاندوفسكي</label>
-	</div>
+    <div class="question" id="q6">
+6. أي لاعب سعودي سجل "أسرع هدف" في تاريخ كأس العالم للشباب (بعد 11 ثانية فقط)؟
+<label><input type="radio" name="q6" value="a" required> سعيد العويران</label>
+<label><input type="radio" name="q6" value="b"> فهد المولد</label>
+<label><input type="radio" name="q6" value="c"> حمد الدوسري</label>
+<label><input type="radio" name="q6" value="d"> ناصر الشمراني</label>
+    </div>
 
-	<div class="question" id="q7">
-7. في أي مدينة يقع ملعب "السان سيرو" الشهير الذي يتشاركه قطبا ميلان؟
-<label><input type="radio" name="q7" value="a" required> روما</label>
-<label><input type="radio" name="q7" value="b"> تورينو</label>
-<label><input type="radio" name="q7" value="c"> ميلانو</label>
-<label><input type="radio" name="q7" value="d"> نابولي</label>
-	</div>
+    <div class="question" id="q7">
+7. من هو المدرب الذي حقق "الثلاثية التاريخية" (الدوري، الكأس، دوري الأبطال) مع ناديين مختلفين؟
+<label><input type="radio" name="q7" value="a" required> كارلو أنشيلوتي</label>
+<label><input type="radio" name="q7" value="b"> جوزيه مورينيو</label>
+<label><input type="radio" name="q7" value="c"> بيب جوارديولا</label>
+<label><input type="radio" name="q7" value="d"> أليكس فيرجسون</label>
+    </div>
 
-	<div class="question" id="q8">
-8. ما هو النادي الإنجليزي الوحيد الذي حقق لقب الدوري الذهبي (بدون أي خسارة) في عهد "البريميرليج"؟
-<label><input type="radio" name="q8" value="a" required> مانشستر يونايتد</label>
-<label><input type="radio" name="q8" value="b"> ليفربول</label>
-<label><input type="radio" name="q8" value="c"> آرسنال</label>
-<label><input type="radio" name="q8" value="d"> تشيلسي</label>
-	</div>
+    <div class="question" id="q8">
+8. ما هي الجنسية الأصلية للاعب "إيرلينج هالاند" نجم مانشستر سيتي؟
+<label><input type="radio" name="q8" value="a" required> السويد</label>
+<label><input type="radio" name="q8" value="b"> الدنمارك</label>
+<label><input type="radio" name="q8" value="c"> النرويج</label>
+<label><input type="radio" name="q8" value="d"> بلجيكا</label>
+    </div>
 
-	<div class="question" id="q9">
-9. من هو المنتخب الذي فاز بأول نسخة في تاريخ كأس العالم عام 1930؟
-<label><input type="radio" name="q9" value="a" required> البرازيل</label>
-<label><input type="radio" name="q9" value="b"> إيطاليا</label>
-<label><input type="radio" name="q9" value="c"> الأوروغواي</label>
-<label><input type="radio" name="q9" value="d"> الأرجنتين</label>
-	</div>
+    <div class="question" id="q9">
+9. في أي عام حقق المنتخب السعودي لقب كأس آسيا لأول مرة في تاريخه؟
+<label><input type="radio" name="q9" value="a" required> 1984</label>
+<label><input type="radio" name="q9" value="b"> 1988</label>
+<label><input type="radio" name="q9" value="c"> 1996</label>
+<label><input type="radio" name="q9" value="d"> 2000</label>
+    </div>
 
-	<div class="question" id="q10">
-10. ما هو عدد الكرات الذهبية (Ballon d'Or) التي حققها الأسطورة ليونيل ميسي؟
-<label><input type="radio" name="q10" value="a" required> 5 كرات</label>
-<label><input type="radio" name="q10" value="b"> 7 كرات</label>
-<label><input type="radio" name="q10" value="c"> 8 كرات</label>
-<label><input type="radio" name="q10" value="d"> 6 كرات</label>
-	</div>
+    <div class="question" id="q10">
+10. من هو الحارس التاريخي الذي فاز بجائزة "الكرة الذهبية" (Ballon d'Or)؟
+<label><input type="radio" name="q10" value="a" required> جيانلويجي بوفون</label>
+<label><input type="radio" name="q10" value="b"> ليف ياشين</label>
+<label><input type="radio" name="q10" value="c"> إيكر كاسياس</label>
+<label><input type="radio" name="q10" value="d"> مانويل نوير</label>
+    </div>
 
-	<button type="submit" id="submit-button">ارسل اجابتك واكتشف مستواك  🏁</button>
+    <button type="submit" id="submit-button">ارسل اجابتك واكتشف مستواك  🏁</button>
 </form>
 
 <div id="result"></div>
@@ -236,88 +236,88 @@
 </div>
 
 <script>
-	const correctAnswers = {
-		q1: "b", q2: "b", q3: "d", q4: "b", q5: "c",
-		q6: "c", q7: "c", q8: "c", q9: "c", q10: "c"
-	};
+    const correctAnswers = {
+        q1: "c", q2: "b", q3: "d", q4: "b", q5: "b",
+        q6: "c", q7: "c", q8: "c", q9: "a", q10: "b"
+    };
 
-	const correctText = {
-		q1: "الأسطورة بيليه هو الوحيد الذي سجل في نهائيات 1958، 1962 (رغم إصابته شارك في الأدوار الأولى) و1970.",
-		q2: "نادي فياريال الإسباني يشتهر بلقب 'الغواصات الصفراء' بسبب لون قميصه وشعار النادي.",
-		q3: "المغرب هو أول منتخب أفريقي وعربي يصل لنصف النهائي في مونديال قطر 2022.",
-		q4: "ألمانيا فازت بـ 4 ألقاب (1954، 1974، 1990، 2014).",
-		q5: "كارلو أنشيلوتي هو المدرب الأكثر تتويجاً بـ 5 ألقاب (2 مع ميلان و3 مع ريال مدريد).",
-		q6: "كريستيانو رونالدو هو الهداف التاريخي للبطولة برصيد يتجاوز 140 هدفاً.",
-		q7: "ملعب السان سيرو يقع في مدينة ميلانو الإيطالية ويسمى أيضاً 'جوزيبي مياتزا'.",
-		q8: "آرسنال حقق الدوري بلا هزيمة في موسم 2003-2004 مع المدرب آرسين فينجر.",
-		q9: "الأوروغواي فازت بالنسخة الأولى على أرضها بعد هزيمة الأرجنتين في النهائي.",
-		q10: "ميسي يتربع على العرش برصيد 8 كرات ذهبية، آخرها كان في عام 2023."
-	};
+    const correctText = {
+        q1: "نادي الهلال هو الأكثر تتويجاً بكأس الملك برصيد 11 لقباً (حتى عام 2024).",
+        q2: "كريستيانو رونالدو حقق الرقم القياسي التاريخي بـ 35 هدفاً في موسم 2023-2024 مع النصر.",
+        q3: "المنتخب البرازيلي (السيليساو) هو الوحيد الذي لم يغب عن أي نسخة من كأس العالم.",
+        q4: "العين الإماراتي هو أول من حقق اللقب بنظامه الجديد بعد فوزه على تيرو ساسانا التايلاندي.",
+        q5: "كلارنس سيدورف هو الوحيد الذي حقق اللقب مع 3 أندية مختلفة (أياكس 1995، ريال مدريد 1998، ميلان 2003 و2007).",
+        q6: "حمد الدوسري سجل أسرع هدف في تاريخ بطولات فيفا للشباب ضد كندا عام 1989 بعد 11 ثانية.",
+        q7: "بيب جوارديولا حققها مع برشلونة (2009) ومع مانشستر سيتي (2023).",
+        q8: "إيرلينج هالاند يمثل منتخب النرويج رغم ولادته في إنجلترا.",
+        q9: "حقق 'الأخضر' السعودي أول ألقابه القارية عام 1984 في سنغافورة بعد فوزه على الصين في النهائي.",
+        q10: "الحارس السوفيتي ليف ياشين (العنكبوت الأسود) هو الحارس الوحيد الذي نال الجائزة عام 1963."
+    };
 
-	const form = document.getElementById('quiz-form');
-	const res = document.getElementById('result');
-	const confetti = document.querySelector('.confetti');
-	const reward = document.getElementById('reward');
+    const form = document.getElementById('quiz-form');
+    const res = document.getElementById('result');
+    const confetti = document.querySelector('.confetti');
+    const reward = document.getElementById('reward');
     const colors = ['#f39c12','#e74c3c','#2ecc71','#3498db','#9b59b6'];
 
-	form.addEventListener('submit', function(e){
-		e.preventDefault();
-		let score = 0;
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        let score = 0;
         const totalQuestions = 10;
         res.innerHTML = '';
         reward.style.display = 'none';
         
-		for(let i=1; i<=totalQuestions; i++){
-			const q = document.getElementById('q'+i);
-			q.classList.remove('wrong','correct');
-			const old = q.querySelector('.correct-answer');
-			if(old) old.remove();
-			const selected = new FormData(form).get('q'+i);
-			if(selected === correctAnswers['q'+i]){
-				score++;
-				q.classList.add('correct');
-			} else {
-				q.classList.add('wrong');
-				const div = document.createElement('div');
-				div.classList.add('correct-answer');
-				div.textContent = '💡 ' + correctText['q'+i];
-				q.appendChild(div);
-			}
-		}
+        for(let i=1; i<=totalQuestions; i++){
+            const q = document.getElementById('q'+i);
+            q.classList.remove('wrong','correct');
+            const old = q.querySelector('.correct-answer');
+            if(old) old.remove();
+            const selected = new FormData(form).get('q'+i);
+            if(selected === correctAnswers['q'+i]){
+                score++;
+                q.classList.add('correct');
+            } else {
+                q.classList.add('wrong');
+                const div = document.createElement('div');
+                div.classList.add('correct-answer');
+                div.textContent = '💡 ' + correctText['q'+i];
+                q.appendChild(div);
+            }
+        }
 
-		if(score === 10){
-			res.textContent = `🎊 العلامة الكاملة ${score}/10 — أنت أسطورة حقيقية!`;
-			res.style.color = '#10b981';
-			reward.style.display = 'block';
-			launchConfetti();
-		} else if(score >= 7) {
-			res.textContent = `🎯 نتيجتك: ${score}/10 — مستوى احترافي ممتاز!`;
-			res.style.color = '#3b82f6';
-		} else {
-			res.textContent = `⚠️ نتيجتك: ${score}/10 — تحتاج لمراجعة معلوماتك التاريخية!`;
-			res.style.color = '#ef4444';
-			confetti.innerHTML = '';
-		}
+        if(score === 10){
+            res.textContent = `🎊 العلامة الكاملة ${score}/10 — أنت أسطورة حقيقية!`;
+            res.style.color = '#10b981';
+            reward.style.display = 'block';
+            launchConfetti();
+        } else if(score >= 7) {
+            res.textContent = `🎯 نتيجتك: ${score}/10 — مستوى احترافي ممتاز!`;
+            res.style.color = '#3b82f6';
+        } else {
+            res.textContent = `⚠️ نتيجتك: ${score}/10 — تحتاج لمراجعة معلوماتك التاريخية!`;
+            res.style.color = '#ef4444';
+            confetti.innerHTML = '';
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
-	});
+    });
 
-	function createPiece(){
-		const el = document.createElement('div');
-		el.classList.add('confetti-piece');
-		el.style.left = Math.random()*100+'%';
-		el.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
-		el.style.animationDuration = (3 + Math.random()*2) + 's';
-		return el;
-	}
+    function createPiece(){
+        const el = document.createElement('div');
+        el.classList.add('confetti-piece');
+        el.style.left = Math.random()*100+'%';
+        el.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+        el.style.animationDuration = (3 + Math.random()*2) + 's';
+        return el;
+    }
 
-	function launchConfetti(){
-		confetti.innerHTML = '';
-		for(let i=0;i<80;i++){
-			let p = createPiece();
-			confetti.appendChild(p);
-			setTimeout(()=>p.remove(),5000);
-		}
-	}
+    function launchConfetti(){
+        confetti.innerHTML = '';
+        for(let i=0;i<80;i++){
+            let p = createPiece();
+            confetti.appendChild(p);
+            setTimeout(()=>p.remove(),5000);
+        }
+    }
 </script>
 
 </body>
