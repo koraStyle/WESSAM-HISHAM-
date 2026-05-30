@@ -1,304 +1,320 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>نجوم المساهمات التهديفية 2025</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      /* الألوان المعتمدة للتناسق مع الموقع */
-      --primary-color: #004d99; /* الأزرق الاحترافي */
-      --secondary-color: #e67e22; /* البرتقالي المميز */
-      --bg-page: #f0f3f7;
-      --bg-card: #ffffff;
-      --text-dark: #343a40;
-      --highlight-bg: #eaf4fb;
-    }
+<meta charset="UTF-8">
+<title>نجوم المساهمات التهديفية 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    body {
-      background: var(--bg-page);
-      font-family: 'Cairo', sans-serif;
-      color: var(--text-dark);
-      padding: 20px 10px;
-      direction: rtl;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-    .cont-box {
-      max-width: 1050px;
-      margin: 20px auto;
-      background: var(--bg-card);
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(0, 77, 153, 0.15);
-      padding: 40px 30px;
-    }
+<style>
+:root{
+--primary-color:#004d99;
+--secondary-color:#e67e22;
+--bg-page:#f0f3f7;
+--bg-card:#ffffff;
+--text-dark:#343a40;
+--highlight-bg:#eaf4fb;
+}
 
-    .cont-title {
-      color: var(--primary-color);
-      font-size: 2.2em;
-      font-weight: 800;
-      margin-bottom: 30px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-    
-    .subtitle {
-        text-align: center;
-        color: #777;
-        font-size: 1.1em;
-        margin-top: -15px;
-        margin-bottom: 30px;
-    }
+body{
+background:var(--bg-page);
+font-family:'Cairo',sans-serif;
+color:var(--text-dark);
+padding:20px 10px;
+direction:rtl;
+}
 
-    /* تصميم الجدول الجديد */
-    .cont-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin-top: 20px;
-      border-radius: 15px;
-      overflow: hidden;
-    }
+.cont-box{
+max-width:1050px;
+margin:20px auto;
+background:var(--bg-card);
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,77,153,.15);
+padding:40px 30px;
+}
 
-    .cont-table th,
-    .cont-table td {
-      padding: 15px 8px;
-      text-align: center;
-      border-bottom: 1px solid #e9ecef;
-    }
-    
-    /* رأس الجدول المميز */
-    .cont-table thead th {
-      background: var(--primary-color);
-      color: #fff;
-      font-size: 1.05em;
-      font-weight: 700;
-      border-bottom: 3px solid var(--secondary-color);
-    }
-    
-    .cont-table tbody tr:nth-child(odd) {
-      background: #fcfcfc;
-    }
-    
-    .cont-table tbody tr:hover {
-        background: var(--highlight-bg);
-        transition: background 0.2s;
-    }
-    
-    /* تنسيق الصفوف الأولى (Top 3) */
-    .cont-table tbody tr:nth-child(-n + 3) {
-        background: #fff8e1; /* خلفية ذهبية فاتحة */
-        font-weight: 600;
-    }
-    .cont-table tbody tr:nth-child(-n + 3):hover {
-        background: #fff3c8;
-    }
+.cont-title{
+color:var(--primary-color);
+font-size:2.2em;
+font-weight:800;
+margin-bottom:30px;
+text-align:center;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+}
 
-    .rank-cell {
-        font-weight: 900;
-        color: var(--secondary-color);
-        font-size: 1.2em;
-    }
-    
-    .player-name {
-        font-weight: 700;
-        color: var(--primary-color);
-    }
-    
-    .club-name {
-        font-size: 0.95em;
-        color: #6c757d;
-    }
-    
-    /* تلوين الإحصائيات (الأهداف والأسيست) */
-    .stats-value {
-        font-weight: 800;
-        color: var(--secondary-color);
-        font-size: 1.1em;
-    }
+.subtitle{
+text-align:center;
+color:#777;
+font-size:1.1em;
+margin-top:-15px;
+margin-bottom:30px;
+}
 
-    /* تصميم بطاقة المساهمات الإجمالية (الشيء المختلف والجذاب) */
-    .total-contributions-cell {
-        padding: 8px 0;
-    }
-    
-    .total-contributions-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        background: var(--primary-color);
-        color: white;
-        border-radius: 50%;
-        font-weight: 900;
-        font-size: 1.2em;
-        box-shadow: 0 2px 8px rgba(0, 77, 153, 0.4);
-        border: 2px solid var(--secondary-color);
-    }
+.cont-table{
+width:100%;
+border-collapse:separate;
+border-spacing:0;
+margin-top:20px;
+border-radius:15px;
+overflow:hidden;
+}
 
-    .footer-note {
-      color: #888; 
-      font-size: 0.95em; 
-      margin-top: 25px; 
-      text-align: center;
-      padding: 10px;
-      background: #f7fafd;
-      border-radius: 10px;
-    }
+.cont-table th,
+.cont-table td{
+padding:15px 8px;
+text-align:center;
+border-bottom:1px solid #e9ecef;
+}
 
-    /* التجاوبية */
-    @media (max-width: 768px) {
-        .cont-box { padding: 20px 15px; }
-        .cont-title { font-size: 1.8em; }
-        /* جعل الجدول قابلاً للتمرير أفقياً */
-        .cont-box { overflow-x: auto; }
-        .cont-table { min-width: 600px; }
-        .cont-table th, .cont-table td { padding: 10px 5px; font-size: 0.9em; }
-        .total-contributions-badge { width: 35px; height: 35px; font-size: 1.1em; }
-    }
-    
-  </style>
+.cont-table thead th{
+background:var(--primary-color);
+color:#fff;
+font-size:1.05em;
+font-weight:700;
+border-bottom:3px solid var(--secondary-color);
+}
+
+.cont-table tbody tr:nth-child(odd){
+background:#fcfcfc;
+}
+
+.cont-table tbody tr:hover{
+background:var(--highlight-bg);
+transition:.2s;
+}
+
+.cont-table tbody tr:nth-child(-n+3){
+background:#fff8e1;
+font-weight:600;
+}
+
+.cont-table tbody tr:nth-child(-n+3):hover{
+background:#fff3c8;
+}
+
+.rank-cell{
+font-weight:900;
+color:var(--secondary-color);
+font-size:1.2em;
+}
+
+.player-name{
+font-weight:700;
+color:var(--primary-color);
+}
+
+.club-name{
+font-size:.95em;
+color:#6c757d;
+}
+
+.stats-value{
+font-weight:800;
+color:var(--secondary-color);
+font-size:1.1em;
+}
+
+.total-contributions-cell{
+padding:8px 0;
+}
+
+.total-contributions-badge{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:45px;
+height:45px;
+background:var(--primary-color);
+color:#fff;
+border-radius:50%;
+font-weight:900;
+font-size:1.2em;
+box-shadow:0 2px 8px rgba(0,77,153,.4);
+border:2px solid var(--secondary-color);
+}
+
+.footer-note{
+color:#888;
+font-size:.95em;
+margin-top:25px;
+text-align:center;
+padding:10px;
+background:#f7fafd;
+border-radius:10px;
+}
+
+@media(max-width:768px){
+
+.cont-box{
+padding:20px 15px;
+overflow-x:auto;
+}
+
+.cont-title{
+font-size:1.8em;
+}
+
+.cont-table{
+min-width:650px;
+}
+
+.cont-table th,
+.cont-table td{
+padding:10px 5px;
+font-size:.9em;
+}
+
+.total-contributions-badge{
+width:35px;
+height:35px;
+font-size:1.05em;
+}
+}
+</style>
 </head>
-<body>
-  <div class="cont-box">
-    <div class="cont-title">
-      <span>⚽️🔥</span>
-      <span>نجوم المساهمات التهديفية</span>
-    </div>
-    <div class="subtitle">تصنيف اللاعبين الأعلى مساهمة في الأهداف والأسيست موسم 2025</div>
-    
-    <table class="cont-table">
-      <thead>
-        <tr>
-          <th>الترتيب</th>
-          <th>اللاعب</th>
-          <th>النادي</th>
-          <th>الجنسية</th>
-          <th>الأهداف</th>
-          <th>الأسيست</th>
-          <th>إجمالي المساهمات</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="rank-cell">1</td>
-          <td class="player-name">رافينيا</td>
-          <td class="club-name">برشلونة</td>
-          <td>البرازيل</td>
-          <td class="stats-value">34</td>
-          <td class="stats-value">25</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">59</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">2</td>
-          <td class="player-name">محمد صلاح</td>
-          <td class="club-name">ليفربول</td>
-          <td>مصر</td>
-          <td class="stats-value">33</td>
-          <td class="stats-value">23</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">56</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">3</td>
-          <td class="player-name">هاري كين</td>
-          <td class="club-name">بايرن ميونخ</td>
-          <td>إنجلترا</td>
-          <td class="stats-value">38</td>
-          <td class="stats-value">13</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">51</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">4</td>
-          <td class="player-name">كيليان مبابي</td>
-          <td class="club-name">ريال مدريد</td>
-          <td>فرنسا</td>
-          <td class="stats-value">42</td>
-          <td class="stats-value">4</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">46</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">5</td>
-          <td class="player-name">عثمان ديمبيلي</td>
-          <td class="club-name">باريس سان جيرمان</td>
-          <td>فرنسا</td>
-          <td class="stats-value">33</td>
-          <td class="stats-value">13</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">46</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">6</td>
-          <td class="player-name">عمر مرموش</td>
-          <td class="club-name">فرانكفورت/مانشستر سيتي</td>
-          <td>مصر</td>
-          <td class="stats-value">28</td>
-          <td class="stats-value">17</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">45</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">7</td>
-          <td class="player-name">روبرت ليفاندوفسكي</td>
-          <td class="club-name">برشلونة</td>
-          <td>بولندا</td>
-          <td class="stats-value">40</td>
-          <td class="stats-value">3</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">43</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">8</td>
-          <td class="player-name">جوناثان ديفيد</td>
-          <td class="club-name">ليل</td>
-          <td>كندا</td>
-          <td class="stats-value">25</td>
-          <td class="stats-value">12</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">37</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">9</td>
-          <td class="player-name">إرلينج هالاند</td>
-          <td class="club-name">مانشستر سيتي</td>
-          <td>النرويج</td>
-          <td class="stats-value">30</td>
-          <td class="stats-value">4</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">34</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">10</td>
-          <td class="player-name">ماتيو ريتيجي</td>
-          <td class="club-name">أتالانتا</td>
-          <td>إيطاليا</td>
-          <td class="stats-value">27</td>
-          <td class="stats-value">6</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">33</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">11</td>
-          <td class="player-name">فينيسوس جونيور</td>
-          <td class="club-name">ريال مدريد</td>
-          <td>البرازيل</td>
-          <td class="stats-value">19</td>
-          <td class="stats-value">13</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">32</div></td>
-        </tr>
-        <tr>
-          <td class="rank-cell">12</td>
-          <td class="player-name">جوليان ألفاريز</td>
-          <td class="club-name">أتلتيكو مدريد</td>
-          <td>الأرجنتين</td>
-          <td class="stats-value">26</td>
-          <td class="stats-value">5</td>
-          <td class="total-contributions-cell"><div class="total-contributions-badge">31</div></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <div class="footer-note">
-      المصدر: مواقع الأندية الرسمية، WhoScored، SofaScore – إحصائيات موسم 2025 (يرجى التأكد من دقة البيانات)
-    </div>
 
-  </div>
+<body>
+
+<div class="cont-box">
+
+<div class="cont-title">
+<span>⚽🔥</span>
+<span>نجوم المساهمات التهديفية</span>
+</div>
+
+<div class="subtitle">
+أكثر اللاعبين مساهمة بالأهداف والأسيست في الدوريات الأوروبية الخمس الكبرى موسم 2025-2026
+</div>
+
+<table class="cont-table">
+
+<thead>
+<tr>
+<th>الترتيب</th>
+<th>اللاعب</th>
+<th>النادي</th>
+<th>الجنسية</th>
+<th>الأهداف</th>
+<th>الأسيست</th>
+<th>إجمالي المساهمات</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="rank-cell">1</td>
+<td class="player-name">هاري كين</td>
+<td class="club-name">بايرن ميونخ</td>
+<td>إنجلترا</td>
+<td class="stats-value">36</td>
+<td class="stats-value">5</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">41</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">2</td>
+<td class="player-name">إرلينج هالاند</td>
+<td class="club-name">مانشستر سيتي</td>
+<td>النرويج</td>
+<td class="stats-value">27</td>
+<td class="stats-value">8</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">35</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">3</td>
+<td class="player-name">مايكل أوليسي</td>
+<td class="club-name">بايرن ميونخ</td>
+<td>فرنسا</td>
+<td class="stats-value">15</td>
+<td class="stats-value">19</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">34</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">4</td>
+<td class="player-name">لويس دياز</td>
+<td class="club-name">بايرن ميونخ</td>
+<td>كولومبيا</td>
+<td class="stats-value">15</td>
+<td class="stats-value">14</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">29</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">5</td>
+<td class="player-name">برونو فيرنانديز</td>
+<td class="club-name">مانشستر يونايتد</td>
+<td>البرتغال</td>
+<td class="stats-value">9</td>
+<td class="stats-value">21</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">30</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">6</td>
+<td class="player-name">كيليان مبابي</td>
+<td class="club-name">ريال مدريد</td>
+<td>فرنسا</td>
+<td class="stats-value">24</td>
+<td class="stats-value">4</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">28</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">7</td>
+<td class="player-name">لامين يامال</td>
+<td class="club-name">برشلونة</td>
+<td>إسبانيا</td>
+<td class="stats-value">16</td>
+<td class="stats-value">11</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">27</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">8</td>
+<td class="player-name">ماسون جرينوود</td>
+<td class="club-name">مارسيليا</td>
+<td>إنجلترا</td>
+<td class="stats-value">21</td>
+<td class="stats-value">6</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">27</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">9</td>
+<td class="player-name">دينيز أونداف</td>
+<td class="club-name">شتوتجارت</td>
+<td>ألمانيا</td>
+<td class="stats-value">18</td>
+<td class="stats-value">8</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">26</div></td>
+</tr>
+
+<tr>
+<td class="rank-cell">10</td>
+<td class="player-name">نيكو باز</td>
+<td class="club-name">كومو</td>
+<td>الأرجنتين</td>
+<td class="stats-value">13</td>
+<td class="stats-value">8</td>
+<td class="total-contributions-cell"><div class="total-contributions-badge">21</div></td>
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="footer-note">
+إحصائيات الدوريات الأوروبية الخمس الكبرى موسم 2025-2026 (الأهداف + الأسيست) — تم الاعتماد على قواعد بيانات StatMuse وSofaScore وإحصائيات الدوريات الأوروبية الرسمية.
+</div>
+
+</div>
+
 </body>
 </html>
