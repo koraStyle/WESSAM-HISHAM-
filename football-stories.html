@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <title>قصص وأسرار كرة القدم - تحليل تكتيكي ومعلومات مفيدة</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- تحميل Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- تخصيص Tailwind (لتضمين خطوط عربية حديثة والتصميم الأفضل) -->
     <script>
         tailwind.config = {
             theme: {
@@ -60,7 +58,6 @@
 </head>
 <body class="bg-bg-light text-gray-800">
 
-    <!-- بداية الهيدر (شريط التنقل) -->
     <header class="bg-primary-blue shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white flex items-center justify-center">
@@ -69,11 +66,7 @@
             </h1>
         </div>
     </header>
-    <!-- نهاية الهيدر -->
-
-    <!-- القسم الرئيسي -->
     <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-        <!-- قسم المقدمة الاحترافي (Hero Section) -->
         <section class="bg-white p-6 sm:p-10 rounded-2xl shadow-xl mb-12 border-b-4 border-primary-blue/50">
             <p class="text-xl sm:text-2xl font-semibold text-primary-blue mb-4 text-center">
                 مساحة لتعميق فهمك لأعظم لعبة في العالم، من التحليل التكتيكي إلى ثورة البيانات.
@@ -83,10 +76,8 @@
             </p>
         </section>
 
-        <!-- شبكة عرض المقالات/البطاقات -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- بطاقة 1: التحليل التكتيكي -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accent-gold hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">🧠</span> التحليل التكتيكي لطرق لعب المدربين الكبار
@@ -99,7 +90,6 @@
                 </p>
             </div>
 
-            <!-- بطاقة 2: قصص ملهمة -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-primary-blue hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">🏆</span> قصص ملهمة لمدربين غيّروا مجرى اللعبة
@@ -112,7 +102,6 @@
                 </p>
             </div>
 
-            <!-- بطاقة 3: علاقة مورينيو باللاعبين -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accent-gold hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">🤝</span> علاقة جوزيه مورينيو باللاعبين وقصص لا تُنسى
@@ -125,7 +114,6 @@
                 </p>
             </div>
 
-            <!-- بطاقة 4: أسرار علاقة المدرب باللاعب -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-primary-blue hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">🧩</span> أسرار علاقة المدرب باللاعب وتأثيرها على الأداء
@@ -138,7 +126,6 @@
                 </p>
             </div>
 
-            <!-- بطاقة 5: تطور التكتيكات وأثر التكنولوجيا -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accent-gold hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">📡</span> تطور التكتيكات وأثر التكنولوجيا ودور غوارديولا
@@ -151,7 +138,6 @@
                 </p>
             </div>
 
-            <!-- بطاقة 6: طرق اللعب الشائعة -->
             <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-primary-blue hover:shadow-2xl transition duration-300">
                 <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
                     <span class="text-3xl ml-2">⚔️</span> طرق اللعب الشائعة وأمثلة تطبيقية
@@ -164,15 +150,49 @@
                 </p>
             </div>
 
+            <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accent-gold hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
+                    <span class="text-3xl ml-2">🦊</span> معجزة ليستر سيتي وكيف تُصنع الإرادة تكتيكاً؟
+                </h2>
+                <p class="text-gray-700">
+                    في عام 2016، حقق ليستر سيتي المستحيل بالتتويج بالبريميرليج بنسبة توقعات بلغت 1 إلى 5000 قبل بداية الموسم. المدرب المخضرم كلاوديو رانييري لم يعتمد على الابتكارات المعقدة، بل طبق خطة كلاسيكية صارمة (4-4-2) مع تضييق المساحات، والاعتماد بالكامل على التحولات الهجومية الخاطفة مستغلاً سرعة جيمي فاردي وعبقرية رياض محرز، ليثبت أن الالتزام والروح يبطلان قوة المال.
+                </p>
+                <p class="text-sm text-gray-500 mt-4">
+                    درس تاريخي يؤكد أن توظيف إمكانيات المجموعات الصغيرة بذكاء يصنع المعجزات.
+                </p>
+            </div>
+
+            <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-primary-blue hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
+                    <span class="text-3xl ml-2">🪄</span> ذكاء العباقرة: خدعة يوهان كرويف مع المشاغب روماريو
+                </h2>
+                <p class="text-gray-700">
+                    طلب المهاجم البرازيلي روماريو من مدربه يوهان كرويف في برشلونة إجازة للسفر وحضور كنفال ريو دي جانيرو، فرفض كرويف في البداية، ثم تحداه قائلاً: "إذا سجلت غداً هدفين في أول 20 دقيقة سأمنحك يومين إضافيين". في المباراة سجل روماريو هدفين في أول 20 دقيقة، وركض فوراً نحو دكة البدلاء لكرويف قائلاً: "أيها المدرب، طائرتي تقلع بعد أقل من ساعة من الآن!" وخرج فوراً.
+                </p>
+                <p class="text-sm text-gray-500 mt-4">
+                    القيادة الحقيقية تكمن في فهم مفاتيح تحفيز النجوم بطرق غير تقليدية داخل وخارج الملعب.
+                </p>
+            </div>
+
+            <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accent-gold hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-primary-blue mb-3 flex items-center">
+                    <span class="text-3xl ml-2">📻</span> بارق العبقرية: قصة التعليق التاريخي على "هدف القرن"
+                </h2>
+                <p class="text-gray-700">
+                    عندما انطلق مارادونا في مونديال 1986 لتجاوز نصف منتخب إنجلترا مخلداً واحداً من أعظم الأهداف، لم يكن العالم يشاهد فقط، بل كان يستمع لـ "فيكتور هوغو موراليس". المعلق الذي فقد صوابه وهو يصرخ بصوت باكي: "عبقري! عبقري! تاتاتاتاتا.. هدف!" ثم اعتذر للجمهور عن دموعه وصراخه قائلاً إنه بكى من شدة جمال اللقطة. موراليس أثبت أن الكلمة تمنح اللحظة عمراً أطول.
+                </p>
+                <p class="text-sm text-gray-500 mt-4">
+                    تثبت هذه القصة أن كرة القدم ليست مجرد ركل للكرة، بل هي "دراما" إنسانية تُروى وتُخلد عبر الأجيال.
+                </p>
+            </div>
+
         </div>
 
-        <!-- قسم التكنولوجيا والدور الرقمي (قسم بتصميم مختلف وأكثر تفصيلاً) -->
         <section class="mt-16 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border-t-8 border-double border-accent-gold/70">
             <h2 class="text-3xl font-extrabold text-primary-blue mb-6 border-b pb-3 flex items-center">
                 <span class="text-4xl ml-2 text-red-500">🚀</span> دور التكنولوجيا في كرة القدم: ثورة رقمية في الملعب
             </h2>
             <ul class="styled-list space-y-6">
-                <!-- بند 1 -->
                 <li>
                     <strong class="text-xl text-primary-blue block mb-2">التحليل الدقيق للأداء:</strong>
                     <div class="text-gray-700 space-y-3 mr-4">
@@ -180,7 +200,6 @@
                         <p>الذكاء الاصطناعي: يستخدم لتحليل كميات هائلة من البيانات، وتحديد الأنماط السلوكية، والتنبؤ بنتائج المباريات.</p>
                     </div>
                 </li>
-                <!-- بند 2 -->
                 <li>
                     <strong class="text-xl text-primary-blue block mb-2">اتخاذ القرارات في الملعب:</strong>
                     <div class="text-gray-700 space-y-3 mr-4">
@@ -188,7 +207,6 @@
                         <p>أجهزة الاستشعار: تساعد في تحديد موقع الكرة بدقة، وتحديد ما إذا كانت قد تجاوزت خط المرمى أم لا.</p>
                     </div>
                 </li>
-                <!-- بند 3 -->
                 <li>
                     <strong class="text-xl text-primary-blue block mb-2">التحديات والمخاطر:</strong>
                     <p class="text-gray-700 mr-4">
@@ -198,7 +216,6 @@
             </ul>
         </section>
 
-        <!-- قسم تحليل البيانات في التعاقدات -->
         <section class="mt-16 bg-white p-6 sm:p-10 rounded-2xl shadow-xl">
             <h2 class="text-3xl font-extrabold text-primary-blue mb-6 border-b pb-3 flex items-center">
                 <span class="text-4xl ml-2 text-primary-blue">📊</span> التكنولوجيا تغزو كرة القدم: تحليل البيانات للتعاقدات
@@ -223,7 +240,7 @@
                     <span class="text-2xl ml-2 text-green-500">🏆</span> نموذج ليفربول في تحليل البيانات (صلاح وكيتا)
                 </h3>
                 <p>
-                    يعتبر ليفربول من أبرز الأندية التي سخرت تحليل البيانات في إدارة التعاقدات بذكاء، إذ استقطب محمد صلاح وفيرجيل فان دايك وأليسون بيكر. يعود الفضل في ذلك إلى إيان جراهام، مدير قسم الأبحاث في النادي، حيث طور مقياسًا يسمى "احتمالية الهدف المضافة"، يعتمد على تحليل كل تصرف يقوم به اللاعب داخل المباراة لحساب مدى تأثيرها على فرصة الفريق في التسجيل.
+                    يعتبر ليفربول من أبرز الأندية التي سخرت تحليل البيانات في إدارة التعاقدات بذكاء, إذ استقطب محمد صلاح وفيرجيل فان دايك وأليسون بيكر. يعود الفضل في ذلك إلى إيان جراهام، مدير قسم الأبحاث في النادي، حيث طور مقياسًا يسمى "احتمالية الهدف المضافة"، يعتمد على تحليل كل تصرف يقوم به اللاعب داخل المباراة لحساب مدى تأثيرها على فرصة الفريق في التسجيل.
                 </p>
                 <p class="text-sm italic text-gray-500">
                     تم التوصية بالتوقيع مع محمد صلاح رغم فترته الباهتة مع تشيلسي، حيث أظهرت البيانات أن إنتاجيته الإجمالية في مسيرته تفوق ما أظهرته الإحصائيات السطحية أثناء تواجده في إنجلترا.
@@ -244,7 +261,6 @@
         </section>
 
 
-        <!-- زر العودة -->
         <div class="mt-12 text-center">
             <a class="back-link inline-block bg-primary-blue text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-800 transform hover:scale-105" href="index.html#football-stories">
                 🔙 العودة إلى قصص وأسرار كرة القدم
