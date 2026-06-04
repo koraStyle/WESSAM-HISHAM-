@@ -2,6 +2,946 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8" />
+<title>ويسلي يقترب من بنفيكا</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🦅 خطوة أخرى تقرب ويسلي جناح النصر من الانتقال لبنفيكا</div>
+    <div class="article-subtitle">المفاوضات تدخل مرحلة الحسم بين الرياض ولشبونة</div>
+    <div class="article-content">
+يواصل نادي بنفيكا البرتغالي تحركاته الجادة في سوق الانتقالات الشتوية، عبر مفاوضات مستمرة مع إدارة النصر السعودي من أجل التعاقد مع الجناح البرازيلي الشاب ويسلي تيكسيرا.
+
+وكشفت تقارير صحفية برتغالية وعالمية عن دخول المفاوضات مرحلة متقدمة، ضمن مساعي بنفيكا لتعزيز صفوفه قبل انطلاق النصف الثاني من الموسم الحالي.
+
+وأكدت صحيفة «أبولا» البرتغالية أن بنفيكا فتح باب التفاوض الرسمي مع النصر، لمناقشة تفاصيل ضم ويسلي خلال ميركاتو يناير 2026.
+
+ويبلغ ويسلي تيكسيرا من العمر 20 عامًا، ويشغل مركز الجناح الأيسر، حيث لفت الأنظار بقدراته الفنية العالية وأدائه الواعد مع فريقه.
+
+ومن جانب النصر، لا يمانع النادي رحيل اللاعب، بعدما منح المدرب البرتغالي جورجي جيسوس الموافقة على انتقاله لإتاحة فرصة ضم محترف أجنبي جديد.
+
+وتبقى الجوانب المالية هي العقبة الأبرز في الصفقة، إذ ينتظر بنفيكا حسم المقابل المالي المطلوب من النصر لإغلاق المفاوضات رسميًا.
+
+وتشير المعطيات إلى أن الأيام المقبلة قد تشهد تطورًا حاسمًا، في ظل رغبة مشتركة من الطرفين لإتمام الصفقة خلال الفترة الشتوية.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>جيسوس يوضح تصريحاته</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #1766a0;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔵 جيسوس يوضح تصريحاته ضد الهلال</div>
+    <div class="article-subtitle">مدرب النصر يضع النقاط على الحروف بعد الجدل الواسع</div>
+    <div class="article-content">
+أكد البرتغالي جورجي جيسوس، مدرب النصر، أن الفوز على الشباب كان ضروريًا بعد سلسلة نتائج غير مرضية، مشددًا على أن مباريات الديربي دائمًا ما تحمل طابعًا خاصًا وصعوبة مضاعفة.
+وأوضح جيسوس في المؤتمر الصحفي أن ترتيب الشباب لا يعكس قيمته الحقيقية، ولا جودة العناصر التي يمتلكها، مشيرًا إلى أن الدعم الجماهيري ساعد فريقه على تسجيل هدفين مبكرين وصناعة أفضلية نفسية.
+وتطرق مدرب النصر إلى تصريحه السابق حول امتلاك الهلال “قوى سياسية”، مؤكدًا أن المسؤولية كبيرة على عاتقه كمدرب للنصر، وأن حديثه لم يكن تقليلًا من قيمة ناديه السابق.
+وأضاف جيسوس أنه يعتز بالفترة التي قضاها مع الهلال على مدار ثلاث سنوات، مشددًا على أن الكرة السعودية شهدت تطورًا كبيرًا، ولا يرغب في تحريف أو تأويل تصريحاته خارج سياقها.
+وطالب المدرب البرتغالي بااحترام مسيرته وعدم نسب أقوال لم تصدر عنه، مؤكدًا أنه حقق إنجازات عديدة داخل السعودية، ويتطلع للحفاظ على الاحترام المتبادل مع جميع الأطراف.
+وفيما يخص سوق الانتقالات الشتوية، أوضح جيسوس أن النصر لا يمتلك شواغر للاعبين الأجانب حاليًا، كما أن الوضع المالي لا يسمح بتحركات كبيرة.
+واختتم تصريحاته بالتأكيد على رغبته في دعم الفريق بلاعبين أو ثلاثة إذا توفرت الظروف المناسبة، مشددًا على أن النصر لن يستسلم وسيواصل القتال في جميع المنافسات.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>مانشستر يونايتد يضغط لضم نيفيز</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #1766a0;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🏴󠁧󠁢󠁥󠁮󠁧󠁿 مانشستر يونايتد يضغط بقوة لضم نيفيز</div>
+    <div class="article-subtitle">الشياطين الحمر يستهدفون "مايسترو" الهلال في صفقة شتوية مدوية</div>
+    <div class="article-content">
+كشف تقارير إعلامية بريطانية عن تحرك جديد من مانشستر يونايتد، يهدف إلى إبرام صفقة من العيار الثقيل خلال فترة الانتقالات الشتوية الحالية لتعزيز صفوف الفريق.
+
+وأكد موقع Football Insider عبر منصة «إكس» أن النادي الإنجليزي وضع البرتغالي روبن نيفيز، لاعب وسط الهلال السعودي، ضمن أبرز أهدافه لدعم خط الوسط.
+
+ويأتي اهتمام مانشستر يونايتد بنيفيز في إطار خطة فنية تسعى لتعزيز الفريق بعناصر تجمع بين الجودة والخبرة، خاصة مع حاجة الوسط للاستقرار في النصف الثاني من الموسم.
+
+وأشار التقرير إلى أن إدارة الهلال لا تبدو متحمسة لفكرة التفريط في نيفيز، حيث تقدر قيمة انتقاله بنحو 20 مليون جنيه إسترليني رغم اقتراب نهاية عقده.
+
+وينتهي عقد روبن نيفيز مع الهلال في يونيو المقبل، ما يمنحه أحقية التوقيع لأي نادٍ مجانًا، حال عدم التوصل إلى اتفاق بشأن التجديد.
+
+ويضع هذا الوضع مانشستر يونايتد أمام خيارين حاسمين، إما التحرك سريعًا وحسم الصفقة شتاءً مقابل مبلغ مالي، أو الانتظار حتى نهاية الموسم.
+
+ويُصنف نيفيز كأحد أبرز لاعبي خط الوسط، بفضل خبرته الطويلة في الدوري الإنجليزي الممتاز، ما يجعله خيارًا مثاليًا ليونايتد الباحث عن استعادة التوازن الفني.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>العقيدي يلجأ للقانون</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #27ae60;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">⚖️ العقيدي يلجأ للقانون لوقف حملات الإساءة</div>
+    <div class="article-subtitle">حارس النصر يتحرك رسمياً لحماية نفسه من التجاوزات الإعلامية</div>
+    <div class="article-content">
+اتخذ نواف العقيدي، حارس مرمى نادي النصر، خطوة رسمية بالتحرك قانونيًا ضد التجاوزات التي طالته عقب ديربي الرياض أمام الهلال في دوري روشن السعودي.
+
+وجاء قرار العقيدي بعد موجة انتقادات إعلامية وجماهيرية واسعة، أعقبت طرده خلال مواجهة الهلال التي خسرها النصر بنتيجة 3-1 ضمن منافسات الجولة الخامسة عشرة.
+
+وتصاعدت حدة الهجوم على حارس النصر بسبب تراجع مستواه، وتحميله مسؤولية الخسارتين أمام القادسية ثم الهلال، ما أشعل الجدل في الأوساط الرياضية.
+
+وأعلن الوكيل الرسمي للعقيدي تكليف شركة محاماة مختصة، لرصد جميع التجاوزات الإعلامية والإساءات المتداولة عبر وسائل الإعلام ومنصات التواصل الاجتماعي.
+
+وأكد الوكيل أن النقد الفني حق مشروع للجماهير، إلا أن ما جرى تداوله تجاوز حدود الرأي، واشتمل على تجريح شخصي ومعلومات مغلوطة لا تمت للواقع بصلة.
+
+وشدد البيان على المضي قدمًا في اتخاذ الإجراءات النظامية لدى الجهات المختصة، بهدف حفظ حقوق اللاعب وتوفير بيئة مناسبة تُمكنه من التركيز داخل الملعب.
+
+ويُذكر أن نواف العقيدي شارك مع النصر في 11 مباراة هذا الموسم بمختلف البطولات، استقبل خلالها 12 هدفًا، ونجح في الخروج بشباك نظيفة خلال ثلاث مواجهات.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>أول تعليق من مراد هوساوي بعد الانتقال للهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔵 أول تعليق من مراد هوساوي بعد الانتقال للهلال</div>
+    <div class="article-subtitle">الزعيم يواصل تعزيز صفوفه بصفقة شتوية من العيار الثقيل</div>
+    <div class="article-content">
+عبّر مراد هوساوي، لاعب وسط الهلال الجديد، عن سعادته الكبيرة بالانضمام إلى صفوف “الزعيم” خلال فترة الانتقالات الشتوية الجارية، مؤكدًا فخره بخوض هذه التجربة الجديدة.
+
+وأعلن نادي الهلال رسميًا تعاقده مع مراد هوساوي قادمًا من نادي الخليج، في صفقة شتوية بارزة تهدف إلى تعزيز خط وسط الفريق خلال المرحلة المقبلة.
+
+ونشر هوساوي رسالة عبر حسابه الرسمي على منصة “إنستغرام”، أكد فيها اعتزازه بتمثيل الهلال، متمنيًا التوفيق والنجاح في هذه المحطة المهمة من مسيرته الكروية.
+
+ووجّه لاعب الوسط الشاب شكره لإدارة نادي الهلال، وسمو الأمير نواف بن سعد رئيس النادي، إضافة إلى وكيل أعماله الدكتور صالح اليامي، تقديرًا للثقة والدعم.
+
+وتأتي صفقة هوساوي ضمن تحركات الهلال الاستباقية لتدعيم وسط الملعب، في ظل المتغيرات المحتملة داخل الفريق، مع تزايد الحديث حول مستقبل بعض العناصر الأجنبية.
+
+ويُعد مراد هوساوي، البالغ من العمر 24 عامًا، من لاعبي الوسط الصاعدين، ويمتلك حضورًا بدنيًا مميزًا وقدرة على الربط بين الخطوط، ما يمنحه أفضلية تكتيكية.
+
+وخاض هوساوي 69 مباراة رسمية مع أحد والخليج، سجل خلالها 4 أهداف وقدم 3 تمريرات حاسمة، دون تلقي أي بطاقة حمراء طوال مسيرته.
+
+وبانضمامه إلى الهلال، ينتظر أن يشكل مراد هوساوي إضافة نوعية للكتيبة الزرقاء، ضمن مشروع يوازن بين الخبرة والعناصر المحلية الشابة.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>يايسله يوضح فلسفته بعد الانتصار</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🟢 يايسله يوضح فلسفته بعد الانتصار: النتيجة أولًا والتغيير كان محسوبًا</div>
+    <div class="article-subtitle">مدرب الأهلي يؤكد: خمسة انتصارات متتالية مؤشر إيجابي لمسار الفريق</div>
+    <div class="article-content">
+أشاد الألماني ماتياس يايسله، المدير الفني للنادي الأهلي، بتحقيق فريقه فوزًا مهمًا على الخلود، مؤكدًا أن حصد النقاط الثلاث يمثل أولوية قصوى في هذه المرحلة من الموسم.
+
+وانتصر الأهلي على الخلود بهدف دون رد، في المواجهة التي احتضنها ملعب مدينة الملك عبدالله الرياضية، ضمن منافسات الجولة السادسة عشرة من دوري روشن السعودي للمحترفين.
+
+وأكد يايسله، خلال حديثه في المؤتمر الصحفي عقب اللقاء، أن بعض المباريات تتطلب التركيز على النتيجة أكثر من الأداء، خاصة عندما تكون المواجهة معقدة فنيًا.
+
+وأوضح المدرب الألماني أن مواجهة الخلود لم تكن سهلة، نظرًا للتنظيم الدفاعي الجيد للمنافس، مشيرًا إلى أن تحقيق خمسة انتصارات متتالية يعد مؤشرًا إيجابيًا لمسار الفريق.
+
+وتطرق يايسله إلى تبديل ريان حامد في الدقيقة 69، موضحًا أن خروجه ودخول محمد بكر جاء بقرار تكتيكي بحت، دون وجود أي أسباب بدنية أو فنية أخرى.
+
+وأضاف أن مثل هذه التغييرات تهدف إلى الحفاظ على توازن الفريق داخل الملعب وضمان الاستمرارية حتى صافرة النهاية.
+
+وبهذا الفوز، عزز الأهلي موقعه في جدول الترتيب، حيث يحتل المركز الثاني برصيد 34 نقطة، مبتعدًا بفارق ثلاث نقاط عن النصر صاحب المركز الثالث.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>النصر يفتح الباب للعمري بشروط نارية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🟡 النصر يفتح الباب للعمري بشروط نارية</div>
+    <div class="article-subtitle">صفقة تبادلية مرتقبة بين النصر والاتحاد في الشتاء</div>
+    <div class="article-content">
+فتح نادي النصر باب التفاوض حول رحيل مدافعه عبدالإله العمري إلى صفوف الاتحاد، خلال فترة الانتقالات الشتوية الجارية، مع وضع شروط محددة لإتمام الصفقة بشكل رسمي.
+
+وكشفت تقارير إعلامية أن إدارة الاتحاد أرسلت خطابًا رسميًا إلى النصر، تطلب خلاله التعاقد مع عبدالإله العمري لتدعيم الخط الخلفي للفريق في النصف الثاني من الموسم.
+
+وذكرت قناة العربية أن النصر منح موافقة مبدئية على إعارة العمري إلى الاتحاد حتى نهاية الموسم الجاري، مقابل الحصول على مبلغ مالي يُقدَّر بخمسة ملايين ريال سعودي.
+
+واشترطت إدارة النصر، ضمن بنود الصفقة، استعارة الجناح الفرنسي موسى ديابي من الاتحاد حتى نهاية الموسم، ليكون جزءًا أساسيًا من الاتفاق بين الناديين.
+
+وجدد الاتحاد محاولاته لضم عبدالإله العمري، بعدما فشل سابقًا في التعاقد معه بشكل نهائي خلال فترة الانتقالات الصيفية الماضية.
+
+وسبق للعمري اللعب بقميص الاتحاد معارًا من النصر في الموسم الماضي، حيث قدم مستويات مميزة، دفعت الإدارة الاتحادية للسعي وراء استعادته مجددًا.
+
+ويُعد عبدالإله العمري أحد الخيارات الدفاعية المهمة في خطط الاتحاد، لدعم كتيبة المدرب البرتغالي سيرجيو كونسيساو خلال المرحلة المقبلة من الموسم.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>جيسوس يحسم رحيل لاعب ويكشف صفقة أجنبية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔵 جيسوس يحسم رحيل لاعب ويكشف صفقة أجنبية مرتقبة</div>
+    <div class="article-subtitle">تحركات كبرى في النصر لإعادة ترتيب الأوراق الفنية</div>
+    <div class="article-content">
+كشف البرتغالي جورجي جيسوس، المدير الفني لنادي النصر، عن قرارات مهمة تتعلق بقائمة الفريق، خلال فترة الانتقالات الشتوية الجارية، في إطار سعي الإدارة لتدعيم الصفوف.
+
+وأوضح جيسوس أن الجهاز الفني اتخذ قرارًا نهائيًا بشأن رحيل أحد لاعبي الفريق، بالتوازي مع التحرك للتعاقد مع صفقة أجنبية جديدة خلال الميركاتو الحالي.
+
+وقال مدرب النصر في المؤتمر الصحفي عقب المباراة إن بينتو ماثيوس سيغادر صفوف العالمي بنظام الإعارة، مؤكدًا أن النادي يعمل في الوقت ذاته على إتمام صفقة أجنبية لدعم الفريق.
+
+وتأتي هذه التحركات ضمن خطة إدارة النصر لإعادة ترتيب الأوراق الفنية، بعد تقييم احتياجات الفريق في المرحلة المقبلة من الموسم.
+
+وكان مسؤولو النصر قد جمدوا في وقت سابق صفقة انتقال بينتو ماثيوس إلى الفريق خلال فترة الانتقالات الماضية، رغم التوصل لاتفاق مع نادي جنوى الإيطالي.
+
+ومن المقرر أن يتوايتواجد بينتو ماثيوس في حراسة مرمى النصر خلال المواجهة المقبلة أمام الشباب، ضمن الجولة السادسة عشرة من دوري روشن السعودي، والتي تقام على ملعب الأول بارك.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>البليهي يرد على شائعات خروجه من الهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔵 البليهي يرد على شائعات خروجه من الهلال</div>
+    <div class="article-subtitle">صخرة الدفاع يطمئن الجماهير برسالة مقتضبة وسط جدل الميركاتو</div>
+    <div class="article-content">
+علّق علي البليهي، مدافع الفريق الأول لكرة القدم بنادي الهلال، على الأنباء المتداولة بشأن احتمالية رحيله عن صفوف الزعيم خلال فترة الانتقالات الشتوية الجارية.
+
+وجاء رد البليهي في توقيت تزايدت فيه التكهنات حول مستقبله، بعد ابتعاده عن المشاركة مؤخرًا وخروجه من حسابات المدرب الإيطالي سيميوني إنزاغي.
+
+ونشر لاعب الهلال رسالة مقتضبة عبر حسابه الرسمي على منصة “سناب شات”، قال فيها: “سلام عليكم، جمعة طيبة على الجميع، تمرين والأمور طيبة إن شاء الله”.
+
+وتعكس رسالة البليهي حالة من الهدوء والثقة، في ظل الجدل الدائر حول وضعه داخل الفريق وإمكانية رحيله خلال الميركاتو الشتوي الحالي.
+
+ويرجع الحديث عن خروج البليهي من الهلال إلى اعتماد إنزاغي على ثلاثي الدفاع حسان تمبكتي، خاليدو كوليبالي، وعلي لاجامي، إضافة إلى التعاقد مع المدافع الإسباني بابلو ماري قادمًا من فيورنتينا.
+
+ويستعد الهلال لخوض مواجهة قوية أمام نيوم، ضمن منافسات الجولة السادسة عشرة من دوري روشن السعودي للمحترفين، في اللقاء المقرر إقامته مساء الأحد المقبل على ملعب المملكة أرينا.
+    </div>
+    <div class="article-date">📆 18/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>تقرير.. ماذا يحدث في ريال مدريد؟</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">⚪ تقرير.. ماذا يحدث في ريال مدريد؟</div>
+    <div class="article-subtitle">خسارة الهوية قبل النتائج.. أزمة عميقة تضرب قلعة "البرنابيو"</div>
+    <div class="article-content">
+لم تكن خسارة ريال مدريد في كأس ملك إسبانيا سوى امتدادٍ لتعثرٍ بدأ بخيبة السوبر أمام برشلونة، قبل أن يسقط بثلاثة أهداف مقابل هدفين أمام ألباسيتي، في مباراة كشفت أكثر مما أخفت، وطرحت أسئلة لا تهدأ بإطلاق صافرة النهاية.
+
+بداية جديدة… على أرضٍ مهتزة
+اللقاء شكّل الظهور الأول للمدرب ألفارو أربيلوا، الذي تسلّم الدفة بعد رحيل تشابي ألونسو، في أعقاب فترة اتسمت بتذبذب الأداء وخسارة السوبر الإسباني أمام برشلونة في السعودية. لكن أربيلوا لم يرث فريقًا مستقرًا، بل وجد نفسه يقود سفينة تتلاطمها الأمواج، في بحرٍ لا يرحم من لا يعرف اتجاه الريح.
+داخل المستطيل الأخضر، لم يكن ريال مدريد عاجزًا، لكنه كان مشتتًا، كفرقة موسيقية تعزف دون قائد. لحظات جيدة تتبعها فوضى، ومحاولات فردية لا تجد صداها الجماعي. كرة القدم حضرت، لكن الشخصية غابت.
+
+غرفة الملابس… حين يتكلم الصمت
+بعيدًا عن الأضواء، كانت غرفة الملابس تنطق بما لا يُقال. قلعةٌ كانت يومًا حصينة، بدت اليوم مضطربة، يسكنها توتر خافت أكثر مما يسكنها انسجام. خلال الفترة الماضية، لم تكن العلاقة بين المدرب السابق تشابي ألونسو وبعض نجوم الفريق في أفضل حال. فينيسيوس جونيور بدا مثقَلًا بقراراتٍ متكررة أخرجته من قلب المباريات في لحظاتٍ حاسمة، فيما تنقّل فيديريكو فالفيردي بين أدوار لم تمنحه الاستقرار، ولم يخلُ الأمر من تباين في الرؤى مع جود بيلينغهام، رغم حضوره المؤثر.
+
+بيريز… بين كرة القدم وصناعة الصورة
+وهنا تتجه الأنظار إلى الرئيس فلورنتينو بيريز، الرجل الذي بنى إمبراطورية اقتصادية وتسويقية تُدرّس، لكنه اليوم أمام سؤال ثقيل: هل ما زالت كرة القدم في صدارة القرار؟ أم أن الدعاية، والصورة، والاسم القابل للتسويق، باتت تتقدم خطوة على متطلبات الملعب؟
+اختيار أربيلوا نفسه يفتح باب الجدل. فهو، رغم تاريخه مع النادي، لم يكن يومًا اللاعب الأكثر قربًا من الجماهير حين ارتدى القميص الأبيض. واليوم، يُطرح السؤال ذاته بصيغة أخرى: هل يكفي الانتماء والرمزية لقيادة غرفة ملابس مليئة بالنجوم؟
+
+أزمة ليست في النتيجة… بل في المعنى
+الخروج أمام ألباسيتي لم يصنع الأزمة، لكنه سلّط الضوء عليها. أزمة هوية، لا نتائج. فريق يبدو أحيانًا كواجهة فاخرة تخفي خلفها ارتباكًا في التخطيط، وتناقضًا في الأولويات. ريال مدريد لا يفتقر إلى الموهبة، ولا إلى التاريخ، لكنه اليوم بحاجة إلى وضوح يشبه وضوح قمصانه البيضاء. بحاجة إلى مشروعٍ يُشبهه، لا إلى عناوين لامعة سرعان ما تخبو.
+    </div>
+    <div class="article-date">📆 15/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>بنزيما يتحدى المرض ويفاجئ جماهير الاتحاد</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🟡 بنزيما يضرب نادرًا في التحدي ويفاجئ جماهير الاتحاد</div>
+    <div class="article-subtitle">رغم الوعكة الصحية.. "الحكومة" يرفض الغياب عن موقعة ضمك</div>
+    <div class="article-content">
+خاض كريم بنزيما، قائد نادي الاتحاد، مواجهة ضمك رغم معاناته من وعكة صحية، في لقاء الجولة الخامسة عشرة من الدوري السعودي، الذي انتهى بالتعادل الإيجابي بهدف لكل فريق.
+
+وكشفت صحيفة “اليوم” السعودية أن النجم الفرنسي تعرض لارتفاع في درجة الحرارة قبل توجه بعثة الاتحاد إلى أبها، استعدادًا لمواجهة ضمك ضمن منافسات دوري روشن.
+وأوضحت الصحيفة أن الجهاز الطبي أوصى بعدم مشاركة بنزيما حفاظًا على سلامته، إلا أن اللاعب تمسك بخوض اللقاء دعمًا لزملائه ورغبةً في مساعدة الفريق.
+
+وظهر بنزيما أساسيًا في المباراة قبل أن يغادر أرضية الملعب عند الدقيقة 46، ليحل المهاجم صالح الشهري بديلًا له خلال مجريات الشوط الثاني. ويواصل نادي الاتحاد استعداداته لمواجهة الاتفاق، المقررة يوم الجمعة المقبل، ضمن منافسات الجولة السادسة عشرة من الدوري السعودي للمحترفين.
+
+ويحتل الاتحاد المركز السادس في جدول ترتيب دوري روشن برصيد 27 نقطة، ويسعى الفريق لتحسين موقعه والعودة للمنافسة بقوة خلال الجولات المقبلة.
+    </div>
+    <div class="article-date">📆 15/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>المغرب يعود لنهائي أفريقيا بعد 22 عاماً</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🇲🇦 بعد 22 عامًا من الانتظار المغرب يعود إلى نهائي كأس أمم إفريقيا</div>
+    <div class="article-subtitle">إنجاز تاريخي لأسود الأطلس يضعهم على أعتاب المجد القاري</div>
+    <div class="article-content">
+حجز المنتخب المغربي بطاقة التأهل إلى نهائي كأس أمم إفريقيا، مساء الأربعاء، ليعود إلى المشهد الختامي للمسابقة القارية لأول مرة منذ نسخة عام 2004، في إنجاز جديد يعكس التطور اللافت الذي يشهده “أسود الأطلس” خلال السنوات الأخيرة.
+
+وجاء هذا التأهل عقب مواجهة قوية في الدور نصف النهائي أمام منتخب نيجيريا، أبان خلالها المنتخب المغربي عن شخصية تنافسية عالية وروح قتالية كبيرة، مكنته من تجاوز عقبة صعبة والاقتراب خطوة إضافية من التتويج باللقب القاري.
+
+ويعيد هذا الإنجاز إلى الذاكرة آخر ظهور للمغرب في نهائي كأس أمم إفريقيا قبل أكثر من عقدين، ليمنح الجيل الحالي فرصة كتابة صفحة جديدة في تاريخ الكرة الوطنية، خاصة في ظل احتضان المملكة لمنافسات هذه النسخة. وسيخوض المنتخب المغربي المباراة النهائية بطموح كبير لإنهاء سنوات الانتظار، والسعي إلى التتويج بالكأس الإفريقية أمام جماهيره، في محطة مفصلية قد تشكل علامة فارقة في مسار كرة القدم المغربية.
+    </div>
+    <div class="article-date">📆 15/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>الهلال يفتح الباب لرحيل علي البليهي</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔵 الهلال يفتح الباب أمام البليهي للرحيل والبحث عن فرصة جديدة</div>
+    <div class="article-subtitle">خروج مرتقب للمدافع المخضرم في ميركاتو الشتاء بقرار من إنزاجي</div>
+    <div class="article-content">
+أعلنت إدارة نادي الهلال حسم موقفها النهائي بخصوص مستقبل علي البليهي، مدافع الفريق الأول، ومنحه الضوء الأخضر للبحث عن وجهة جديدة خلال فترة الانتقالات الشتوية الحالية.
+
+وذكرت تقارير أن البليهي أصبح لاعبًا احتياطيًا في حسابات المدرب الإيطالي سيموني إنزاجي، بعد عدم الاعتماد عليه في المباريات الأخيرة، ما أثار التساؤلات حول مستقبله داخل الزعيم. وأوضحت إذاعة “العربية إف إم” أن إدارة الهلال توصلت إلى اتفاق مع البليهي لتسهيل رحيله في الشتاء، بما يضمن له فرصة المشاركة بشكل أكبر مع فريق آخر.
+
+وكان هناك مقترح سابق يقضي بإعارته للاتحاد لمدة 6 أشهر، مقابل انتقال الجناح الأيمن عبدالرحمن العبود للهلال، إلا أن المدرب البرتغالي سيرجيو كونسيساو رفض الصفقة للحفاظ على العبود. كما أشارت المصادر إلى أن الضوء الأخضر للرحيل جاء بعد تعزيز الهلال لخط الدفاع بقدوم المدافع الإسباني بابلو ماري معارًا من فيورنتينا، ما قلل حاجة الفريق لخدمات البليهي في الموسم الجاري.
+ويُتوقع أن يبحث البليهي عن فرصة مناسبة في الدوري السعودي أو خارج البلاد، لتعويض قلة مشاركاته الأخيرة وضمان الاستعداد الأمثل لمستقبله الكروي.
+    </div>
+    <div class="article-date">📆 15/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>عقوبة تنتظر النصر في صفقة الحمدان</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">⚠️ عقوبة في انتظار النصر حال ضم الحمدان بهذه الطريقة</div>
+    <div class="article-subtitle">تحذيرات قانونية من فسخ العقد.. وشبح قضية "كنو" يلوح في الأفق</div>
+    <div class="article-content">
+حذّر المستشار القانوني يعقوب المطير من عواقب قانونية قاسية قد تلاحق نادي النصر، في حال التراجع عن العقد الموقع مع مهاجم الهلال عبدالله الحمدان خلال فترة الانتقالات الشتوية الحالية.
+
+وتداولت تقارير إعلامية مؤخرًا أن النصر حصل على توقيع الحمدان، عقب رفضه تجديد عقده مع الهلال، بهدف دعم الخط الهجومي للفريق العاصمي في ميركاتو يناير الجاري. وكشف برنامج “دورينا غير” أن الحمدان وقّع عقده مع النصر بإشراف الرئيس التنفيذي خوسيه سيميدو، إلا أن اللجنة التنفيذية داخل النادي أبدت رفضها لإتمام الصفقة.
+
+وأوضح يعقوب المطير أن العقد يصبح ملزمًا قانونيًا متى ما تم توقيعه من اللاعب ومسؤول يملك الصلاحية، مؤكدًا أن توقيع سيميدو يمنح العقد الصفة الرسمية والنافذة. وأشار المطير إلى أن تراجع النصر عن تنفيذ العقد قد يمنح الحمدان الحق في المطالبة بكامل قيمته المالية، حتى وإن لم يشارك في أي مباراة بقميص الفريق.
+
+وشدد المستشار القانوني على أن الحل الأمثل أمام النصر يتمثل في تنفيذ التعاقد أو الوصول إلى تسوية ودية مع اللاعب لتفادي التصعيد القانوني. واختتم حديثه بالتنبيه إلى أن فسخ العقد في الفترة المحمية قد يؤدي إلى إحالة القضية للجنة المنازعات، مع احتمالية فرض عقوبات مشابهة لما حدث سابقًا في قضية محمد كنو.
+    </div>
+    <div class="article-date">📆 15/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>محرز يفاجئ الأهلي بقرار جريء أمام التعاون</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🟢 محرز يفاجئ الأهلي بقرار جريء أمام التعاون</div>
+    <div class="article-subtitle">النجم الجزائري يرفض الراحة ويستعد مبكراً لقمة دوري روشن</div>
+    <div class="article-content">
+اختار النجم الجزائري رياض محرز موقفًا لافتًا، بعدما قرر تجاهل الراحة والاستعداد مبكرًا لمواجهة الأهلي المرتقبة أمام التعاون، ضمن منافسات الجولة الخامسة عشرة من دوري روشن السعودي.
+
+وانتظم رياض محرز في تدريبات النادي الأهلي، رغم قرار المدرب الألماني ماتياس يايسله منحه راحة إضافية عقب عودته من المشاركة مع منتخب الجزائر في كأس الأمم الأفريقية.
+
+وأكدت صحيفة اليوم السعودية أن اللاعب الجزائري فضّل التواجد مع زملائه في التدريبات، إدراكًا لأهمية المباراة المقبلة وصعوبتها في سباق المراكز المتقدمة بجدول الدوري.
+
+ويرى محرز أن مواجهة التعاون تمثل محطة حاسمة، خاصة في ظل تقارب النقاط بين الفريقين، ما دفعه لرفض الراحة والسعي لدعم الأهلي فنيًا ومعنويًا.
+
+وكان منتخب الجزائر قد ودع بطولة كأس الأمم الأفريقية المقامة في المغرب، بعد خسارته أمام منتخب نيجيريا بهدفين دون رد في الدور ربع النهائي.
+
+ويحتل النادي الأهلي المركز الرابع في جدول ترتيب الدوري السعودي للمحترفين برصيد 28 نقطة، متأخرًا بفارق ثلاث نقاط فقط عن التعاون صاحب المركز الثالث.
+    </div>
+    <div class="article-date">📆 14/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>جيسوس يجمّد انتقال بينتو إلى جنوى</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🛑 جيسوس يجمّد انتقال بينتو إلى جنوى لهذا السبب</div>
+    <div class="article-subtitle">أزمة حراسة المرمى في النصر تبعثر أوراق الميركاتو الشتوي</div>
+    <div class="article-content">
+أوقف البرتغالي جورجي جيسوس، مدرب نادي النصر، خطوة رحيل الحارس البرازيلي بينتو ماتيوس إلى نادي جنوى الإيطالي خلال سوق الانتقالات الشتوية الجارية.
+
+وكشفت صحيفة الرياضية السعودية أن جيسوس قرر تعليق الصفقة بشكل مؤقت، إلى حين حسم موقف الحارس النهائي أو التوصل لاتفاق بشأن التعاقد مع بديل مناسب في الفترة المقبلة.
+
+وجاء هذا القرار بعد تعرض نواف العقيدي للطرد في مواجهة الهلال، ضمن الجولة الخامسة عشرة من دوري روشن السعودي، والتي انتهت بخسارة النصر بثلاثة أهداف مقابل هدف.
+
+وكان بينتو ماتيوس قريبًا من الانضمام إلى جنوى على سبيل الإعارة حتى نهاية الموسم، مع وجود بند يتيح الشراء، في ظل اتجاه سابق من جيسوس للموافقة على رحيله.
+
+وسعى مدرب النصر إلى الاستغناء عن الحارس البرازيلي، بهدف إفساح المجال للتعاقد مع لاعب محور ارتكاز أجنبي يدعم صفوف الفريق خلال الميركاتو الشتوي الحالي.
+
+ويستعد نادي النصر لمواجهة الشباب يوم السبت المقبل، ضمن منافسات الجولة السادسة عشرة من الدوري السعودي للمحترفين.
+
+ويحتل النصر المركز الثاني في جدول ترتيب دوري روشن برصيد 31 نقطة، بعد خسارتين متتاليتين أمام القادسية ثم الهلال، ليزداد الضغط على الجهاز الفني قبل المرحلة المقبلة.
+    </div>
+    <div class="article-date">📆 14/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>تعادل بطعم الخسارة.. الاتحاد يتعثر أمام ضمك</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">⚠️ تعادل بطعم الخسارة.. الاتحاد يتعثر أمام ضمك</div>
+    <div class="article-subtitle">العميد يهدر فوزاً كان في المتناول ويفقد فابينيو في الجولة القادمة</div>
+    <div class="article-content">
+سقط فريق اتحاد جدة في فخ التعادل أمام ضمك بنتيجة هدف لكل فريق، خلال المواجهة التي أُقيمت مساء الثلاثاء على ملعب مدينة الأمير سلطان بن عبدالعزيز الرياضية، ضمن الجولة الخامسة عشرة من دوري روشن السعودي.
+
+دخل المدرب البرتغالي سيرجيو كونسيساو اللقاء بتشكيل أساسي ضم رايكوفيتش، الشنقيطي، دانيلو بيريرا، كادش، شراحيلي، فابينيو، كانتي، فيرنانديز، ديابي، بيرجوين، وبنزيما.
+
+وبدأ الاتحاد المباراة بضغط هجومي مبكر، حيث كاد مهند الشنقيطي أن يفتتح التسجيل في الدقيقة الرابعة، بعد تمريرة بالكعب من كريم بنزيما، قبل أن يُلغى الهدف عقب العودة لتقنية الفيديو.
+
+ونجح ضمك في خطف هدف التقدم عند الدقيقة 37، بعدما استغل عبدالله القحطاني تمريرة متقنة من رياض شراحيلي خلف دفاع الاتحاد، ليسدد الكرة بنجاح داخل الشباك.
+
+وقبل نهاية الشوط الأول مباشرة، أعاد الاتحاد المباراة لنقطة البداية، إثر عرضية موسى ديابي التي حولها مهند الشنقيطي إلى هدف التعادل في الدقيقة 45.
+
+ومع انطلاق الشوط الثاني، أجرى كونسيساو تغييرًا بخروج كريم بنزيما ودخول صالح الشهري، وواصل الاتحاد محاولاته الهجومية دون أن ينجح في تسجيل الهدف الثاني.
+
+وشهد الوقت بدل الضائع أحداثًا ساخنة، بعدما نال فابينيو البطاقة الصفراء الثانية ثم الحمراء، ليغيب عن مواجهة الاتفاق، فيما رفع الاتحاد رصيده إلى 27 نقطة سادسًا، وبقي ضمك رابع عشر بعشر نقاط.
+    </div>
+    <div class="article-date">📆 14/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>الهلال يعرقل انتقال الحمدان إلى النصر</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">⚡ الهلال يعرقل انتقال الحمدان إلى النصر بقرار صادم</div>
+    <div class="article-subtitle">صراع القطبين يشتعل على المهاجم الدولي في الأمتار الأخيرة من عقده</div>
+    <div class="article-content">
+كشفت تقارير صحفية عن تطورات مستقبل المهاجم الدولي عبد الله الحمدان، مع نادي الهلال السعودي، في ظل اقترابه من الرحيل، خلال الفترة الشتوية الجارية. وأفادت آخر التقارير أن الحمدان يرفض محاولات الهلال لتجديد عقده، وسط اهتمام بالغ من جانب النصر ومدربه البرتغالي جورجي جيسوس بالتعاقد معه.
+
+وبحسب ما ذكرته صحيفة "الرياضية" فقد رفض مسؤولو نادي الهلال المباحثات الأولية لرحيل الحمدان إلى الجار، النصر، خلال السوق الشتوي الجاري. ويجري عبد اللطيف الغنام، وكيل أعمال اللاعب ووالده، مباحثات مستمرة مع الهلال، للوصول إلى اتفاق يسمح بخروج المهاجم، الذي ينتهي عقده مع الهلال يوم 6 من فبراير المقبل، أي بعد نهاية الميركاتو الشتوي بثلاثة أيام.
+
+وفي هذه الحالة لن يستطيع النصر، قيد الحمدان رسميًا، وينتظر أن تحسم الأمور بين الطرفين قريبًا بموافقة الهلال أو رفضه رحيل الحمدان قبل إغلاق سوق الانتقالات الشتوية الحالية. يذكر أن عبد الله الحمدان كان قد رفض تجديد عقده مع الهلال بنفس المميزات التي يحصل عليها ووفقًا للعقد الحالي، ليلتفت النصر إلى الأمر، ويحاول الانقضاض على اللاعب.
+
+ويعدّ المهاجم السعودي أحد اللاعبين المفضَّلين لدى مدرب النصر الحالي، جيسوس، إبان فترة تدريبه الهلال، حيث وصفه دائمًا بالتكتيكي، وذي القدرات البدنية القوية. ووقع الحمدان لنادي الهلال قادمًا من الشباب بعد تجربة احتراف قصيرة في إسبانيا، ويتقاضى حاليًا 150 ألف ريال شهريًا، إضافةً إلى مقدم سنوي يبلغ 3 ملايين و450 ألفًا.
+    </div>
+    <div class="article-date">📆 14/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>منافسة بين أهلي جدة والقادسية لضم مدافع ضمك</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🔥 منافسة بين أهلي جدة والقادسية لضم مدافع ضمك</div>
+    <div class="article-subtitle">الصراع يشتعل على ضاري العنزي في ميركاتو الشتاء</div>
+    <div class="article-content">
+اشتد الصراع بين نادي أهلي جدة ومنافسه القادسية على ضم مدافع فريق ضمك ضاري العنزي في فترة الانتقالات الشتوية الحالية. وأفادت صحيفة "عكاظ" السعودية أن ضاري العنزي تلقى عرضًا من القادسية يتضمن مبلغًا ماليًا إلى جانب دخول عدد من اللاعبين في الصفقة.
+
+في المقابل، جاء عرض الأهلي ماليًا فقط، إلا أن المؤشرات تفيد باقتراب نادي القادسية من الفوز بهذه الصفقة. وكانت صحيفة "عكاظ" نشرت في يناير الجاري أن هناك محاولات من قطبي جدة، الأهلي والاتحاد، بجانب القادسية للحصول على خدمات اللاعب صاحب الـ25 عامًا.
+
+وشارك "العنزي" في 13 مباراة مع ضمك في الموسم الحالي، وتحديدًا في دوري روشن السعودي، حيث استطاع أن يصنع هدفين. وكان "العنزي" قد انتقل إلى صفوف ضمك في 2022 قادمًا من فريق الشباب بنادي النصر، حيث يمتلك اللاعب عقدًا ينتهي في صيف 2027 وفقًا لموقع "ترانسفير ماركت".
+
+جدير بالذكر أن فريق الأهلي يحتل الترتيب الرابع برصيد 28 نقطة من 13 مباراة، بينما يأتي القادسية خامسًا برصيد 27 نقطة.
+    </div>
+    <div class="article-date">📆 14/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>مدافع محلي على رادار الاتحاد</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🛡️ بتوصية كونسيساو مدافع محلي على رادار الاتحاد</div>
+    <div class="article-subtitle">العميد يتحرك لتعزيز الخط الخلفي في ميركاتو يناير</div>
+    <div class="article-content">
+دفع البرتغالي سيرجيو كونسيساو، مدرب الاتحاد، إدارة ناديه للتحرك العاجل من أجل تعزيز الخط الخلفي بصفقة محلية، مستغلًا فترة الانتقالات الشتوية الجارية في شهر يناير.
+
+وأكدت تقارير برنامج «دورينا غير» أن إدارة الاتحاد بدأت فعليًا دراسة خيارات تدعيم الدفاع، استجابة لرغبة مباشرة من كونسيساو الذي يرى الحاجة لتقوية هذا المركز.
+
+وأبدى كونسيساو إعجابه بإمكانات وليد الأحمد، مدافع فريق التعاون، معتبرًا إياه خيارًا مناسبًا لدعم صفوف الاتحاد خلال المرحلة المقبلة من الموسم.
+
+لكن الصفقة تواجه عقبة محتملة، في ظل اقتراب نادي القادسية من حسم التعاقد مع وليد الأحمد، ما يقلص فرص الاتحاد في الظفر باللاعب.
+
+وفي السياق ذاته، يترقب القادسية وصول عرض مالي مغرٍ للتخلي عن مدافعه جهاد ذكري، بهدف توظيف العائد المالي لإتمام صفقة وليد الأحمد.
+
+ويترقب الاتحاد تطورات موقف القادسية، إذ يعتزم التقدم بطلب ضم وليد الأحمد حال انسحاب القادسية من الصفقة وعدم إتمام بيع جهاد ذكري.
+
+وعلى صعيد آخر، لم تبادر إدارة الاتحاد حتى الآن بتقديم عروض لتجديد عقود الثلاثي فابينيو، ونجولو كانتي، وكريم بنزيما، مفضلة تأجيل حسم ملفاتهم إلى نهاية الموسم الحالي.
+    </div>
+    <div class="article-date">📆 13/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>كواليس انتقال مراد هوساوي للهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">💰 تعرف على أسرار وكواليس انتقال مراد هوساوي إلى الهلال</div>
+    <div class="article-subtitle">56 مليون ريال تحسم صفقة المدافع الواعد للزعيم</div>
+    <div class="article-content">
+أنهى مسؤولو نادي الهلال السعودي جميع تفاصيل التعاقد مع مراد هوساوي، لاعب فريق الخليج، ضمن تحركات النادي القوية خلال فترة الانتقالات الشتوية الجارية.
+
+وكشفت مصادر صحفية أن الهلال توصل إلى اتفاق نهائي مع إدارة الخليج لضم مراد هوساوي مقابل 56 مليونًا و250 ألف ريال، في صفقة تهدف لتعزيز خيارات الفريق المحلية.
+
+وأوضحت التقارير أن القيمة المالية للصفقة ستوزع بين نادي الخليج ونادي أحد، الذي يحتفظ بنسبة 40 في المئة من عائد إعادة البيع، وفق بند سابق في عقد اللاعب.
+
+وبيّنت الصحيفة أن مراد هوساوي سيوقّع عقدًا طويل الأمد مع الهلال، يمتد لفترة تتراوح ما بين أربعة إلى خمسة أعوام، ليكون أحد استثمارات النادي المستقبلية.
+
+وجاء تحرك الهلال لحسم الصفقة مبكرًا في ظل القناعة الفنية بإمكانات اللاعب، وقدرته على تقديم الإضافة المطلوبة خلال المنافسات المحلية والقارية.
+
+ويُذكر أن مراد هوساوي خاض بقميص الخليج 44 مباراة في دوري روشن السعودي وكأس الملك، سجل خلالها ثلاثة أهداف، وقدم تمريرتين حاسمتين.
+
+وتترقب جماهير الهلال الإعلان الرسمي عن الصفقة، خاصة أنها تُعد من أبرز صفقات الشتاء بالنظر لقيمتها المالية وتنافسية السوق المحلية.
+    </div>
+    <div class="article-date">📆 13/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>الاتحاد يرفض الصفقة التبادلية مع الهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">🚫 الاتحاد يغلق الباب أمام الهلال في إجراء صفقة تبادلية</div>
+    <div class="article-subtitle">تراجع مفاجئ للعميد عن مبادلة العبود بالبليهي</div>
+    <div class="article-content">
+أغلق نادي الاتحاد ملف صفقة تبادلية كانت مطروحة مع الهلال خلال سوق الانتقالات الشتوية الحالية، بعد أن قرر التراجع عن إتمامها رغم تداولها داخل أروقة الناديين مؤخرًا.
+
+وكشف برنامج “دورينا غير” أن الصفقة المقترحة كانت تقضي بانتقال عبدالرحمن العبود إلى الهلال، مقابل انضمام المدافع علي البليهي إلى صفوف الاتحاد في صفقة تبادلية.
+
+وأوضح المصدر ذاته أن الفكرة لم تصل إلى مرحلة المفاوضات الرسمية، رغم وجود موافقة مبدئية في وقت سابق، قبل أن يغيّر الاتحاد موقفه ويتراجع عنها نهائيًا.
+
+وكان الهلال يسعى لتعزيز مركز الوسط الهجومي بعنصر محلي خلال الميركاتو الشتوي، حيث وُضعت عدة أسماء على الطاولة، أبرزها سلطان مندش، ثم همام الهمامي وعبدالرحمن العبود.
+
+ونجح الهلال بالفعل في حسم صفقة سلطان مندش قادمًا من التعاون، بعقد يمتد لعامين ونصف، ليستمر اللاعب مع الفريق الأزرق حتى يونيو 2028.
+
+في المقابل، فتح الاتحاد الباب أمام إعارة عبدالرحمن العبود خلال فترة الانتقالات الحالية، بعد خروجه من حسابات المدرب البرتغالي سيرجيو كونسيساو لأسباب انضباطية.
+
+وأشارت تقارير صحفية إلى دخول نادي الشباب على خط المفاوضات مع الاتحاد، سعيًا لضم العبود في يناير، مع تقديم وعود بمنحه فرصة المشاركة الأساسية حال إتمام الصفقة.
+    </div>
+    <div class="article-date">📆 13/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>مستقبل كايو سيزار مع الهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">❓ حيرة داخل الهلال بسبب مستقبل كايو سيزار</div>
+    <div class="article-subtitle">عروض أوروبية وبرازيلية تهدد استمرار الجناح الشاب مع الزعيم</div>
+    <div class="article-content">
+يفاضل نادي الهلال حاليًا بين خيارين حاسمين يخصان مستقبل الجناح البرازيلي كايو سيزار، الذي يشغل خانة لاعب مواليد في قائمة الفريق، بالتزامن مع نشاط سوق الانتقالات الشتوية.
+
+وانضم كايو سيزار، البالغ من العمر 21 عامًا، إلى الهلال في يناير 2023 قادمًا من فيتوريا جيماريش، إلا أن مشاركته هذا الموسم بقيت محدودة تحت قيادة الإيطالي سيموني إنزاجي.
+
+وشارك اللاعب البرازيلي في 16 مباراة بجميع المسابقات، بإجمالي 660 دقيقة لعب، نجح خلالها في تسجيل هدف واحد وصناعة هدفين، دون أن يحجز مكانًا ثابتًا في التشكيل الأساسي.
+
+وتلقت إدارة الهلال عرضين رسميين لشراء عقد كايو، أحدهما من نادٍ أوروبي والآخر من فريق برازيلي، وفق ما كشفه برنامج “دورينا غير” خلال الأيام الماضية.
+
+وتدرس إدارة النادي العروض المقدمة بعناية، مع إمكانية الموافقة على بيع اللاعب بشكل نهائي، في حال كانت القيمة المالية مناسبة وتخدم خطط الفريق المستقبلية.
+
+وتتجه أنظار الهلال، في حال رحيل كايو، إلى التعاقد مع محترف مواليد جديد في مركز الجناح الأيمن أو المهاجم، لتعويض الفراغ المحتمل خلال النصف الثاني من الموسم.
+
+وكان الهلال قد افتتح سوقه الشتوية بضم المدافع الإسباني بابلو ماري من فيورنتينا على سبيل الإعارة، إضافة إلى التعاقد مع الجناح سلطان مندش من التعاون بعقد طويل الأمد.
+    </div>
+    <div class="article-date">📆 13/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>الوليد بن طلال ودعمه للهلال</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+body {font-family:'Cairo',Tahoma,Arial,sans-serif;background:#f0f3f7;margin:0;}
+.article-container {max-width:850px;margin:30px auto;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(23, 102, 160, 0.2);padding:40px;}
+.article-title {font-size:2.2em;color:#1766a0;font-weight:800;margin-bottom:15px;text-align:center;border-bottom:3px solid #e67e22;padding-bottom:10px;}
+.article-subtitle {color:#e67e22;font-size:1.2em;text-align:center;margin-bottom:30px;font-weight:700;}
+.article-content {font-size:1.1em;line-height:2.0;color:#333;white-space:pre-line; text-align: justify;}
+.article-date {color:#555;font-size:1em;margin-top:25px;text-align:left;font-weight:600; border-top: 1px dashed #ddd; padding-top: 10px;}
+.back-link {display:inline-block;margin-top:30px;padding:12px 35px;background:#1766a0;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold; box-shadow: 0 4px 10px rgba(23, 102, 160, 0.4);}
+</style>
+</head>
+<body>
+<div class="article-container">
+    <div class="article-title">👑 رجل الظل يحسمها للهلال من يقف خلف صفقـتَي ماري ومندش؟</div>
+    <div class="article-subtitle">الأمير الوليد بن طلال يواصل دعمه التاريخي للزعيم في ميركاتو الشتاء</div>
+    <div class="article-content">
+ثمَّن نادي الهلال الدعم الكبير الذي قدّمه العضو الذهبي الأمير الوليد بن طلال، بعدما تكفّل بإتمام صفقتي التعاقد مع الإسباني بابلو ماري والجناح الأيمن سلطان مندش خلال سوق الانتقالات الشتوية الحالية.
+
+وأعلن الهلال رسميًا، يوم الأحد، ضم المدافع بابلو ماري قادمًا من فيورنتينا الإيطالي بنظام الإعارة حتى نهاية الموسم، مع أفضلية التمديد لعام إضافي، إلى جانب التعاقد مع سلطان مندش بعقد يمتد لعامين ونصف.
+
+وأوضح النادي العاصمي، عبر بيان رسمي، أن الأمير الوليد بن طلال تحمّل القيمة المالية الكاملة لصفقتي بابلو ماري وسلطان مندش، دعمًا لمسيرة الفريق خلال المرحلة المقبلة.
+
+وتقدّم مجلس إدارة شركة نادي الهلال، برئاسة نواف بن سعد، بخالص الشكر والتقدير للأمير الوليد بن طلال، مشيدًا بدعمه اللامحدود وحرصه المستمر على تلبية احتياجات الفريق الأول.
+
+وأكد البيان أن هذه المبادرة ليست غريبة على العضو الذهبي، وتعكس رغبته الدائمة في الحفاظ على مكانة الهلال الريادية ومواصلة تفوقه على المستويين المحلي والقاري.
+
+وفي سياق متصل، يواصل الهلال استعداداته لمواجهة النصر في ديربي الرياض المرتقب، ضمن الجولة الخامسة عشرة من دوري روشن السعودي للمحترفين، على ملعب «المملكة أرينا».
+
+ويتصدر الهلال جدول ترتيب الدوري السعودي برصيد 35 نقطة، متقدمًا على النصر صاحب المركز الثاني بـ31 نقطة، قبل القمة المنتظرة التي تحظى باهتمام جماهيري واسع.
+    </div>
+    <div class="article-date">📆 13/01/2026</div>
+    <a class="back-link" href="index.html#latest-articles">🔙 العودة إلى المقالات</a>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
 <title>الهلال يسابق الزمن لصفقة الديربي</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
